@@ -1,0 +1,65 @@
+/* Base button styles */
+.button {
+	min-width: 150px;
+	height: 60px;
+	padding: 0 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 1.41;
+	letter-spacing: -0.4px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	box-shadow: 7px 17px 14.3px 0px rgba(0, 0, 0, 0.09);
+	border-radius: 128px;
+}
+
+/* Disabled state */
+.button:disabled {
+	cursor: not-allowed;
+	opacity: 0.8;
+}
+
+/* Primary variant */
+.primary {
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+/* Secondary variant */
+.secondary {
+	background-color: var(--secondary);
+	color: var(--white);
+}
+
+/* Loading spinner */
+.spinner {
+	width: 20px;
+	height: 20px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+.spinnerPrimary {
+	border-top: 2px solid var(--secondary);
+}
+
+.spinnerSecondary {
+	border-top: 2px solid var(--white);
+}
+
+/* Spin animation keyframes */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
