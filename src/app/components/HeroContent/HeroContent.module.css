@@ -1,0 +1,57 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 39px;
+	width: 603px;
+}
+
+.textSection {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	width: 100%;
+}
+
+.tagAndHeading {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.tag {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.41;
+	letter-spacing: -0.36px;
+	color: var(--color-white);
+}
+
+.heading {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 1.04;
+	letter-spacing: -1.2px;
+	color: var(--color-white);
+	width: 90%;
+}
+
+.highlighted {
+	color: var(--hightlight-text);
+}
+
+.description {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.41;
+	letter-spacing: -0.4px;
+	color: var(--color-white);
+}
+
+.buttonSection {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}

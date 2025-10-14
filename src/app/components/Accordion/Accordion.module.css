@@ -1,0 +1,108 @@
+/* Accordion Container */
+.accordion {
+	width: 100%;
+}
+
+/* Accordion Item */
+.accordionItem {
+	width: 100%;
+}
+
+.itemHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 74px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.itemHeader:hover {
+	background-color: rgba(177, 207, 95, 0.05);
+}
+
+.itemTitle {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 1.15;
+	letter-spacing: -0.52px;
+	color: var(--secondary);
+	margin: 0;
+	transition: color 0.3s ease;
+}
+
+.activeTitle {
+	color: var(--hightlight-text);
+}
+
+.chevron {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 33px;
+	height: 33px;
+	color: var(--secondary);
+	transition:
+		transform 0.3s ease,
+		color 0.3s ease;
+}
+
+.chevronRotated {
+	transform: rotate(180deg);
+	color: var(--hightlight-text);
+}
+
+.itemContent {
+	padding: 0 0 20px 0;
+	animation: slideDown 0.3s ease-out;
+}
+
+.itemDescription {
+	font-family: var(--font-body);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.41;
+	letter-spacing: -0.4px;
+	color: var(--secondary);
+	margin: 0;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: var(--gray);
+}
+
+/* Animations */
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.itemTitle {
+		font-size: 22px;
+	}
+
+	.itemDescription {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 480px) {
+	.itemTitle {
+		font-size: 20px;
+	}
+
+	.itemDescription {
+		font-size: 16px;
+	}
+}

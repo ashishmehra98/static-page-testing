@@ -1,0 +1,132 @@
+/* Rating Card Container */
+.ratingCard {
+	background-color: var(--rating-card-bg);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 18.133px;
+	align-items: flex-start;
+	padding: 27.2px;
+	position: relative;
+	border-radius: 18.133px;
+	width: 306px;
+	min-height: 325px;
+}
+
+/* Rating Stars */
+.rating {
+	height: 27.2px;
+	position: relative;
+	width: 154.133px;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+.star {
+	width: 27px;
+	height: 27px;
+	flex-shrink: 0;
+}
+
+/* User Section */
+.user {
+	display: flex;
+	gap: 18.133px;
+	align-items: center;
+	position: relative;
+	width: 100%;
+}
+
+.userProfile {
+	height: 45.334px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 45.333px;
+	width: 45.333px;
+	flex-shrink: 0;
+}
+
+.userImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 45.333px;
+}
+
+.userDetail {
+	display: flex;
+	flex-direction: column;
+	gap: 9.067px;
+	align-items: flex-start;
+	flex: 1;
+	min-width: 0;
+}
+
+.username {
+	font-family: var(--font-primary);
+	font-weight: 600;
+	font-size: 18.133px;
+	line-height: 22.667px;
+	color: #1a1a1a;
+	margin: 0;
+	width: 100%;
+}
+
+.designation {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 13.6px;
+	line-height: 17px;
+	color: rgba(0, 0, 0, 0.5);
+	margin: 0;
+	width: 100%;
+}
+
+/* Review Section */
+.review {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	width: 100%;
+}
+
+.reviewText {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 18.133px;
+	line-height: 22.667px;
+	color: #1a1a1a;
+	margin: 0;
+	width: 100%;
+}
+
+/* Posting Section */
+.posting {
+	display: flex;
+	flex-direction: column;
+	gap: 9.067px;
+	align-items: flex-start;
+	position: relative;
+	width: 100%;
+}
+
+.postedOn {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 13.6px;
+	line-height: 17px;
+	color: rgba(0, 0, 0, 0.5);
+	margin: 0;
+	white-space: nowrap;
+}
+
+.googleLogo {
+	height: 23.8px;
+	position: relative;
+	width: 72.533px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
