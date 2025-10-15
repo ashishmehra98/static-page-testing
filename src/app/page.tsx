@@ -9,6 +9,8 @@ import UserReviews from "./components/UserReviews";
 import { IMAGES } from "./constants/images";
 import PestControlServices from "./components/PestControlServices";
 import HowWeWork from "./components/HowWeWork";
+import HeaderSection from "./components/HeaderSection";
+import PesticideInfoSlides from "./components/PesticideInfoSlides";
 
 export default function Home() {
 	const handlePhoneClick = () => {
@@ -48,6 +50,10 @@ export default function Home() {
 			<UserReviews />
 			<PestControlServices />
 			<HowWeWork />
+			<div className="py-[120px] flex flex-col gap-[60px] pl-[5%]">
+				<HeaderSection title="What pest do you want to " highlightedText="get rid of ?" align="start" className="w-[500px]" />
+				<PesticideInfoSlides />
+			</div>
 		</Container>
 	);
 }

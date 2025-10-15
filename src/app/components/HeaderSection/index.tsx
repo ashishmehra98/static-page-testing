@@ -29,7 +29,7 @@ import styles from "./HeaderSection.module.css";
 export interface HeaderSectionProps {
 	title: string;
 	highlightedText: string;
-	subtitle: string;
+	subtitle?: string;
 	titleColor?: string;
 	highlightedTextColor?: string;
 	subtitleColor?: string;
@@ -56,9 +56,11 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
 					{highlightedText}
 				</span>
 			</h2>
-			<p className={styles.subtitle} style={{ color: subtitleColor }}>
-				{subtitle}
-			</p>
+			{subtitle ? (
+				<p className={styles.subtitle} style={{ color: subtitleColor }}>
+					{subtitle}
+				</p>
+			) : null}
 		</div>
 	);
 };

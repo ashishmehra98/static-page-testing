@@ -1,0 +1,81 @@
+.container {
+	background-color: var(--light-gray);
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+	height: 370px;
+	padding: 36px 22px;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.25s ease-in-out;
+	gap: 42px;
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+}
+
+.insectLarge {
+	position: absolute;
+	top: -20;
+	right: -50;
+	opacity: 0;
+}
+
+.name {
+	font-family: var(--font-heading);
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 1.15;
+	color: var(--secondary);
+	letter-spacing: -0.64px;
+	margin-bottom: 12px;
+	margin-top: 42px;
+}
+
+.description {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.41;
+	color: var(--secondary);
+	letter-spacing: -0.32px;
+	width: 262px;
+}
+
+.learnMoreButton {
+	border: none;
+	cursor: pointer;
+	margin-top: 29px;
+}
+
+.learnMoreText {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.41;
+	color: var(--secondary);
+	text-decoration: underline;
+	letter-spacing: -0.4px;
+	white-space: nowrap;
+	transition: color 0.2s ease-in-out;
+}
+
+.learnMoreButton:hover .learnMoreText {
+	color: var(--dark-green);
+}
+
+.selected {
+	background-color: var(--secondary);
+	transform: scale(1.1);
+}
+
+.selected * {
+	color: var(--white);
+}
+
+.selected .insectLarge {
+	opacity: 1;
+}
