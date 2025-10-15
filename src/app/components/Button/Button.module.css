@@ -37,6 +37,11 @@
 	color: var(--white);
 }
 
+.light {
+	background-color: var(--white);
+	color: var(--secondary);
+}
+
 /* Loading spinner */
 .spinner {
 	width: 20px;

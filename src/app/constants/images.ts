@@ -1,6 +1,8 @@
 export const IMAGES = {
 	HEADER_BG: "/images/home-bg.jpg",
 	PEST_CONTROL_SERVICES: "/images/pest-service-thumbnail.jpg",
+	PATTERN_BG: "/images/pattern-bg.png",
+	INSECTION_SERVICE: "/images/inspection.jpg",
 };
 
 export type ImageName = keyof typeof IMAGES;

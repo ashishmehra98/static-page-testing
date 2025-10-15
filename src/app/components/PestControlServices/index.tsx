@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { IMAGES } from "../../constants/images";
 import Accordion, { AccordionItem } from "../Accordion";
+import HeaderSection from "../HeaderSection";
 import styles from "./PestControlServices.module.css";
 
 const PestControlServices: React.FC = () => {
@@ -67,14 +68,13 @@ const PestControlServices: React.FC = () => {
 		<section className={styles.section}>
 			<div className={styles.container}>
 				{/* Header Section */}
-				<div className={styles.headerSection}>
-					<h2 className={styles.mainTitle}>
-						Our <span className={styles.highlight}>Pest Control</span> Services
-					</h2>
-					<p className={styles.subtitle}>
-						Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment.
-					</p>
-				</div>
+				<HeaderSection
+					title="Our"
+					highlightedText="Pest Control"
+					subtitle="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
+					align="center"
+					className="mb-[60px]"
+				/>
 
 				{/* Content Section */}
 				<div className={styles.contentSection}>

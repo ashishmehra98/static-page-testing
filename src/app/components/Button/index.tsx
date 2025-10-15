@@ -6,7 +6,7 @@ import { IconName, ICONS } from "../../constants/icons";
 import styles from "./Button.module.css";
 
 interface ButtonProps {
-	variant: "primary" | "secondary";
+	variant: "primary" | "secondary" | "light";
 	title: string;
 	onPress: () => void;
 	disabled?: boolean;

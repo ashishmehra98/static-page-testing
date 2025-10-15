@@ -1,0 +1,55 @@
+/* Info component container */
+.infoContainer {
+	display: flex;
+	gap: 41px;
+	align-items: flex-end;
+	width: 100%;
+}
+
+/* Icon container with circular background */
+.iconContainer {
+	position: relative;
+	width: 78px;
+	height: 78px;
+	background-color: var(--light-green);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	flex-shrink: 0;
+}
+
+/* Content container */
+.contentContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	align-items: flex-start;
+	flex: 1;
+	max-width: 456px;
+}
+
+/* Title styling */
+.title {
+	font-family: var(--font-primary);
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 1.15;
+	letter-spacing: -0.64px;
+	color: var(--white);
+	margin: 0;
+	width: 100%;
+}
+
+/* Description styling */
+.description {
+	font-family: var(--font-secondary);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.41;
+	letter-spacing: -0.4px;
+	color: var(--white);
+	margin: 0;
+	width: 100%;
+}

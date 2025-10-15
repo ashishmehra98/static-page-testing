@@ -8,6 +8,7 @@ import ContactForm, { ContactFormData } from "./components/ContactForm";
 import UserReviews from "./components/UserReviews";
 import { IMAGES } from "./constants/images";
 import PestControlServices from "./components/PestControlServices";
+import HowWeWork from "./components/HowWeWork";
 
 export default function Home() {
 	const handlePhoneClick = () => {
@@ -46,6 +47,7 @@ export default function Home() {
 			</Hero>
 			<UserReviews />
 			<PestControlServices />
+			<HowWeWork />
 		</Container>
 	);
 }
