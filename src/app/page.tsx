@@ -11,6 +11,7 @@ import PestControlServices from "./components/PestControlServices";
 import HowWeWork from "./components/HowWeWork";
 import HeaderSection from "./components/HeaderSection";
 import PesticideInfoSlides from "./components/PesticideInfoSlides";
+import BookConsultation from "./components/BookConsultation";
 
 export default function Home() {
 	const handlePhoneClick = () => {
@@ -54,6 +55,7 @@ export default function Home() {
 				<HeaderSection title="What pest do you want to " highlightedText="get rid of ?" align="start" className="w-[500px]" />
 				<PesticideInfoSlides />
 			</div>
+			<BookConsultation />
 		</Container>
 	);
 }

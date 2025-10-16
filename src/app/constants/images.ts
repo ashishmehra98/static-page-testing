@@ -3,6 +3,7 @@ export const IMAGES = {
 	PEST_CONTROL_SERVICES: "/images/pest-service-thumbnail.jpg",
 	PATTERN_BG: "/images/pattern-bg.png",
 	INSECTION_SERVICE: "/images/inspection.jpg",
+	WORKER: "/images/worker.png",
 };
 
 export type ImageName = keyof typeof IMAGES;

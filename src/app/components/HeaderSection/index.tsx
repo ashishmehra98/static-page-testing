@@ -29,23 +29,27 @@ import styles from "./HeaderSection.module.css";
 export interface HeaderSectionProps {
 	title: string;
 	highlightedText: string;
+	extraTitle?: string;
 	subtitle?: string;
 	titleColor?: string;
 	highlightedTextColor?: string;
 	subtitleColor?: string;
 	align: "center" | "start";
 	className?: string;
+	subtitleClassName?: string;
 }
 
 const HeaderSection: React.FC<HeaderSectionProps> = ({
 	title,
 	highlightedText,
 	subtitle,
+	extraTitle,
 	titleColor,
 	highlightedTextColor,
 	subtitleColor,
 	align,
 	className,
+	subtitleClassName,
 }) => {
 	return (
 		<div
@@ -55,9 +59,10 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
 				<span className={styles.highlight} style={{ color: highlightedTextColor }}>
 					{highlightedText}
 				</span>
+				{extraTitle}
 			</h2>
 			{subtitle ? (
-				<p className={styles.subtitle} style={{ color: subtitleColor }}>
+				<p className={`${styles.subtitle} ${subtitleClassName}`} style={{ color: subtitleColor }}>
 					{subtitle}
 				</p>
 			) : null}

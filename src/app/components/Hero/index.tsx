@@ -5,9 +5,10 @@ interface HeroProps {
 	bgImage: string;
 	hideGradient?: boolean;
 	className?: string;
+	contentViewClassName?: string;
 }
 
-const Hero = ({ children, bgImage, hideGradient, className }: HeroProps) => {
+const Hero = ({ children, bgImage, hideGradient, className, contentViewClassName }: HeroProps) => {
 	return (
 		<section
 			className={`w-full min-h-[652px] bg-cover bg-center bg-no-repeat flex items-center justify-center ${className}`}
@@ -17,7 +18,7 @@ const Hero = ({ children, bgImage, hideGradient, className }: HeroProps) => {
 					: `linear-gradient(278.35deg, rgba(19, 64, 33, 0) 38.67%, var(--secondary) 91.02%), url(${bgImage})`,
 				position: "relative",
 			}}>
-			<div className="w-[90%]">{children}</div>
+			<div className={`w-[90%] ${contentViewClassName}`}>{children}</div>
 		</section>
 	);
 };
