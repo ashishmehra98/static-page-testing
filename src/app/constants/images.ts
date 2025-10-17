@@ -4,6 +4,7 @@ export const IMAGES = {
 	PATTERN_BG: "/images/pattern-bg.png",
 	INSECTION_SERVICE: "/images/inspection.jpg",
 	WORKER: "/images/worker.png",
+	PEST_WORKER: "/images/pest-controller.png",
 };
 
 export type ImageName = keyof typeof IMAGES;

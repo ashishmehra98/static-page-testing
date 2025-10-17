@@ -12,6 +12,9 @@ import HowWeWork from "./components/HowWeWork";
 import HeaderSection from "./components/HeaderSection";
 import PesticideInfoSlides from "./components/PesticideInfoSlides";
 import BookConsultation from "./components/BookConsultation";
+import BestWeOffer from "./components/BestWeOffer";
+import FAQ from "./components/FAQ";
+import { FAQ_DATA } from "./constants/faq";
 
 export default function Home() {
 	const handlePhoneClick = () => {
@@ -56,6 +59,8 @@ export default function Home() {
 				<PesticideInfoSlides />
 			</div>
 			<BookConsultation />
+			<BestWeOffer />
+			<FAQ items={FAQ_DATA} />
 		</Container>
 	);
 }

@@ -12,13 +12,20 @@ export interface AccordionItem {
 }
 
 interface AccordionProps {
+	variant?: "primary" | "secondary";
 	items: AccordionItem[];
 	allowMultiple?: boolean;
 	defaultExpanded?: string[];
 	className?: string;
 }
 
-const Accordion: React.FC<AccordionProps> = ({ items, allowMultiple = true, defaultExpanded = [], className = "" }) => {
+const Accordion: React.FC<AccordionProps> = ({
+	variant = "primary",
+	items,
+	allowMultiple = true,
+	defaultExpanded = [],
+	className = "",
+}) => {
 	const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set(defaultExpanded));
 
 	const toggleItem = (itemId: string) => {
@@ -42,13 +49,15 @@ const Accordion: React.FC<AccordionProps> = ({ items, allowMultiple = true, defa
 			{items.map((item, index) => {
 				const isExpanded = expandedItems.has(item.id);
 				return (
-					<div key={item.id} className={styles.accordionItem}>
-						<div className={styles.divider} />
+					<div key={item.id} className={`${styles.accordionItem} ${variant === "secondary" ? styles.accordionSecondary : ""}`}>
+						{variant === "primary" && <div className={styles.divider} />}
 						<div className={styles.itemHeader} onClick={() => toggleItem(item.id)}>
-							<h3 className={`${styles.itemTitle} ${isExpanded ? styles.activeTitle : ""}`}>{item.title}</h3>
+							<h3 className={`${styles.itemTitle} ${isExpanded && variant === "primary" ? styles.activeTitle : ""}`}>
+								{item.title}
+							</h3>
 							<div className={`${styles.chevron} ${isExpanded ? styles.chevronRotated : ""}`}>
 								<Image
-									src={isExpanded ? ICONS.minus : ICONS.plus}
+									src={isExpanded ? ICONS["minus-primary"] : ICONS.plus}
 									alt={isExpanded ? "collapse" : "expand"}
 									width={33}
 									height={33}
@@ -63,7 +72,7 @@ const Accordion: React.FC<AccordionProps> = ({ items, allowMultiple = true, defa
 					</div>
 				);
 			})}
-			<div className={styles.divider} />
+			{variant === "primary" && <div className={styles.divider} />}
 		</div>
 	);
 };

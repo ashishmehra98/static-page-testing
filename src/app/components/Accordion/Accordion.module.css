@@ -8,6 +8,12 @@
 	width: 100%;
 }
 
+.accordionSecondary {
+	background-color: var(--light-gray);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
 .itemHeader {
 	display: flex;
 	align-items: center;
@@ -15,6 +21,11 @@
 	height: 74px;
 	cursor: pointer;
 	transition: all 0.3s ease;
+}
+
+.accordionSecondary .itemHeader {
+	background-color: var(--light-gray);
+	padding: 20px 40px;
 }
 
 .itemHeader:hover {
@@ -56,6 +67,10 @@
 .itemContent {
 	padding: 0 0 20px 0;
 	animation: slideDown 0.3s ease-out;
+}
+
+.accordionSecondary .itemContent {
+	padding: 20px 40px;
 }
 
 .itemDescription {

@@ -6,6 +6,7 @@ export const ICONS = {
 	google: "/icons/google.svg",
 	plus: "/icons/plus.svg",
 	minus: "/icons/minus.svg",
+	"minus-primary": "/icons/minus-primary.svg",
 	support: "/icons/support.svg",
 	document: "/icons/document.svg",
 	stars: "/icons/stars.svg",
