@@ -14,6 +14,7 @@ import PesticideInfoSlides from "./components/PesticideInfoSlides";
 import BookConsultation from "./components/BookConsultation";
 import BestWeOffer from "./components/BestWeOffer";
 import FAQ from "./components/FAQ";
+import Blogs from "./components/Blogs";
 import { FAQ_DATA } from "./constants/faq";
 
 export default function Home() {
@@ -31,6 +32,56 @@ export default function Home() {
 		// Handle form submission
 		console.log("Form submitted:", formData);
 	};
+
+	const handleSeeMoreBlogs = () => {
+		// Handle see more blogs click
+		console.log("See more blogs clicked");
+	};
+
+	const handleLearnMore = (blogId: string) => {
+		// Handle learn more click
+		console.log("Learn more clicked for blog:", blogId);
+	};
+
+	// Sample blog data
+	const blogData = [
+		{
+			id: "1",
+			image: "/images/pest-service-thumbnail.jpg",
+			date: "01/05/2025",
+			title: "10 Signs You Might Have a Termite Problem",
+		},
+		{
+			id: "2",
+			image: "/images/pest-service-thumbnail.jpg",
+			date: "28/04/2025",
+			title: "How to Prevent Cockroach Infestations",
+		},
+		{
+			id: "3",
+			image: "/images/pest-service-thumbnail.jpg",
+			date: "25/04/2025",
+			title: "Safe Pest Control for Families with Children",
+		},
+		{
+			id: "4",
+			image: "/images/pest-service-thumbnail.jpg",
+			date: "22/04/2025",
+			title: "Common Spider Species in Sydney",
+		},
+		{
+			id: "5",
+			image: "/images/pest-service-thumbnail.jpg",
+			date: "19/04/2025",
+			title: "Rodent Control: Signs and Solutions",
+		},
+		{
+			id: "6",
+			image: "/images/pest-service-thumbnail.jpg",
+			date: "16/04/2025",
+			title: "Eco-Friendly Pest Control Methods",
+		},
+	];
 
 	return (
 		<Container>
@@ -61,6 +112,7 @@ export default function Home() {
 			<BookConsultation />
 			<BestWeOffer />
 			<FAQ items={FAQ_DATA} />
+			<Blogs blogs={blogData} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
 		</Container>
 	);
 }

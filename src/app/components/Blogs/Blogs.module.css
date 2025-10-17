@@ -1,0 +1,96 @@
+/* Blogs container */
+.blogsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	align-items: flex-start;
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 120px;
+}
+
+/* Header container with title and button */
+.headerContainer {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+}
+
+/* Header section styling */
+.headerSection {
+	width: 660px;
+}
+
+.blogsView {
+	position: relative;
+	width: 100%;
+}
+
+/* Cards container with horizontal scroll */
+.cardsContainer {
+	height: 353px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+	width: 100%;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scroll-behavior: smooth;
+}
+
+/* Ensure gradients stay fixed at edges of container */
+.cardsContainer > .gradientLeft,
+.cardsContainer > .gradientRight {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.cardsContainer::-webkit-scrollbar {
+	display: none; /* WebKit */
+}
+
+/* Cards wrapper for horizontal scrolling */
+.cardsWrapper {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	height: 100%;
+	width: max-content;
+	padding: 0 20px;
+}
+
+/* Individual blog card styling */
+.cardsWrapper > * {
+	flex-shrink: 0;
+	width: 306px;
+	height: 353px;
+}
+
+/* Gradient overlays for smooth edges - fixed at container edges */
+.gradientLeft {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 91px;
+	height: 100%;
+	background: linear-gradient(to right, var(--color-white), rgba(255, 255, 255, 0));
+	z-index: 10;
+	pointer-events: none;
+}
+
+.gradientRight {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 91px;
+	height: 100%;
+	background: linear-gradient(to left, var(--color-white), rgba(255, 255, 255, 0));
+	z-index: 10;
+	pointer-events: none;
+}
