@@ -68,3 +68,25 @@
 		transform: rotate(360deg);
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.button {
+		min-width: 120px;
+		height: 48px;
+		font-size: 14px;
+		padding: 0 25px;
+	}
+	.phone-icon {
+		width: 12px !important;
+		height: 12px !important;
+	}
+
+	.email-icon {
+		width: 17px !important;
+		height: 17px !important;
+	}
+
+	.content {
+		gap: 7px !important;
+	}
+}

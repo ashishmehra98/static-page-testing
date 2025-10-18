@@ -62,3 +62,32 @@
 	gap: 16px;
 	align-items: flex-start;
 }
+
+.menuBtn {
+	display: none !important;
+}
+
+/* Hide navigation and buttons container below large viewport */
+@media (max-width: 1280px) {
+	.header {
+		height: 86px;
+	}
+
+	.logoContainer {
+		height: 37px;
+		width: 115px;
+	}
+
+	.navigation {
+		display: none;
+	}
+
+	.buttonsContainer {
+		display: none;
+		gap: 11px;
+	}
+
+	.menuBtn {
+		display: flex !important;
+	}
+}

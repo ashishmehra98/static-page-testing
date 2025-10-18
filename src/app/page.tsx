@@ -2,9 +2,7 @@
 
 import Container from "./components/Container";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import HeroContent from "./components/HeroContent";
-import ContactForm, { ContactFormData } from "./components/ContactForm";
+import HomeJumbotron from "./components/HomeJumbotron";
 import UserReviews from "./components/UserReviews";
 import { IMAGES } from "./constants/images";
 import PestControlServices from "./components/PestControlServices";
@@ -17,23 +15,11 @@ import FAQ from "./components/FAQ";
 import Blogs from "./components/Blogs";
 import Footer from "./components/Footer";
 import { FAQ_DATA } from "./constants/faq";
+import Hero from "./components/Hero";
+import HeroContent from "./components/HeroContent";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
-	const handlePhoneClick = () => {
-		// Handle phone click
-		console.log("Phone clicked");
-	};
-
-	const handleContactClick = () => {
-		// Handle contact click
-		console.log("Contact clicked");
-	};
-
-	const handleFormSubmit = (formData: ContactFormData) => {
-		// Handle form submission
-		console.log("Form submitted:", formData);
-	};
-
 	const handleSeeMoreBlogs = () => {
 		// Handle see more blogs click
 		console.log("See more blogs clicked");
@@ -88,22 +74,16 @@ export default function Home() {
 		<Container>
 			<Header />
 			<div className="flex flex-col gap-[120px]">
-				<Hero bgImage={IMAGES.HEADER_BG}>
-					<HeroContent
-						tag="Protect Your Home Today"
-						heading="Safe and Effective "
-						highlightedText="Pest Control "
-						subHeading="Around Sydney"
-						description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
-						phoneNumber="0432 227 227"
-						contactButtonText="Contact us"
-						onPhoneClick={handlePhoneClick}
-						onContactClick={handleContactClick}
-					/>
-					<div className="absolute right-[5%] top-[74px]">
-						<ContactForm onSubmit={handleFormSubmit} />
-					</div>
-				</Hero>
+				<HomeJumbotron
+					bgImage={IMAGES.HEADER_BG}
+					tag="Protect Your Home Today"
+					heading="Safe and Effective "
+					highlightedText="Pest Control "
+					subHeading="Around Sydney"
+					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
+					phoneNumber="0432 227 227"
+					contactButtonText="Contact us"
+				/>
 				<UserReviews className="pt-[80px]" />
 				<PestControlServices />
 				<HowWeWork />
@@ -125,7 +105,7 @@ export default function Home() {
 						descriptionClassName="!w-[60%]"
 					/>
 					<div className="absolute right-[5%] top-[74px]">
-						<ContactForm onSubmit={handleFormSubmit} />
+						<ContactForm onSubmit={() => {}} />
 					</div>
 				</Hero>
 				<Footer className="py-[80px]" />

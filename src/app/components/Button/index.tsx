@@ -51,8 +51,8 @@ const Button: React.FC<ButtonProps> = ({ variant, title, onPress, disabled = fal
 					aria-label="Loading"
 				/>
 			) : (
-				<div className="flex flex-row items-center gap-[10px]">
-					{icon && <Image src={ICONS[icon]} alt="Button icon" width={18} height={18} />}
+				<div className={`flex flex-row items-center gap-[10px] ${styles.content}`}>
+					{icon && <Image src={ICONS[icon]} alt="Button icon" width={18} height={18} className={styles[`${icon}-icon`]} />}
 					{title}
 				</div>
 			)}

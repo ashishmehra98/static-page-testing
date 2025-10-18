@@ -17,6 +17,13 @@
 	--font-heading:
 		"ES Rebond Grotesque TRIAL", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	--font-body: var(--font-primary);
+
+	/* Viewport Variables */
+	--viewport-mobile: 320px;
+	--viewport-tablet: 768px;
+	--viewport-desktop: 1024px;
+	--viewport-large: 1280px;
+	--viewport-xl: 1536px;
 }
 
 @theme inline {

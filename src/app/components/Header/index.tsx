@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../Button";
 import { ICONS } from "../../constants/icons";
+import MenuButton from "../MenuButton";
 import styles from "./Header.module.css";
 
 const Header: React.FC = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 	const handlePhoneClick = () => {
 		// Handle phone button click
 		console.log("Phone button clicked");
@@ -20,7 +23,7 @@ const Header: React.FC = () => {
 			<div className={styles.nav}>
 				<div className={styles.logoAndLinks}>
 					<div className={styles.logoContainer}>
-						<Image src={ICONS.logo} alt="Ecovia Logo" width={202} height={65} className={styles.logo} />
+						<Image src={ICONS.logo} alt="Ecovia Logo" fill className={styles.logo} />
 					</div>
 					<nav className={styles.navigation}>
 						<a href="#about" className={styles.navLink}>
@@ -38,6 +41,7 @@ const Header: React.FC = () => {
 					<Button variant="primary" title="0432 227 227" onPress={handlePhoneClick} icon="phone" />
 					<Button variant="secondary" title="Contact us" onPress={handleContactClick} icon="email" />
 				</div>
+				<MenuButton onToggle={setIsMenuOpen} isOpen={isMenuOpen} className={styles.menuBtn} />
 			</div>
 		</header>
 	);

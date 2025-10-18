@@ -1,0 +1,69 @@
+"use client";
+
+import React from "react";
+import Hero from "../Hero";
+import HeroContent from "../HeroContent";
+import ContactForm, { ContactFormData } from "../ContactForm";
+import styles from "./HomeJumbotron.module.css";
+
+interface HomeJumbotronProps {
+	bgImage: string;
+	tag: string;
+	heading: string;
+	highlightedText: string;
+	subHeading: string;
+	description: string;
+	phoneNumber: string;
+	contactButtonText: string;
+	className?: string;
+}
+
+const HomeJumbotron: React.FC<HomeJumbotronProps> = ({
+	bgImage,
+	tag,
+	heading,
+	highlightedText,
+	subHeading,
+	description,
+	phoneNumber,
+	contactButtonText,
+	className,
+}) => {
+	const handlePhoneClick = () => {
+		// Handle phone click
+		console.log("Phone clicked");
+	};
+
+	const handleContactClick = () => {
+		// Handle contact click
+		console.log("Contact clicked");
+	};
+
+	const handleFormSubmit = (formData: ContactFormData) => {
+		// Handle form submission
+		console.log("Form submitted:", formData);
+	};
+
+	return (
+		<div className={`${styles.jumbotron} ${className ?? ""}`}>
+			<Hero bgImage={bgImage}>
+				<HeroContent
+					tag={tag}
+					heading={heading}
+					highlightedText={highlightedText}
+					subHeading={subHeading}
+					description={description}
+					phoneNumber={phoneNumber}
+					contactButtonText={contactButtonText}
+					onPhoneClick={handlePhoneClick}
+					onContactClick={handleContactClick}
+				/>
+				<div className={styles.contactFormContainer}>
+					<ContactForm onSubmit={handleFormSubmit} />
+				</div>
+			</Hero>
+		</div>
+	);
+};
+
+export default HomeJumbotron;
