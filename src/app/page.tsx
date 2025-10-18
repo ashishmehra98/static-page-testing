@@ -15,6 +15,7 @@ import BookConsultation from "./components/BookConsultation";
 import BestWeOffer from "./components/BestWeOffer";
 import FAQ from "./components/FAQ";
 import Blogs from "./components/Blogs";
+import Footer from "./components/Footer";
 import { FAQ_DATA } from "./constants/faq";
 
 export default function Home() {
@@ -113,6 +114,20 @@ export default function Home() {
 			<BestWeOffer />
 			<FAQ items={FAQ_DATA} />
 			<Blogs blogs={blogData} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
+			<Hero bgImage={IMAGES.HEADER_BG}>
+				<HeroContent
+					heading="Book your quick & free "
+					highlightedText="consultation "
+					subHeading="today"
+					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
+					contentClassName="!w-[55%]"
+					descriptionClassName="!w-[60%]"
+				/>
+				<div className="absolute right-[5%] top-[74px]">
+					<ContactForm onSubmit={handleFormSubmit} />
+				</div>
+			</Hero>
+			<Footer />
 		</Container>
 	);
 }

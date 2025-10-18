@@ -15,6 +15,8 @@ interface HeroContentProps {
 	hideButtonSection?: boolean;
 	onPhoneClick?: () => void;
 	onContactClick?: () => void;
+	contentClassName?: string;
+	descriptionClassName?: string;
 }
 
 const HeroContent: React.FC<HeroContentProps> = ({
@@ -28,9 +30,11 @@ const HeroContent: React.FC<HeroContentProps> = ({
 	hideButtonSection,
 	onPhoneClick,
 	onContactClick,
+	contentClassName,
+	descriptionClassName,
 }) => {
 	return (
-		<div className={styles.content}>
+		<div className={`${styles.content} ${contentClassName ?? ""}`}>
 			<div className={styles.textSection}>
 				<div className={styles.tagAndHeading}>
 					{tag && <p className={styles.tag}>{tag}</p>}
@@ -42,7 +46,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
 						</h1>
 					)}
 				</div>
-				{description && <p className={styles.description}>{description}</p>}
+				{description && <p className={`${styles.description} ${descriptionClassName ?? ""}`}>{description}</p>}
 			</div>
 			{!hideButtonSection && (
 				<div className={styles.buttonSection}>

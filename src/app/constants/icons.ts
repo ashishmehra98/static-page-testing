@@ -4,6 +4,8 @@ export const ICONS = {
 	"email-secondary": "/icons/email-secondary.svg",
 	logo: "icons/ecovia-logo.svg",
 	google: "/icons/google.svg",
+	facebook: "/icons/facebook.svg",
+	instagram: "/icons/instagram.svg",
 	plus: "/icons/plus.svg",
 	minus: "/icons/minus.svg",
 	"minus-primary": "/icons/minus-primary.svg",

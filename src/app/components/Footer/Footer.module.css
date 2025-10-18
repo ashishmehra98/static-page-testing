@@ -1,0 +1,177 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	align-items: center;
+	width: 90%;
+	margin: 200px auto 100px;
+	background-color: var(--white);
+}
+
+.content {
+	display: flex;
+	gap: 368px;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.logoContainer {
+	height: 65px;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 65px;
+	width: auto;
+	object-fit: contain;
+}
+
+.navigation {
+	display: flex;
+	gap: 28px;
+	align-items: center;
+}
+
+.navLink {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.41;
+	color: var(--secondary);
+	text-transform: capitalize;
+	letter-spacing: -0.4px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.navLink:hover {
+	color: var(--dark-green);
+	text-decoration: underline;
+}
+
+.socialContainer {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	height: 21px;
+}
+
+.socialButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.socialButton:hover {
+	transform: scale(1.1);
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: var(--gray);
+}
+
+.footerMeta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.copyright {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.5;
+	color: var(--secondary);
+	margin: 0;
+}
+
+.policyLinks {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.policyLink {
+	font-family: var(--font-primary);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.5;
+	color: var(--secondary);
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.policyLink:hover {
+	color: var(--dark-green);
+	text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+	.content {
+		gap: 200px;
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 30px 20px;
+		gap: 24px;
+	}
+
+	.content {
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+		text-align: center;
+	}
+
+	.navigation {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.footerMeta {
+		flex-direction: column;
+		gap: 16px;
+		text-align: center;
+	}
+
+	.policyLinks {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.navLink,
+	.copyright,
+	.policyLink {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer {
+		padding: 20px 16px;
+	}
+
+	.navLink,
+	.copyright,
+	.policyLink {
+		font-size: 16px;
+	}
+}
