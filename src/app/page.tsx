@@ -87,47 +87,49 @@ export default function Home() {
 	return (
 		<Container>
 			<Header />
-			<Hero bgImage={IMAGES.HEADER_BG}>
-				<HeroContent
-					tag="Protect Your Home Today"
-					heading="Safe and Effective "
-					highlightedText="Pest Control "
-					subHeading="Around Sydney"
-					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
-					phoneNumber="0432 227 227"
-					contactButtonText="Contact us"
-					onPhoneClick={handlePhoneClick}
-					onContactClick={handleContactClick}
-				/>
-				<div className="absolute right-[5%] top-[74px]">
-					<ContactForm onSubmit={handleFormSubmit} />
+			<div className="flex flex-col gap-[120px]">
+				<Hero bgImage={IMAGES.HEADER_BG}>
+					<HeroContent
+						tag="Protect Your Home Today"
+						heading="Safe and Effective "
+						highlightedText="Pest Control "
+						subHeading="Around Sydney"
+						description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
+						phoneNumber="0432 227 227"
+						contactButtonText="Contact us"
+						onPhoneClick={handlePhoneClick}
+						onContactClick={handleContactClick}
+					/>
+					<div className="absolute right-[5%] top-[74px]">
+						<ContactForm onSubmit={handleFormSubmit} />
+					</div>
+				</Hero>
+				<UserReviews className="pt-[80px]" />
+				<PestControlServices />
+				<HowWeWork />
+				<div className="flex flex-col gap-[60px] pl-[5%]">
+					<HeaderSection title="What pest do you want to " highlightedText="get rid of ?" align="start" className="w-[500px]" />
+					<PesticideInfoSlides />
 				</div>
-			</Hero>
-			<UserReviews />
-			<PestControlServices />
-			<HowWeWork />
-			<div className="py-[120px] flex flex-col gap-[60px] pl-[5%]">
-				<HeaderSection title="What pest do you want to " highlightedText="get rid of ?" align="start" className="w-[500px]" />
-				<PesticideInfoSlides />
+				<BookConsultation />
+				<BestWeOffer />
+				<FAQ items={FAQ_DATA} />
+				<Blogs blogs={blogData} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
+				<Hero bgImage={IMAGES.HEADER_BG}>
+					<HeroContent
+						heading="Book your quick & free "
+						highlightedText="consultation "
+						subHeading="today"
+						description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
+						contentClassName="!w-[55%]"
+						descriptionClassName="!w-[60%]"
+					/>
+					<div className="absolute right-[5%] top-[74px]">
+						<ContactForm onSubmit={handleFormSubmit} />
+					</div>
+				</Hero>
+				<Footer className="py-[80px]" />
 			</div>
-			<BookConsultation />
-			<BestWeOffer />
-			<FAQ items={FAQ_DATA} />
-			<Blogs blogs={blogData} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
-			<Hero bgImage={IMAGES.HEADER_BG}>
-				<HeroContent
-					heading="Book your quick & free "
-					highlightedText="consultation "
-					subHeading="today"
-					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
-					contentClassName="!w-[55%]"
-					descriptionClassName="!w-[60%]"
-				/>
-				<div className="absolute right-[5%] top-[74px]">
-					<ContactForm onSubmit={handleFormSubmit} />
-				</div>
-			</Hero>
-			<Footer />
 		</Container>
 	);
 }

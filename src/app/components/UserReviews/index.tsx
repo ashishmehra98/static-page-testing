@@ -18,7 +18,7 @@ interface ReviewData {
 	designation: string;
 }
 
-const UserReviews: React.FC = () => {
+const UserReviews: React.FC<{ className?: string }> = ({ className }) => {
 	// Sample review data - 10 different reviews
 	const reviews: ReviewData[] = [
 		{
@@ -105,7 +105,7 @@ const UserReviews: React.FC = () => {
 	];
 
 	return (
-		<section className={styles.userReviewsSection}>
+		<section className={`${styles.userReviewsSection} ${className}`}>
 			<div className={styles.container}>
 				<div className={styles.carouselWrapper}>
 					<Swiper
