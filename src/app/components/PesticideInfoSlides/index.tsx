@@ -2,8 +2,9 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import PesticideInfo from "../PesticideInfo";
+import useIsMobile from "../../../hooks/useIsMobile";
 import styles from "./PesticideInfoSlides.module.css";
 
 // Import Swiper styles
@@ -59,6 +60,7 @@ const pesticideData: PesticideData[] = [
 const PesticideInfoSlides: React.FC = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const swiperRef = useRef<SwiperClass | null>(null);
+	const isMobile = useIsMobile({ breakpoint: 768 });
 
 	const handleSlideChange = (swiper: SwiperClass) => {
 		setActiveIndex(swiper.activeIndex);
@@ -93,14 +95,36 @@ const PesticideInfoSlides: React.FC = () => {
 		}
 	}, [activeIndex]);
 
+	// Handle autoplay based on screen size
+	useEffect(() => {
+		if (swiperRef.current) {
+			if (isMobile) {
+				// Start autoplay on mobile
+				swiperRef.current.autoplay?.start();
+			} else {
+				// Stop autoplay on desktop
+				swiperRef.current.autoplay?.stop();
+			}
+		}
+	}, [isMobile]);
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.sliderWrapper}>
 				<Swiper
-					modules={[Navigation, Pagination]}
+					key={isMobile ? "mobile" : "desktop"}
+					modules={[Navigation, Pagination, Autoplay]}
 					spaceBetween={24}
 					slidesPerView="auto"
 					centeredSlides={false}
+					autoplay={
+						isMobile
+							? {
+								delay: 3000,
+								disableOnInteraction: false,
+							}
+							: false
+					}
 					onSwiper={(swiper) => (swiperRef.current = swiper)}
 					onSlideChange={handleSlideChange}
 					className={styles.swiper}>

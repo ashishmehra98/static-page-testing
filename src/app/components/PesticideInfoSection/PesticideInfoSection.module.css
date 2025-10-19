@@ -1,0 +1,27 @@
+/* PesticideInfoSection styles */
+.pesticideInfoSection {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.headerSection {
+	width: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+	.pesticideInfoSection {
+		width: 100%;
+		overflow: hidden;
+	}
+	.headerSection {
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.headerSection h2 {
+		font-size: 32px;
+	}
+}

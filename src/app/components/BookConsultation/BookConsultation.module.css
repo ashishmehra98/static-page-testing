@@ -1,0 +1,103 @@
+.heroContainer {
+	display: flex;
+	align-self: flex-end;
+}
+
+.container {
+	width: 100%;
+	justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+}
+
+.subTitle {
+	width: 85%;
+}
+
+.leftSection {
+	display: flex;
+	flex-direction: row;
+}
+
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 46px;
+	width: 500px;
+}
+
+.buttonContainer {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+}
+
+.imageContainer {
+	width: 492px;
+	height: 508px;
+	position: relative;
+}
+
+.ratingCardContainer .buttonContainer {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.heroContainer {
+		align-self: center;
+	}
+
+	.container {
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.subTitle {
+		width: 100%;
+	}
+
+	.contentWrapper .buttonContainer {
+		display: none;
+	}
+
+	.ratingCardContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.ratingCardContainer > div:first-child {
+		width: 100%;
+		padding: 27px;
+	}
+
+	.ratingCardContainer :global(.user-image) {
+		width: 45px;
+		height: 45px;
+	}
+
+	.ratingCardContainer :global(.username),
+	.ratingCardContainer :global(.review-text) {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.ratingCardContainer :global(.designation),
+	.ratingCardContainer :global(.posted-on-text) {
+		font-size: 13.6px;
+		line-height: 17px;
+	}
+
+	.ratingCardContainer :global(.google-logo) {
+		width: 72px;
+		height: 23px;
+	}
+
+	.ratingCardContainer .buttonContainer {
+		display: block;
+	}
+
+	.imageContainer {
+		display: none;
+	}
+}

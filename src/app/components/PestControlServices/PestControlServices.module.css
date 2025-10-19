@@ -7,6 +7,9 @@
 .container {
 	width: 90%;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
 }
 
 /* Content Section */
@@ -38,10 +41,15 @@
 .servicesSection {
 	flex: 1;
 	margin-top: 15px;
+	width: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+	.container {
+		gap: 30px;
+	}
+
 	.contentSection {
 		flex-direction: column;
 		gap: 40px;
@@ -53,26 +61,6 @@
 	}
 
 	.imageContainer {
-		height: 400px;
-	}
-
-	.servicesSection {
-		max-width: 100%;
-	}
-}
-
-@media (max-width: 768px) {
-	.section {
-		padding: 60px 0;
-	}
-
-	.imageContainer {
-		height: 300px;
-	}
-}
-
-@media (max-width: 480px) {
-	.container {
-		padding: 0 16px;
+		height: 216px;
 	}
 }

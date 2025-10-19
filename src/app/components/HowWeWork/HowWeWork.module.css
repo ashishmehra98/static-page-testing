@@ -1,0 +1,88 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: end;
+	margin-bottom: 60px;
+}
+
+.headerSection {
+	margin-bottom: 0;
+}
+
+.buttonGroup {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.contentWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 54px;
+}
+
+.imageContainer {
+	flex: 0 0 50%;
+	height: 438px;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.infoContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 57px;
+	flex: 0 0 50%;
+}
+
+.contentWrapper .buttonGroup {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		margin-bottom: 32px;
+	}
+
+	.headerSection h2 {
+		font-size: 32px;
+	}
+
+	.subTitleSection {
+		width: 90%;
+	}
+
+	.container .buttonGroup {
+		display: none;
+	}
+
+	.contentWrapper {
+		flex-direction: column-reverse;
+		gap: 32px;
+	}
+
+	.contentWrapper .buttonGroup {
+		width: 100%;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.imageContainer {
+		flex: none;
+		width: 100%;
+		height: 300px;
+	}
+
+	.infoContainer {
+		flex: none;
+		width: 100%;
+		gap: 32px;
+	}
+}

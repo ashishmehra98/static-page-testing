@@ -32,6 +32,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 				<div className={styles.logoContainer}>
 					<Image src={ICONS.logo} alt="Ecovia Pest Control Logo" width={202} height={65} className={styles.logo} />
 				</div>
+				<div className={styles.divider} />
 
 				{/* Navigation Links */}
 				<nav className={styles.navigation}>
@@ -44,7 +45,15 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 					<button className={styles.navLink} onClick={() => handleNavigationClick("testimonials")}>
 						Testimonials
 					</button>
+					<button className={styles.policyLink} onClick={() => handlePolicyClick("privacy")}>
+						Privacy Policy
+					</button>
+					<button className={styles.policyLink} onClick={() => handlePolicyClick("cookies")}>
+						Cookies Settings
+					</button>
 				</nav>
+
+				<div className={styles.divider} />
 
 				{/* Social Media Icons */}
 				<div className={styles.socialContainer}>

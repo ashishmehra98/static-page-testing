@@ -130,3 +130,48 @@
 	align-items: center;
 	justify-content: flex-start;
 }
+
+@media screen and (max-width: 768px) {
+	.ratingCard {
+		width: 244px;
+		padding: 22px;
+		min-height: 270px;
+		gap: 14px;
+	}
+	.star {
+		width: 21px;
+		height: 21px;
+	}
+	.user {
+		gap: 14px;
+	}
+	.userProfile {
+		width: 36px;
+		height: 36px;
+	}
+	.userDetail {
+		gap: 7px;
+	}
+	.username {
+		font-size: 14px;
+		line-height: 18.1px;
+	}
+	.designation {
+		font-size: 10px;
+		line-height: 13.6px;
+	}
+	.reviewText {
+		font-size: 14px;
+		line-height: 18.1px;
+	}
+	.posting {
+		gap: 7px;
+	}
+	.postedOn {
+		font-size: 10px;
+	}
+	.googleLogo {
+		width: 57px;
+		height: 18px;
+	}
+}

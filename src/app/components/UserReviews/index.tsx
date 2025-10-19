@@ -112,6 +112,7 @@ const UserReviews: React.FC<{ className?: string }> = ({ className }) => {
 						modules={[Autoplay]}
 						spaceBetween={24}
 						slidesPerView="auto"
+						centeredSlides={true}
 						autoplay={{
 							delay: 3000,
 							disableOnInteraction: false,

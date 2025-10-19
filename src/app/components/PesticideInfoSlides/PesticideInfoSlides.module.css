@@ -100,15 +100,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-	.slide {
-		width: 280px;
-		height: 380px;
+	.actionView {
+		display: none;
 	}
-}
-
-@media (max-width: 480px) {
-	.slide {
-		width: 260px;
-		height: 360px;
+	.swiper {
+		padding: 0 10%;
 	}
 }

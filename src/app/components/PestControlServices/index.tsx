@@ -73,7 +73,7 @@ const PestControlServices: React.FC = () => {
 					highlightedText="Pest Control"
 					subtitle="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
 					align="center"
-					className="mb-[60px]"
+					className={styles.headerSection}
 				/>
 
 				{/* Content Section */}

@@ -7,17 +7,14 @@ import UserReviews from "./components/UserReviews";
 import { IMAGES } from "./constants/images";
 import PestControlServices from "./components/PestControlServices";
 import HowWeWork from "./components/HowWeWork";
-import HeaderSection from "./components/HeaderSection";
-import PesticideInfoSlides from "./components/PesticideInfoSlides";
+import PesticideInfoSection from "./components/PesticideInfoSection";
 import BookConsultation from "./components/BookConsultation";
 import BestWeOffer from "./components/BestWeOffer";
 import FAQ from "./components/FAQ";
 import Blogs from "./components/Blogs";
 import Footer from "./components/Footer";
 import { FAQ_DATA } from "./constants/faq";
-import Hero from "./components/Hero";
-import HeroContent from "./components/HeroContent";
-import ContactForm from "./components/ContactForm";
+import HomeFooterJumbotron from "./components/HomeFooterJumbotron";
 
 export default function Home() {
 	const handleSeeMoreBlogs = () => {
@@ -73,7 +70,7 @@ export default function Home() {
 	return (
 		<Container>
 			<Header />
-			<div className="flex flex-col gap-[120px]">
+			<div className="flex flex-col gap-[60px] xl:gap-[120px]">
 				<HomeJumbotron
 					bgImage={IMAGES.HEADER_BG}
 					tag="Protect Your Home Today"
@@ -87,27 +84,18 @@ export default function Home() {
 				<UserReviews className="pt-[80px]" />
 				<PestControlServices />
 				<HowWeWork />
-				<div className="flex flex-col gap-[60px] pl-[5%]">
-					<HeaderSection title="What pest do you want to " highlightedText="get rid of ?" align="start" className="w-[500px]" />
-					<PesticideInfoSlides />
-				</div>
+				<PesticideInfoSection />
 				<BookConsultation />
 				<BestWeOffer />
 				<FAQ items={FAQ_DATA} />
 				<Blogs blogs={blogData} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
-				<Hero bgImage={IMAGES.HEADER_BG}>
-					<HeroContent
-						heading="Book your quick & free "
-						highlightedText="consultation "
-						subHeading="today"
-						description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
-						contentClassName="!w-[55%]"
-						descriptionClassName="!w-[60%]"
-					/>
-					<div className="absolute right-[5%] top-[74px]">
-						<ContactForm onSubmit={() => {}} />
-					</div>
-				</Hero>
+				<HomeFooterJumbotron
+					bgImage={IMAGES.FOOTER_BG}
+					heading="Book your quick & free "
+					highlightedText="consultation "
+					subHeading="today"
+					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
+				/>
 				<Footer className="py-[80px]" />
 			</div>
 		</Container>

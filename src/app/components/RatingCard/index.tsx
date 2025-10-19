@@ -44,23 +44,23 @@ const RatingCard: React.FC<RatingCardProps> = ({ ratings, review, userImage, use
 			<div className={styles.rating}>{renderStars()}</div>
 
 			<div className={styles.user}>
-				<div className={styles.userProfile}>
-					<Image src={userImage} alt="User profile" width={45} height={45} className={styles.userImage} />
+				<div className={`${styles.userProfile} user-image`}>
+					<Image src={userImage} alt="User profile" fill className={styles.userImage} />
 				</div>
 				<div className={styles.userDetail}>
-					<p className={styles.username}>{username}</p>
-					<p className={styles.designation}>{designation}</p>
+					<p className={`${styles.username} username`}>{username}</p>
+					<p className={`${styles.designation} designation`}>{designation}</p>
 				</div>
 			</div>
 
 			<div className={styles.review}>
-				<p className={styles.reviewText}>{review}</p>
+				<p className={`${styles.reviewText} review-text`}>{review}</p>
 			</div>
 
 			<div className={styles.posting}>
-				<p className={styles.postedOn}>Posted on</p>
-				<div className={styles.googleLogo}>
-					<Image src={ICONS.google} alt="Google" width={73} height={24} />
+				<p className={`${styles.postedOn} posted-on-text`}>Posted on</p>
+				<div className={`${styles.googleLogo} google-logo`}>
+					<Image src={ICONS.google} alt="Google" fill />
 				</div>
 			</div>
 		</div>

@@ -1,7 +1,16 @@
-/* HomeJumbotron component styles */
+/* HomeFooterJumbotron styles */
 .jumbotron {
-	width: 100%;
 	position: relative;
+	min-height: 652px;
+}
+
+.content,
+.infoGroup {
+	width: 55% !important;
+}
+
+.description {
+	width: 60% !important;
 }
 
 .contactFormContainer {
@@ -10,13 +19,27 @@
 	top: 74px;
 }
 
-/* Responsive adjustments */
+.infoGroup {
+	display: flex;
+	flex-direction: row;
+	gap: 52px;
+}
 
 @media screen and (max-width: 1280px) {
 	.jumbotron > section {
 		height: 690px;
 		align-items: flex-start;
 		padding-top: 46px;
+	}
+
+	.content,
+	.infoGroup,
+	.description {
+		width: 100% !important;
+	}
+
+	.description {
+		font-size: 16px;
 	}
 
 	.contactFormContainer {
@@ -27,6 +50,10 @@
 	.contactFormContainer > div {
 		margin: 0;
 		z-index: 99;
+	}
+
+	.infoGroup {
+		gap: 7px;
 	}
 }
 

@@ -5,6 +5,7 @@ export const IMAGES = {
 	INSECTION_SERVICE: "/images/inspection.jpg",
 	WORKER: "/images/worker.png",
 	PEST_WORKER: "/images/pest-controller.png",
+	FOOTER_BG: "images/home-footer-bg.jpg",
 };
 
 export type ImageName = keyof typeof IMAGES;

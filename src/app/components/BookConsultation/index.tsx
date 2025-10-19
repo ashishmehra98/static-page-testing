@@ -3,15 +3,16 @@ import Hero from "../Hero";
 import HeaderSection from "../HeaderSection";
 import Button from "../Button";
 import RatingCard from "../RatingCard";
+import styles from "./BookConsultation.module.css";
 import { IMAGES } from "@/app/constants/images";
 
 const BookConsultation = () => {
 	return (
-		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} contentViewClassName="flex self-end">
-			<div style={{ width: "100%", justifyContent: "space-between" }} className="flex flex-row">
+		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} contentViewClassName={styles.heroContainer}>
+			<div className={styles.container}>
 				{/* Left Section */}
-				<div className="flex flex-row">
-					<div className="flex flex-col gap-[46px] w-[500px]">
+				<div className={styles.leftSection}>
+					<div className={styles.contentWrapper}>
 						<HeaderSection
 							title="Book your quick & free"
 							titleColor="white"
@@ -21,18 +22,18 @@ const BookConsultation = () => {
 							subtitleColor="white"
 							align="start"
 							className="mb-0"
-							subtitleClassName="w-[85%]"
+							subtitleClassName={styles.subTitle}
 						/>
-						<div className="flex gap-4 items-start">
+						<div className={styles.buttonContainer}>
 							<Button variant="primary" title={" 0432 227 227"} onPress={() => {}} icon={"phone"} />
 						</div>
 					</div>
-					<div style={{ width: 492, height: 508, position: "relative" }}>
+					<div className={styles.imageContainer}>
 						<Image src={IMAGES.WORKER} alt="Worker" fill />
 					</div>
 				</div>
 				{/* Right Section */}
-				<div>
+				<div className={styles.ratingCardContainer}>
 					<RatingCard
 						ratings={4}
 						review={"Great team, professional approach, and always delivers on time. Highly recommend their services."}
@@ -40,6 +41,9 @@ const BookConsultation = () => {
 						username={"Sarah Johnson"}
 						designation={"CEO"}
 					/>
+					<div className={styles.buttonContainer}>
+						<Button variant="primary" title={" 0432 227 227"} onPress={() => {}} icon={"phone"} />
+					</div>
 				</div>
 			</div>
 		</Hero>

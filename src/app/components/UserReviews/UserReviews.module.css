@@ -35,7 +35,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 91px;
+	width: 70px;
 	height: 100%;
 	background: linear-gradient(to right, var(--color-white), rgba(255, 255, 255, 0));
 	z-index: 10;
@@ -46,52 +46,26 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 91px;
+	width: 70px;
 	height: 100%;
 	background: linear-gradient(to left, var(--color-white), rgba(255, 255, 255, 0));
 	z-index: 10;
 	pointer-events: none;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+@media screen and (max-width: 1280px) {
 	.userReviewsSection {
-		padding: 40px 0;
-	}
-
-	.carouselWrapper {
-		height: 280px;
-	}
-
-	.swiper {
-		padding: 0 40px;
-	}
-
-	.slide {
-		width: 280px !important;
-	}
-
-	.gradientLeft,
-	.gradientRight {
-		width: 40px;
+		padding-top: 240px !important;
 	}
 }
 
-@media (max-width: 480px) {
-	.carouselWrapper {
-		height: 250px;
-	}
-
-	.swiper {
-		padding: 0 20px;
-	}
-
+@media screen and (max-width: 768px) {
+	/* Configure slide width same as RatingCard width below 768px  */
 	.slide {
-		width: 250px !important;
+		width: 244px !important;
 	}
 
-	.gradientLeft,
-	.gradientRight {
-		width: 20px;
+	.carouselWrapper {
+		min-height: 244px;
 	}
 }

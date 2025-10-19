@@ -93,3 +93,20 @@
 	z-index: 10;
 	pointer-events: none;
 }
+
+@media screen and (max-width: 768px) {
+	.blogsContainer {
+		gap: 32px;
+		width: 100%;
+	}
+	.headerContainer {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.headerContainer button {
+		display: none;
+	}
+	.headerSection {
+		text-align: center;
+	}
+}

@@ -11,11 +11,7 @@ interface Feature {
 	description: string;
 }
 
-interface BestWeOfferProps {
-	className?: string;
-}
-
-const BestWeOffer: React.FC<BestWeOfferProps> = ({ className }) => {
+const BestWeOffer = () => {
 	const features: Feature[] = [
 		{
 			title: "Quick Response Time",
@@ -36,18 +32,31 @@ const BestWeOffer: React.FC<BestWeOfferProps> = ({ className }) => {
 	];
 
 	return (
-		<section className={`${styles.section} ${className || ""}`}>
+		<section className={styles.section}>
 			<div className={styles.imageContainer}>
-				<Image src={IMAGES.PEST_WORKER} alt="Pest control professional" fill className={styles.image} />
+				<Image
+					src={IMAGES.PEST_WORKER}
+					alt="Pest control professional"
+					fill
+					style={{ objectFit: "cover", objectPosition: "0 50%" }}
+				/>
 			</div>
 			<div className={styles.content}>
 				<HeaderSection
 					title="Benefits "
-					highlightedText="we offer"
+					highlightedText="We Offer"
 					subtitle="Enjoy peace of mind with fast, effective, and hassle-free pest control solutions tailored to your needs."
 					align="start"
-					className="w-[70%]"
+					className={styles.headerSection}
 				/>
+				<div className={styles.imageContainerMobile}>
+					<Image
+						src={IMAGES.PEST_WORKER}
+						alt="Pest control professional"
+						fill
+						style={{ objectFit: "cover", objectPosition: "0 5%" }}
+					/>
+				</div>
 				<div className={styles.features}>
 					{features.map((feature, index) => (
 						<div key={index} className={styles.feature}>

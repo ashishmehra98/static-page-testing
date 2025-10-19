@@ -12,6 +12,8 @@ export const ICONS = {
 	support: "/icons/support.svg",
 	document: "/icons/document.svg",
 	stars: "/icons/stars.svg",
+	family: "/icons/family.svg",
+	thumb: "/icons/thumb.svg",
 	file: "/file.svg",
 	globe: "/globe.svg",
 	next: "/next.svg",
