@@ -1,0 +1,37 @@
+/* HomeJumbotron component styles */
+.jumbotron {
+	width: 100%;
+	position: relative;
+}
+
+.contactFormContainer {
+	position: absolute;
+	right: 5%;
+	top: 74px;
+}
+
+/* Responsive adjustments */
+
+@media screen and (max-width: 1280px) {
+	.jumbotron > section {
+		height: 690px;
+		align-items: flex-start;
+		padding-top: 46px;
+	}
+
+	.contactFormContainer {
+		position: static;
+		margin-top: 38px;
+	}
+
+	.contactFormContainer > div {
+		margin: 0;
+		z-index: 99;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.contactFormContainer > div {
+		width: 100%;
+	}
+}

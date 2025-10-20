@@ -1,0 +1,103 @@
+.heroSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 48px;
+}
+
+.headerSection {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.frame {
+	position: absolute;
+	display: none;
+}
+
+.pestExpertSection > div {
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	gap: 52px;
+}
+
+.pestExpertSection > div > div {
+	padding-top: 45px;
+}
+
+.pestExpertSection h2 {
+	font-size: 42px;
+}
+
+.pesticideInfo > div:nth-of-type(1) {
+	width: 482px;
+}
+
+.midHeroContent {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 500px;
+	gap: 44px;
+}
+
+.midHeroContent h2 {
+	font-size: 60px;
+}
+
+.midHeroSubtitle {
+	width: 85%;
+}
+
+.userReviewsSection {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.userReviewsSection :global(.user-reviews--header) {
+	width: 45%;
+}
+
+.userReviewsSection :global(.user-reviews) > div {
+	width: 100%;
+}
+
+@media screen and (min-width: 1368px) {
+	.frame {
+		display: block;
+	}
+
+	.frame:nth-of-type(1) {
+		top: 0;
+		left: 10%;
+	}
+
+	.frame:nth-of-type(2) {
+		top: 0;
+		right: 25%;
+	}
+
+	.frame:nth-of-type(3) {
+		bottom: 100px;
+		left: 5%;
+	}
+
+	.frame:nth-of-type(4) {
+		bottom: 0;
+		left: 25%;
+	}
+
+	.frame:nth-of-type(5) {
+		bottom: 0;
+		right: 25%;
+	}
+
+	.frame:nth-of-type(6) {
+		bottom: 200px;
+		right: 5%;
+	}
+}
