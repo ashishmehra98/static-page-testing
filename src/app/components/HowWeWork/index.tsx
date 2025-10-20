@@ -8,7 +8,7 @@ import { IMAGES } from "@/app/constants/images";
 
 const HowWeWork = () => {
 	return (
-		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} className="pt-[90px] pb-[60px]">
+		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} className={styles.heroSection}>
 			<div className={styles.container}>
 				<HeaderSection
 					title="How We"

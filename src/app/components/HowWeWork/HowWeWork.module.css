@@ -1,3 +1,7 @@
+.heroSection {
+	padding: 60px 0 90px;
+}
+
 .container {
 	display: flex;
 	flex-direction: row;
@@ -43,7 +47,11 @@
 	display: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+	.heroSection {
+		padding: 60px 0;
+	}
+
 	.container {
 		flex-direction: column;
 		align-items: flex-start;
@@ -84,5 +92,18 @@
 		flex: none;
 		width: 100%;
 		gap: 32px;
+	}
+
+	.infoContainer :global(.info-icon--container) {
+		width: 50px;
+		height: 50px;
+	}
+
+	.infoContainer :global(.info-title) {
+		font-size: 22px;
+	}
+
+	.infoContainer :global(.info-description) {
+		font-size: 14px;
 	}
 }

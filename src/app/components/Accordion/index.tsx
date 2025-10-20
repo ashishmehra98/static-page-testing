@@ -57,7 +57,7 @@ const Accordion: React.FC<AccordionProps> = ({
 							</h3>
 							<div className={`${styles.chevron} ${isExpanded ? styles.chevronRotated : ""}`}>
 								<Image
-									src={isExpanded ? ICONS["minus-primary"] : ICONS.plus}
+									src={isExpanded ? ICONS[variant !== "secondary" ? "minus" : "minus-primary"] : ICONS.plus}
 									alt={isExpanded ? "collapse" : "expand"}
 									width={33}
 									height={33}

@@ -18,9 +18,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 74px;
+	min-height: 74px;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	padding: 22px 0;
 }
 
 .accordionSecondary .itemHeader {
@@ -53,7 +54,7 @@
 	justify-content: center;
 	width: 33px;
 	height: 33px;
-	color: var(--secondary);
+	/* color: var(--secondary); */
 	transition:
 		transform 0.3s ease,
 		color 0.3s ease;
@@ -65,12 +66,12 @@
 }
 
 .itemContent {
-	padding: 0 0 20px 0;
+	padding-bottom: 20px;
 	animation: slideDown 0.3s ease-out;
 }
 
 .accordionSecondary .itemContent {
-	padding: 20px 40px;
+	padding: 0 40px 20px;
 }
 
 .itemDescription {
@@ -102,13 +103,17 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.itemTitle {
-		font-size: 22px;
+		font-size: 20px;
 	}
 
 	.itemDescription {
 		font-size: 16px;
+	}
+
+	.itemHeader {
+		min-height: 66px;
 	}
 
 	.accordionSecondary .itemHeader,

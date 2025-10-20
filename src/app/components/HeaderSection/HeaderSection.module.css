@@ -43,7 +43,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.mainTitle {
 		font-size: 42px;
 		letter-spacing: -0.84px;
@@ -54,7 +54,7 @@
 	}
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
 	.mainTitle {
 		font-size: 36px;
 	}

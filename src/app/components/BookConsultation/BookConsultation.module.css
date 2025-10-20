@@ -45,6 +45,7 @@
 @media screen and (max-width: 768px) {
 	.heroContainer {
 		align-self: center;
+		padding: 60px 0px;
 	}
 
 	.container {
