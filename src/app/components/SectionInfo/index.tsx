@@ -5,19 +5,27 @@ import Image from "next/image";
 import HeaderSection, { HeaderSectionProps } from "../HeaderSection";
 import styles from "./SectionInfo.module.css";
 
-interface SectionInfoProps extends HeaderSectionProps {
+interface SectionInfoProps extends Partial<HeaderSectionProps> {
 	imageSrc: string;
 	imageAlt: string;
 	className?: string;
 	isReverse?: boolean;
+	children?: React.ReactNode;
 }
 
-const SectionInfo: React.FC<SectionInfoProps> = ({ imageSrc, imageAlt, className, isReverse, ...headerSectionProps }) => {
+const SectionInfo: React.FC<SectionInfoProps> = ({
+	imageSrc,
+	imageAlt,
+	className,
+	isReverse,
+	children,
+	...headerSectionProps
+}) => {
 	return (
 		<section className={`${styles.section} ${isReverse ? styles.sectionReverse : ""} ${className}`}>
 			<div className={styles.content}>
-				<HeaderSection {...headerSectionProps} className={styles.textContainer} />
-				<div className={styles.imageContainer}>
+				{children || <HeaderSection {...(headerSectionProps as HeaderSectionProps)} className={styles.textContainer} />}
+				<div className={`${styles.imageContainer} image-container`}>
 					<Image src={imageSrc} alt={imageAlt} fill className={styles.image} priority />
 				</div>
 			</div>

@@ -28,7 +28,7 @@ interface SlideData {
 const slides: SlideData[] = [
 	{
 		id: "cockroaches",
-		imageSrc: "/images/pest-controller.png",
+		imageSrc: IMAGES.COCKROACHES,
 		imageAlt: "Cockroaches",
 		pestName: "Cockroaches",
 		commonSigns: "Droppings, greasy marks behind appliances, live sightings",
@@ -37,7 +37,7 @@ const slides: SlideData[] = [
 	},
 	{
 		id: "rodents",
-		imageSrc: "/images/worker.png",
+		imageSrc: IMAGES.COCKROACHES,
 		imageAlt: "Rodents",
 		pestName: "Rodents",
 		commonSigns: "Gnaw marks, droppings, scratching noises, nests in hidden areas",
@@ -45,7 +45,7 @@ const slides: SlideData[] = [
 	},
 	{
 		id: "spiders",
-		imageSrc: "/images/trusted-expert.jpg",
+		imageSrc: IMAGES.COCKROACHES,
 		imageAlt: "Spiders",
 		pestName: "Spiders",
 		commonSigns: "Webs in corners, window frames, garages and sheds",
@@ -53,7 +53,7 @@ const slides: SlideData[] = [
 	},
 ];
 
-const PestServicesSlide: React.FC = () => {
+const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const swiperRef = useRef<SwiperClass | null>(null);
 	const isMobile = useIsMobile({ breakpoint: 768 });
@@ -99,7 +99,7 @@ const PestServicesSlide: React.FC = () => {
 	}, [isMobile]);
 
 	return (
-		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} className={styles.heroSection}>
+		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} className={`${styles.heroSection} ${className}`}>
 			<HeaderSection
 				title="Our Residential "
 				highlightedText="Pest Services"

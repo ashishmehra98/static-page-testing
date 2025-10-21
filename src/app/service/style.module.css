@@ -1,0 +1,82 @@
+.residentialInfoSection,
+.ecoviaProcessSection,
+.safetyMeasureSection,
+.userReviewsSection {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.residentialInfoSection :global(.header) {
+	width: 800px;
+	margin: 0 auto;
+	gap: 18px;
+}
+
+.residentialInfoSection > div {
+	align-items: center;
+	justify-content: space-between;
+	gap: initial;
+}
+
+.ecoviaProcessSection :global(.header) {
+	width: 653px;
+	margin: 0 auto;
+}
+
+.safetyMeasureSection :global(.header) {
+	width: 850px;
+	margin: 0 auto;
+}
+
+.userReviewsSection :global(.user-reviews--header) {
+	width: 50%;
+}
+
+.userReviewsSection :global(.user-reviews) > div {
+	width: 100%;
+}
+
+/* Content */
+.infoContainer {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	max-width: 100%;
+}
+
+.infoContent {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	flex: 0.9;
+}
+
+.infoItem {
+	font-size: 22px;
+	line-height: 1.15;
+	color: var(--secondary);
+	letter-spacing: -0.44px;
+	width: 100%;
+}
+
+.boldText {
+	font-weight: 700;
+	font-family: var(--font-heading);
+}
+
+.regularText {
+	font-weight: 400;
+	font-family: var(--font-heading);
+}
+
+/* Image container */
+.residentialInfoSection :global(.image-container) {
+	position: relative;
+	width: 595px;
+	height: 509px;
+	border-radius: 20px;
+	overflow: hidden;
+}
