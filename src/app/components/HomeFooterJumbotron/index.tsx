@@ -13,6 +13,7 @@ interface HomeFooterJumbotronProps {
 	highlightedText: string;
 	subHeading: string;
 	description: string;
+	heroContainerClassName?: string;
 }
 
 const HomeFooterJumbotron: React.FC<HomeFooterJumbotronProps> = ({
@@ -21,6 +22,7 @@ const HomeFooterJumbotron: React.FC<HomeFooterJumbotronProps> = ({
 	highlightedText,
 	subHeading,
 	description,
+	heroContainerClassName,
 }) => {
 	return (
 		<div className={styles.jumbotron}>
@@ -30,7 +32,7 @@ const HomeFooterJumbotron: React.FC<HomeFooterJumbotronProps> = ({
 					highlightedText={highlightedText}
 					subHeading={subHeading}
 					description={description}
-					contentClassName={styles.content}
+					contentClassName={`${styles.content} ${heroContainerClassName || ""}`.trim()}
 					descriptionClassName={styles.description}
 				/>
 				<div className={styles.infoGroup}>

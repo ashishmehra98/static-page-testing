@@ -1,0 +1,114 @@
+/* Local Pest Expert Section */
+.localPestExpert {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	align-items: center;
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* Map Section */
+.mapSection {
+	background-color: var(--gray);
+	border-radius: 13px;
+	height: 492px;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding: 47px 43px;
+	box-sizing: border-box;
+}
+
+.mapPlaceholder {
+	font-family: var(--font-body);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.41;
+	letter-spacing: -0.4px;
+	color: var(--secondary);
+	white-space: nowrap;
+	margin: 0;
+}
+
+/* Info Section */
+.infoSection {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.infoItem {
+	flex: 1;
+	max-width: 401px;
+}
+
+.infoText {
+	font-family: var(--font-heading);
+	font-size: 22px;
+	line-height: 1.15;
+	letter-spacing: -0.44px;
+	color: var(--secondary);
+	margin: 0;
+}
+
+.infoBold {
+	font-weight: 700;
+}
+
+.infoRegular {
+	font-weight: 400;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+	.infoSection {
+		flex-direction: column;
+		gap: 24px;
+		align-items: flex-start;
+	}
+
+	.infoItem {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.localPestExpert {
+		gap: 40px;
+	}
+
+	.mapSection {
+		height: 300px;
+		padding: 30px 20px;
+	}
+
+	.mapPlaceholder {
+		font-size: 18px;
+	}
+
+	.infoText {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.localPestExpert {
+		gap: 30px;
+	}
+
+	.mapSection {
+		height: 250px;
+		padding: 20px 15px;
+	}
+
+	.mapPlaceholder {
+		font-size: 16px;
+	}
+
+	.infoText {
+		font-size: 18px;
+	}
+}

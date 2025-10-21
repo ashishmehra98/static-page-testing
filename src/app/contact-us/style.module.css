@@ -1,6 +1,17 @@
-.residentialInfoSection,
-.ecoviaProcessSection,
-.safetyMeasureSection,
+.jumbotronHeaderContent {
+	width: 507px !important;
+}
+
+.jumbotronFooterContent {
+	width: 625px !important;
+}
+
+.jumbotronHeaderContent p,
+.jumbotronFooterContent p {
+	width: 100% !important;
+}
+
+.whyChooseEcoviaSection,
 .userReviewsSection {
 	display: flex;
 	flex-direction: column;
@@ -9,30 +20,19 @@
 	margin: 0 auto;
 }
 
-.residentialInfoSection :global(.header) {
-	width: 800px;
+.whyChooseEcoviaSection :global(.header) {
+	width: 70%;
 	margin: 0 auto;
-	gap: 18px;
 }
 
-.residentialInfoSection section {
+.whyChooseEcoviaSection section {
 	width: 100%;
 }
 
-.residentialInfoSection section > div {
+.whyChooseEcoviaSection section > div {
 	align-items: center;
 	justify-content: space-between;
 	gap: initial;
-}
-
-.ecoviaProcessSection :global(.header) {
-	width: 653px;
-	margin: 0 auto;
-}
-
-.safetyMeasureSection :global(.header) {
-	width: 850px;
-	margin: 0 auto;
 }
 
 .userReviewsSection :global(.user-reviews--header) {
@@ -77,7 +77,7 @@
 }
 
 /* Image container */
-.residentialInfoSection :global(.image-container) {
+.whyChooseEcoviaSection :global(.image-container) {
 	position: relative;
 	width: 595px;
 	height: 509px;

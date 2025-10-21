@@ -19,6 +19,7 @@ export const IMAGES = {
 	SERVICE_HEADER_BG: "/images/service-bg.jpg",
 	COMMERCIAL: "/images/commercial.jpg",
 	COCKROACHES: "/images/cockroaches.png",
+	CONTACT_BG: "/images/contact-bg.jpg",
 };
 
 export type ImageName = keyof typeof IMAGES;
