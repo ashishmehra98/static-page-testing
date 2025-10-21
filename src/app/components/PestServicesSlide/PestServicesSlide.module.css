@@ -1,31 +1,42 @@
-.container {
-	width: 100%;
+.heroSection {
+	padding: 150px 0;
 }
 
+.headerSection {
+	width: 50%;
+	margin: 0 auto 60px;
+}
+
+/* Slider wrapper and slides */
 .sliderWrapper {
 	position: relative;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .swiper {
 	width: 100%;
 	height: auto;
-	padding: 0 24px 0 0 !important;
-	overflow: visible !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	max-width: 1192px; /* image(595) + content(532) + gap(65) */
 }
 
 .slide {
-	width: 306px !important;
-	height: 405px !important;
-	flex-shrink: 0;
+	width: 100% !important;
+	height: auto !important;
 }
 
+/* Action view (progress + buttons) */
 .actionView {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 44px;
-	width: 90%;
+	width: 100%;
+	margin: 32px 0 0;
 }
 
 .slideButtonContainer {
@@ -50,9 +61,8 @@
 }
 
 .navButton:hover {
-	background-color: var(--secondary);
-	color: var(--white);
-	border-color: var(--secondary);
+	background-color: var(--primary);
+	border-color: var(--primary);
 }
 
 .navButton:disabled {
@@ -98,12 +108,16 @@
 	transition: width 0.3s ease-in-out;
 }
 
-/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+	.headerSection {
+		width: 100%;
+		margin: 0 0 40px;
+	}
+}
+
+/* Hide desktop action view on small screens; autoplay will handle progression */
 @media screen and (max-width: 768px) {
 	.actionView {
 		display: none;
-	}
-	.swiper {
-		padding: 0 10% 0 10% !important;
 	}
 }

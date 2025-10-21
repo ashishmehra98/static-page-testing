@@ -19,7 +19,7 @@
 	--font-body: var(--font-primary);
 
 	/* Viewport Variables */
-	--viewport-mobile: 320px;
+	--viewport-mobile: 480px;
 	--viewport-tablet: 768px;
 	--viewport-desktop: 1024px;
 	--viewport-large: 1280px;
@@ -43,6 +43,7 @@ body {
 	background: var(----color-background);
 	color: var(----color-foreground);
 	font-family: var(--font-body);
+	overflow-x: hidden;
 }
 
 @keyframes spin {

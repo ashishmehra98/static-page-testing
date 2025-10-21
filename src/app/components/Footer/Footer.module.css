@@ -134,6 +134,7 @@
 	.footer {
 		gap: 24px;
 		margin-top: 250px;
+		padding-top: 0 !important;
 	}
 
 	.content {

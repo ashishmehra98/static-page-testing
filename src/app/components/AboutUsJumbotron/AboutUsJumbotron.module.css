@@ -15,7 +15,6 @@
 @media screen and (max-width: 1280px) {
 	.jumbotron > section {
 		height: 690px;
-		align-items: flex-start;
 		padding-top: 46px;
 	}
 

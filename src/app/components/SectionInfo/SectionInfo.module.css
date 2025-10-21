@@ -13,6 +13,11 @@
 	width: 100%;
 }
 
+.sectionReverse .content {
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
 /* Image container */
 .imageContainer {
 	position: relative;
@@ -35,6 +40,10 @@
 	padding-top: 90px;
 }
 
+.textContainer h2 {
+	text-align: start;
+}
+
 @media screen and (max-width: 1280px) {
 	.imageContainer {
 		width: 45%;
@@ -47,6 +56,11 @@
 		flex-direction: column;
 		gap: 32px;
 		align-items: flex-start;
+	}
+
+	.sectionReverse .content {
+		flex-direction: column;
+		justify-content: flex-end;
 	}
 
 	.textContainer {

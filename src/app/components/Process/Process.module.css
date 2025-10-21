@@ -1,0 +1,175 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+}
+
+.lineContainer {
+	height: 0;
+	position: relative;
+	width: 324px;
+	flex-shrink: 0;
+}
+
+.line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: -1px;
+	display: block;
+	max-width: none;
+	width: 100%;
+	height: 100%;
+}
+
+.flowOne,
+.flowTwo {
+	display: flex;
+	gap: 32px;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	flex-shrink: 0;
+}
+
+.step {
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+	align-items: center;
+	position: relative;
+	flex-shrink: 0;
+	width: 30%;
+}
+
+.stepNumber {
+	background-color: var(--secondary);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	padding: 11px 13px;
+	position: relative;
+	border-radius: 25.5px;
+	flex-shrink: 0;
+	width: 51px;
+	height: 51px;
+}
+
+.numberText {
+	text-transform: capitalize;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	line-height: 1.15;
+	font-style: normal;
+	position: relative;
+	flex-shrink: 0;
+	color: var(--light-green);
+	font-size: 24px;
+	text-align: center;
+	white-space: nowrap;
+	letter-spacing: -0.48px;
+}
+
+.stepContent {
+	display: flex;
+	flex-direction: column;
+	gap: 17px;
+	align-items: center;
+	position: relative;
+	flex-shrink: 0;
+	color: var(--secondary);
+	text-align: center;
+	width: 100%;
+}
+
+.stepTitle {
+	text-transform: capitalize;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	line-height: 1.15;
+	font-style: normal;
+	position: relative;
+	flex-shrink: 0;
+	font-size: 28px;
+	letter-spacing: -0.56px;
+	width: 100%;
+}
+
+.stepDescription {
+	font-family: var(--font-body);
+	font-weight: 400;
+	line-height: 1.41;
+	position: relative;
+	flex-shrink: 0;
+	font-size: 16px;
+	letter-spacing: -0.32px;
+	width: 100%;
+}
+
+.separator {
+	position: absolute;
+	width: 80%;
+	left: calc(50% + 51px);
+	top: 25px;
+	height: 2px;
+	background-color: transparent;
+	border-top: 1.5px dashed var(--black);
+	border-radius: 1px;
+	border-image: repeating-linear-gradient(to right, var(--black) 0, var(--black) 8px, transparent 8px, transparent 16px) 1;
+}
+
+.container > .separator {
+	display: none;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+	.container {
+		gap: 32px;
+	}
+
+	.step {
+		width: 100%;
+		flex-direction: row;
+	}
+
+	.step .separator {
+		display: none;
+	}
+
+	.flowOne,
+	.flowTwo {
+		flex-direction: column;
+	}
+
+	.flowOne .step,
+	.flowTwo .step {
+		align-items: flex-start;
+	}
+
+	.flowOne .stepContent,
+	.flowTwo .stepContent {
+		flex: 0.8;
+		text-align: left;
+	}
+
+	.container > .separator {
+		display: block;
+		position: absolute;
+		height: 75%;
+		width: 1px;
+		left: 25px;
+		top: 60px;
+		border-right: 1.5px dashed var(--black);
+		border-radius: 1px;
+		border-image: repeating-linear-gradient(to bottom, var(--black) 0, var(--black) 8px, transparent 8px, transparent 16px) 1;
+	}
+}

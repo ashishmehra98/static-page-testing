@@ -23,7 +23,7 @@ export default function AboutUs() {
 			<Header />
 			<div className="flex flex-col gap-[60px] xl:gap-[120px]">
 				<AboutUsJumbotron
-					bgImage={IMAGES.HEADER_BG}
+					bgImage={IMAGES.ABOUT_HEADER_BG}
 					heading="Safe and Effective "
 					highlightedText="Pest Control "
 					subHeading="Around Sydney"
@@ -37,8 +37,13 @@ export default function AboutUs() {
 					imageSrc={IMAGES.HOME_BG}
 					imageAlt="Pest control services"
 					align="start"
+					className={styles.commitmentSection}
 				/>
-				<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} contentViewClassName={styles.heroSection}>
+				<Hero
+					bgImage={IMAGES.PATTERN_BG}
+					hideGradient={true}
+					className={styles.trustInfoSection}
+					contentViewClassName={styles.trustInfoContentSection}>
 					<HeaderSection
 						title="Trusted By "
 						highlightedText="Households "
@@ -47,7 +52,7 @@ export default function AboutUs() {
 						titleColor="white"
 						subtitleColor="white"
 						align="center"
-						className={styles.headerSection}
+						className={styles.trustInfo}
 					/>
 					<Button variant="primary" title="0432 227 227" icon="phone" onPress={() => {}} />
 					<Image src={IMAGES.FRAME_ONE} alt="frame-one" width={206} height={248} className={styles.frame} />
@@ -70,9 +75,10 @@ Partner with a seasoned professional committed to protecting your home and givin
 					imageAlt="Pest control services"
 					align="start"
 					className={styles.pestExpertSection}
+					isReverse={true}
 				/>
 				<PesticideInfoSection className={styles.pesticideInfo} />
-				<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} contentViewClassName={styles.midHeroSection}>
+				<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} className={styles.midHeroSection}>
 					<div className={styles.midHeroContent}>
 						<HeaderSection
 							title="Your Local Sydney Pest Experts"

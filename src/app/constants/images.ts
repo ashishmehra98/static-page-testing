@@ -15,6 +15,7 @@ export const IMAGES = {
 	FRAME_FIVE: "/images/frame-5.png",
 	FRAME_SIX: "/images/frame-6.png",
 	TRUSTED_EXPERTS: "/images/trusted-expert.jpg",
+	ABOUT_HEADER_BG: "/images/about-us.jpg",
 };
 
 export type ImageName = keyof typeof IMAGES;

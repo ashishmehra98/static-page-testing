@@ -40,6 +40,7 @@ export default function Home() {
 			image: "/images/pest-service-thumbnail.jpg",
 			date: "28/04/2025",
 			title: "How to Prevent Cockroach Infestations",
+			content: "Discover effective strategies to keep cockroaches away from your home with these proven prevention methods.",
 		},
 		{
 			id: "3",

@@ -1,11 +1,11 @@
-.heroSection {
+.trustInfoContentSection {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 48px;
 }
 
-.headerSection {
+.trustInfo {
 	width: 50%;
 	margin: 0 auto;
 	text-align: center;
@@ -17,8 +17,6 @@
 }
 
 .pestExpertSection > div {
-	flex-direction: row-reverse;
-	justify-content: flex-end;
 	gap: 52px;
 }
 
@@ -44,6 +42,7 @@
 
 .midHeroContent h2 {
 	font-size: 60px;
+	text-align: left;
 }
 
 .midHeroSubtitle {
@@ -99,5 +98,58 @@
 	.frame:nth-of-type(6) {
 		bottom: 200px;
 		right: 5%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.trustInfoSection {
+		min-height: initial;
+		padding: 60px 0;
+	}
+
+	.trustInfoContentSection {
+		gap: 32px;
+	}
+
+	.trustInfo {
+		width: 100%;
+		gap: 30px;
+	}
+
+	.pesticideInfo > div:nth-of-type(1) {
+		width: 100%;
+	}
+
+	.midHeroSection {
+		min-height: initial !important;
+		padding: 60px 0;
+	}
+
+	.midHeroContent {
+		width: 100%;
+		gap: 32px;
+		align-items: center;
+	}
+
+	.midHeroContent h2 {
+		font-size: 32px;
+		text-align: center !important;
+	}
+
+	.midHeroSubtitle {
+		width: 100%;
+		text-align: center !important;
+	}
+
+	.userReviewsSection :global(.user-reviews--header) {
+		width: 100%;
+	}
+
+	.userReviewsSection :global(.user-reviews--header) h2 {
+		text-align: left;
+	}
+
+	:global(.user-reviews) {
+		padding-top: 0 !important;
 	}
 }

@@ -9,11 +9,12 @@ interface SectionInfoProps extends HeaderSectionProps {
 	imageSrc: string;
 	imageAlt: string;
 	className?: string;
+	isReverse?: boolean;
 }
 
-const SectionInfo: React.FC<SectionInfoProps> = ({ imageSrc, imageAlt, className, ...headerSectionProps }) => {
+const SectionInfo: React.FC<SectionInfoProps> = ({ imageSrc, imageAlt, className, isReverse, ...headerSectionProps }) => {
 	return (
-		<section className={`${styles.section} ${className}`}>
+		<section className={`${styles.section} ${isReverse ? styles.sectionReverse : ""} ${className}`}>
 			<div className={styles.content}>
 				<HeaderSection {...headerSectionProps} className={styles.textContainer} />
 				<div className={styles.imageContainer}>
