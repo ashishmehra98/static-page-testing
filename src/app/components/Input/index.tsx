@@ -33,7 +33,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 					required={required}
 					className={`${styles.input} ${error ? styles.error : ""} ${disabled ? styles.disabled : ""}`}
 					aria-invalid={!!error}
-					aria-describedby={error ? `${label}-error` : undefined}
+					aria-describedby={error ? `${label}-error` : ""}
 				/>
 				{error && (
 					<span id={`${label}-error`} className={styles.errorMessage} role="alert">

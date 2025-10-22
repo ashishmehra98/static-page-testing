@@ -46,7 +46,7 @@ const Accordion: React.FC<AccordionProps> = ({
 
 	return (
 		<div className={`${styles.accordion} ${className}`}>
-			{items.map((item, index) => {
+			{items.map((item) => {
 				const isExpanded = expandedItems.has(item.id);
 				return (
 					<div key={item.id} className={`${styles.accordionItem} ${variant === "secondary" ? styles.accordionSecondary : ""}`}>
