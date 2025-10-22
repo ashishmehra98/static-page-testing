@@ -13,6 +13,12 @@ interface PestInfoProps {
 	treatmentLabel?: string;
 	treatment: string;
 	className?: string;
+	isReverse?: boolean;
+	textColor?: {
+		sectionLabel?: string;
+		pestName?: string;
+		paragraph?: string;
+	};
 }
 
 const PestInfo: React.FC<PestInfoProps> = ({
@@ -25,15 +31,25 @@ const PestInfo: React.FC<PestInfoProps> = ({
 	treatmentLabel = "Treatment Approach",
 	treatment,
 	className,
+	isReverse = false,
+	textColor,
 }) => {
+	const contentStyle = textColor
+		? ({
+			"--section-label-color": textColor.sectionLabel,
+			"--pest-name-color": textColor.pestName,
+			"--paragraph-color": textColor.paragraph,
+		} as React.CSSProperties)
+		: {};
+
 	return (
-		<section className={`${styles.container} ${className}`}>
+		<section className={`${styles.container} ${isReverse ? styles.reverse : ""} ${className}`}>
 			<div className={styles.imageContainer}>
 				{/* Using native img to avoid external domain config requirements */}
 				<img src={imageSrc} alt={imageAlt} className={styles.image} />
 			</div>
 
-			<div className={styles.content}>
+			<div className={styles.content} style={contentStyle}>
 				<div className={styles.sectionBlock}>
 					<p className={styles.sectionLabel}>{pestLabel}</p>
 					<p className={styles.pestName}>{pestName}</p>

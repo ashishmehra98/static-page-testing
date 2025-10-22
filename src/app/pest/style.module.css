@@ -1,0 +1,50 @@
+.header {
+	width: 55%;
+}
+
+.whatWeTreatSection,
+.ecoviaProcessSection,
+.userReviewsSection {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.userReviewsSection :global(.user-reviews--header) {
+	width: 50%;
+}
+
+.userReviewsSection :global(.user-reviews) > div {
+	width: 100%;
+}
+
+.ecoviaProcessSection :global(.header) {
+	width: 653px;
+	margin: 0 auto;
+}
+
+.separator {
+	background-color: #f3f3f3;
+	height: 4px;
+	border-radius: 32px;
+	width: 100%;
+	margin-top: 58px;
+}
+
+.pestInfoCard {
+	justify-content: flex-end;
+}
+
+.pestInfoCard > div {
+	flex: 1;
+}
+
+.jumbotronFooterContent {
+	width: 625px !important;
+}
+
+.jumbotronFooterContent p {
+	width: 100% !important;
+}
