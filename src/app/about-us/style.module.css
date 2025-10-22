@@ -1,3 +1,13 @@
+.commitmentSection > div {
+	gap: 0;
+	justify-content: space-between;
+}
+
+.commitmentSection :global(.content-container) {
+	width: initial;
+	flex: 0.9;
+}
+
 .trustInfoContentSection {
 	display: flex;
 	flex-direction: column;
@@ -20,8 +30,10 @@
 	gap: 52px;
 }
 
-.pestExpertSection > div > div {
+.pestExpertSection :global(.content-container) {
 	padding-top: 45px;
+	width: initial;
+	flex: 0.85;
 }
 
 .pestExpertSection h2 {

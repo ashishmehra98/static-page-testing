@@ -90,7 +90,7 @@ const Service = () => {
 						align="center"
 						className="header"
 					/>
-					<SectionInfo imageSrc={IMAGES.COMMERCIAL} imageAlt="commercial" className={styles.residentialInfoSection}>
+					<SectionInfo imageSrc={IMAGES.COMMERCIAL} imageAlt="commercial">
 						<div className={styles.infoContent}>
 							<div className={styles.infoItem}>
 								<span className={styles.regularText}>We only </span>

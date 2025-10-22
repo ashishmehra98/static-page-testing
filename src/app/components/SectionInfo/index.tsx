@@ -24,7 +24,12 @@ const SectionInfo: React.FC<SectionInfoProps> = ({
 	return (
 		<section className={`${styles.section} ${isReverse ? styles.sectionReverse : ""} ${className}`}>
 			<div className={styles.content}>
-				{children || <HeaderSection {...(headerSectionProps as HeaderSectionProps)} className={styles.textContainer} />}
+				{children || (
+					<HeaderSection
+						{...(headerSectionProps as HeaderSectionProps)}
+						className={`${styles.textContainer} content-container`}
+					/>
+				)}
 				<div className={`${styles.imageContainer} image-container`}>
 					<Image src={imageSrc} alt={imageAlt} fill className={styles.image} priority />
 				</div>

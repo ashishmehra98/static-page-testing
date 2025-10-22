@@ -1,0 +1,173 @@
+.controlMattersSection,
+.commonSpeciesSection,
+.serviceMethodsSection,
+.diySection,
+.userReviewsSection {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.controlMattersSection :global(.header),
+.commonSpeciesSection :global(.header),
+.serviceMethodsSection :global(.header),
+.diySection :global(.header) {
+	width: 100%;
+	margin: 0 auto;
+	gap: 18px;
+}
+
+.commonSpeciesSection :global(.header),
+.diySection :global(.header) {
+	width: 55%;
+}
+
+.serviceMethodsSection :global(.header) {
+	width: 956px;
+}
+
+.controlMattersSection :global(.header) p {
+	max-width: 70%;
+}
+
+.serviceMethodsSection :global(.header) h2 {
+	width: 80%;
+}
+
+.serviceMethodsSection :global(.header) p {
+	max-width: 100%;
+}
+
+.controlMattersSection section,
+.commonSpeciesSection section,
+.serviceMethodsSection section,
+.diySection section {
+	width: 100%;
+}
+
+.controlMattersSection section > div,
+.commonSpeciesSection section > div,
+.serviceMethodsSection section > div,
+.diySection section > div {
+	align-items: center;
+	justify-content: space-between !important;
+	gap: initial;
+}
+
+.infestationSigns,
+.processListSection,
+.processCheckSection {
+	min-height: initial;
+	padding: 60px 0;
+}
+
+.infestationSigns > div,
+.processListSection > div {
+	display: flex;
+	flex-direction: row;
+	gap: 144px;
+}
+
+.infestationSigns :global(.header),
+.processListSection :global(.header) {
+	flex: 0.5;
+}
+
+.processCheckSection > div {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+}
+
+.processCheckSection :global(.header) p {
+	max-width: 100%;
+}
+
+.infestationSigns .infoItem,
+.processListSection .infoItem {
+	color: var(--white);
+}
+
+.userReviewsSection :global(.user-reviews--header) {
+	width: 50%;
+}
+
+.userReviewsSection :global(.user-reviews) > div {
+	width: 100%;
+}
+
+/* Content */
+.infoContainer {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	max-width: 100%;
+}
+
+.infoContent {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	flex: 0.85 !important;
+}
+
+.infoItem {
+	font-size: 22px;
+	line-height: 1.15;
+	color: var(--secondary);
+	letter-spacing: -0.44px;
+	width: 100%;
+}
+
+.boldText {
+	font-weight: 700;
+	font-family: var(--font-heading);
+}
+
+.regularText {
+	font-weight: 400;
+	font-family: var(--font-heading);
+}
+
+.regularText a {
+	color: var(--hightlight-text);
+}
+
+/* Image container */
+.controlMattersSection :global(.image-container) {
+	position: relative;
+	width: 595px;
+	height: 509px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.commonSpeciesSection section :global(.image-container),
+.serviceMethodsSection section :global(.image-container) {
+	width: 595px !important;
+	height: 612px !important;
+}
+
+.diySection section :global(.image-container) {
+	width: 595px !important;
+	height: 484px !important;
+}
+
+/* Process Check List Styles */
+.processCheckList {
+	display: flex;
+	flex-direction: row;
+	gap: 21px;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.processCheckList > * {
+	flex: 1;
+	min-width: 0;
+}

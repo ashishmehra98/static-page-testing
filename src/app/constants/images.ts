@@ -20,6 +20,9 @@ export const IMAGES = {
 	COMMERCIAL: "/images/commercial.jpg",
 	COCKROACHES: "/images/cockroaches.png",
 	CONTACT_BG: "/images/contact-bg.jpg",
+	PEST_STUDY_BG: "/images/pest-study-bg.jpg",
+	ANT_CONTROL_MATTERS: "/images/ant-control-matters.jpg",
+	COMMON_ANT_SPECIES: "/images/common-ant-species.png",
 };
 
 export type ImageName = keyof typeof IMAGES;

@@ -14,6 +14,7 @@ export const ICONS = {
 	stars: "/icons/stars.svg",
 	family: "/icons/family.svg",
 	thumb: "/icons/thumb.svg",
+	"verified-tick": "/icons/verified-tick.svg",
 	file: "/file.svg",
 	globe: "/globe.svg",
 	next: "/next.svg",
