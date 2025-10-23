@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 import MenuButton from "../MenuButton";
 import styles from "./MobileNavigation.module.css";
 
@@ -10,11 +11,13 @@ interface MobileNavigationProps {
 }
 
 const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) => {
+	const router = useRouter();
+
 	if (!isOpen) return null;
 
 	const handleLinkClick = (href: string) => {
 		// Handle navigation
-		console.log(`Navigating to: ${href}`);
+		router.push(href);
 		onClose();
 	};
 

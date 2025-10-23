@@ -6,6 +6,11 @@ import Button from "@/app/components/Button";
 import RatingCard from "@/app/components/RatingCard";
 import { IMAGES } from "@/app/constants/images";
 
+const handlePhoneClick = () => {
+	// Open phone dialer
+	window.location.href = "tel:0432227227";
+};
+
 const BookConsultation = () => {
 	return (
 		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} contentViewClassName={styles.heroContainer}>
@@ -25,7 +30,7 @@ const BookConsultation = () => {
 							subtitleClassName={styles.subTitle}
 						/>
 						<div className={styles.buttonContainer}>
-							<Button variant="primary" title={" 0432 227 227"} onPress={() => {}} icon={"phone"} />
+							<Button variant="primary" title={" 0432 227 227"} onPress={handlePhoneClick} icon={"phone"} />
 						</div>
 					</div>
 					<div className={styles.imageContainer}>
@@ -42,7 +47,7 @@ const BookConsultation = () => {
 						designation={"CEO"}
 					/>
 					<div className={styles.buttonContainer}>
-						<Button variant="primary" title={" 0432 227 227"} onPress={() => {}} icon={"phone"} />
+						<Button variant="primary" title={" 0432 227 227"} onPress={handlePhoneClick} icon={"phone"} />
 					</div>
 				</div>
 			</div>

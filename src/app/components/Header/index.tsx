@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Button from "../Button";
 import { ICONS } from "../../constants/icons";
 import MenuButton from "../MenuButton";
@@ -8,15 +10,16 @@ import styles from "./Header.module.css";
 
 const Header: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const router = useRouter();
 
 	const handlePhoneClick = () => {
-		// Handle phone button click
-		console.log("Phone button clicked");
+		// Handle phone button click - could open phone dialer
+		window.location.href = "tel:0432227227";
 	};
 
 	const handleContactClick = () => {
-		// Handle contact button click
-		console.log("Contact button clicked");
+		// Navigate to contact page
+		router.push("/contact-us");
 	};
 
 	return (
@@ -24,19 +27,19 @@ const Header: React.FC = () => {
 			<header className={`flex flex-row justify-center items-center ${styles.header}`}>
 				<div className={styles.nav}>
 					<div className={styles.logoAndLinks}>
-						<div className={styles.logoContainer}>
+						<Link href="/" className={styles.logoContainer}>
 							<Image src={ICONS.logo} alt="Ecovia Logo" fill className={styles.logo} />
-						</div>
+						</Link>
 						<nav className={styles.navigation}>
-							<a href="#about" className={styles.navLink}>
+							<Link href="/about-us" className={styles.navLink}>
 								about
-							</a>
-							<a href="#services" className={styles.navLink}>
+							</Link>
+							<Link href="/services" className={styles.navLink}>
 								services
-							</a>
-							<a href="#testimonials" className={styles.navLink}>
-								testimonials
-							</a>
+							</Link>
+							<Link href="/blogs" className={styles.navLink}>
+								blog
+							</Link>
 						</nav>
 					</div>
 					<div className={styles.buttonsContainer}>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { HomeJumbotron, PestControlServices, HowWeWork, BookConsultation, BestWeOffer, Blogs } from "./components";
 import { blogData } from "./data";
 import styles from "./style.module.css";
@@ -14,11 +15,12 @@ import PesticideInfoSection from "@/app/components/PesticideInfoSection";
 import { FAQ_DATA } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
 
-
 export default function Home() {
+	const router = useRouter();
+
 	const handleSeeMoreBlogs = () => {
-		// Handle see more blogs click
-		console.log("See more blogs clicked");
+		// Navigate to blogs page
+		router.push("/blogs");
 	};
 
 	const handleLearnMore = (blogId: string) => {

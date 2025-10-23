@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ICONS } from "../../constants/icons";
 import styles from "./Footer.module.css";
 
@@ -10,9 +11,19 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ className }) => {
+	const router = useRouter();
+
 	const handleNavigationClick = (section: string) => {
-		console.log(`Navigate to ${section}`);
-		// Add smooth scrolling or navigation logic here
+		// Navigate to appropriate page
+		const routes: { [key: string]: string } = {
+			about: "/about-us",
+			services: "/services",
+			testimonials: "/blogs", // Assuming testimonials are in blogs
+		};
+
+		if (routes[section]) {
+			router.push(routes[section]);
+		}
 	};
 
 	const handleSocialClick = (platform: string) => {
