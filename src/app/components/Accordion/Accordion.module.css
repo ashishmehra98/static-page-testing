@@ -108,6 +108,11 @@
 	.itemTitle {
 		font-size: 22px;
 	}
+
+	.chevron {
+		width: 30px;
+		height: 30px;
+	}
 }
 
 @media screen and (max-width: 480px) {

@@ -1,21 +1,21 @@
 "use client";
 
-import Container from "../components/Container";
-import Header from "../components/Header";
-import HeaderSection from "../components/HeaderSection";
-import Hero from "../components/Hero";
-import HeroContent from "../components/HeroContent";
-import SectionInfo from "../components/SectionInfo";
-import { IMAGES } from "../constants/images";
-import ProcessCheckInfo from "../components/ProcessCheckInfo";
-import Button from "../components/Button";
-import UserReviews from "../components/UserReviews";
-import LocalPestExpert from "../components/LocalPestExpert";
-import FAQ from "../components/FAQ";
-import { FAQ_DATA } from "../constants/faq";
-import HomeFooterJumbotron from "../components/ContactFormFooter";
-import Footer from "../components/Footer";
+import UserReviewsSection from "../about-us/components/UserReviewsSection";
 import styles from "./style.module.css";
+import Container from "@/app/components/Container";
+import Header from "@/app/components/Header";
+import HeaderSection from "@/app/components/HeaderSection";
+import Hero from "@/app/components/Hero";
+import HeroContent from "@/app/components/HeroContent";
+import SectionInfo from "@/app/components/SectionInfo";
+import ProcessCheckInfo from "@/app/components/ProcessCheckInfo";
+import Button from "@/app/components/Button";
+import LocalPestExpert from "@/app/components/LocalPestExpert";
+import FAQ from "@/app/components/FAQ";
+import { FAQ_DATA } from "@/app/constants/faq";
+import HomeFooterJumbotron from "@/app/components/ContactFormFooter";
+import Footer from "@/app/components/Footer";
+import { IMAGES } from "@/app/constants/images";
 
 const PestStudy = () => {
 	return (
@@ -338,17 +338,7 @@ const PestStudy = () => {
 					<Button variant="primary" title=" 0432 227 227" icon="phone" onPress={() => {}} />
 				</Hero>
 				{/* User Reviews */}
-				<div className={styles.userReviewsSection}>
-					<HeaderSection
-						title="What "
-						highlightedText="Our Customers "
-						extraTitle="Had To Say About Us"
-						subtitle="This is what some of our customers had to say about our services after-the-fact!"
-						align="start"
-						className="user-reviews--header"
-					/>
-					<UserReviews className="user-reviews" />
-				</div>
+				<UserReviewsSection />
 				<LocalPestExpert />
 				<FAQ items={FAQ_DATA} />
 				<HomeFooterJumbotron
