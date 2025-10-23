@@ -1,6 +1,6 @@
 /* ContactForm container */
 .form {
-	background-color: #134021;
+	background-color: var(--secondary);
 	border-radius: 10px;
 	padding: 35px 32px;
 	position: relative;
@@ -12,7 +12,7 @@
 
 /* Form title */
 .title {
-	font-family: var(--font-primary);
+	font-family: var(--font-heading);
 	font-weight: 500;
 	font-size: 38px;
 	line-height: 1.137;
@@ -69,7 +69,19 @@
 	width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.title {
+		font-size: 30px;
+		margin-bottom: 19px;
+	}
+
+	.formContainer button {
+		font-size: 18px;
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 480px) {
 	.form {
 		padding: 24px 22px;
 	}

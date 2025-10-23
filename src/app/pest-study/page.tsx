@@ -13,7 +13,7 @@ import UserReviews from "../components/UserReviews";
 import LocalPestExpert from "../components/LocalPestExpert";
 import FAQ from "../components/FAQ";
 import { FAQ_DATA } from "../constants/faq";
-import HomeFooterJumbotron from "../components/HomeFooterJumbotron";
+import HomeFooterJumbotron from "../components/ContactFormFooter";
 import Footer from "../components/Footer";
 import styles from "./style.module.css";
 

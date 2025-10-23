@@ -1,10 +1,8 @@
-"use client";
-
 import React from "react";
-import Hero from "../Hero";
-import HeroContent from "../HeroContent";
-import ContactForm, { ContactFormData } from "../ContactForm";
 import styles from "./HomeJumbotron.module.css";
+import Hero from "@/app/components/Hero";
+import HeroContent from "@/app/components/HeroContent";
+import ContactForm, { ContactFormData } from "@/app/components/ContactForm";
 
 interface HomeJumbotronProps {
 	bgImage: string;
@@ -57,6 +55,7 @@ const HomeJumbotron: React.FC<HomeJumbotronProps> = ({
 					contactButtonText={contactButtonText}
 					onPhoneClick={handlePhoneClick}
 					onContactClick={handleContactClick}
+					contentClassName={styles.heroContent}
 				/>
 				<div className={styles.contactFormContainer}>
 					<ContactForm onSubmit={handleFormSubmit} />

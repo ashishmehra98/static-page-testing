@@ -94,13 +94,28 @@
 	pointer-events: none;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.headerSection {
+		flex: 0.9;
+	}
+	.headerSection h2 {
+		font-size: 46px;
+	}
+
+	.headerContainer button {
+		font-size: 16px;
+		padding: 0 25px;
+		height: 50px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.blogsContainer {
 		gap: 32px;
 		width: 100%;
 	}
 	.headerContainer {
-		width: 90%;
+		width: 80%;
 		margin: 0 auto;
 	}
 	.headerContainer button {
@@ -108,5 +123,11 @@
 	}
 	.headerSection {
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.headerContainer {
+		width: 100%;
 	}
 }

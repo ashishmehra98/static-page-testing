@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Hero from "../Hero";
-import HeaderSection from "../HeaderSection";
-import Button from "../Button";
-import Info from "../Info";
 import styles from "./HowWeWork.module.css";
+import Hero from "@/app/components/Hero";
+import HeaderSection from "@/app/components/HeaderSection";
+import Button from "@/app/components/Button";
+import Info from "@/app/components/Info";
 import { IMAGES } from "@/app/constants/images";
 
 const HowWeWork = () => {
@@ -31,12 +31,7 @@ const HowWeWork = () => {
 					<Button variant="light" title={"Contact us"} onPress={() => {}} icon={"email-secondary"} />
 				</div>
 				<div className={styles.imageContainer}>
-					<Image
-						src={IMAGES.INSECTION_SERVICE}
-						alt="Inspection process"
-						fill
-						style={{ objectFit: "cover", objectPosition: "center 75%" }}
-					/>
+					<Image src={IMAGES.INSECTION_SERVICE} alt="Inspection process" fill />
 				</div>
 				<div className={styles.infoContainer}>
 					<Info icon="support" title="Initial Consultation" description="We begin with a detailed assessment of your home" />

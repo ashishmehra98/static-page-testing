@@ -1,9 +1,7 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
-import HeaderSection from "../HeaderSection";
 import styles from "./BestWeOffer.module.css";
+import HeaderSection from "@/app/components/HeaderSection";
 import { IMAGES } from "@/app/constants/images";
 
 interface Feature {
@@ -11,26 +9,26 @@ interface Feature {
 	description: string;
 }
 
-const BestWeOffer = () => {
-	const features: Feature[] = [
-		{
-			title: "Quick Response Time",
-			description: "We know pests don't wait, so neither do we. Our team is ready to act fast when you need us most.",
-		},
-		{
-			title: "Safe for Families & Pets",
-			description: "We use eco-friendly and low-toxicity treatments that are tough on pests but safe for your loved ones.",
-		},
-		{
-			title: "Flexible Appointment Times",
-			description: "We work around your schedule, including evenings and weekends, so you don't have to rearrange your day.",
-		},
-		{
-			title: "Experienced Technicians",
-			description: "Our skilled professionals are fully licensed, insured, and trained to handle all types of pest issues.",
-		},
-	];
+const features: Feature[] = [
+	{
+		title: "Quick Response Time",
+		description: "We know pests don't wait, so neither do we. Our team is ready to act fast when you need us most.",
+	},
+	{
+		title: "Safe for Families & Pets",
+		description: "We use eco-friendly and low-toxicity treatments that are tough on pests but safe for your loved ones.",
+	},
+	{
+		title: "Flexible Appointment Times",
+		description: "We work around your schedule, including evenings and weekends, so you don't have to rearrange your day.",
+	},
+	{
+		title: "Experienced Technicians",
+		description: "Our skilled professionals are fully licensed, insured, and trained to handle all types of pest issues.",
+	},
+];
 
+const BestWeOffer = () => {
 	return (
 		<section className={styles.section}>
 			<div className={styles.imageContainer}>

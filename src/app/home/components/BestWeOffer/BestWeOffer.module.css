@@ -31,7 +31,7 @@
 	align-items: flex-start;
 	position: relative;
 	flex-shrink: 0;
-	width: 845px;
+	flex: 1;
 }
 
 .header {
@@ -84,6 +84,37 @@
 	letter-spacing: -0.4px;
 	color: var(--secondary);
 	margin: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.headerSection {
+		width: 100%;
+	}
+
+	.headerSection h2 {
+		font-size: 32px;
+	}
+
+	.headerSection p {
+		font-size: 18px;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.features {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.featureTitle {
+		font-size: 22px;
+	}
+
+	.featureDescription {
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-width: 768px) {

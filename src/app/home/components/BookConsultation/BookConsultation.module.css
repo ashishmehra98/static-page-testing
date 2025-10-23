@@ -36,6 +36,7 @@
 	width: 492px;
 	height: 508px;
 	position: relative;
+	left: -50px;
 }
 
 .ratingCardContainer .buttonContainer {

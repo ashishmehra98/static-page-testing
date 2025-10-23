@@ -1,0 +1,91 @@
+/* HomeJumbotron component styles */
+.jumbotron {
+	width: 100%;
+	position: relative;
+}
+
+.contactFormContainer {
+	position: absolute;
+	right: 5%;
+	top: 74px;
+}
+
+/* Responsive adjustments */
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+	.heroContent {
+		width: 45%;
+	}
+
+	.heroContent button {
+		min-width: 120px;
+		height: 48px;
+		padding: 0 25px;
+		font-size: 14px;
+	}
+
+	.contactFormContainer {
+		width: 45%;
+	}
+
+	.contactFormContainer > div {
+		margin: initial;
+		margin-left: auto;
+		width: 100%;
+		z-index: 99;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+	.heroContent {
+		width: 90%;
+	}
+
+	.contactFormContainer {
+		width: 80%;
+	}
+
+	.jumbotron > section {
+		height: 100vh;
+		align-items: flex-start;
+		padding-top: 100px;
+	}
+
+	.contactFormContainer {
+		width: 100%;
+		position: static;
+		margin-top: 38px;
+	}
+
+	.contactFormContainer > div {
+		width: 100%;
+		margin: 0;
+		z-index: 99;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.jumbotron > section {
+		height: 690px;
+		align-items: flex-start;
+		padding-top: 46px;
+	}
+
+	.contactFormContainer {
+		position: static;
+		margin-top: 38px;
+	}
+
+	.contactFormContainer > div {
+		width: 100%;
+		margin: 0;
+		z-index: 99;
+	}
+
+	.heroContent {
+		gap: 28px;
+	}
+	.heroContent :global(.text-section) {
+		gap: 13px;
+	}
+}

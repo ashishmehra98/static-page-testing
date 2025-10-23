@@ -1,0 +1,146 @@
+/* HomeFooterJumbotron styles */
+.jumbotron {
+	position: relative;
+	min-height: 652px;
+}
+
+.content,
+.infoGroup {
+	width: 55% !important;
+}
+
+.description {
+	width: 60% !important;
+}
+
+.contactFormContainer {
+	position: absolute;
+	right: 5%;
+	top: 74px;
+}
+
+.infoGroup {
+	display: flex;
+	flex-direction: row;
+	gap: 52px;
+	margin-top: 66px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+	.content,
+	.infoGroup {
+		width: 45% !important;
+	}
+
+	.description {
+		width: 90% !important;
+	}
+
+	.infoGroup {
+		gap: 30px;
+		margin-top: 35px;
+	}
+
+	.infoGroup :global(.info-icon--container) {
+		width: 60px;
+		height: 60px;
+	}
+
+	.infoGroup :global(.info-icon--container) img {
+		transform: scale(0.9);
+	}
+
+	.infoGroup :global(.info-title) {
+		font-size: 18px;
+	}
+
+	.heroContent button {
+		min-width: 120px;
+		height: 48px;
+		padding: 0 25px;
+		font-size: 14px;
+	}
+
+	.contactFormContainer {
+		width: 45%;
+	}
+
+	.contactFormContainer > div {
+		margin: initial;
+		margin-left: auto;
+		width: 100%;
+		z-index: 99;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+	.content,
+	.infoGroup {
+		width: 90% !important;
+	}
+
+	.description {
+		width: 70% !important;
+	}
+
+	.infoGroup {
+		margin-top: 35px;
+	}
+
+	.contactFormContainer {
+		width: 80%;
+	}
+
+	.jumbotron > section {
+		height: 100vh;
+		align-items: flex-start;
+		padding-top: 100px;
+	}
+
+	.contactFormContainer {
+		width: 100%;
+		position: static;
+		margin-top: 38px;
+	}
+
+	.contactFormContainer > div {
+		width: 100%;
+		margin: 0;
+		z-index: 99;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.jumbotron > section {
+		height: 690px;
+		align-items: flex-start;
+		padding-top: 46px;
+	}
+
+	.content,
+	.infoGroup,
+	.description {
+		width: 100% !important;
+	}
+
+	.description {
+		font-size: 16px;
+	}
+
+	.contactFormContainer {
+		width: 100%;
+		position: static;
+		margin-top: 50px;
+	}
+
+	.contactFormContainer > div {
+		width: 100%;
+		margin: 0;
+		z-index: 99;
+	}
+
+	.infoGroup {
+		gap: 7px;
+		margin-top: 30px;
+	}
+}

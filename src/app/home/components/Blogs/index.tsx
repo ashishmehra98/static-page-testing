@@ -1,10 +1,8 @@
-"use client";
-
 import React from "react";
-import HeaderSection from "../HeaderSection";
-import Button from "../Button";
-import BlogCard from "../BlogCard";
 import styles from "./Blogs.module.css";
+import HeaderSection from "@/app/components/HeaderSection";
+import Button from "@/app/components/Button";
+import BlogCard from "@/app/components/BlogCard";
 
 interface BlogData {
 	id: string;

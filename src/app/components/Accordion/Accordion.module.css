@@ -103,7 +103,14 @@
 }
 
 /* Responsive Design */
+
 @media screen and (max-width: 768px) {
+	.itemTitle {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 480px) {
 	.itemTitle {
 		font-size: 20px;
 	}
@@ -118,10 +125,14 @@
 
 	.accordionSecondary .itemHeader,
 	.accordionSecondary .itemContent {
-		padding: 20px;
+		padding: 21px 20px;
 	}
 
-	.accordionSecondary .chevron {
+	.accordionSecondary .itemContent {
+		padding-top: 0;
+	}
+
+	.chevron {
 		width: 28px;
 		height: 28px;
 	}

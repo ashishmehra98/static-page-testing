@@ -35,7 +35,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
 }) => {
 	return (
 		<div className={`${styles.content} ${contentClassName ?? ""}`}>
-			<div className={styles.textSection}>
+			<div className={`${styles.textSection} text-section`}>
 				<div className={styles.tagAndHeading}>
 					{tag && <p className={styles.tag}>{tag}</p>}
 					{heading && (

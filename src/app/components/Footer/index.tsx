@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 			<div className={styles.content}>
 				{/* Logo */}
 				<div className={styles.logoContainer}>
-					<Image src={ICONS.logo} alt="Ecovia Pest Control Logo" width={202} height={65} className={styles.logo} />
+					<Image src={ICONS.logo} alt="Ecovia Logo" fill className={styles.logo} />
 				</div>
 				<div className={styles.divider} />
 

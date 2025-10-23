@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Hero from "../Hero";
-import HeaderSection from "../HeaderSection";
-import Button from "../Button";
-import RatingCard from "../RatingCard";
 import styles from "./BookConsultation.module.css";
+import Hero from "@/app/components/Hero";
+import HeaderSection from "@/app/components/HeaderSection";
+import Button from "@/app/components/Button";
+import RatingCard from "@/app/components/RatingCard";
 import { IMAGES } from "@/app/constants/images";
 
 const BookConsultation = () => {

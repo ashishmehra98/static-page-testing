@@ -4,8 +4,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 300px;
-	height: 370px;
-	padding: 36px 22px;
+	padding: 30px 22px;
 	display: flex;
 	flex-direction: column;
 	transition: all 0.25s ease-in-out;
@@ -42,7 +41,6 @@
 	line-height: 1.41;
 	color: var(--secondary);
 	letter-spacing: -0.32px;
-	width: 262px;
 }
 
 .learnMoreButton {
@@ -78,4 +76,18 @@
 
 .selected .insectLarge {
 	opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+	.name {
+		font-size: 28px;
+	}
+
+	.description {
+		font-size: 16px;
+	}
+
+	.learnMoreText {
+		font-size: 18px;
+	}
 }

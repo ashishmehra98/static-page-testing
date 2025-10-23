@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import HeaderSection from "../components/HeaderSection";
 import Hero from "../components/Hero";
 import HeroContent from "../components/HeroContent";
-import HomeFooterJumbotron from "../components/HomeFooterJumbotron";
+import HomeFooterJumbotron from "../components/ContactFormFooter";
 import PestInfo from "../components/PestInfo";
 import Process from "../components/Process";
 import UserReviews from "../components/UserReviews";

@@ -7,7 +7,7 @@ import HeroContent from "../components/HeroContent";
 import { IMAGES } from "../constants/images";
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/Footer";
-import HomeFooterJumbotron from "../components/HomeFooterJumbotron";
+import HomeFooterJumbotron from "../components/ContactFormFooter";
 import useIsMobile from "../../hooks/useIsMobile";
 import styles from "./style.module.css";
 

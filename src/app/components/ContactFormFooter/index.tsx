@@ -1,13 +1,11 @@
-"use client";
-
 import React from "react";
 import Hero from "../Hero";
 import HeroContent from "../HeroContent";
 import ContactForm from "../ContactForm";
 import Info from "../Info";
-import styles from "./HomeFooterJumbotron.module.css";
+import styles from "./ContactFormFooter.module.css";
 
-interface HomeFooterJumbotronProps {
+interface ContactFormFooterProps {
 	bgImage: string;
 	heading: string;
 	highlightedText: string;
@@ -16,7 +14,7 @@ interface HomeFooterJumbotronProps {
 	heroContainerClassName?: string;
 }
 
-const HomeFooterJumbotron: React.FC<HomeFooterJumbotronProps> = ({
+const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 	bgImage,
 	heading,
 	highlightedText,
@@ -34,6 +32,7 @@ const HomeFooterJumbotron: React.FC<HomeFooterJumbotronProps> = ({
 					description={description}
 					contentClassName={`${styles.content} ${heroContainerClassName || ""}`.trim()}
 					descriptionClassName={styles.description}
+					hideButtonSection={true}
 				/>
 				<div className={styles.infoGroup}>
 					<Info variant="col" icon="family" title="Safe for Families & Pets" />
@@ -48,4 +47,4 @@ const HomeFooterJumbotron: React.FC<HomeFooterJumbotronProps> = ({
 	);
 };
 
-export default HomeFooterJumbotron;
+export default ContactFormFooter;

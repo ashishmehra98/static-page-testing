@@ -1,0 +1,22 @@
+.userReviewsSection,
+.footer {
+	padding-top: 80px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+	.userReviewsSection {
+		padding-top: 300px;
+	}
+	.footer {
+		margin-top: 300px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.userReviewsSection {
+		padding-top: 220px;
+	}
+	.footer {
+		margin-top: 300px;
+	}
+}

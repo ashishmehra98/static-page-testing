@@ -62,10 +62,28 @@
 
 	.tag,
 	.description {
+		font-size: 18px;
+	}
+
+	.heading {
+		font-size: 44px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.content {
+		width: 100%;
+	}
+
+	.tag,
+	.description {
 		font-size: 14px;
 	}
 
 	.heading {
 		font-size: 38px;
+	}
+	.buttonSection {
+		gap: 11px;
 	}
 }

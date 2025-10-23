@@ -5,7 +5,7 @@ import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeaderSection from "../components/HeaderSection";
-import HomeFooterJumbotron from "../components/HomeFooterJumbotron";
+import HomeFooterJumbotron from "../components/ContactFormFooter";
 import LocalPestExpert from "../components/LocalPestExpert";
 import SectionInfo from "../components/SectionInfo";
 import UserReviews from "../components/UserReviews";

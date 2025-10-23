@@ -44,15 +44,14 @@
 	width: 100%;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
 	.container {
 		gap: 30px;
 	}
 
 	.contentSection {
 		flex-direction: column;
-		gap: 40px;
+		gap: 30px;
 	}
 
 	.imageSection {
@@ -62,5 +61,10 @@
 
 	.imageContainer {
 		height: 216px;
+		aspect-ratio: 16 / 9;
+	}
+
+	.servicesSection {
+		margin-top: 0;
 	}
 }
