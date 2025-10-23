@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import styles from "./PestInfo.module.css";
 
 interface PestInfoProps {
@@ -46,7 +47,7 @@ const PestInfo: React.FC<PestInfoProps> = ({
 		<section className={`${styles.container} ${isReverse ? styles.reverse : ""} ${className}`}>
 			<div className={styles.imageContainer}>
 				{/* Using native img to avoid external domain config requirements */}
-				<img src={imageSrc} alt={imageAlt} className={styles.image} />
+				<Image src={imageSrc} alt={imageAlt} fill className={styles.image} />
 			</div>
 
 			<div className={styles.content} style={contentStyle}>

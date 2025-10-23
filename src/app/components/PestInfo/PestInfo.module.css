@@ -89,14 +89,16 @@
 		height: 320px;
 	}
 
-	.content {
+	.content,
+	.pestName {
 		width: 100%;
 	}
 }
 
 @media screen and (max-width: 480px) {
 	.imageContainer {
-		height: 291px;
+		width: 100%;
+		height: 231px;
 	}
 
 	.pestName {

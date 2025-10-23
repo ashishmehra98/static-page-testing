@@ -349,7 +349,7 @@ const PestStudy = () => {
 					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
 					heroContainerClassName={styles.jumbotronFooterContent}
 				/>
-				<Footer className="py-[80px]" />
+				<Footer className={styles.footer} />
 			</div>
 		</Container>
 	);

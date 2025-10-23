@@ -1,5 +1,5 @@
 .header {
-	width: 55%;
+	width: 644px;
 }
 
 .whatWeTreatSection,
@@ -41,10 +41,44 @@
 	flex: 1;
 }
 
-.jumbotronFooterContent {
-	width: 625px !important;
-}
-
 .jumbotronFooterContent p {
 	width: 100% !important;
+}
+
+.footer {
+	padding-top: 80px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+	.footer {
+		margin-top: 300px !important;
+	}
+	.pestInfoCard > div {
+		flex: initial;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		width: 90% !important;
+	}
+	.pestInfoCard > div {
+		flex: initial;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.whatWeTreatSection {
+		gap: 30px;
+	}
+	.pestInfoCard {
+		flex-direction: column-reverse;
+	}
+
+	.separator {
+		display: none;
+	}
+	.footer {
+		margin-top: 350px !important;
+	}
 }
