@@ -2,9 +2,9 @@ import React from "react";
 import HeaderSection from "../HeaderSection";
 import styles from "./LocalPestExpert.module.css";
 
-const LocalPestExpert: React.FC = () => {
+const LocalPestExpert: React.FC<{ className?: string }> = ({ className }) => {
 	return (
-		<section className={styles.localPestExpert}>
+		<section className={`${styles.localPestExpert}${className ? ` ${className}` : ""}`}>
 			<HeaderSection
 				title="Your "
 				highlightedText="Local Sydney"

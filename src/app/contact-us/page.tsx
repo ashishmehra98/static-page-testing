@@ -1,17 +1,17 @@
 "use client";
 
-import Container from "../components/Container";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import HeaderSection from "../components/HeaderSection";
-import HomeFooterJumbotron from "../components/ContactFormFooter";
-import LocalPestExpert from "../components/LocalPestExpert";
-import SectionInfo from "../components/SectionInfo";
-import UserReviews from "../components/UserReviews";
-import { FAQ_DATA } from "../constants/faq";
-import { IMAGES } from "../constants/images";
+import UserReviewsSection from "../about-us/components/UserReviewsSection";
 import styles from "./style.module.css";
+import Container from "@/app/components/Container";
+import FAQ from "@/app/components/FAQ";
+import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import HeaderSection from "@/app/components/HeaderSection";
+import ContactFormFooter from "@/app/components/ContactFormFooter";
+import LocalPestExpert from "@/app/components/LocalPestExpert";
+import SectionInfo from "@/app/components/SectionInfo";
+import { FAQ_DATA } from "@/app/constants/faq";
+import { IMAGES } from "@/app/constants/images";
 
 const ContactUs = () => {
 	return (
@@ -19,7 +19,7 @@ const ContactUs = () => {
 			<Header />
 			<div className="flex flex-col gap-[60px] xl:gap-[120px]">
 				{/* Jumbotron */}
-				<HomeFooterJumbotron
+				<ContactFormFooter
 					bgImage={IMAGES.CONTACT_BG}
 					heading="Contact "
 					highlightedText="Ecovia "
@@ -27,7 +27,7 @@ const ContactUs = () => {
 					description="Have a pest problem at home or just need advice? Our friendly team at Ecovia is here to help. Contact us today for a free inspection and no-obligation quote for your residential pest control needs."
 					heroContainerClassName={styles.jumbotronHeaderContent}
 				/>
-				<LocalPestExpert />
+				<LocalPestExpert className={styles.localPestExpertSection} />
 				{/* Why Choose Ecovia */}
 				<div className={styles.whyChooseEcoviaSection}>
 					<HeaderSection
@@ -69,18 +69,8 @@ const ContactUs = () => {
 				</div>
 				<FAQ items={FAQ_DATA} />
 				{/* User Reviews */}
-				<div className={styles.userReviewsSection}>
-					<HeaderSection
-						title="What "
-						highlightedText="Our Customers "
-						extraTitle="Had To Say About Us"
-						subtitle="This is what some of our customers had to say about our services after-the-fact!"
-						align="start"
-						className="user-reviews--header"
-					/>
-					<UserReviews className="user-reviews" />
-				</div>
-				<HomeFooterJumbotron
+				<UserReviewsSection />
+				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book Your "
 					highlightedText="Free Inspection "
@@ -88,7 +78,7 @@ const ContactUs = () => {
 					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
 					heroContainerClassName={styles.jumbotronFooterContent}
 				/>
-				<Footer className="py-[80px]" />
+				<Footer className={styles.footer} />
 			</div>
 		</Container>
 	);

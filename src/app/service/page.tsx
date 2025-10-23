@@ -26,11 +26,12 @@ const Service = () => {
 					<HeroContent
 						heading={"Residential "}
 						highlightedText={"Pest Control "}
-						subHeading={"for Sydney Homes & Businesses"}
+						subHeading={"in Sydney"}
 						description={
-							"Stay informed with practical tips, latest news, and expert advice on keeping your space pest-free all year round"
+							"Living in Sydney has many perks — except when uninvited pests move in. At Ecovia, we specialise in residential pest control tailored to Sydney homes. Whether it’s ants in the kitchen, rodents in the roof, or cockroaches in your bathroom, our licensed team provides fast, safe, and effective solutions across the region."
 						}
-						hideButtonSection={true}
+						phoneNumber="0432 227 227"
+						contactButtonText="Contact Us"
 					/>
 				</Hero>
 				{/* Residential & Commercial Info */}
