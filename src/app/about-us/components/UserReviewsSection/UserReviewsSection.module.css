@@ -1,0 +1,29 @@
+.userReviewsSection {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.userReviewsSection :global(.user-reviews--header) {
+	width: 660px;
+}
+
+.userReviewsSection :global(.user-reviews) > div {
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	.userReviewsSection :global(.user-reviews--header) {
+		width: 100%;
+	}
+
+	.userReviewsSection :global(.user-reviews--header) h2 {
+		text-align: left;
+	}
+
+	:global(.user-reviews) {
+		padding-top: 0 !important;
+	}
+}

@@ -1,21 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import AboutUsJumbotron from "../components/AboutUsJumbotron";
-import Container from "../components/Container";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import SectionInfo from "../components/SectionInfo";
-import { IMAGES } from "../constants/images";
-import HeaderSection from "../components/HeaderSection";
-import Button from "../components/Button";
-import PesticideInfoSection from "../components/PesticideInfoSection";
-import UserReviews from "../components/UserReviews";
-import FAQ from "../components/FAQ";
-import { FAQ_DATA } from "../constants/faq";
-import HomeFooterJumbotron from "../components/ContactFormFooter";
-import Footer from "../components/Footer";
+import UserReviewsSection from "./components/UserReviewsSection";
 import styles from "./style.module.css";
+import AboutUsJumbotron from "@/app/components/AboutUsJumbotron";
+import Container from "@/app/components/Container";
+import Header from "@/app/components/Header";
+import Hero from "@/app/components/Hero";
+import SectionInfo from "@/app/components/SectionInfo";
+import HeaderSection from "@/app/components/HeaderSection";
+import Button from "@/app/components/Button";
+import PesticideInfoSection from "@/app/components/PesticideInfoSection";
+import FAQ from "@/app/components/FAQ";
+import ContactFormFooter from "@/app/components/ContactFormFooter";
+import Footer from "@/app/components/Footer";
+import { FAQ_DATA } from "@/app/constants/faq";
+import { IMAGES } from "@/app/constants/images";
 
 export default function AboutUs() {
 	return (
@@ -91,26 +91,16 @@ Partner with a seasoned professional committed to protecting your home and givin
 						<Button variant="primary" title="0432 227 227" icon="phone" onPress={() => {}} />
 					</div>
 				</Hero>
-				<div className={styles.userReviewsSection}>
-					<HeaderSection
-						title="What "
-						highlightedText="Our Customers "
-						extraTitle="Had To Say About Us"
-						subtitle="This is what some of our customers had to say about our services after-the-fact!"
-						align="start"
-						className="user-reviews--header"
-					/>
-					<UserReviews className="user-reviews" />
-				</div>
+				<UserReviewsSection />
 				<FAQ items={FAQ_DATA} />
-				<HomeFooterJumbotron
+				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book your quick & free "
 					highlightedText="consultation "
 					subHeading="today"
 					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
 				/>
-				<Footer className="py-[80px]" />
+				<Footer className={styles.footer} />
 			</div>
 		</Container>
 	);

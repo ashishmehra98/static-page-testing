@@ -1,11 +1,11 @@
 .commitmentSection > div {
-	gap: 0;
+	gap: 32px;
 	justify-content: space-between;
 }
 
 .commitmentSection :global(.content-container) {
 	width: initial;
-	flex: 0.9;
+	flex: 0.8;
 }
 
 .trustInfoContentSection {
@@ -61,20 +61,8 @@
 	width: 85%;
 }
 
-.userReviewsSection {
-	display: flex;
-	flex-direction: column;
-	gap: 60px;
-	width: 90%;
-	margin: 0 auto;
-}
-
-.userReviewsSection :global(.user-reviews--header) {
-	width: 45%;
-}
-
-.userReviewsSection :global(.user-reviews) > div {
-	width: 100%;
+.footer {
+	padding-top: 80px;
 }
 
 @media screen and (min-width: 1368px) {
@@ -113,6 +101,20 @@
 	}
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.trustInfo {
+		width: 70%;
+	}
+
+	.pestExpertSection img {
+		object-position: 0 20%;
+	}
+
+	.footer {
+		margin-top: 300px !important;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.trustInfoSection {
 		min-height: initial;
@@ -143,6 +145,10 @@
 		align-items: center;
 	}
 
+	.midHeroContent > div {
+		align-items: center;
+	}
+
 	.midHeroContent h2 {
 		font-size: 32px;
 		text-align: center !important;
@@ -153,15 +159,7 @@
 		text-align: center !important;
 	}
 
-	.userReviewsSection :global(.user-reviews--header) {
-		width: 100%;
-	}
-
-	.userReviewsSection :global(.user-reviews--header) h2 {
-		text-align: left;
-	}
-
-	:global(.user-reviews) {
-		padding-top: 0 !important;
+	.footer {
+		margin-top: 300px !important;
 	}
 }
