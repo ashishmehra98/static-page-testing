@@ -1,0 +1,24 @@
+.ecoviaProcessSection {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.ecoviaProcessSection :global(.header) {
+	width: 653px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+	.ecoviaProcessSection {
+		gap: 32px;
+	}
+
+	.ecoviaProcessSection :global(.header) {
+		width: 100%;
+		margin: 0 auto;
+		gap: 18px;
+	}
+}

@@ -117,7 +117,7 @@
 
 /* Hide desktop action view on small screens; autoplay will handle progression */
 @media screen and (max-width: 768px) {
-	.actionView {
+	.slideButtonContainer {
 		display: none;
 	}
 }

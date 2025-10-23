@@ -6,6 +6,7 @@
 	justify-content: center;
 	width: 100%;
 	position: relative;
+	padding-bottom: 30px;
 }
 
 .lineContainer {
@@ -171,5 +172,20 @@
 		border-right: 1.5px dashed var(--black);
 		border-radius: 1px;
 		border-image: repeating-linear-gradient(to bottom, var(--black) 0, var(--black) 8px, transparent 8px, transparent 16px) 1;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.stepTitle {
+		font-size: 22px;
+	}
+
+	.stepDescription {
+		font-size: 14px;
+	}
+
+	.flowOne .stepContent,
+	.flowTwo .stepContent {
+		flex: 1;
 	}
 }

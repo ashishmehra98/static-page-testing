@@ -1,20 +1,20 @@
 "use client";
 
-import Container from "../components/Container";
-import Header from "../components/Header";
-import HeaderSection from "../components/HeaderSection";
-import Hero from "../components/Hero";
-import HeroContent from "../components/HeroContent";
-import { IMAGES } from "../constants/images";
-import SectionInfo from "../components/SectionInfo";
-import PestServicesSlide from "../components/PestServicesSlide";
-import Process from "../components/Process";
-import UserReviews from "../components/UserReviews";
-import FAQ from "../components/FAQ";
-import { FAQ_DATA } from "../constants/faq";
-import HomeFooterJumbotron from "../components/ContactFormFooter";
-import Footer from "../components/Footer";
+import PestServicesSlide from "./components/PestServicesSlide";
+import EcoviaProcess from "./components/EcoviaProcess/EcoviaProcess";
 import styles from "./style.module.css";
+import Container from "@/app/components/Container";
+import Header from "@/app/components/Header";
+import HeaderSection from "@/app/components/HeaderSection";
+import Hero from "@/app/components/Hero";
+import HeroContent from "@/app/components/HeroContent";
+import SectionInfo from "@/app/components/SectionInfo";
+import FAQ from "@/app/components/FAQ";
+import ContactFormFooter from "@/app/components/ContactFormFooter";
+import Footer from "@/app/components/Footer";
+import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
+import { IMAGES } from "@/app/constants/images";
+import { FAQ_DATA } from "@/app/constants/faq";
 
 const Service = () => {
 	return (
@@ -22,7 +22,7 @@ const Service = () => {
 			<Header />
 			<div className="flex flex-col gap-[60px] xl:gap-[120px]">
 				{/* Jumbotron */}
-				<Hero bgImage={IMAGES.SERVICE_HEADER_BG} bgPosition="0 18%">
+				<Hero bgImage={IMAGES.SERVICE_HEADER_BG} bgPosition="0 18%" className={styles.jumbotron}>
 					<HeroContent
 						heading={"Residential "}
 						highlightedText={"Pest Control "}
@@ -71,15 +71,7 @@ const Service = () => {
 				{/* Pest Info Slides */}
 				<PestServicesSlide className={styles.pestInfoSlidesSection} />
 				{/* Ecovia Process */}
-				<div className={styles.ecoviaProcessSection}>
-					<HeaderSection
-						title="Our Process: How Ecovia Works"
-						subtitle="We follow a transparent, step-by-step approach so you know exactly what to expect."
-						align="center"
-						className="header"
-					/>
-					<Process />
-				</div>
+				<EcoviaProcess />
 				{/* Safety Measures */}
 				<div className={styles.safetyMeasureSection}>
 					<HeaderSection
@@ -136,26 +128,16 @@ const Service = () => {
 					</SectionInfo>
 				</div>
 				{/* User Reviews */}
-				<div className={styles.userReviewsSection}>
-					<HeaderSection
-						title="What "
-						highlightedText="Our Customers "
-						extraTitle="Had To Say About Us"
-						subtitle="This is what some of our customers had to say about our services after-the-fact!"
-						align="start"
-						className="user-reviews--header"
-					/>
-					<UserReviews className="user-reviews" />
-				</div>
+				<UserReviewsSection />
 				<FAQ items={FAQ_DATA} />
-				<HomeFooterJumbotron
+				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book your quick & free "
 					highlightedText="consultation "
 					subHeading="today"
 					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
 				/>
-				<Footer className="py-[80px]" />
+				<Footer className={styles.footer} />
 			</div>
 		</Container>
 	);

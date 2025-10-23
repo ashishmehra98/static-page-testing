@@ -3,40 +3,40 @@
 import React from "react";
 import styles from "./Process.module.css";
 
-const Process: React.FC = () => {
-	const processSteps = [
-		{
-			number: "01",
-			title: "Inspection & assessment",
-			description:
-				"Our technician visits your home, inspects the interior and exterior, identifies pests, and assesses severity (including hidden areas).",
-		},
-		{
-			number: "02",
-			title: "Treatment proposal",
-			description:
-				"We present you with a custom plan (no one-size-fits-all), quoting cost, methods, safety measures, and guarantees.",
-		},
-		{
-			number: "03",
-			title: "Execution of treatment",
-			description:
-				"We apply safe treatments, baiting, sprays, dusts, or barrier methods, depending on pest type. We take care to minimise disruption.",
-		},
-		{
-			number: "04",
-			title: "Follow-up & prevention",
-			description:
-				"We return if pests reappear within the warranty. We also provide advice on how you can reduce risk going forward",
-		},
-		{
-			number: "05",
-			title: "Optional maintenance plan",
-			description:
-				"Many clients choose periodic inspections and treatments (quarterly, bi-annual, or annual) to keep pests at bay.",
-		},
-	];
+const processSteps = [
+	{
+		number: "01",
+		title: "Inspection & assessment",
+		description:
+			"Our technician visits your home, inspects the interior and exterior, identifies pests, and assesses severity (including hidden areas).",
+	},
+	{
+		number: "02",
+		title: "Treatment proposal",
+		description:
+			"We present you with a custom plan (no one-size-fits-all), quoting cost, methods, safety measures, and guarantees.",
+	},
+	{
+		number: "03",
+		title: "Execution of treatment",
+		description:
+			"We apply safe treatments, baiting, sprays, dusts, or barrier methods, depending on pest type. We take care to minimise disruption.",
+	},
+	{
+		number: "04",
+		title: "Follow-up & prevention",
+		description:
+			"We return if pests reappear within the warranty. We also provide advice on how you can reduce risk going forward",
+	},
+	{
+		number: "05",
+		title: "Optional maintenance plan",
+		description:
+			"Many clients choose periodic inspections and treatments (quarterly, bi-annual, or annual) to keep pests at bay.",
+	},
+];
 
+const Process: React.FC = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.separator} />

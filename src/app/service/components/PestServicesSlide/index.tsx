@@ -1,14 +1,12 @@
-"use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-import Hero from "../Hero";
-import HeaderSection from "../HeaderSection";
-import PestInfo from "../PestInfo";
-import { IMAGES } from "../../constants/images";
-import useIsMobile from "../../../hooks/useIsMobile";
+import useIsMobile from "../../../../hooks/useIsMobile";
 import styles from "./PestServicesSlide.module.css";
+import Hero from "@/app/components/Hero";
+import HeaderSection from "@/app/components/HeaderSection";
+import PestInfo from "@/app/components/PestInfo";
+import { IMAGES } from "@/app/constants/images";
 
 // Import Swiper styles
 import "swiper/css";
