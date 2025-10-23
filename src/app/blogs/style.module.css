@@ -43,56 +43,48 @@
 }
 .featuredPosts {
 	display: grid;
-	grid-template-columns: 1fr; /* mobile default */
+	grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for the 4 sm cards */
+	grid-template-rows: auto auto auto; /* 3 rows: lg+md, md, 4 sm cards */
 	gap: 24px;
+	align-items: stretch;
 }
 
-/* Grid areas for desktop: lg card on the left, two md stacked on right, then 4 sm cards in a row */
-@media (min-width: 1024px) {
-	.featuredPosts {
-		grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for the 4 sm cards */
-		grid-template-rows: auto auto auto; /* 3 rows: lg+md, md, 4 sm cards */
-		gap: 24px;
-		align-items: stretch;
-	}
+/* First child (lg) spans two rows and two columns */
+.featuredPosts > :nth-child(1) {
+	grid-column: 1 / 3;
+	grid-row: 1 / span 2;
+}
 
-	/* First child (lg) spans two rows and two columns */
-	.featuredPosts > :nth-child(1) {
-		grid-column: 1 / 3;
-		grid-row: 1 / span 2;
-	}
+/* Place 2nd and 3rd cards (md) in right column */
+.featuredPosts > :nth-child(2) {
+	grid-column: 3 / 5;
+	grid-row: 1;
+}
 
-	/* Place 2nd and 3rd cards (md) in right column */
-	.featuredPosts > :nth-child(2) {
-		grid-column: 3 / 5;
-		grid-row: 1;
-	}
+.featuredPosts > :nth-child(3) {
+	grid-column: 3 / 5;
+	grid-row: 2;
+}
 
-	.featuredPosts > :nth-child(3) {
-		grid-column: 3 / 5;
-		grid-row: 2;
-	}
+/* Last 4 cards (4th, 5th, 6th, 7th) in a single row, each taking 1 column */
+.featuredPosts > :nth-child(4) {
+	grid-column: 1;
+	grid-row: 3;
+}
 
-	/* Last 4 cards (4th, 5th, 6th, 7th) in a single row, each taking 1 column */
-	.featuredPosts > :nth-child(4) {
-		grid-column: 1;
-		grid-row: 3;
-	}
+.featuredPosts > :nth-child(5) {
+	grid-column: 2;
+	grid-row: 3;
+}
 
-	.featuredPosts > :nth-child(5) {
-		grid-column: 2;
-		grid-row: 3;
-	}
+.featuredPosts > :nth-child(6) {
+	grid-column: 3;
+	grid-row: 3;
+}
 
-	.featuredPosts > :nth-child(6) {
-		grid-column: 3;
-		grid-row: 3;
-	}
-
-	.featuredPosts > :nth-child(7) {
-		grid-column: 4;
-		grid-row: 3;
-	}
+.featuredPosts > :nth-child(7) {
+	grid-column: 4;
+	grid-row: 3;
 }
 
 /* Latest Posts section */
@@ -103,28 +95,70 @@
 
 .latestPostsGrid {
 	display: grid;
-	grid-template-columns: 1fr; /* mobile default */
+	grid-template-columns: repeat(2, 1fr);
 	gap: 24px;
 }
 
-/* Desktop: 2x2 grid layout */
-@media (min-width: 1024px) {
-	.latestPostsGrid {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 24px;
-	}
+.featuredPosts :global(.blog-card) :global(.blog-card--title) {
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
-/* Tablet: 2x2 grid layout */
-@media (min-width: 768px) and (max-width: 1023px) {
+.featuredPosts :global(.blog-card) :global(.blog-card--content) {
+	display: -webkit-box;
+	line-clamp: 3;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.footer {
+	padding-top: 80px;
+}
+
+/* Large tablets and smaller: 2x2 grid layout */
+@media (max-width: 1023px) {
+	.featuredPosts {
+		display: grid;
+		grid-template-columns: 1fr 1fr; /* 2 columns for 2x2 grid */
+		grid-template-rows: auto; /* Reset rows */
+		gap: 20px;
+	}
+
+	/* Reset all grid positioning for tablet layout */
+	.featuredPosts > :nth-child(1),
+	.featuredPosts > :nth-child(2),
+	.featuredPosts > :nth-child(3),
+	.featuredPosts > :nth-child(4),
+	.featuredPosts > :nth-child(5),
+	.featuredPosts > :nth-child(6),
+	.featuredPosts > :nth-child(7) {
+		grid-column: auto;
+		grid-row: auto;
+	}
+
+	/* First 3 cards stack vertically */
+	.featuredPosts > :nth-child(1),
+	.featuredPosts > :nth-child(2),
+	.featuredPosts > :nth-child(3) {
+		grid-column: 1 / -1; /* span full width */
+	}
+
 	.latestPostsGrid {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
 	}
+
+	.footer {
+		margin-top: 300px !important;
+	}
 }
 
 /* Mobile: Horizontal scrolling for both sections */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.sectionHeading {
 		width: 90%;
 	}
@@ -170,5 +204,9 @@
 	}
 	:global(.blog-card) p {
 		font-size: 14px;
+	}
+
+	.footer {
+		margin-top: 300px !important;
 	}
 }

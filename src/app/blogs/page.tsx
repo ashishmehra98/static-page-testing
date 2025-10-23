@@ -1,15 +1,15 @@
 "use client";
 
-import Container from "../components/Container";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import HeroContent from "../components/HeroContent";
-import { IMAGES } from "../constants/images";
-import BlogCard from "../components/BlogCard";
-import Footer from "../components/Footer";
-import HomeFooterJumbotron from "../components/ContactFormFooter";
 import useIsMobile from "../../hooks/useIsMobile";
 import styles from "./style.module.css";
+import Container from "@/app/components/Container";
+import Header from "@/app/components/Header";
+import Hero from "@/app/components/Hero";
+import HeroContent from "@/app/components/HeroContent";
+import BlogCard from "@/app/components/BlogCard";
+import Footer from "@/app/components/Footer";
+import HomeFooterJumbotron from "@/app/components/ContactFormFooter";
+import { IMAGES } from "@/app/constants/images";
 
 const Blogs = () => {
 	const isMobile = useIsMobile();
@@ -156,7 +156,7 @@ const Blogs = () => {
 					subHeading="today"
 					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
 				/>
-				<Footer className="py-[60px]" />
+				<Footer className={styles.footer} />
 			</div>
 		</Container>
 	);

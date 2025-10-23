@@ -55,9 +55,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ variant = "sm", image, date, title,
 					<Image src={image} alt="Blog post image" fill className={styles.image} />
 				</div>
 				<div className={styles.contentLg}>
-					<p className={styles.date}>{date}</p>
-					<h3 className={styles.titleLg}>{title}</h3>
-					{content ? <p className={styles.excerpt}>{content}</p> : null}
+					<p className={`${styles.date} blog-card---date`}>{date}</p>
+					<h3 className={`${styles.titleLg} blog-card--title`}>{title}</h3>
+					{content ? <p className={`${styles.excerpt} blog-card--content`}>{content}</p> : null}
 					<button className={styles.learnMore} onClick={onLearnMore} aria-label="Learn more about this blog post">
 						learn more
 					</button>
@@ -72,9 +72,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ variant = "sm", image, date, title,
 					<Image src={image} alt="Blog post image" fill className={styles.image} />
 				</div>
 				<div className={styles.contentMd}>
-					<p className={styles.date}>{date}</p>
-					<h3 className={styles.title}>{title}</h3>
-					{content ? <p className={styles.excerpt}>{content}</p> : null}
+					<p className={`${styles.date} blog-card--date`}>{date}</p>
+					<h3 className={`${styles.title} blog-card--title`}>{title}</h3>
+					{content ? <p className={`${styles.excerpt} blog-card--content`}>{content}</p> : null}
 					<button className={styles.learnMore} onClick={onLearnMore} aria-label="Learn more about this blog post">
 						learn more
 					</button>
@@ -89,8 +89,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ variant = "sm", image, date, title,
 				<Image src={image} alt="Blog post image" fill className={styles.image} />
 			</div>
 			<div className={styles.content}>
-				<p className={styles.date}>{date}</p>
-				<h3 className={styles.title}>{title}</h3>
+				<p className={`${styles.date} blog-card--date`}>{date}</p>
+				<h3 className={`${styles.title} blog-card--title`}>{title}</h3>
 				<button className={styles.learnMore} onClick={onLearnMore} aria-label="Learn more about this blog post">
 					learn more
 				</button>
