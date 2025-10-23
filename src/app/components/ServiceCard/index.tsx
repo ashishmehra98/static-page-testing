@@ -26,7 +26,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 	serviceNumber = "01/",
 	serviceName,
 	serviceDescription,
-	ctaText = "book a free consultation",
+	ctaText = "Book a free consultation",
 	className,
 	isReverse = false,
 	textColor,
