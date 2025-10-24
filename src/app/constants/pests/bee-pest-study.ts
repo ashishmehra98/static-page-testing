@@ -3,9 +3,9 @@ const beePestStudyData = {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Bee ",
 		highlightedText: "Pest Control ",
-		subHeading: "Sydney",
+		subHeading: "In Sydney",
 		description:
-			"Protect your home, your family — and local pollinators. If you've discovered unwanted bees in walls, roof cavities or garden spaces, Ecovia provides professional bee pest control and hive removal services across Sydney. Call us now or request a free quote with no obligation.",
+			"Protect your home, your family — and local pollinators. If you've discovered unwanted bees in walls, roof cavities or garden spaces, Ecovia provides professional <b>bee pest control</b> and hive removal services across Sydney. Call us now or request a free quote with no obligation.",
 		hideButtonSection: true,
 	},
 
@@ -38,7 +38,7 @@ const beePestStudyData = {
 			{
 				boldText: "Legal & biosecurity obligations: ",
 				regularText:
-					"In New South Wales, beekeeping and destruction of hives are regulated under the Apiaries Act 1985, the Biosecurity Act 2015, and the Australian Honey Bee Industry Biosecurity Code of Practice.",
+					"In New South Wales, beekeeping and destruction of hives are regulated under the <b>Apiaries Act 1985</b>, the <b>Biosecurity Act 2015</b>, and the Australian Honey Bee Industry Biosecurity Code of Practice.",
 			},
 			{
 				boldText: "Ecological impact: ",
@@ -64,180 +64,234 @@ const beePestStudyData = {
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "European honey bees (Apis mellifera): ",
-				regularText: "The most frequent for hive removal work; known to form large colonies.",
+				boldText: "European honey bees (Apis mellifera) — ",
+				regularText: "the most frequent for hive removal work; known to form large colonies.",
 			},
 			{
-				boldText: "Feral honey bees: ",
-				regularText: "Wild or escaped hives that adapt to nooks in structures.",
+				boldText: "Feral honey bees — ",
+				regularText: "wild or escaped hives that adapt to nooks in structures.",
 			},
 			{
-				boldText: "Carpenter bees (e.g. Xylocopa bombylans, Xylocopa aerata): ",
+				boldText: "Carpenter bees (e.g. Xylocopa bombylans, Xylocopa aerata) — ",
 				regularText:
-					"These bees bore into wood rather than build typical comb hives. They don't usually form large colonies, but their tunnels can weaken timber.",
+					"these bees bore into wood rather than build typical comb hives. They don't usually form large colonies, but their tunnels can weaken timber.",
+			},
+			{
+				boldText: "Native stingless bees — ",
+				regularText:
+					"though less common in Sydney, these can nest in cavities; they tend to be less aggressive but still need careful removal.",
+			},
+			{
+				regularText:
+					"Understanding which species you're dealing with is part of how we deliver effective <b>bee pest control</b>.",
 			},
 		],
 	},
 
 	infestationSigns: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "Our",
-		highlightedText: "Bee Pest Control ",
-		extraTitle: "Services",
-		subtitle: "Our approach to <b>bee pest control</b> prioritises safety, effectiveness, and environmental responsibility:",
+		title: "Signs You",
+		highlightedText: "Have ",
+		extraTitle: "A Bee Infestation",
+		subtitle: "You don't always see a hive outright. Look for these signs:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Inspection & Assessment: ",
-				regularText: "We identify the species, locate the hive, and assess the best removal method.",
+				boldText: "A persistent buzzing noise ",
+				regularText: "inside walls, roof voids or ceiling cavities",
 			},
 			{
-				boldText: "Safe Hive Removal: ",
-				regularText: "Professional extraction of bees and hives from walls, roofs, and other structures.",
+				boldText: "Increased bee activity ",
+				regularText: "around eaves, vents or wall junctions",
 			},
 			{
-				boldText: "Relocation Services: ",
-				regularText: "Where possible, we relocate healthy hives to beekeepers rather than exterminate.",
+				boldText: "Visible bees entering/exiting ",
+				regularText: "holes or cracks in walls",
 			},
 			{
-				boldText: "Structural Repair: ",
-				regularText: "We seal entry points and repair any damage caused by bee activity.",
+				boldText: "Honey or wax drips ",
+				regularText: "staining ceilings, walls, or insulation",
 			},
 			{
-				boldText: "Prevention Measures: ",
-				regularText: "We implement strategies to prevent future bee infestations.",
+				boldText: "Swarms clustering temporarily ",
+				regularText: "on trees or fences",
+			},
+			{
+				boldText: "Warm spots behind walls or damp patches ",
+				regularText: "(due to honey leakage)",
+			},
+			{
+				regularText: "If you notice any of these, it's time to consider a professional <b>bee pest control</b> solution.",
 			},
 		],
 	},
 
 	serviceMethods: {
-		title: "What",
-		highlightedText: "To Expect ",
-		extraTitle: "From Our Process",
-		subtitle: "Our <b>bee pest control</b> process is designed to be safe, transparent, and effective:",
+		title: "Our",
+		highlightedText: "Bee Pest Control ",
+		extraTitle: "& Removal Methods",
+		subtitle: "At Ecovia, we tailor the <b>bee pest control</b> process to each situation. Here are the methods we use:",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg",
 		imageAlt: "commercial",
 		infoItems: [
 			{
-				boldText: "Initial Inspection: ",
-				regularText: "We assess the situation and provide a detailed quote.",
+				boldText: "Inspection & identification — ",
+				regularText:
+					"We inspect the structure to locate the hive, traffic paths, entry points, interior cavity spaces and access difficulty. We also identify species and assess whether relocation is viable.",
 			},
 			{
-				boldText: "Treatment Plan: ",
-				regularText: "We explain our approach and timeline for removal.",
+				boldText: "Probe & access opening — ",
+				regularText:
+					"Based on inspection, we carefully open a small access point into the hive zone (e.g. cavity wall, roof space) to examine brood comb and honey stores.",
 			},
 			{
-				boldText: "Safe Removal: ",
-				regularText: "Professional removal using appropriate methods for the species and location.",
+				boldText: "Trap-out or one-way exit installation — ",
+				regularText:
+					"Where possible, we install a one-way trap or tube that lets bees exit but not return. This encourages the colony to vacate naturally over several days.",
 			},
 			{
-				boldText: "Clean-up & Prevention: ",
-				regularText: "We clean the area and implement prevention measures.",
+				boldText: "Vacuum / bee vac removal — ",
+				regularText:
+					"We may use a bee vacuum (a soft suction method) to gently remove residual bees that remain after trap-out, especially in tighter cavities. Bee removal is often about relocation, not destruction.",
 			},
 			{
-				boldText: "Follow-up: ",
-				regularText: "We ensure the problem is completely resolved and provide ongoing support if needed.",
+				boldText: "Hive cut-out or full removal — ",
+				regularText:
+					"If the hive is embedded in structure (e.g. within bricks, walls), we remove comb, honey, brood, and the physical hive structure. We then clean and treat the cavity.",
+			},
+			{
+				boldText: "Cleaning, sealing & repair — ",
+				regularText:
+					"After removal, we clean off honey, seal entry gaps, treat exposed timber or insulation, and restore wall linings where needed to prevent future re-infestation.",
+			},
+			{
+				boldText: "Follow-up & monitoring — ",
+				regularText: "We schedule return visits to confirm the hive is gone, address lingering bees, and monitor for re-entry.",
+			},
+			{
+				regularText:
+					"We always aim for <b>humane relocation</b> when feasible, but in extreme or inaccessible cases, removal may require destroying damaged comb when it cannot be saved. Our priority is safe, effective <b>bee pest control</b> with minimal disruption.",
 			},
 		],
 	},
 
 	processList: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "DIY",
-		highlightedText: "Tips ",
-		extraTitle: "& Prevention",
-		subtitle: "While professional <b>bee pest control</b> is recommended for safety, here are some prevention tips:",
+		title: "What",
+		highlightedText: "To Expect: ",
+		extraTitle: "Our Process & Frequently Asked Questions",
+		subtitle: "Here's how working with Ecovia typically unfolds:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Seal entry points ",
-				regularText: "around your home to prevent bees from nesting.",
+				boldText: "Step 1 – Free Inspection & Quote — ",
+				regularText: "We visit your property, confirm the hive location, and present a detailed quote.",
 			},
 			{
-				boldText: "Remove food sources ",
-				regularText: "like open garbage cans or pet food that might attract bees.",
+				boldText: "Step 2 – Removal Work — ",
+				regularText: "Our licensed technicians carry out the selected removal method (trap-out, cut-out, vacuum, etc.).",
 			},
 			{
-				boldText: "Regular inspection ",
-				regularText: "of your property for early signs of bee activity.",
+				boldText: "Step 3 – Clean-up & Repairs — ",
+				regularText: "We clean residual wax, honey, debris and seal the cavity. We also repair structural damage or finishes.",
 			},
 			{
-				boldText: "Avoid swatting or disturbing bees ",
-				regularText: "as this can make them more aggressive.",
-			},
-			{
-				regularText:
-					"Remember: Bees are important pollinators. If you find a hive, call professionals rather than attempting DIY removal.",
+				boldText: "Step 4 – Follow-up & Guarantee — ",
+				regularText: "If bees return within the guarantee period, we'll come back at no extra cost.",
 			},
 		] as InfoItem[],
 	},
 
 	diyTips: {
-		title: "Safety, ",
-		highlightedText: "Guarantees & Peace ",
-		extraTitle: "of Mind",
-		subtitle: "At Ecovia, we prioritise safety and environmental responsibility in all our <b>bee pest control</b> services:",
+		title: "DIY",
+		highlightedText: "Tips ",
+		extraTitle: "& Bee Prevention",
+		subtitle:
+			"Here are practical actions you can take to reduce the risk of bee infestation — but note that DIY methods rarely remove an active hive fully:",
 		align: "center" as const,
 		imageSrc: "/images/common-ant-species.png",
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Licensed and insured technicians with proper training in bee removal.",
+				boldText: "Seal cracks, vents or gaps ",
+				regularText: "in roof eaves, gutters, pipes, wall junctions",
 			},
 			{
-				boldText: "Safe methods that protect your family and pets.",
+				boldText: "Trim branches and shrubs ",
+				regularText: "away from your house to reduce bee access paths",
 			},
 			{
-				boldText: "Environmental responsibility - we relocate healthy hives when possible.",
+				boldText: "Avoid attracting bees near your structure: ",
+				regularText: "avoid leaving sugary drinks, open compost, or exposed water sources too close",
 			},
 			{
-				boldText: "Compliance with NSW regulations and biosecurity requirements.",
+				boldText: "Inspect vulnerable areas ",
+				regularText: "periodically (roof voids, subfloor, wall cavities)",
 			},
 			{
-				regularText: "We provide written guarantees and follow-up support to ensure complete resolution.",
+				boldText: "Use mesh screens ",
+				regularText: "on vents and exhaust ports",
+			},
+			{
+				boldText: "Consult early: ",
+				regularText: "at first signs of bees, contact professionals — don't wait until the colony is large",
+			},
+			{
+				regularText: "These steps support, but don't replace, professional <b>bee pest control</b> when a hive is established.",
 			},
 		],
 	},
 
-	processCheck: {
+	extraContent: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "Book Your ",
-		highlightedText: "Bee Pest Control ",
-		extraTitle: "Service Today",
-		subtitle:
-			"Don't let bee infestations put your family at risk. Call Ecovia now for professional <b>bee pest control</b> services across Sydney. We'll safely remove hives and protect your property.",
-		align: "center" as const,
+		title: "Safety, ",
+		highlightedText: "Legality & Environmental ",
+		extraTitle: "Responsibility",
+		subtitle: "At Ecovia, we don't just remove bees — we do it responsibly:",
+		align: "start",
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
-		processItems: [
+		infoItems: [
 			{
-				title:
-					"We provide bee pest control services across Sydney, including Eastern Suburbs, Northern Beaches, Inner West, Western Sydney, Sutherland Shire, North Shore, and Greater Sydney.",
+				regularText: "We hold current licences and comply with <b>NSW Pesticides Regulation 2017</b> for safe chemical use.",
+			},
+			{
+				regularText:
+					"Our methods follow the <b>Australian Honey Bee Industry Biosecurity Code of Practice</b>, ensuring we uphold standards for health, transport, and hive management.",
+			},
+			{
+				regularText:
+					"Where possible, we liaise with local beekeepers or conservation groups for <b>humane relocation</b> (for instance, we support groups like <a href='https://www.sydneybeerescue.org/' target='_blank'>Sydney Bee Rescue</a>).",
+			},
+			{
+				regularText: "We document and remove honey and debris to avoid mould or pests in future",
+			},
+			{
+				regularText: "We maintain full insurance and adhere to safe work practices",
+			},
+			{
+				regularText:
+					"By choosing us for <b>bee pest control</b>, you gain peace of mind that your home, local environment, and pollinators are treated with care.",
 			},
 		],
-		button: {
-			variant: "primary" as const,
-			title: " 0432 227 227",
-			icon: "phone" as const,
-		},
 	},
 
 	footer: {
 		backgroundImage: "/images/home-footer-bg.jpg",
 		heading: "Book Your ",
-		highlightedText: "Bee Pest Control ",
-		subHeading: "Service Today",
+		highlightedText: "Bee Removal ",
+		subHeading: "Service Now",
 		description:
-			"Don't let bee infestations put your family at risk. Call Ecovia now for professional <b>bee pest control</b> services across Sydney. We'll safely remove hives and protect your property.",
+			"Don't let a hive become a bigger problem. Fill out our quick form or call us to schedule a <b>bee pest control</b> inspection and safe hive removal in Sydney. We'll assess, quote, and handle everything — with a care-first, professional approach.",
 		showCallCTAOnMobile: true,
 	},
 
@@ -246,56 +300,62 @@ const beePestStudyData = {
 			id: 1,
 			ratings: 5,
 			review:
-				"Ecovia safely removed a large bee hive from our roof cavity. They were professional, explained everything clearly, and even relocated the bees to a beekeeper. Highly recommend!",
+				"Ecovia responded quickly when bees settled in our roof. They relocated them, cleaned up, and sealed off the access. No return so far.",
 			userImage: "",
 			username: "Sarah",
-			designation: "Northern Beaches",
+			designation: "Gordon, Sydney",
 		},
 		{
 			id: 2,
 			ratings: 5,
-			review:
-				"We had carpenter bees damaging our deck. Ecovia identified the problem quickly and treated it effectively. No more damage and the bees haven't returned.",
+			review: "I was worried about us killing bees, but Ecovia arranged a beekeeper to take them away. Very professional.",
 			userImage: "",
-			username: "Michael",
-			designation: "Eastern Suburbs",
+			username: "Jamal",
+			designation: "Hornsby",
 		},
 	],
 
 	faq: [
 		{
-			id: "bee-identification",
-			question: "How do I know if I have a bee problem?",
+			id: "bee-legal-kill",
+			question: "Is it legal to kill bees in NSW?",
 			answer:
-				"Look for increased bee activity around your property, buzzing sounds in walls, or visible hives. If you're unsure, call us for a professional inspection.",
+				"Strict rules apply under the <b>Apiaries Act 1985</b> and <b>Biosecurity Act 2015</b>. Where possible, hives should be relocated. Unauthorised destruction may attract penalties.",
+		},
+		{
+			id: "bee-always-kill",
+			question: "Will you always kill the bees?",
+			answer:
+				"No — when conditions allow, we practice <b>ethical bee pest control</b> and relocate the colony. Killing is a last resort if relocation isn't feasible safely.",
+		},
+		{
+			id: "bee-removal-cost",
+			question: "How much does bee removal cost in Sydney?",
+			answer:
+				"Costs vary by access difficulty, hive size, and location. As a rough benchmark, safe relocation of a 2-month hive is quoted in Sydney at AUD $700–$900; a 1-year hive can cost $1,500–$1,800.",
+		},
+		{
+			id: "bee-removal-duration",
+			question: "How long does removal take?",
+			answer:
+				"Small accessible hives may be removed in a few hours; complex cavities may take one to two days, especially for trap-out methods.",
 		},
 		{
 			id: "bee-treatment-safety",
-			question: "Is bee removal safe for my family?",
+			question: "Are treatments safe for pets and children?",
 			answer:
-				"Yes. Our technicians are trained in safe bee removal methods and will ensure your family's safety throughout the process.",
+				"Yes. We use licensed products and only apply inside cavities or in sealed zones. Re-entry instructions are clearly provided.",
 		},
 		{
-			id: "bee-relocation",
-			question: "Do you relocate bees instead of killing them?",
+			id: "bee-return-guarantee",
+			question: "What if bees return later?",
+			answer: "We offer a warranty period. If bees reappear, we come back to treat them within that period, at no extra charge.",
+		},
+		{
+			id: "bee-best-time",
+			question: "When is the best time to remove bees?",
 			answer:
-				"Yes, whenever possible we relocate healthy hives to beekeepers rather than exterminate them, as bees are important pollinators.",
-		},
-		{
-			id: "bee-legal-compliance",
-			question: "Are you licensed for bee removal?",
-			answer: "Yes, we comply with all NSW regulations including the Apiaries Act 1985 and Biosecurity Act 2015.",
-		},
-		{
-			id: "bee-prevention",
-			question: "How can I prevent future bee problems?",
-			answer:
-				"We'll provide specific prevention advice based on your property, including sealing entry points and removing attractants.",
-		},
-		{
-			id: "bee-guarantee",
-			question: "Do you guarantee your bee removal service?",
-			answer: "Yes, we provide written guarantees and will return if bees reappear within the warranty period.",
+				"Late spring to early summer is ideal, when colonies are strong and foraging. But we respond year-round where safety and access permit.",
 		},
 	],
 } as PestStudyConfig;

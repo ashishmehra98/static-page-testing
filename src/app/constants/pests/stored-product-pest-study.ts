@@ -3,9 +3,9 @@ const storedProductPestStudyData = {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Stored Product Pests ",
 		highlightedText: "Control ",
-		subHeading: "Sydney",
+		subHeading: "In Sydney",
 		description:
-			"Protect your food, home, or business with professional stored product pests control in Sydney. Ecovia offers safe, effective treatments to eliminate pantry pests such as beetles, moths, and weevils, helping you avoid costly contamination and stock losses.",
+			"<b>Protect your food, home, or business with professional stored product pests control in Sydney.</b> Ecovia offers safe, effective treatments to eliminate pantry pests such as beetles, moths, and weevils, helping you avoid costly contamination and stock losses.",
 		hideButtonSection: true,
 	},
 
@@ -33,7 +33,7 @@ const storedProductPestStudyData = {
 			{
 				boldText: "Reputation risk: ",
 				regularText:
-					"For food businesses, failing to control common stored product pests can lead to compliance breaches, damaged customer trust, and even closures.",
+					"For food businesses, failing to control <b>common stored product pests</b> can lead to compliance breaches, damaged customer trust, and even closures.",
 			},
 			{
 				regularText:
@@ -82,164 +82,191 @@ const storedProductPestStudyData = {
 
 	infestationSigns: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "Signs You",
-		highlightedText: "May Have ",
-		extraTitle: "A Stored Product Pest Infestation",
-		subtitle: "Early detection is key to preventing extensive damage. Look for these signs:",
+		title: "Signs of",
+		highlightedText: "A Stored Product ",
+		extraTitle: "Pest Infestation",
+		subtitle: "Infestations often start small but can spread quickly. Watch for these telltale signs:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Small moths or beetles: ",
-				regularText: "Flying around your pantry or kitchen area.",
+				boldText: "Small beetles, moths, or larvae ",
+				regularText: "around cupboards, storage areas, or food packages",
 			},
 			{
-				boldText: "Webbing in food containers: ",
-				regularText: "Especially in flour, grains, or dried goods.",
+				boldText: "Holes in packaging, ",
+				regularText: "especially cardboard or plastic bags",
 			},
 			{
-				boldText: "Larvae in food products: ",
-				regularText: "Small, worm-like creatures in stored food.",
+				boldText: "Clumps, webbing, or dust ",
+				regularText: "in flour and grains",
 			},
 			{
-				boldText: "Holes in packaging: ",
-				regularText: "Small holes in food bags or containers.",
+				boldText: "Spoiled, discoloured, or bad-smelling ",
+				regularText: "food products",
 			},
 			{
-				boldText: "Powdery residue: ",
-				regularText: "Fine dust or powder in food containers.",
+				boldText: "Customer complaints about contaminated goods ",
+				regularText: "(for businesses)",
+			},
+			{
+				regularText:
+					"If you notice these symptoms, professional <b>stored product pests control</b> is essential before the infestation spreads further.",
 			},
 		],
 	},
 
 	serviceMethods: {
-		title: "Our",
-		highlightedText: "Stored Product Pest Control ",
-		extraTitle: "Services",
-		subtitle: "Our comprehensive <b>stored product pest control</b> services include:",
+		title: "How",
+		highlightedText: "Ecovia Treats ",
+		extraTitle: "Stored Product Pests",
+		subtitle:
+			"At Ecovia, we don't just treat the symptoms. We eliminate the pests at their source. Our process is transparent, thorough, and designed to give long-lasting results.",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg",
 		imageAlt: "commercial",
 		infoItems: [
 			{
-				boldText: "Thorough Inspection: ",
-				regularText: "We identify the species and locate all infestation sources.",
+				boldText: "Inspection — ",
+				regularText:
+					"Our licensed technicians identify the pest species, trace the source of infestation, and assess affected products.",
 			},
 			{
-				boldText: "Targeted Treatment: ",
-				regularText: "Safe, effective treatments that eliminate pests at all life stages.",
+				boldText: "Targeted Treatment — ",
+				regularText: "Depending on the situation, we may use:",
 			},
 			{
-				boldText: "Food Safety: ",
-				regularText: "We ensure all treatments are safe for food areas and comply with regulations.",
+				regularText: "• Safe fumigation for large infestations",
 			},
 			{
-				boldText: "Prevention Measures: ",
-				regularText: "We implement strategies to prevent future infestations.",
+				regularText: "• Residual sprays for cracks and crevices",
 			},
 			{
-				boldText: "Follow-up Monitoring: ",
-				regularText: "Regular inspections to ensure complete elimination.",
+				regularText: "• Heat treatments in food-handling environments",
+			},
+			{
+				regularText: "• Dusting in hidden storage areas",
+			},
+			{
+				boldText: "Exclusion & Hygiene Support — ",
+				regularText: "We provide advice on sealing entry points, cleaning storage areas, and stock rotation.",
+			},
+			{
+				boldText: "Follow-up Guarantee — ",
+				regularText: "If pests return within the warranty period, we come back at no charge.",
+			},
+			{
+				regularText:
+					"This tailored approach ensures your <b>stored product pest infestation</b> is not only cleared but prevented from recurring.",
+			},
+		],
+	},
+
+	extraContent: {
+		backgroundImage: "/images/pattern-bg.png",
+		title: "Industries We",
+		highlightedText: "Protect ",
+		extraTitle: "From Stored Product Pests",
+		subtitle: "Ecovia provides <b>stored product pests control Sydney</b> wide across multiple industries:",
+		align: "start",
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
+		infoItems: [
+			{
+				regularText: "- Homes and apartments",
+			},
+			{
+				regularText: "- Restaurants and cafes",
+			},
+			{
+				regularText: "- Supermarkets and grocery stores",
+			},
+			{
+				regularText: "- Warehouses and storage facilities",
+			},
+			{
+				regularText: "- Food processing and manufacturing plants",
+			},
+			{
+				regularText:
+					"Each sector faces different risks. We adjust our treatments to meet the strictest hygiene and compliance standards, especially for businesses operating under HACCP or Australian food safety regulations.",
 			},
 		],
 	},
 
 	processList: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "What",
-		highlightedText: "To Expect ",
-		extraTitle: "From Our Process",
-		subtitle: "Our <b>stored product pest control</b> process is thorough and effective:",
+		title: "Why",
+		highlightedText: "Choose Ecovia ",
+		extraTitle: "For Stored Product Pest Control",
+		subtitle: "Ecovia is trusted across Sydney for safe, effective pest management. Here's why:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Inspection: ",
-				regularText: "We assess the extent of the infestation and identify all sources.",
+				boldText: "Licensed and insured technicians — ",
+				regularText: "All treatments comply with AEPMA Codes of Practice.",
 			},
 			{
-				boldText: "Treatment Plan: ",
-				regularText: "We develop a customised solution for your specific situation.",
+				boldText: "Safe for homes and businesses — ",
+				regularText: "Treatments are approved for use in food-handling areas.",
 			},
 			{
-				boldText: "Treatment: ",
-				regularText: "We apply safe, effective treatments to eliminate all life stages.",
+				boldText: "Tailored solutions — ",
+				regularText: "We adapt treatments for households, retail, and large-scale warehouses.",
 			},
 			{
-				boldText: "Clean-up: ",
-				regularText: "We clean affected areas and remove contaminated products.",
+				boldText: "Service guarantee — ",
+				regularText: "If pests return within our warranty period, so do we.",
 			},
 			{
-				boldText: "Follow-up: ",
-				regularText: "We monitor the situation and provide ongoing support.",
+				regularText:
+					"For more details on stored product insects and their risks, see the Australian Department of Agriculture's food pest advice.",
 			},
 		] as InfoItem[],
 	},
 
 	diyTips: {
-		title: "DIY",
-		highlightedText: "Tips ",
-		extraTitle: "& Prevention",
-		subtitle: "While professional <b>stored product pest control</b> is most effective, here are some prevention tips:",
+		title: "Tips to",
+		highlightedText: "Prevent ",
+		extraTitle: "Pantry Pests",
+		subtitle:
+			"While professional treatment is the most reliable solution, prevention plays a big role in keeping food storage pest-free. Here are practical steps you can take:",
 		align: "center" as const,
 		imageSrc: "/images/common-ant-species.png",
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Store food in sealed containers to prevent access.",
+				boldText: "Store dry goods ",
+				regularText: "in airtight, sealed containers",
 			},
 			{
-				boldText: "Regularly inspect stored food for signs of infestation.",
+				boldText: "Keep storage areas ",
+				regularText: "clean, dry, and well-ventilated",
 			},
 			{
-				boldText: "Clean pantry areas regularly and remove spilled food.",
+				boldText: "Rotate stock regularly ",
+				regularText: '(use the "first in, first out" system)',
 			},
 			{
-				boldText: "Use airtight containers for flour, grains, and cereals.",
+				boldText: "Inspect new food deliveries ",
+				regularText: "for signs of pests",
 			},
 			{
-				boldText: "Rotate food stock to use older items first.",
+				boldText: "Dispose of contaminated goods immediately ",
+				regularText: "to avoid spread",
 			},
 			{
-				regularText: "Remember: Professional treatment is usually necessary for established infestations.",
+				regularText:
+					"These simple measures reduce the risk, but once an infestation takes hold, professional <b>stored product pests control</b> is usually the only way to fully resolve it.",
 			},
 		],
-	},
-
-	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
-		title: "Safety, ",
-		highlightedText: "Guarantees & Peace ",
-		extraTitle: "of Mind",
-		subtitle: "At Ecovia, we prioritise safety and effectiveness in all our <b>stored product pest control</b> services:",
-		align: "center" as const,
-		titleColor: "white",
-		subtitleColor: "white",
-		highlightedTextColor: "#b1cf5f",
-		processItems: [
-			{
-				title: "Safe treatments that protect your family and food safety.",
-			},
-			{
-				title: "Effective methods that eliminate pests at all life stages.",
-			},
-			{
-				title: "Written guarantees for complete elimination.",
-			},
-			{
-				title: "Ongoing support and monitoring to prevent reinfestation.",
-			},
-		],
-		button: {
-			variant: "primary" as const,
-			title: " 0432 227 227",
-			icon: "phone" as const,
-		},
 	},
 
 	footer: {
@@ -248,66 +275,39 @@ const storedProductPestStudyData = {
 		highlightedText: "Stored Product Pest Control ",
 		subHeading: "Service Today",
 		description:
-			"Don't let stored product pests contaminate your food or damage your business. Call Ecovia now for professional <b>stored product pest control</b> services across Sydney. We'll eliminate the infestation and protect your food safety.",
+			"Don't let pantry pests put your health, food, or reputation at risk. Call Ecovia now or fill out our quick form to book a <b>stored product pests control service in Sydney</b>. Our experts will inspect, treat, and protect your property with results you can trust.",
 		showCallCTAOnMobile: true,
 	},
 
-	reviews: [
-		{
-			id: 1,
-			ratings: 5,
-			review:
-				"Ecovia solved our pantry moth problem completely. They identified the source, treated all affected areas, and provided great prevention advice. No more contaminated food.",
-			userImage: "",
-			username: "Sarah",
-			designation: "Inner West",
-		},
-		{
-			id: 2,
-			ratings: 5,
-			review:
-				"We had flour beetles in our restaurant kitchen. Ecovia treated the problem effectively and ensured food safety compliance. The beetles haven't returned.",
-			userImage: "",
-			username: "Tony",
-			designation: "Eastern Suburbs",
-		},
-	],
-
 	faq: [
 		{
-			id: "stored-product-identification",
-			question: "How do I know if I have stored product pests?",
+			id: "stored-product-what-are",
+			question: "What are stored product pests?",
 			answer:
-				"Look for small moths or beetles in your pantry, webbing in food containers, or larvae in stored food. If you're unsure, call us for a professional inspection.",
+				"They are insects like moths, beetles, and weevils that infest dried and packaged foods, causing contamination and spoilage.",
+		},
+		{
+			id: "stored-product-how-know",
+			question: "How do I know if I have them?",
+			answer: "Look for webbing, beetles, larvae, or holes in packaging. Food may clump, smell strange, or appear discoloured.",
 		},
 		{
 			id: "stored-product-treatment-safety",
-			question: "Is stored product pest treatment safe for food areas?",
-			answer: "Yes, we use safe treatments that comply with food safety regulations and protect your family's health.",
+			question: "Are treatments safe for my home or business?",
+			answer: "Yes. We only use licensed products safe for residential and commercial food environments.",
 		},
 		{
-			id: "stored-product-prevention",
-			question: "How can I prevent future stored product pest problems?",
-			answer:
-				"We'll provide specific prevention advice including proper food storage, regular cleaning, and using airtight containers.",
-		},
-		{
-			id: "stored-product-contamination",
-			question: "What should I do with contaminated food?",
-			answer:
-				"Contaminated food should be disposed of immediately. We'll help you identify and safely remove all affected products.",
+			id: "stored-product-throw-away",
+			question: "Do I need to throw away all my food?",
+			answer: "Only infested products must be discarded. Our technicians advise what can be kept and what should be removed.",
 		},
 		{
 			id: "stored-product-treatment-duration",
-			question: "How long does stored product pest treatment take?",
-			answer: "Most treatments are completed in a few hours, but follow-up visits may be needed to ensure complete elimination.",
-		},
-		{
-			id: "stored-product-guarantee",
-			question: "Do you guarantee your stored product pest control service?",
-			answer: "Yes, we provide written guarantees and will return if pests reappear within the warranty period.",
+			question: "How long does treatment take?",
+			answer:
+				"Most treatments can be completed in a single visit, though larger commercial infestations may require staged treatments.",
 		},
 	],
-} as PestStudyConfig;
+} as Partial<PestStudyConfig>;
 
 export default storedProductPestStudyData;

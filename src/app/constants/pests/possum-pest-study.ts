@@ -3,10 +3,11 @@ const possumPestStudyData = {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Possum ",
 		highlightedText: "Pest Control ",
-		subHeading: "Sydney",
+		subHeading: "In Sydney",
 		description:
 			"If you're hearing scratching in your roof or spotting possum droppings in your attic, you're not alone. Possums are common in Sydney—and when they take up residence in your roof or wall cavities, they can cause damage, odours, noise and serious headaches. At <b>Ecovia</b>, we specialise in <b>possum pest control</b> in Sydney—using licensed, humane and effective methods to solve your problem and keep possums out for good.",
 		hideButtonSection: false,
+		tag: "Humane, legal solutions across Greater Sydney",
 	},
 
 	controlMatters: {
@@ -38,6 +39,43 @@ const possumPestStudyData = {
 			{
 				regularText:
 					"A professional <b>possum pest control Sydney</b> service doesn't just trap the animal — it addresses the root cause, seals entry, cleans contamination and monitors for return.",
+			},
+		],
+	},
+
+	commonSpecies: {
+		title: "Possums in Sydney",
+		highlightedText: "Species, Behaviour ",
+		extraTitle: "& Risks",
+		subtitle: "",
+		align: "center",
+		imageSrc: "/images/common-ant-species.png",
+		imageAlt: "commercial",
+		isReverse: true,
+		infoItems: [
+			{
+				regularText: "Understanding possum habits helps us remove them safely and permanently—here’s what to know:",
+			},
+			{
+				boldText: "Common species: ",
+				regularText: " In Sydney, the common brushtail possum and ringtail possum are the ones most likely to invade homes.",
+			},
+			{
+				boldText: "Nocturnal & territorial: ",
+				regularText: "They’re active at night, sleep in hollows or roof voids by day, and tend to reuse territories",
+			},
+			{
+				boldText: "Excellent climbers: ",
+				regularText: "They use trees, guttering, pipes, overhanging branches—anything close to your roof—to gain access.",
+			},
+			{
+				boldText: "Protected animal status: ",
+				regularText:
+					"In NSW, possums are protected under the <a href='https://legislation.nsw.gov.au/view/html/inforce/current/act-1974-080' target='_blank'>National Parks and Wildlife Act 1974</a>. You must follow rules around trapping, relocating or handling them.",
+			},
+			{
+				regularText:
+					"Because of these protections, <b>pest control for possums</b> is not the same as for rats or insects. Unlicensed or illegal removal can result in fines or worse.",
 			},
 		],
 	},
@@ -97,12 +135,12 @@ const possumPestStudyData = {
 				regularText: "in attic spaces",
 			},
 			{
-				boldText: "Chewed insulation, timber or wiring",
+				boldText: "Chewed insulation, timber or wiring ",
 				regularText: "damage",
 			},
 			{
 				boldText: "Loose tiles or entry gaps ",
-				regularText: "along eaves or roof vents",
+				regularText: "along eaves, fascia boards or roof vents",
 			},
 			{
 				boldText: "Nesting materials (leaf,bark) ",
@@ -123,11 +161,15 @@ const possumPestStudyData = {
 		title: "Our",
 		highlightedText: "Possum Pest Control ",
 		extraTitle: "Services",
-		subtitle: "Ecovia’s approach is thorough and tailored. Here’s how we handle <b>pest control for possums</b> step by step:",
+		subtitle: "",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg",
 		imageAlt: "possum pest control service",
 		infoItems: [
+			{
+				regularText:
+					"Ecovia’s approach is thorough and tailored. Here’s how we handle <b>pest control for possums</b> step by step:",
+			},
 			{
 				boldText: "Detailed inspection & assessment: ",
 				regularText:
@@ -164,39 +206,68 @@ const possumPestStudyData = {
 		],
 	},
 
-	// processList: {
-	// 	backgroundImage: "/images/pattern-bg.png",
-	// 	title: "What",
-	// 	highlightedText: "To Expect: ",
-	// 	extraTitle: "Our Process",
-	// 	subtitle: "Our step-by-step process ensures safe, legal removal of possums. Here's what to expect:",
-	// 	align: "start" as const,
-	// 	titleColor: "white",
-	// 	subtitleColor: "white",
-	// 	highlightedTextColor: "#b1cf5f",
-	// 	infoItems: [
-	// 		{
-	// 			boldText: "Inspection – ",
-	// 			regularText: "Identify nests, species, entry points, damages.",
-	// 		},
-	// 		{
-	// 			boldText: "Quote & plan – ",
-	// 			regularText: "Provide clear plan and costs.",
-	// 		},
-	// 		{
-	// 			boldText: "Treatment & removal – ",
-	// 			regularText: "Humane trapping or exclusion, sealing exits.",
-	// 		},
-	// 		{
-	// 			boldText: "Follow-up inspection – ",
-	// 			regularText: "Ensure no re-entry.",
-	// 		},
-	// 		{
-	// 			boldText: "Warranty – ",
-	// 			regularText: "Free re-treatment if possums return during warranty period.",
-	// 		},
-	// 	],
-	// },
+	processList: {
+		backgroundImage: "/images/pattern-bg.png",
+		title: "What to",
+		highlightedText: "Expect: ",
+		extraTitle: "Our Process",
+		subtitle: "Transparency is important to us, so here’s how our ant pest control Sydney service works:",
+		align: "start",
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
+		infoItems: [
+			{
+				boldText: "Inspection: ",
+				regularText: "We survey your property, identify access points / nests / damage",
+			},
+			{
+				boldText: "Quote & plan: ",
+				regularText: "We present you with a clear, written plan and cost",
+			},
+			{
+				boldText: "Treatment & removal: ",
+				regularText: "We trap or exclude, seal entries, remove waste",
+			},
+			{
+				boldText: "Follow-up inspection: ",
+				regularText: "We revisit to ensure no re-entry",
+			},
+			{
+				boldText: "Warranty & support: ",
+				regularText: "If possums return in warranty period, we handle it.",
+			},
+		],
+	},
+
+	lawsInfo: {
+		backgroundImage: "/images/pattern-bg.png",
+		title: "NSW",
+		highlightedText: "Legal & Licence ",
+		extraTitle: "Considerations",
+		subtitle: "Because possums are protected, possum removal in NSW is regulated:",
+		align: "start",
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
+		infoItems: [
+			{
+				regularText: "You <b>must hold a licence</b> (Catch & Release Licence) to trap or relocate possums.",
+			},
+			{
+				regularText: "Released possums must be returned to a location on or near the property (usually within a limited radius).",
+			},
+			{
+				regularText: "You cannot kill, harm, or illegally export possums.",
+			},
+			{
+				regularText: "Non-compliance can incur heavy fines under the National Parks and Wildlife Act.",
+			},
+			{
+				regularText: "That’s why it’s critical to engage a pest control company that is licensed, experienced and compliant.",
+			},
+		],
+	},
 
 	// diyTips: {
 	// 	title: "Tips for",

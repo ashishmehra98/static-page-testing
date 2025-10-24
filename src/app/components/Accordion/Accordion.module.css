@@ -82,6 +82,7 @@
 	letter-spacing: -0.4px;
 	color: var(--secondary);
 	margin: 0;
+	white-space: pre-line;
 }
 
 .divider {

@@ -5,8 +5,9 @@ const antPestStudyData = {
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
 		description:
-			"Ants may be small, but once they enter your home, they quickly become a big problem. From raiding food in the kitchen to leaving trails across the floor, ants can be both a nuisance and a hygiene concern. At Ecovia, we specialise in ant pest control Sydney homeowners can rely on. Our technicians use safe, proven methods to target the colony at its source and keep ants out for good.",
+			"Ants may be small, but once they enter your home, they quickly become a big problem. From raiding food in the kitchen to leaving trails across the floor, ants can be both a nuisance and a hygiene concern. At Ecovia, we specialise in <b>ant pest control Sydney</b> homeowners can rely on. Our technicians use safe, proven methods to target the colony at its source and keep ants out for good.",
 		hideButtonSection: true,
+		tag: "Effective solutions for lasting results",
 	},
 
 	controlMatters: {
@@ -73,7 +74,7 @@ const antPestStudyData = {
 				regularText: "Build large nests in soil, often visible in gardens and yards.",
 			},
 			{
-				regularText: `By understanding these species, our ant pest control solutions are tailored to the exact problem, ensuring long-lasting results. 
+				regularText: `By understanding these species, our <b>ant pest control</b> solutions are tailored to the exact problem, ensuring long-lasting results. 
 					
 					For further background on ant species in Australia, see `,
 				link: {
@@ -206,22 +207,22 @@ const antPestStudyData = {
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Keep kitchens clean and free of food scraps or crumbs.",
+				regularText: "Keep kitchens clean and free of food scraps or crumbs.",
 			},
 			{
-				boldText: "Store food in sealed containers.",
+				regularText: "Store food in sealed containers.",
 			},
 			{
-				boldText: "Wipe down surfaces with soapy water or vinegar to disrupt ant trails.",
+				regularText: "Wipe down surfaces with soapy water or vinegar to disrupt ant trails.",
 			},
 			{
-				boldText: "Seal cracks and crevices around windows, doors, and skirting.",
+				regularText: "Seal cracks and crevices around windows, doors, and skirting.",
 			},
 			{
-				boldText: "Fix leaks, as ants seek out water sources.",
+				regularText: "Fix leaks, as ants seek out water sources.",
 			},
 			{
-				boldText: "Keep garden beds, mulch, and tree branches away from the house perimeter",
+				regularText: "Keep garden beds, mulch, and tree branches away from the house perimeter",
 			},
 			{
 				regularText: "These steps can help, but once an infestation is established, professional help is usually required.",
@@ -282,7 +283,7 @@ const antPestStudyData = {
 				"We had sugar ants all over our kitchen bench. Ecovia treated the nest with baits, and within days the ants were gone. They even gave us prevention tips that have worked.",
 			userImage: "",
 			username: "Anna",
-			designation: "",
+			designation: "Parramatta",
 		},
 		{
 			id: 2,
@@ -291,7 +292,7 @@ const antPestStudyData = {
 				"After heavy rain, our yard was full of ant mounds. Ecovia identified the species, treated the colonies, and we've had no repeat issues.",
 			userImage: "",
 			username: "George",
-			designation: "",
+			designation: "Sutherland",
 		},
 	],
 

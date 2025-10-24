@@ -53,6 +53,7 @@ interface HeroConfig {
 	subHeading: string;
 	description: string;
 	hideButtonSection: boolean;
+	tag: string;
 }
 
 // Control matters section interface
@@ -175,6 +176,8 @@ interface FAQ {
 	answer: string;
 }
 
+interface ExtraContentConfig extends ProcessListConfig {}
+
 // Main pest study config interface
 interface PestStudyConfig {
 	hero: HeroConfig;
@@ -185,6 +188,7 @@ interface PestStudyConfig {
 	processList: ProcessListConfig;
 	diyTips: DiyTipsConfig;
 	processCheck: ProcessCheckConfig;
+	extraContent: ExtraContentConfig;
 	footer: FooterConfig;
 	reviews: Review[];
 	faq: FAQ[];

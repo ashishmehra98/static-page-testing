@@ -5,8 +5,9 @@ const waspsPestStudyData = {
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
 		description:
-			"Getting stung by a wasp is no small thing. Whether it's your house, your backyard or your business, once wasps set up shop, they pose safety, health and nuisance risks. At Ecovia, we deliver premium wasp pest control services in Sydney — fast, safe, and with long-term results.",
+			"Getting stung by a wasp is no small thing. Whether it's your house, your backyard or your business, once wasps set up shop, they pose safety, health and nuisance risks. At Ecovia, we deliver premium <b>wasp pest control</b> services in Sydney — fast, safe, and with long-term results.",
 		hideButtonSection: true,
+		tag: "Safe, effective wasp pest control and wasp nest removal in Greater Sydney",
 	},
 
 	controlMatters: {
@@ -22,23 +23,23 @@ const waspsPestStudyData = {
 				regularText: "Wasps are more than just annoying. Ignoring them can lead to serious consequences:",
 			},
 			{
-				boldText: "Health & allergy risk: ",
-				regularText: "a single wasp sting can trigger swelling or, in sensitive people, anaphylaxis.",
+				boldText: "Health & allergy risk — ",
+				regularText: "a single wasp sting can trigger swelling or, in sensitive people, <b>anaphylaxis</b>.",
 			},
 			{
-				boldText: "Multiple stings possible: ",
+				boldText: "Multiple stings possible — ",
 				regularText: "unlike bees, many wasps can sting repeatedly.",
 			},
 			{
-				boldText: "Nest growth: ",
+				boldText: "Nest growth — ",
 				regularText: "colonies can swell rapidly; nests may host thousands of wasps.",
 			},
 			{
-				boldText: "Structural risk: ",
+				boldText: "Structural risk — ",
 				regularText: "nests in wall cavities, eaves or roof voids can exacerbate damage or enter your home.",
 			},
 			{
-				boldText: "Deterrent to use of outdoor spaces: ",
+				boldText: "Deterrent to use of outdoor spaces — ",
 				regularText: "patios, gardens and balconies become zones to avoid.",
 			},
 			{
@@ -51,7 +52,7 @@ const waspsPestStudyData = {
 	commonSpecies: {
 		title: "Common",
 		highlightedText: "Wasp Species ",
-		extraTitle: "In Sydney",
+		extraTitle: "In Sydney & Their Behaviour",
 		subtitle:
 			"Understanding which <b>wasp species</b> you might face helps with correct treatment. Here are the ones we commonly see around Sydney / New South Wales:",
 		align: "center" as const,
@@ -83,6 +84,10 @@ const waspsPestStudyData = {
 					"Found in eastern NSW in large nest clusters (e.g. under bridges or overhangs). Moderate, defensive behaviour.",
 			},
 			{
+				boldText: "Large native wasps (e.g. blue flower wasps / scoliid wasps): ",
+				regularText: "Often beneficial predators, rarely nest near homes. Usually harmless unless provoked.",
+			},
+			{
 				regularText:
 					"Because there are over 10,000 wasp species in Australia (many harmless), identification is key to correct treatment.",
 			},
@@ -91,34 +96,41 @@ const waspsPestStudyData = {
 
 	infestationSigns: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "Signs You",
-		highlightedText: "May Have ",
+		title: "Signs You've",
+		highlightedText: "Got ",
 		extraTitle: "A Wasp Problem",
-		subtitle: "Early detection is key to preventing serious problems. Look for these signs:",
+		subtitle: "Here are clear indicators that you may need professional <b>wasp pest control</b>:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Increased wasp activity: ",
-				regularText: "More wasps than usual around your property.",
+				boldText: "A visible nest ",
+				regularText: "under eaves, in roof voids, trees, or wall voids",
 			},
 			{
-				boldText: "Visible nests: ",
-				regularText: "Paper-like nests under eaves, in trees, or in wall cavities.",
+				boldText: "Increased wasp activity ",
+				regularText: "around doors, windows, outdoor bins, BBQs",
 			},
 			{
-				boldText: "Buzzing sounds: ",
-				regularText: "Loud buzzing coming from walls, roof, or trees.",
+				boldText: "Frequent wasps flying in and out ",
+				regularText: "of a small opening in walls or soffits",
 			},
 			{
-				boldText: "Aggressive behaviour: ",
-				regularText: "Wasps becoming more aggressive when disturbed.",
+				boldText: "Sudden aggressive behaviour ",
+				regularText: "when near certain parts of your property",
 			},
 			{
-				boldText: "Entry points: ",
-				regularText: "Small holes or gaps in walls where wasps might be entering.",
+				boldText: "Multiple stings or frequent sightings ",
+				regularText: "despite DIY sprays",
+			},
+			{
+				boldText: "Discovery of wasps inside your home ",
+				regularText: "late in the day",
+			},
+			{
+				regularText: "If you notice any of these, don't wait — nests grow fast, especially in Sydney's warmer months.",
 			},
 		],
 	},
@@ -126,31 +138,41 @@ const waspsPestStudyData = {
 	serviceMethods: {
 		title: "Our",
 		highlightedText: "Wasp Pest Control ",
-		extraTitle: "Services",
-		subtitle: "Our comprehensive <b>wasp pest control</b> services include:",
+		extraTitle: "Services & Methods",
+		subtitle:
+			"At Ecovia, we use a targeted, safety-first approach to <b>wasp pest control</b> and nest removal. Below are our main methods:",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg",
 		imageAlt: "commercial",
 		infoItems: [
 			{
-				boldText: "Safe Nest Removal: ",
-				regularText: "Professional removal of wasp nests using safe, effective methods.",
+				boldText: "Nest Removal & Direct Treatment: ",
+				regularText:
+					"We locate and treat the nest entrance using targeted insecticide (safe, residential-grade). Once the colony is neutralised, we carefully remove the entire nest structure — preventing reuse and reducing re-infestation. (This is standard practice in professional wasp control.)",
 			},
 			{
-				boldText: "Species Identification: ",
-				regularText: "We identify the wasp species to determine the best treatment approach.",
+				boldText: "Residual & Spot Spraying: ",
+				regularText:
+					"We apply residual spray around entry points, wall gaps, roof voids, eaves, and garden perimeters. This forms a protective barrier against wandering wasps. We hold current licences and comply with <a href='https://legislation.nsw.gov.au/view/html/inforce/current/sl-2017-0448' target='_blank'>NSW Pesticides Regulation 2017</a> for safe chemical use.",
 			},
 			{
-				boldText: "Targeted Treatment: ",
-				regularText: "Safe, effective treatments that eliminate wasps at all life stages.",
+				boldText: "Dust & Foaming Treatments: ",
+				regularText:
+					"For nests inside voids, wall cavities or places we can't access easily, we may use insecticidal dust or foam injected into the cavity to reach hidden wasps.",
 			},
 			{
-				boldText: "Prevention Measures: ",
-				regularText: "We implement strategies to prevent future infestations.",
+				boldText: "Exclusion & Sealing: ",
+				regularText:
+					"Once treatment is done, we seal cracks, gaps, or access points around eaves, fascias, vents and wall junctions to block future entry.",
 			},
 			{
-				boldText: "Follow-up Monitoring: ",
-				regularText: "Regular inspections to ensure complete elimination.",
+				boldText: "Monitoring & Follow-Up: ",
+				regularText:
+					"We inspect after treatment (within warranty period) to confirm success and address any stragglers or new activity.",
+			},
+			{
+				regularText:
+					"All our techniques prioritise safety for people and pets, and we minimise chemical use, focusing only on targeted zones.",
 			},
 		],
 	},
@@ -160,104 +182,46 @@ const waspsPestStudyData = {
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Our Process",
-		subtitle: "Our <b>wasp pest control</b> process is thorough and effective:",
+		subtitle: "Here's how we work — so you know exactly what's happening at your property:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Inspection: ",
-				regularText: "We assess the wasp problem and identify the species involved.",
+				boldText: "Inspection & assessment — ",
+				regularText: "We survey your property, locate the nest(s), identify species, and check access issues.",
 			},
 			{
-				boldText: "Treatment Plan: ",
-				regularText: "We develop a customised solution for your specific situation.",
+				boldText: "Treatment proposal & quote — ",
+				regularText: "We explain what treatments we'll use, costs, timeframes, and safety instructions.",
 			},
 			{
-				boldText: "Safe Removal: ",
-				regularText: "We remove nests using safe, effective methods.",
+				boldText: "Safe treatment & removal — ",
+				regularText: "Our technician arrives in protective gear, neutralises the colony, removes nest material, and cleans up.",
 			},
 			{
-				boldText: "Clean-up: ",
-				regularText: "We clean affected areas and remove debris.",
+				boldText: "Sealing & preventative work — ",
+				regularText: "We seal entry points and apply residual protection.",
 			},
 			{
-				boldText: "Follow-up: ",
-				regularText: "We monitor the situation and provide ongoing support.",
+				boldText: "Follow-up check — ",
+				regularText: "If wasps return within our warranty period, we revisit at no extra cost.",
+			},
+			{
+				boldText: "Aftercare advice — ",
+				regularText: "We guide you on steps to minimise attractants and future nesting.",
 			},
 		] as InfoItem[],
-	},
-
-	diyTips: {
-		title: "DIY",
-		highlightedText: "Tips ",
-		extraTitle: "& Prevention",
-		subtitle: "While professional <b>wasp pest control</b> is most effective, here are some prevention tips:",
-		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
-		imageAlt: "commercial",
-		isReverse: true,
-		infoItems: [
-			{
-				boldText: "Seal entry points to prevent wasps from nesting in walls or roof cavities.",
-			},
-			{
-				boldText: "Remove food sources that might attract wasps.",
-			},
-			{
-				boldText: "Keep outdoor areas clean and free of debris.",
-			},
-			{
-				boldText: "Regularly inspect your property for early signs of wasp activity.",
-			},
-			{
-				boldText: "Avoid swatting or disturbing wasps as this can make them more aggressive.",
-			},
-			{
-				regularText: "Remember: Wasp removal can be dangerous. Always call professionals for safe removal.",
-			},
-		],
-	},
-
-	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
-		title: "Safety, ",
-		highlightedText: "Guarantees & Peace ",
-		extraTitle: "of Mind",
-		subtitle: "At Ecovia, we prioritise safety and effectiveness in all our <b>wasp pest control</b> services:",
-		align: "center" as const,
-		titleColor: "white",
-		subtitleColor: "white",
-		highlightedTextColor: "#b1cf5f",
-		processItems: [
-			{
-				title: "Safe removal methods that protect your family and pets.",
-			},
-			{
-				title: "Effective treatments that eliminate wasps at all life stages.",
-			},
-			{
-				title: "Written guarantees for complete elimination.",
-			},
-			{
-				title: "Ongoing support and monitoring to prevent reinfestation.",
-			},
-		],
-		button: {
-			variant: "primary" as const,
-			title: " 0432 227 227",
-			icon: "phone" as const,
-		},
 	},
 
 	footer: {
 		backgroundImage: "/images/home-footer-bg.jpg",
 		heading: "Book Your ",
-		highlightedText: "Wasp Pest Control ",
-		subHeading: "Service Today",
+		highlightedText: "Wasp Control ",
+		subHeading: "Service",
 		description:
-			"Don't let wasps put your family at risk or ruin your outdoor enjoyment. Call Ecovia now for professional <b>wasp pest control</b> services across Sydney. We'll safely remove nests and protect your property.",
+			"Don't let wasps threaten your safety. Contact Ecovia today for <b>professional wasp pest control</b> and <b>wasp nest removal</b> in Sydney. Fill out our form below or call us directly for fast response and free inspection.",
 		showCallCTAOnMobile: true,
 	},
 
@@ -266,56 +230,73 @@ const waspsPestStudyData = {
 			id: 1,
 			ratings: 5,
 			review:
-				"Ecovia safely removed a large wasp nest from our roof cavity. They were professional, explained everything clearly, and ensured our family's safety throughout the process.",
+				"Ecovia removed a nest from our roof cavity. The technician was careful and informative — within a day, the buzzing stopped. Highly recommended.",
 			userImage: "",
-			username: "Michelle",
-			designation: "Western Sydney",
+			username: "Sarah",
+			designation: "Ryde",
 		},
 		{
 			id: 2,
 			ratings: 5,
 			review:
-				"We had European wasps nesting in our garden. Ecovia identified the species and treated the problem effectively. No more aggressive wasps!",
+				"We had aggressive wasps by our BBQ area. Ecovia came out same day, removed the nest, and sealed entry gaps. No wasps since.",
 			userImage: "",
-			username: "Peter",
-			designation: "Sutherland Shire",
+			username: "Mark",
+			designation: "Hornsby",
 		},
 	],
 
 	faq: [
 		{
-			id: "wasp-identification",
-			question: "How do I know if I have a wasp problem?",
-			answer:
-				"Look for increased wasp activity, visible nests, buzzing sounds, or aggressive behaviour. If you're unsure, call us for a professional inspection.",
-		},
-		{
 			id: "wasp-treatment-safety",
-			question: "Is wasp removal safe for my family?",
+			question: "Is professional wasp nest removal safe for my family and pets?",
 			answer:
-				"Yes, our technicians are trained in safe wasp removal methods and will ensure your family's safety throughout the process.",
+				"Yes. We use approved insecticides, apply them discretely, and only in targeted areas. Once treated areas are dry and properly ventilated, they are safe. We'll give you clear re-entry times.",
 		},
 		{
-			id: "wasp-species-identification",
-			question: "Do you identify the wasp species?",
-			answer: "Yes, we identify the wasp species to determine the best treatment approach and ensure effective removal.",
+			id: "wasp-return-guarantee",
+			question: "Will the wasps come back after treatment?",
+			answer:
+				"With correct nest removal, sealing and residual treatment, re-infestation risk is low. But if new nests appear within our guarantee window, we return at no extra cost.",
 		},
 		{
-			id: "wasp-prevention",
-			question: "How can I prevent future wasp problems?",
+			id: "wasp-pricing",
+			question: "How much does wasp pest control cost in Sydney?",
 			answer:
-				"We'll provide specific prevention advice including sealing entry points, removing food sources, and regular property inspections.",
+				"It depends on nest location, species, access difficulty, and size. Simple jobs start ~$120, complex ones cost more. (We always inspect first.)",
 		},
 		{
 			id: "wasp-treatment-duration",
-			question: "How long does wasp removal take?",
+			question: "How long does treatment take?",
+			answer: "Most jobs take 1 to 2 hours. Larger or roof/void sites may take longer or require multiple visits.",
+		},
+		{
+			id: "wasp-home-leave",
+			question: "Do I need to leave my home during treatment?",
+			answer: "Usually no, as long as we can isolate the work area. We'll advise you based on the treatment plan.",
+		},
+		{
+			id: "wasp-preparation",
+			question: "What should I do before the technician arrives?",
 			answer:
-				"Most wasp removals are completed in a few hours, but follow-up visits may be needed to ensure complete elimination.",
+				"Clear the area around the nest, keep children/pets inside, close windows near treatment site, and remove or secure outdoor furniture.",
+		},
+		{
+			id: "wasp-diy-removal",
+			question: "Can I remove a nest myself?",
+			answer:
+				"This is risky. DIY methods often fail to eliminate the entire colony and increase risk of multiple stings. Professionals have protective gear, experience, and safety protocols.",
+		},
+		{
+			id: "wasp-nest-recognition",
+			question: "How do I recognise a wasp nest?",
+			answer:
+				"Wasp nests can be papery combs under eaves or hollow limbs, brown or grey spherical nests, mud tubes, or nests in cavities with a small access point.",
 		},
 		{
 			id: "wasp-guarantee",
-			question: "Do you guarantee your wasp control service?",
-			answer: "Yes, we provide written guarantees and will return if wasps reappear within the warranty period.",
+			question: "Do you guarantee your service?",
+			answer: "Yes. We offer a warranty period (e.g. 3–6 months) during which we'll re-visit free if wasps return.",
 		},
 	],
 } as PestStudyConfig;

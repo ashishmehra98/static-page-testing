@@ -3,10 +3,13 @@ const bedBugsPestStudyData = {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Bed Bug ",
 		highlightedText: "Pest Control ",
-		subHeading: "Sydney",
-		description:
-			"Tired of sleepless nights and itchy bites? Bed bugs are one of the hardest pests to deal with on your own. At Ecovia, we specialise in bed bug pest control Sydney homeowners can rely on. Our technicians use proven methods to eliminate infestations at the source and help you get back to a safe, comfortable home.",
+		subHeading: "In Sydney",
+		description: `Tired of sleepless nights and itchy bites? Bed bugs are one of the hardest pests to deal with on your own. At Ecovia, we specialise in <b>bed bug pest control Sydney</b> homeowners can rely on. Our technicians use proven methods to eliminate infestations at the source and help you get back to a safe, comfortable home.
+				
+		Book your service today and let our experienced team take the stress out of dealing with bed bugs.
+			`,
 		hideButtonSection: true,
+		tag: "Effective, Safe, Guaranteed",
 	},
 
 	controlMatters: {
@@ -43,21 +46,26 @@ const bedBugsPestStudyData = {
 			},
 			{
 				regularText:
-					"According to NSW Health, bed bugs have resurged across Australia in recent years due to increased travel and resistance to common insecticides. This makes expert treatment more important than ever.",
+					"According to <a href='https://www.health.nsw.gov.au/' target='_blank'>NSW Health</a>, bed bugs have resurged across Australia in recent years due to increased travel and resistance to common insecticides. This makes expert treatment more important than ever.",
 			},
 		],
 	},
 
-	commonSpecies: {
-		title: "Signs You",
-		highlightedText: "Have A ",
-		extraTitle: "Bed Bug Infestation",
-		subtitle: "Bed bugs are experts at hiding, so most infestations go unnoticed until they spread widely. Key signs include:",
-		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
-		imageAlt: "commercial",
-		isReverse: true,
+	infestationSigns: {
+		backgroundImage: "/images/pattern-bg.png",
+		title: "Signs You ",
+		highlightedText: "Have A Bed Bug ",
+		extraTitle: "Infestation",
+		subtitle: "",
+		align: "start",
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
 		infoItems: [
+			{
+				regularText:
+					"Bed bugs are experts at hiding, so most infestations go unnoticed until they spread widely. Key signs include:",
+			},
 			{
 				boldText: "Itchy bites on skin, ",
 				regularText: "often appearing in a line or cluster.",
@@ -81,17 +89,15 @@ const bedBugsPestStudyData = {
 		],
 	},
 
-	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+	serviceMethods: {
 		title: "Our",
 		highlightedText: "Bed Bug Pest Control ",
 		extraTitle: "Services in Sydney",
 		subtitle:
 			"At Ecovia, we understand that every infestation is different. Our approach to <b>bed bugs pest control</b> is targeted, safe, and designed to stop the problem at its source.",
-		align: "start" as const,
-		titleColor: "white",
-		subtitleColor: "white",
-		highlightedTextColor: "#b1cf5f",
+		align: "center",
+		imageSrc: "/images/ant-control-matters.jpg",
+		imageAlt: "commercial",
 		infoItems: [
 			{
 				regularText: "Our services include:",
@@ -124,15 +130,17 @@ const bedBugsPestStudyData = {
 		],
 	},
 
-	serviceMethods: {
+	processList: {
+		backgroundImage: "/images/pattern-bg.png",
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Our Process",
 		subtitle:
 			"We believe in being transparent with our customers. Here's how our <b>bed bug pest control Sydney</b> service works:",
-		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
-		imageAlt: "commercial",
+		align: "start",
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
 				boldText: "Inspection: ",
@@ -156,17 +164,17 @@ const bedBugsPestStudyData = {
 		],
 	},
 
-	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+	diyTips: {
 		title: "DIY",
 		highlightedText: "Tips ",
 		extraTitle: "& Prevention",
 		subtitle:
 			"Professional treatment is the only reliable solution for established infestations, but there are steps you can take to lower the risk:",
-		align: "start" as const,
-		titleColor: "white",
-		subtitleColor: "white",
-		highlightedTextColor: "#b1cf5f",
+		backgroundImage: "/images/pattern-bg.png",
+		align: "center",
+		imageSrc: "/images/common-ant-species.png",
+		imageAlt: "commercial",
+		isReverse: true,
 		infoItems: [
 			{
 				boldText: "Wash and dry bedding, clothes, and curtains on high heat ",
@@ -195,50 +203,32 @@ const bedBugsPestStudyData = {
 		] as InfoItem[],
 	},
 
-	diyTips: {
+	processCheck: {
+		backgroundImage: "/images/pattern-bg.png",
 		title: "Safety, ",
 		highlightedText: "Guarantees & Peace ",
 		extraTitle: "of Mind",
 		subtitle: "We know safety is a top concern for families. That's why all our <b>bed bug removal services</b> are:",
-		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
-		imageAlt: "commercial",
-		isReverse: true,
-		infoItems: [
-			{
-				boldText: "Safe for children and pets once treatments have dried.",
-			},
-			{
-				boldText: "Carried out using licensed products approved for residential use in Australia.",
-			},
-			{
-				boldText: "Backed by a written guarantee – if bed bugs return within the warranty, we'll re-treat free of charge.",
-			},
-			{
-				boldText:
-					"Performed by fully insured technicians following Australian Environmental Pest Managers Association (AEPMA) standards.",
-			},
-			{
-				regularText: "You can trust Ecovia to protect your home without compromising your family's safety.",
-			},
-		],
-	},
-
-	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
-		title: "Book Your ",
-		highlightedText: "Bed Bug Pest Control ",
-		extraTitle: "Service Today",
-		subtitle:
-			"Don't let bed bugs disrupt your sleep or peace of mind. Call Ecovia now or fill out our quick online form to book a professional <b>bed bug pest control</b> service in Sydney. Our expert technicians will inspect, treat, and protect your home – with results you can trust.",
-		align: "center" as const,
+		align: "center",
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		processItems: [
 			{
+				title: "Safe for children and pets once treatments have dried.",
+			},
+			{
+				title: "Carried out using licensed products approved for residential use in Australia.",
+			},
+			{
+				title: "Backed by a written guarantee – if bed bugs return within the warranty, we'll re-treat free of charge.",
+			},
+			{
 				title:
-					"We provide bed bug pest control Sydney wide, including Eastern Suburbs, Northern Beaches, Inner West, Western Sydney, Sutherland Shire, North Shore, and Greater Sydney.",
+					"Performed by fully insured technicians following <a href='https://www.aepma.com.au/' target='_blank'>Australian Environmental Pest Managers Association (AEPMA)</a> standards.",
+			},
+			{
+				title: "You can trust Ecovia to protect your home without compromising your family's safety.",
 			},
 		],
 		button: {
@@ -312,6 +302,6 @@ const bedBugsPestStudyData = {
 				"We provide a written service guarantee. If bed bugs return within the warranty period, so do we – at no extra cost.",
 		},
 	],
-} as PestStudyConfig;
+} as Partial<PestStudyConfig>;
 
 export default bedBugsPestStudyData;

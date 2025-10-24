@@ -7,6 +7,7 @@ const cockroachPestStudyData = {
 		description:
 			"Cockroaches are one of Sydney's most persistent pests. Once they move into a property, they multiply quickly, contaminate food, and spread harmful bacteria. At Ecovia, we specialise in <b>cockroach pest control Sydney</b> homeowners and businesses can rely on. Our licensed technicians use proven, safe methods to not only remove the cockroaches you see but also target the hidden infestations you don't.",
 		hideButtonSection: true,
+		tag: "Safe, effective treatments to eliminate cockroaches fast",
 	},
 	controlMatters: {
 		title: "Why",
@@ -194,22 +195,22 @@ const cockroachPestStudyData = {
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Keep food sealed in airtight containers.",
+				regularText: "Keep food sealed in airtight containers.",
 			},
 			{
-				boldText: "Clean crumbs and spills promptly.",
+				regularText: "Clean crumbs and spills promptly.",
 			},
 			{
-				boldText: "Empty rubbish bins daily and keep lids closed.",
+				regularText: "Empty rubbish bins daily and keep lids closed.",
 			},
 			{
-				boldText: "Fix leaks and reduce moisture, especially under sinks.",
+				regularText: "Fix leaks and reduce moisture, especially under sinks.",
 			},
 			{
-				boldText: "Seal cracks and gaps around windows, skirting boards, and drains.",
+				regularText: "Seal cracks and gaps around windows, skirting boards, and drains.",
 			},
 			{
-				boldText: "Don't leave pet food out overnight.",
+				regularText: "Don't leave pet food out overnight.",
 			},
 			{
 				regularText: "These measures help, but once cockroaches establish a nest, DIY methods usually aren't enough.",
@@ -235,7 +236,7 @@ const cockroachPestStudyData = {
 			},
 			{
 				title:
-					"We carry full insurance and follow <a href='https://www.aepma.com.au/codes-of-practice' target='_blank'>AEPMA</a> Codes of Practice.",
+					"We carry full insurance and follow <a href='https://www.aepma.com.au/codes-of-practice' target='_blank'>AEPMA Codes of Practice</a>.",
 			},
 			{
 				title: "Every cockroach service comes with a written guarantee for your peace of mind.",
@@ -254,8 +255,8 @@ const cockroachPestStudyData = {
 			review:
 				"Ecovia treated a German cockroach problem in our restaurant kitchen. Within days, activity dropped, and after follow-up we've had no issues since. Highly recommended.",
 			userImage: "",
-			username: "Mark, Inner West",
-			designation: "",
+			username: "Mark",
+			designation: "Inner West",
 		},
 		{
 			id: 2,
@@ -263,8 +264,8 @@ const cockroachPestStudyData = {
 			review:
 				"We had cockroaches in the bathroom that sprays wouldn't fix. Ecovia identified the source and treated it properly. No sign of them months later.",
 			userImage: "",
-			username: "Lisa, Northern Beaches",
-			designation: "",
+			username: "Lisa",
+			designation: "Northern Beaches",
 		},
 	],
 	faq: [
@@ -295,6 +296,7 @@ const cockroachPestStudyData = {
 			id: "commercial-cockroach-control",
 			question: "Do you provide commercial cockroach control?",
 			answer: `Yes. We provide tailored solutions for restaurants, warehouses, and <b>construction site pest control</b> where cockroach infestations can create serious delays or health risks.
+			
 				For further background on cockroach health risks, see <a href="https://www.health.nsw.gov.au/environment/pests/Pages/default.aspx" target="_blank">NSW Health’s pest control</a> guidance.
 				`,
 		},

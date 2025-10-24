@@ -37,6 +37,7 @@ const PestStudy = () => {
 						subHeading={PEST_STUDY_CONFIG.hero.subHeading}
 						description={PEST_STUDY_CONFIG.hero.description}
 						hideButtonSection={PEST_STUDY_CONFIG.hero.hideButtonSection}
+						tag={PEST_STUDY_CONFIG.hero.tag}
 					/>
 				</Hero>
 				{/* Control Matters */}
@@ -224,7 +225,33 @@ const PestStudy = () => {
 					</Hero>
 				)}
 				{/* User Reviews */}
-				<UserReviewsSection reviews={PEST_REVIEWS_DATA} />
+				{PEST_REVIEWS_DATA.length ? <UserReviewsSection reviews={PEST_REVIEWS_DATA} /> : null}
+				{/* Laws */}
+				{PEST_STUDY_CONFIG.extraContent && (
+					<Hero bgImage={PEST_STUDY_CONFIG.extraContent.backgroundImage} className={styles.processListSection}>
+						<HeaderSection
+							title={PEST_STUDY_CONFIG.extraContent.title}
+							highlightedText={PEST_STUDY_CONFIG.extraContent.highlightedText}
+							extraTitle={PEST_STUDY_CONFIG.extraContent.extraTitle}
+							subtitle={PEST_STUDY_CONFIG.extraContent.subtitle}
+							align={PEST_STUDY_CONFIG.extraContent.align}
+							titleColor={PEST_STUDY_CONFIG.extraContent.titleColor}
+							subtitleColor={PEST_STUDY_CONFIG.extraContent.subtitleColor}
+							highlightedTextColor={PEST_STUDY_CONFIG.extraContent.highlightedTextColor}
+							className="header"
+						/>
+						<div className={styles.infoContent}>
+							{PEST_STUDY_CONFIG.extraContent.infoItems.map((item, index) => (
+								<div key={index} className={styles.infoItem}>
+									{item.boldText && <span className={styles.boldText}>{item.boldText}</span>}
+									{item.regularText && (
+										<span className={styles.regularText} dangerouslySetInnerHTML={{ __html: item.regularText }} />
+									)}
+								</div>
+							))}
+						</div>
+					</Hero>
+				)}
 				<LocalPestExpert />
 				<FAQ items={PEST_FAQ_DATA} />
 				<HomeFooterJumbotron

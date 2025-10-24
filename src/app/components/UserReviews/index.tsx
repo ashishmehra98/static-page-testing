@@ -8,6 +8,7 @@ import styles from "./UserReviews.module.css";
 
 // Import Swiper styles
 import "swiper/css";
+import useIsMobile from "@/hooks/useIsMobile";
 
 export interface ReviewData {
 	id: number;
@@ -24,6 +25,7 @@ interface UserReviewsProps {
 }
 
 const UserReviews: React.FC<UserReviewsProps> = ({ className, reviews: propReviews }) => {
+	const isMobileView = useIsMobile();
 	// Sample review data - 2 reviews (used as default)
 	const defaultReviews: ReviewData[] = [
 		{
@@ -48,6 +50,7 @@ const UserReviews: React.FC<UserReviewsProps> = ({ className, reviews: propRevie
 
 	// Use prop reviews if provided, otherwise use default reviews
 	const reviews = propReviews || defaultReviews;
+	const showGradient = (isMobileView && reviews.length > 1) || (!isMobileView && reviews.length > 5);
 
 	return (
 		<section className={`${styles.userReviewsSection} ${className}`}>
@@ -57,7 +60,7 @@ const UserReviews: React.FC<UserReviewsProps> = ({ className, reviews: propRevie
 						modules={[Autoplay]}
 						spaceBetween={24}
 						slidesPerView="auto"
-						centeredSlides={true}
+						centeredSlides={isMobileView}
 						autoplay={{
 							delay: 3000,
 							disableOnInteraction: false,
@@ -79,8 +82,12 @@ const UserReviews: React.FC<UserReviewsProps> = ({ className, reviews: propRevie
 					</Swiper>
 
 					{/* Gradient overlays for smooth edges */}
-					<div className={styles.gradientLeft}></div>
-					<div className={styles.gradientRight}></div>
+					{showGradient && (
+						<>
+							<div className={styles.gradientLeft}></div>
+							<div className={styles.gradientRight}></div>
+						</>
+					)}
 				</div>
 			</div>
 		</section>

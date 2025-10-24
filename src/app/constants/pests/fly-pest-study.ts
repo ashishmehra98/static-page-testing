@@ -7,13 +7,14 @@ const fliesPestStudyData = {
 		description:
 			"At Ecovia, we know how frustrating it is to see flies buzzing around your home or business. That's why we offer specialised <b>fly pest control</b> Sydney families and companies can trust. We combine deep experience, effective methods, and local knowledge to rid your space of flies—and keep them out.",
 		hideButtonSection: false,
+		tag: "Fast, safe, and lasting solutions for homes & businesses",
 	},
 
 	controlMatters: {
 		title: "Why",
 		highlightedText: "Fly Control ",
 		extraTitle: "Matters",
-		subtitle: "Fast, safe, and lasting solutions for homes & businesses",
+		subtitle: "A few flies here and there might seem harmless—until they aren’t. Here’s what’s at stake:",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg", // default image reused
 		imageAlt: "commercial",
@@ -47,12 +48,15 @@ const fliesPestStudyData = {
 		title: "Common",
 		highlightedText: "Fly Types ",
 		extraTitle: "In Sydney",
-		subtitle: "Below are the species Ecovia treats. Recognising them helps us target your problem effectively.",
+		subtitle: "",
 		align: "center" as const,
 		imageSrc: "/images/common-ant-species.png", // default image reused
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
+			{
+				regularText: "Below are the species Ecovia treats. Recognising them helps us target your problem effectively.",
+			},
 			{
 				boldText: "House flies (Musca domestica): ",
 				regularText: "Grey body, approx. 6-7 mm long, attracted to food waste, garbage, kitchens.",
@@ -90,7 +94,7 @@ const fliesPestStudyData = {
 		highlightedText: "of a Fly ",
 		extraTitle: "Infestation",
 		subtitle:
-			"If you see multiple signs consistently, you’re likely beyond casual control: it’s time for professional fly pest control.",
+			"If you see multiple signs consistently, you’re likely beyond casual control: it’s time for professional <b>fly pest control</b>.",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
@@ -116,8 +120,7 @@ const fliesPestStudyData = {
 				regularText: "in rooms or kitchens.",
 			},
 			{
-				boldText: "Flies near drains or waste bins ",
-				regularText: "or compost heaps.",
+				boldText: "Flies near drains or waste bins, compost heaps or decaying organic matter",
 			},
 			{
 				boldText: "Fly presence despite DIY traps or sprays.",
@@ -130,7 +133,8 @@ const fliesPestStudyData = {
 		title: "Our",
 		highlightedText: "Fly Pest Control ",
 		extraTitle: "Services & Methods",
-		subtitle: "We use safe, effective treatments targeting the fly lifecycle and breeding sites.",
+		subtitle:
+			"Ecovia’s approach is comprehensive, combining inspection, treatment, prevention, and guarantees. Here’s how we do it for residential and commercial clients.",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg", // default image reused
 		imageAlt: "commercial",
@@ -175,15 +179,12 @@ const fliesPestStudyData = {
 		title: "Why",
 		highlightedText: "Choose Ecovia ",
 		extraTitle: "for Fly Pest Control ",
-		subtitle: "",
+		subtitle: "When you pick Ecovia, you get more than a one-off spray:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
-			{
-				regularText: "When you pick Ecovia, you get more than a one-off spray:",
-			},
 			{
 				boldText: "Local expertise in Sydney’s climate & fly species",
 			},
@@ -255,7 +256,7 @@ const fliesPestStudyData = {
 		highlightedText: "Fly Control ",
 		subHeading: "Service Today",
 		description:
-			"Don’t let flies overrun your space. Call Ecovia today or fill out our form to arrange professional fly pest control in Sydney. We’ll inspect, treat, and protect your home or business with results you can trust.",
+			"Don’t let flies overrun your space. <b>Book a free inspection for fly pest control today</b> and reclaim a clean, healthy environment.",
 		showCallCTAOnMobile: true,
 	},
 
@@ -265,9 +266,9 @@ const fliesPestStudyData = {
 			ratings: 5,
 			review:
 				"We had a constant barrage of flies in our café on King’s Cross. Ecovia identified drain breeding sites, installed traps and resealed entry gaps. Within a week, flies were gone—and they supported us with preventive tips. Highly recommend.",
-			username: "Sara, Woolloomooloo",
+			username: "Sara",
 			userImage: "",
-			designation: "",
+			designation: "Woolloomooloo",
 		},
 	],
 

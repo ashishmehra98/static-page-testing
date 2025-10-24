@@ -3,9 +3,9 @@ const birdPestStudyData = {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Bird ",
 		highlightedText: "Pest Control ",
-		subHeading: "Sydney",
+		subHeading: "In Sydney",
 		description:
-			"Birds are part of our urban life in Sydney, but when they start nesting on your roof, perching on ledges or leaving droppings everywhere, they become pests. At Ecovia, we specialise in bird pest control in Sydney that's safe, effective and long-lasting. Let us help you reclaim your building — call us for a free inspection today.",
+			"<b>Humane, effective bird pest control solutions for homes & businesses</b><br><br>Birds are part of our urban life in Sydney, but when they start nesting on your roof, perching on ledges or leaving droppings everywhere, they become pests. At Ecovia, we specialise in <b>bird pest control</b> in Sydney that's safe, effective and long-lasting. Let us help you reclaim your building — call us for a free inspection today.",
 		hideButtonSection: true,
 	},
 
@@ -40,7 +40,12 @@ const birdPestStudyData = {
 			},
 			{
 				boldText: "Legal or permit risks: ",
-				regularText: "Some bird species and nests may be protected under NSW regulations. You need safe, compliant removal.",
+				regularText:
+					"Some bird species and nests may be protected under <a href='https://www.lls.nsw.gov.au/help-and-advice/pest-control/vertebrate-pest-animals/pest-birds' target='_blank'>NSW regulations</a>. You need safe, compliant removal.",
+			},
+			{
+				regularText:
+					"Ignoring early signs leads to escalating costs. For example, one <a href='https://www.realestate.com.au/news/pigeons-turn-sydney-house-into-7k-damage-disaster/' target='_blank'>Sydney homeowner saw more than <b>$7,000</b> in damage</a> before calling pest control.",
 			},
 			{
 				regularText: "With <b>professional bird pest control</b>, you don't just remove the symptoms — you prevent recurrence.",
@@ -51,7 +56,7 @@ const birdPestStudyData = {
 	commonSpecies: {
 		title: "Common",
 		highlightedText: "Pest Birds ",
-		extraTitle: "In Sydney",
+		extraTitle: "In Sydney & Their Behaviour",
 		subtitle: "Knowing which species you're dealing with helps us tailor the solution:",
 		align: "center" as const,
 		imageSrc: "/images/common-ant-species.png",
@@ -59,187 +64,243 @@ const birdPestStudyData = {
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Pigeons: ",
+				boldText: "Pigeons (feral rock doves): ",
+				regularText: "Large droppings, roosting, spread pathogens. Typical locations: Roof ledges, eaves, signs, ducts.",
+			},
+			{
+				boldText: 'Australian White Ibis ("bin chicken"): ',
+				regularText: "Scavenging, nesting in palms, mess in public areas. Typical locations: Rooftops, palm trees, parks.",
+			},
+			{
+				boldText: "Common Mynas: ",
+				regularText: "Aggressive competitors, nest in cavities, block gutters. Typical locations: Eaves, wall cavities, vents.",
+			},
+			{
+				boldText: "Starlings / Sparrows: ",
+				regularText: "Nest in roof voids, bring mites inside. Typical locations: Roof spaces, eaves, wall voids.",
+			},
+			{
+				boldText: "Magpies (during swooping season): ",
 				regularText:
-					"Most common urban pest birds. Nest on ledges, in gutters, and roof cavities. Cause significant damage with droppings.",
-			},
-			{
-				boldText: "Indian Mynas: ",
-				regularText: "Aggressive birds that displace native species. Nest in roof cavities and can cause structural damage.",
-			},
-			{
-				boldText: "Starlings: ",
-				regularText: "Form large flocks and can cause noise and mess. Often nest in roof spaces and wall cavities.",
-			},
-			{
-				boldText: "Sparrows: ",
-				regularText: "Small but persistent. Nest in small gaps and can cause damage to building materials.",
+					"Can swoop and cause injury in breeding months. Typical locations: Trees near pedestrian paths, suburban zones.",
 			},
 			{
 				regularText:
-					"Each species requires different control methods, which is why professional <b>bird pest control</b> is essential.",
+					"Each species demands a slightly different control method. For example, controlling pigeons often involves long-term exclusion (netting, spikes), while dealing with ibis may require habitat modification and permit-based interventions.",
 			},
 		],
 	},
 
 	infestationSigns: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "Our",
-		highlightedText: "Bird Pest Control ",
-		extraTitle: "Services",
-		subtitle: "Our comprehensive <b>bird pest control</b> services include:",
+		title: "Signs You",
+		highlightedText: "Have ",
+		extraTitle: "A Bird Problem",
+		subtitle: "If you see any of these, it's time to act:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Bird Exclusion Systems: ",
-				regularText: "Installation of spikes, nets, and other deterrents to prevent roosting and nesting.",
+				boldText: "Consistent accumulation of droppings ",
+				regularText: "on ledges, windows or walkways",
 			},
 			{
-				boldText: "Nest Removal: ",
-				regularText: "Safe removal of existing nests and cleaning of contaminated areas.",
+				boldText: "Active nesting material, twigs or debris ",
+				regularText: "in gutters, vents or roof voids",
 			},
 			{
-				boldText: "Structural Repairs: ",
-				regularText: "Repair damage caused by bird activity and seal entry points.",
+				boldText: "Feathers ",
+				regularText: "scattered around building perimeters",
 			},
 			{
-				boldText: "Cleaning & Sanitisation: ",
-				regularText: "Professional cleaning of droppings and contaminated areas.",
+				boldText: "Noise or flapping ",
+				regularText: "at dawn or dusk",
 			},
 			{
-				boldText: "Ongoing Maintenance: ",
-				regularText: "Regular inspections and maintenance to prevent reinfestation.",
+				boldText: "Bird mites / biting insects ",
+				regularText: "appearing indoors, especially during warmer months",
+			},
+			{
+				boldText: "Surface staining or corrosion ",
+				regularText: "from acidic droppings",
+			},
+			{
+				boldText: "Blocked drainage or gutters ",
+				regularText: "from nesting debris",
+			},
+			{
+				regularText: "These are not isolated complaints — they often signal an active infestation that's gradually worsening.",
 			},
 		],
 	},
 
 	serviceMethods: {
-		title: "What",
-		highlightedText: "To Expect ",
-		extraTitle: "From Our Process",
-		subtitle: "Our <b>bird pest control</b> process is thorough and effective:",
+		title: "Our",
+		highlightedText: "Bird Pest Control ",
+		extraTitle: "Services & Methods",
+		subtitle:
+			"We apply a layered approach that's humane, targeted, and effective. Here's how Ecovia handles <b>bird pest control</b>:",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg",
 		imageAlt: "commercial",
 		infoItems: [
 			{
-				boldText: "Inspection: ",
-				regularText: "We assess the bird problem and identify the species involved.",
+				boldText: "Inspection & Assessment — ",
+				regularText:
+					"We survey your property, identify species, map nests and entry points, evaluate risk zones— roof, vents, facades, etc.",
 			},
 			{
-				boldText: "Treatment Plan: ",
-				regularText: "We develop a customised solution for your specific situation.",
+				boldText: "Proofing / Exclusion — ",
+				regularText:
+					"Using netting, stainless steel mesh, wire, spikes or spring-wire systems, we physically block birds from roosting or nesting.",
 			},
 			{
-				boldText: "Installation: ",
-				regularText: "We install appropriate deterrents and exclusion systems.",
+				boldText: "Deterrents & Repellents — ",
+				regularText:
+					"Visual aids (reflective strips, scare devices), sound deterrents, or non-toxic gels can discourage birds from returning to areas where proofing is impractical.",
 			},
 			{
-				boldText: "Clean-up: ",
-				regularText: "We clean and sanitise affected areas.",
+				boldText: "Nest Removal & Clean-Up — ",
+				regularText:
+					"We safely remove old nests, feathers and droppings. Then we sanitise the area to neutralise pathogens and prevent lingering pests.",
 			},
 			{
-				boldText: "Follow-up: ",
-				regularText: "We monitor the situation and provide ongoing support.",
+				boldText: "Maintenance & Monitoring — ",
+				regularText:
+					"Periodic inspections ensure that proofing remains intact and no fresh activity begins. This is critical for long term success.",
+			},
+			{
+				boldText: "Contract / Seasonal Services — ",
+				regularText:
+					"For commercial properties or large buildings, we offer ongoing <b>bird control</b> contracts (e.g. quarterly inspections, repairs, deterrent refreshes).",
+			},
+			{
+				regularText:
+					"We emphasise humane, non-lethal methods. Toxic chemicals or lethal control are rarely effective long term, and often carry risks for native species.",
 			},
 		],
 	},
 
 	processList: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "DIY",
-		highlightedText: "Tips ",
-		extraTitle: "& Prevention",
-		subtitle: "While professional <b>bird pest control</b> is most effective, here are some prevention tips:",
+		title: "What",
+		highlightedText: "To Expect ",
+		extraTitle: "—  Our Process",
+		subtitle: "We believe in clarity and accountability. You’ll know exactly what to expect at each step.",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Remove food sources ",
-				regularText: "like open garbage cans or pet food that might attract birds.",
+				boldText: "1. Contact & Booking -",
+				regularText: "You reach out by phone or via our site; we arrange a convenient inspection.",
 			},
 			{
-				boldText: "Install bird deterrents ",
-				regularText: "like spikes or netting on ledges and roosting areas.",
+				boldText: "2. On-site Visit & Quote — ",
+				regularText: "We present our findings, a method plan, and transparent cost – no hidden fees.",
 			},
 			{
-				boldText: "Keep gutters clean ",
-				regularText: "and free of debris that birds might use for nesting.",
+				boldText: "3. Treatment / Installation — ",
+				regularText: "Our team installs proofing, deterrents, removes nests, and cleans the area.",
 			},
 			{
-				boldText: "Seal entry points ",
-				regularText: "to prevent birds from accessing roof cavities and wall spaces.",
+				boldText: "4. Follow-up & Inspection — ",
+				regularText: "We return to check integrity, re-secure any displaced materials, and ensure birds stay away.",
 			},
 			{
-				regularText: "Remember: Some bird species are protected, so always check regulations before taking action.",
+				boldText: "5. Guarantee / Warranty — ",
+				regularText: "If birds return within our warranty period, we come back at no extra charge.",
 			},
 		] as InfoItem[],
 	},
 
 	diyTips: {
-		title: "Safety, ",
-		highlightedText: "Guarantees & Peace ",
-		extraTitle: "of Mind",
-		subtitle: "At Ecovia, we prioritise safety and compliance in all our <b>bird pest control</b> services:",
+		title: "DIY ",
+		highlightedText: "Tips ",
+		extraTitle: "& Prevention (Between Services)",
+		subtitle: "These aren't full solutions, but they help reduce risk:",
 		align: "center" as const,
 		imageSrc: "/images/common-ant-species.png",
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Compliance with NSW wildlife regulations and protected species laws.",
+				boldText: "Seal or screen vents, eaves and gaps ",
+				regularText: "in roofing",
 			},
 			{
-				boldText: "Safe and humane methods that don't harm birds unnecessarily.",
+				boldText: "Reduce food sources: ",
+				regularText: "secure bins, remove open compost, avoid feeding birds",
 			},
 			{
-				boldText: "Professional cleaning and sanitisation to protect your health.",
+				boldText: "Prune trees or overhanging branches ",
+				regularText: "near roofs",
 			},
 			{
-				boldText: "Long-term solutions that prevent reinfestation.",
+				boldText: "Clean droppings promptly ",
+				regularText: "using safe disinfectants",
 			},
 			{
-				regularText: "We provide written guarantees and ongoing support to ensure your property remains bird-free.",
+				boldText: "Avoid placing ledge decor or ornamentation ",
+				regularText: "in vulnerable spots",
+			},
+			{
+				boldText: "Use temporary deterrents ",
+				regularText: "(reflective tape, visual distractions) while awaiting professional service",
+			},
+			{
+				regularText:
+					"These actions make your property less hospitable, but for full removal, professional <b>bird pest control</b> is the best path.",
 			},
 		],
 	},
 
-	processCheck: {
+	extraContent: {
 		backgroundImage: "/images/pattern-bg.png",
-		title: "Book Your ",
-		highlightedText: "Bird Pest Control ",
-		extraTitle: "Service Today",
-		subtitle:
-			"Don't let birds damage your property or pose health risks. Call Ecovia now for professional <b>bird pest control</b> services across Sydney. We'll protect your property safely and effectively.",
-		align: "center" as const,
+		title: "Why",
+		highlightedText: "Choose Ecovia ",
+		extraTitle: "For Bird Pest Control",
+		subtitle: "Here's what sets us apart:",
+		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
-		processItems: [
+		infoItems: [
 			{
-				title:
-					"We provide bird pest control services across Sydney, including Eastern Suburbs, Northern Beaches, Inner West, Western Sydney, Sutherland Shire, North Shore, and Greater Sydney.",
+				regularText: "- Locally based in Sydney, with deep understanding of area species",
+			},
+			{
+				regularText: "- Fully licensed, insured and compliant with NSW wildlife regulations",
+			},
+			{
+				regularText: "- Human-first, eco-friendly methods — minimal harm, maximum effect",
+			},
+			{
+				regularText: "- Transparent pricing and process",
+			},
+			{
+				regularText: "- Fast response and reliability",
+			},
+			{
+				regularText: "- Warranty / guarantee on workmanship",
+			},
+			{
+				regularText:
+					"When you engage Ecovia, you're not just hiring a contractor — you're getting a trusted partner in maintaining a bird-free environment.",
 			},
 		],
-		button: {
-			variant: "primary" as const,
-			title: " 0432 227 227",
-			icon: "phone" as const,
-		},
 	},
 
 	footer: {
 		backgroundImage: "/images/home-footer-bg.jpg",
 		heading: "Book Your ",
-		highlightedText: "Bird Pest Control ",
-		subHeading: "Service Today",
+		highlightedText: "Free Bird ",
+		subHeading: "Inspection",
 		description:
-			"Don't let birds damage your property or pose health risks. Call Ecovia now for professional <b>bird pest control</b> services across Sydney. We'll protect your property safely and effectively.",
+			"Don't let birds damage your property or risk hygiene issues. <b>Book your free inspection</b> with Ecovia today. Fill out the form below or call us — we'll visit your site, assess the bird issue, and provide a clear, no-obligation quote.",
 		showCallCTAOnMobile: true,
 	},
 
@@ -248,57 +309,64 @@ const birdPestStudyData = {
 			id: 1,
 			ratings: 5,
 			review:
-				"Ecovia solved our pigeon problem completely. They installed deterrents and cleaned up all the mess. Our roof is now bird-free and the damage has been repaired.",
+				"Ecovia removed a pigeon colony from our attic in Bondi. Their proofing solution and follow-up visits have kept birds away ever since.",
 			userImage: "",
-			username: "Jennifer",
-			designation: "Western Sydney",
+			username: "Sarah",
+			designation: "Bondi",
 		},
 		{
 			id: 2,
 			ratings: 5,
 			review:
-				"We had Indian Mynas nesting in our roof cavity. Ecovia removed them safely and sealed the entry points. No more noise or damage.",
+				"We had ibis nesting on our office rooftop every spring. Ecovia installed discreet netting and deterrents — problem solved.",
 			userImage: "",
-			username: "David",
+			username: "Mark",
 			designation: "Sutherland Shire",
 		},
 	],
 
 	faq: [
 		{
-			id: "bird-identification",
-			question: "How do I know if I have a bird problem?",
+			id: "bird-safety",
+			question: "Is your bird control safe for people, pets and native birds?",
 			answer:
-				"Look for increased bird activity, droppings, nesting materials, or damage to your property. If you're unsure, call us for a professional inspection.",
+				"Yes. We use non-toxic methods and comply with relevant wildlife protection laws. We avoid harmful chemicals and lethal approaches unless strictly necessary and permitted.",
 		},
 		{
-			id: "bird-treatment-safety",
-			question: "Is bird control safe for the birds?",
+			id: "bird-treatment-duration",
+			question: "How long does treatment last?",
 			answer:
-				"Yes, we use humane methods and comply with all wildlife regulations. We prioritise exclusion and deterrents over harmful methods.",
+				"A well-installed proofing system can last many years. Deterrents and maintenance may need refreshes over time depending on weather exposure.",
 		},
 		{
-			id: "bird-legal-compliance",
-			question: "Are you licensed for bird control?",
-			answer: "Yes, we comply with all NSW wildlife regulations and protected species laws.",
-		},
-		{
-			id: "bird-prevention",
-			question: "How can I prevent future bird problems?",
+			id: "bird-return",
+			question: "Will birds come back after treatment?",
 			answer:
-				"We'll provide specific prevention advice including removing food sources, installing deterrents, and sealing entry points.",
+				"If gaps or weak points remain, yes. That's why our monitoring and warranty are crucial — we re-inspect and repair as needed.",
 		},
 		{
-			id: "bird-cleaning",
-			question: "Do you clean up bird droppings?",
-			answer: "Yes, we provide professional cleaning and sanitisation services to remove health hazards and contamination.",
+			id: "bird-permit",
+			question: "Do I need a permit to remove nests or birds?",
+			answer: "In NSW, certain bird species and nests may be protected under legislation. Ecovia handles permit compliance.",
 		},
 		{
-			id: "bird-guarantee",
-			question: "Do you guarantee your bird control service?",
-			answer: "Yes, we provide written guarantees and will return if birds reappear within the warranty period.",
+			id: "bird-preparation",
+			question: "What preparation do I need before service?",
+			answer:
+				"Clear pathways, ensure roof access, remove fragile items near treatment zones, and secure pets or occupants during installation.",
+		},
+		{
+			id: "bird-new-droppings",
+			question: "What if I see new droppings after service?",
+			answer: "Contact us immediately — we'll investigate whether it's new activity or residual residue.",
+		},
+		{
+			id: "bird-cost",
+			question: "How is cost determined?",
+			answer:
+				"Price depends on species, infestation severity, building complexity, height and materials needed. We always quote after inspection.",
 		},
 	],
-} as PestStudyConfig;
+} as Partial<PestStudyConfig>;
 
 export default birdPestStudyData;

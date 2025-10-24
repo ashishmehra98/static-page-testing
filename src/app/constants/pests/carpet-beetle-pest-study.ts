@@ -3,9 +3,9 @@ const carpetBeetlePestStudyData = {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Carpet Beetle ",
 		highlightedText: "Pest Control ",
-		subHeading: "Sydney",
+		subHeading: "In Sydney",
 		description:
-			"Protect your home and fabrics from silent damage with effective carpet beetle pest control by Ecovia. Whether it's your carpets, woollens, or upholstered furniture, we deliver targeted, safe solutions to keep your belongings intact and your peace of mind secure.",
+			"Protect your home and fabrics from silent damage with effective <b>carpet beetle pest control</b> by Ecovia. Whether it's your carpets, woollens, or upholstered furniture, we deliver targeted, safe solutions to keep your belongings intact and your peace of mind secure.",
 		hideButtonSection: true,
 	},
 
@@ -30,7 +30,7 @@ const carpetBeetlePestStudyData = {
 			{
 				boldText: "Health irritation: ",
 				regularText:
-					"The hairs and shed skins of carpet beetle larvae can trigger skin irritation or carpet beetle dermatitis in sensitive individuals.",
+					"The hairs and shed skins of carpet beetle larvae can trigger skin irritation or <b>carpet beetle dermatitis</b> in sensitive individuals.",
 			},
 			{
 				boldText: "Cost of delay: ",
@@ -71,7 +71,11 @@ const carpetBeetlePestStudyData = {
 			},
 			{
 				regularText:
-					"<b>Life Cycle & Behaviour:</b> Eggs are tiny, cream-coloured, laid near food sources. Larvae are the destructive stage, feeding on animal-based fibres. Adults live briefly and lay eggs to begin a new cycle.",
+					"<b>Life Cycle & Behaviour:</b> Eggs are tiny, cream-coloured, laid near food sources (hidden). Larvae are the destructive stage, feeding on animal-based fibres. Pupation occurs in quiet areas; adults live briefly (2–6 weeks), feed on pollen/nectar, and lay eggs to begin a new cycle.",
+			},
+			{
+				regularText:
+					"Adults themselves rarely cause damage — their role is reproduction and spreading. The real harm comes from <b>larvae</b> feeding.",
 			},
 		],
 	},
@@ -79,65 +83,110 @@ const carpetBeetlePestStudyData = {
 	infestationSigns: {
 		backgroundImage: "/images/pattern-bg.png",
 		title: "Signs You",
-		highlightedText: "May Have ",
+		highlightedText: "Have ",
 		extraTitle: "A Carpet Beetle Infestation",
-		subtitle: "Early detection is key to preventing extensive damage. Look for these signs:",
+		subtitle: "Spotting early signs is key. Look for:",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Holes in fabrics: ",
-				regularText: "Small, irregular holes in wool, silk, or other natural fibres.",
+				boldText: "Small patches of fabric damage ",
+				regularText: "(eaten edges, holes in woollen rugs)",
 			},
 			{
-				boldText: "Shed skins: ",
-				regularText: "Tiny, hairy larval skins found in corners or under furniture.",
+				boldText: "Shed skins, exoskeletons, droppings ",
+				regularText: '("sand-like pellets") near carpet edges or beneath furniture',
 			},
 			{
-				boldText: "Adult beetles: ",
-				regularText: "Small, round beetles (2-4mm) often found near windows or light sources.",
+				boldText: "Clusters of larvae ",
+				regularText: "(hairy, slow-moving) in dark, undisturbed areas",
 			},
 			{
-				boldText: "Larvae: ",
-				regularText: "Small, hairy, brown or black larvae (3-7mm) in dark, undisturbed areas.",
+				boldText: "Adult beetles ",
+				regularText: "near windows, light sources (they're attracted to light)",
 			},
 			{
-				boldText: "Damage to stored items: ",
-				regularText: "Furs, taxidermy, or other animal-based items showing signs of feeding.",
+				boldText: "Damage to stored fabrics, furs, feathers, taxidermy, wool insulation",
+			},
+			{
+				regularText:
+					"Often, the infestation begins behind baseboards, in wardrobes, inside wall cavities, or under heavy furniture — hidden from plain sight until damage is widespread.",
+			},
+		],
+	},
+
+	extraContent: {
+		backgroundImage: "/images/pattern-bg.png",
+		title: "Why",
+		highlightedText: "Choose ",
+		extraTitle: "Ecovia",
+		subtitle: "We follow best practices and Australian standards to deliver lasting solutions.",
+		align: "start",
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
+		infoItems: [
+			{
+				regularText: "- Licensed, insured pest professionals specialising in <b>carpet beetle pest control</b>",
+			},
+			{
+				regularText: "- Safe treatment protocols — child- and pet-friendly after drying",
+			},
+			{
+				regularText: "- Sydney-wide service (Eastern Suburbs, North Shore, Inner West, Western Sydney, Sutherland Shire, etc.)g",
+			},
+			{
+				regularText: "- Written guarantee — we return if beetles reappear within the warranty period",
+			},
+			{
+				regularText: "- Local knowledge of Sydney’s climate, building types, and pest patterns",
+			},
+			{
+				regularText: "- Clear communication, transparent pricing, and no surprise costs",
 			},
 		],
 	},
 
 	serviceMethods: {
 		title: "Our",
-		highlightedText: "Carpet Beetle Pest Control ",
-		extraTitle: "Services",
-		subtitle: "Our comprehensive <b>carpet beetle pest control</b> services include:",
+		highlightedText: "Carpet Beetle Control ",
+		extraTitle: "Solutions",
+		subtitle:
+			"At Ecovia, we customise treatments depending on infestation severity, fabric type, and location. Our methods include:",
 		align: "center" as const,
 		imageSrc: "/images/ant-control-matters.jpg",
 		imageAlt: "commercial",
 		infoItems: [
 			{
-				boldText: "Thorough Inspection: ",
-				regularText: "We identify the species and locate all infestation sources.",
+				boldText: "Comprehensive inspection: ",
+				regularText: "We locate breeding sites, entry routes, and susceptible fabrics",
 			},
 			{
-				boldText: "Targeted Treatment: ",
-				regularText: "Safe, effective treatments that eliminate beetles at all life stages.",
+				boldText: "Targeted insecticidal treatments: ",
+				regularText: "Use of safe, approved residual insecticides in cracks, under skirting, edges of carpets, wall voids",
 			},
 			{
-				boldText: "Fabric Protection: ",
-				regularText: "Specialised treatments for carpets, upholstery, and stored items.",
+				boldText: "Heat / steam or cold treatment: ",
+				regularText:
+					"For isolated items like rugs, furs, or quilts we apply controlled high heat or freezing to kill larvae and eggs",
 			},
 			{
-				boldText: "Prevention Measures: ",
-				regularText: "We implement strategies to prevent future infestations.",
+				boldText: "Fabric treatment (wrap, bag, isolate): ",
+				regularText: "Items are sealed or treated separately, washed where possible",
 			},
 			{
-				boldText: "Follow-up Monitoring: ",
-				regularText: "Regular inspections to ensure complete elimination.",
+				boldText: "Barrier / exclusion measures: ",
+				regularText: "Sealing cracks, installing screens, applying perimeter sprays to prevent entry",
+			},
+			{
+				boldText: "Follow-up monitoring & maintenance: ",
+				regularText: "Return visits, trap monitoring, and guarantee checks",
+			},
+			{
+				regularText:
+					"We ensure our methods are safe for children and pets (once dry) and follow all <a href='https://legislation.nsw.gov.au/view/whole/html/inforce/current/sl-2017-0448' target='_blank'>Australian pest control regulations</a>.",
 			},
 		],
 	},
@@ -145,106 +194,84 @@ const carpetBeetlePestStudyData = {
 	processList: {
 		backgroundImage: "/images/pattern-bg.png",
 		title: "What",
-		highlightedText: "To Expect ",
-		extraTitle: "From Our Process",
-		subtitle: "Our <b>carpet beetle pest control</b> process is thorough and effective:",
+		highlightedText: "To Expect: ",
+		extraTitle: "Our Process",
+		subtitle: "We aim for transparency and keep you informed at every step.",
 		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
-				boldText: "Inspection: ",
-				regularText: "We assess the extent of the infestation and identify all sources.",
+				boldText: "Inspection & assessment: ",
+				regularText: "We map the full extent of infestation and identify vulnerable areas.",
 			},
 			{
-				boldText: "Treatment Plan: ",
-				regularText: "We develop a customised solution for your specific situation.",
+				boldText: "Treatment plan: ",
+				regularText: "A clear quote with recommended methods (chemical, heat, exclusion) is provided.",
 			},
 			{
-				boldText: "Treatment: ",
-				regularText: "We apply safe, effective treatments to eliminate all life stages.",
+				boldText: "Execution: ",
+				regularText: "Our team applies treatments indoors and outdoors in coordinated stages.",
 			},
 			{
-				boldText: "Clean-up: ",
-				regularText: "We clean affected areas and remove debris.",
+				boldText: "Re-entry & restoration: ",
+				regularText: "After safe re-entry time, carpets and fabrics are restored, and sealed if needed.",
 			},
 			{
-				boldText: "Follow-up: ",
-				regularText: "We monitor the situation and provide ongoing support.",
+				boldText: "Follow-up & guarantee: ",
+				regularText: "We return during the warranty period if beetles reappear, and monitor long-term for lasting results.",
 			},
 		] as InfoItem[],
 	},
 
 	diyTips: {
-		title: "DIY",
+		title: "Prevention",
 		highlightedText: "Tips ",
-		extraTitle: "& Prevention",
-		subtitle: "While professional <b>carpet beetle pest control</b> is most effective, here are some prevention tips:",
+		extraTitle: "& Best Practices",
+		subtitle: "These actions help minimise risk (though they're not enough alone):",
 		align: "center" as const,
 		imageSrc: "/images/common-ant-species.png",
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Regular vacuuming of carpets, rugs, and upholstery.",
+				boldText: "Vacuum regularly ",
+				regularText: "(edges, corners, under furniture) to remove eggs, larvae, remnant fibres",
 			},
 			{
-				boldText: "Store wool and silk items in sealed containers.",
+				boldText: "Wash or dry-clean stored fabrics ",
+				regularText: "periodically in hot water",
 			},
 			{
-				boldText: "Clean up pet hair and food debris regularly.",
+				boldText: "Store off-season woollens ",
+				regularText: "in sealed airtight containers",
 			},
 			{
-				boldText: "Inspect second-hand furniture before bringing it home.",
+				boldText: "Inspect new items ",
+				regularText: "(furniture, rugs, flowers) before bringing inside",
 			},
 			{
-				boldText: "Use mothballs or cedar blocks in storage areas.",
+				boldText: "Seal cracks, gaps, and insecure screens ",
+				regularText: "to block beetle entry",
 			},
 			{
-				regularText: "Remember: Professional treatment is usually necessary for established infestations.",
+				boldText: "Minimise outdoor lighting ",
+				regularText: "near entrances (adults drawn to light)",
+			},
+			{
+				regularText: "These steps lower the chance of reinfestation but don't replace expert treatment.",
 			},
 		],
-	},
-
-	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
-		title: "Safety, ",
-		highlightedText: "Guarantees & Peace ",
-		extraTitle: "of Mind",
-		subtitle: "At Ecovia, we prioritise safety and effectiveness in all our <b>carpet beetle pest control</b> services:",
-		align: "center" as const,
-		titleColor: "white",
-		subtitleColor: "white",
-		highlightedTextColor: "#b1cf5f",
-		processItems: [
-			{
-				title: "Safe treatments that protect your family and pets.",
-			},
-			{
-				title: "Effective methods that eliminate all life stages.",
-			},
-			{
-				title: "Written guarantees for complete elimination.",
-			},
-			{
-				title: "Ongoing support and monitoring to prevent reinfestation.",
-			},
-		],
-		button: {
-			variant: "primary" as const,
-			title: " 0432 227 227",
-			icon: "phone" as const,
-		},
 	},
 
 	footer: {
 		backgroundImage: "/images/home-footer-bg.jpg",
-		heading: "Book Your ",
-		highlightedText: "Carpet Beetle Pest Control ",
-		subHeading: "Service Today",
+		heading: "Ready to ",
+		highlightedText: "Protect Your Home?",
+		subHeading: "",
 		description:
-			"Don't let carpet beetles damage your valuable fabrics and furnishings. Call Ecovia now for professional <b>carpet beetle pest control</b> services across Sydney. We'll protect your belongings and eliminate the infestation completely.",
+			"Don't let carpet beetles eat away at your fabrics and peace of mind. <b>Book your free inspection now</b> and let Ecovia deliver the targeted, safe, long-lasting <b>carpet beetle pest control</b> your home needs.",
 		showCallCTAOnMobile: true,
 	},
 
@@ -253,57 +280,57 @@ const carpetBeetlePestStudyData = {
 			id: 1,
 			ratings: 5,
 			review:
-				"Ecovia solved our carpet beetle problem completely. They identified the source, treated all affected areas, and provided prevention advice. No more damage to our carpets and furniture.",
+				"Ecovia came to inspect our moth-damaged rugs. They identified carpet beetles, treated all areas including under floorboards, and returned when larvae reappeared. No damage now — amazing service.",
 			userImage: "",
-			username: "Lisa",
-			designation: "North Shore",
+			username: "Jess",
+			designation: "Parramatta",
 		},
 		{
 			id: 2,
 			ratings: 5,
 			review:
-				"We had carpet beetles in our wool rugs. Ecovia treated the problem effectively and gave us great prevention tips. The beetles haven't returned.",
+				"After seeing tiny holes in our wool rug, Ecovia confirmed the infestation, treated discreetly, and saved the carpet. The follow-up visits reassured us completely.",
 			userImage: "",
-			username: "Robert",
+			username: "Mark",
 			designation: "Eastern Suburbs",
 		},
 	],
 
 	faq: [
 		{
-			id: "carpet-beetle-identification",
-			question: "How do I know if I have carpet beetles?",
+			id: "carpet-beetle-safety",
+			question: "Are carpet beetle treatments safe for children and pets?",
 			answer:
-				"Look for small holes in fabrics, shed skins, or small round beetles near windows. If you're unsure, call us for a professional inspection.",
+				"Yes. We use licensed insecticides applied by professionals. Once treatments dry fully, the area is safe. We give you clear re-entry instructions.",
 		},
 		{
-			id: "carpet-beetle-treatment-safety",
-			question: "Is carpet beetle treatment safe for my family?",
-			answer: "Yes, we use safe treatments that protect your family and pets while effectively eliminating the beetles.",
+			id: "carpet-beetle-duration",
+			question: "How long does treatment take?",
+			answer: "Depending on infestation size, treatment in one room may take 2–4 hours. Whole-home jobs can take a day or more.",
 		},
 		{
-			id: "carpet-beetle-prevention",
-			question: "How can I prevent future carpet beetle problems?",
+			id: "carpet-beetle-reentry",
+			question: "When can I put my carpets or clothes back?",
+			answer: "After re-entry time given (usually a few hours), but fabrics should remain sealed until fully dry and ventilated.",
+		},
+		{
+			id: "carpet-beetle-diy",
+			question: "Can I treat carpet beetles myself?",
 			answer:
-				"We'll provide specific prevention advice including regular vacuuming, proper storage of natural fibres, and maintaining clean, dry conditions.",
+				"Mild infestations may respond to DIY methods, but these rarely eliminate eggs or deep-seated infestation. Professional service ensures full coverage.",
 		},
 		{
-			id: "carpet-beetle-damage",
-			question: "Can carpet beetle damage be repaired?",
+			id: "carpet-beetle-return",
+			question: "How likely are carpet beetles to return?",
 			answer:
-				"Minor damage can often be repaired, but severe damage may require replacement. We'll assess the damage and provide recommendations.",
+				"If not fully eliminated or if reintroduction occurs, reinfestation is possible. That's why exclusion, monitoring, and follow-up are crucial.",
 		},
 		{
-			id: "carpet-beetle-treatment-duration",
-			question: "How long does carpet beetle treatment take?",
-			answer: "Most treatments are completed in a few hours, but follow-up visits may be needed to ensure complete elimination.",
-		},
-		{
-			id: "carpet-beetle-guarantee",
-			question: "Do you guarantee your carpet beetle control service?",
-			answer: "Yes, we provide written guarantees and will return if beetles reappear within the warranty period.",
+			id: "carpet-beetle-preparation",
+			question: "What preparation do I need to do before treatment?",
+			answer: "Vacuum your home, remove breakables, cover or relocate pets. We'll provide a checklist in advance.",
 		},
 	],
-} as PestStudyConfig;
+} as Partial<PestStudyConfig>;
 
 export default carpetBeetlePestStudyData;

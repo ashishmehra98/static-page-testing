@@ -5,8 +5,9 @@ const ratsMicePestStudyData = {
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
 		description:
-			"Rats and mice might seem small, but the problems they cause in Sydney homes and businesses can be huge. From gnawing electrical wires and damaging property to spreading dangerous diseases, rodents are a risk you can't ignore. At Ecovia, we specialise in rats and mice pest control Sydney homeowners and businesses can trust. Our licensed technicians use proven methods that target infestations at their source, keeping your property safe and rodent-free.",
+			"Rats and mice might seem small, but the problems they cause in Sydney homes and businesses can be huge. From gnawing electrical wires and damaging property to spreading dangerous diseases, rodents are a risk you can't ignore. At Ecovia, we specialise in <b>rats and mice pest control Sydney</b> homeowners and businesses can trust. Our licensed technicians use proven methods that target infestations at their source, keeping your property safe and rodent-free.",
 		hideButtonSection: true,
+		tag: "Effective solutions for lasting rodent control",
 	},
 
 	controlMatters: {
@@ -25,7 +26,7 @@ const ratsMicePestStudyData = {
 			{
 				boldText: "Health risks: ",
 				regularText:
-					"Rodents spread diseases such as leptospirosis, salmonella, and hantavirus through their droppings, urine, and bites. NSW Health warns that rat-borne diseases have been on the rise in parts of Sydney.",
+					"Rodents spread diseases such as leptospirosis, salmonella, and hantavirus through their droppings, urine, and bites. <a href='https://www.health.nsw.gov.au/' target='_blank'>NSW Health</a> warns that rat-borne diseases have been on the rise in parts of Sydney.",
 			},
 			{
 				boldText: "Property damage: ",
@@ -51,12 +52,15 @@ const ratsMicePestStudyData = {
 		title: "Common",
 		highlightedText: "Rodents Found ",
 		extraTitle: "In Sydney",
-		subtitle: "Sydney homes and businesses most often deal with three types of rodents:",
+		subtitle: "",
 		align: "center" as const,
 		imageSrc: "/images/common-ant-species.png",
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
+			{
+				regularText: "Sydney homes and businesses most often deal with three types of rodents:",
+			},
 			{
 				boldText: "Norway Rat (Brown Rat): ",
 				regularText: "Large and strong swimmers, often found in sewers, drains, and lower floors of buildings.",
@@ -200,22 +204,22 @@ const ratsMicePestStudyData = {
 		isReverse: true,
 		infoItems: [
 			{
-				boldText: "Store food in sealed containers.",
+				regularText: "Store food in sealed containers.",
 			},
 			{
-				boldText: "Keep kitchen areas clean and free of crumbs.",
+				regularText: "Keep kitchen areas clean and free of crumbs.",
 			},
 			{
-				boldText: "Seal cracks and gaps around doors, windows, and pipes.",
+				regularText: "Seal cracks and gaps around doors, windows, and pipes.",
 			},
 			{
-				boldText: "Keep rubbish bins sealed and emptied regularly.",
+				regularText: "Keep rubbish bins sealed and emptied regularly.",
 			},
 			{
-				boldText: "Trim back trees and vegetation that touch your home.",
+				regularText: "Trim back trees and vegetation that touch your home.",
 			},
 			{
-				boldText: "Keep pet food in sealed containers and avoid leaving it out overnight.",
+				regularText: "Keep pet food in sealed containers and avoid leaving it out overnight.",
 			},
 			{
 				regularText:
