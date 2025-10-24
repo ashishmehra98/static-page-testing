@@ -12,9 +12,10 @@ interface ButtonProps {
 	disabled?: boolean;
 	isLoading?: boolean;
 	icon?: IconName;
+	className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ variant, title, onPress, disabled = false, isLoading = false, icon }) => {
+const Button: React.FC<ButtonProps> = ({ variant, title, onPress, disabled = false, isLoading = false, icon, className }) => {
 	const buttonRef = useRef<HTMLButtonElement>(null);
 	const [buttonWidth, setButtonWidth] = useState<number | null>(null);
 
@@ -40,7 +41,7 @@ const Button: React.FC<ButtonProps> = ({ variant, title, onPress, disabled = fal
 			ref={buttonRef}
 			onClick={handleClick}
 			disabled={disabled || isLoading}
-			className={`${styles.button} ${styles[variant]}`}
+			className={`${styles.button} ${styles[variant]} ${className ?? ""}`.trim()}
 			style={buttonStyle}
 			aria-label={isLoading ? "Loading..." : title}
 			aria-disabled={disabled || isLoading}>

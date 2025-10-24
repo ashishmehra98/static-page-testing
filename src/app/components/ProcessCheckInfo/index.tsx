@@ -7,27 +7,16 @@ import styles from "./ProcessCheckInfo.module.css";
 
 interface ProcessCheckInfoProps {
 	title: string;
-	highlightedText?: string;
 	className?: string;
 }
 
-const ProcessCheckInfo: React.FC<ProcessCheckInfoProps> = ({ title, highlightedText, className = "" }) => {
+const ProcessCheckInfo: React.FC<ProcessCheckInfoProps> = ({ title, className = "" }) => {
 	return (
 		<div className={`${styles.container} ${className}`}>
 			<div className={styles.iconContainer}>
 				<Image src={ICONS["verified-tick"]} alt="Verified tick" width={28} height={28} className={styles.icon} />
 			</div>
-			<p className={styles.text}>
-				{highlightedText ? (
-					<>
-						{title.split(highlightedText)[0]}
-						<span className={styles.highlighted}>{highlightedText}</span>
-						{title.split(highlightedText)[1]}
-					</>
-				) : (
-					title
-				)}
-			</p>
+			<p className={styles.text} dangerouslySetInnerHTML={{ __html: title }} />
 		</div>
 	);
 };

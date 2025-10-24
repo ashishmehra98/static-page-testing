@@ -34,3 +34,9 @@
 .highlighted {
 	font-weight: 700;
 }
+
+.text a {
+	color: var(--hightlight-text);
+	text-decoration: underline;
+	font-weight: bold;
+}

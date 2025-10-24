@@ -90,6 +90,12 @@
 	background-color: var(--light-gray);
 }
 
+.itemDescription a {
+	color: var(--hightlight-text);
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 /* Animations */
 @keyframes slideDown {
 	from {

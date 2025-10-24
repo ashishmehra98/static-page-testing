@@ -46,7 +46,12 @@ const HeroContent: React.FC<HeroContentProps> = ({
 						</h1>
 					)}
 				</div>
-				{description && <p className={`${styles.description} ${descriptionClassName ?? ""}`}>{description}</p>}
+				{description && (
+					<p
+						className={`${styles.description} ${descriptionClassName ?? ""}`}
+						dangerouslySetInnerHTML={{ __html: description }}
+					/>
+				)}
 			</div>
 			{!hideButtonSection && (
 				<div className={styles.buttonSection}>

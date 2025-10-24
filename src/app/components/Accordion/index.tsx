@@ -66,7 +66,7 @@ const Accordion: React.FC<AccordionProps> = ({
 						</div>
 						{isExpanded && item.description && (
 							<div className={styles.itemContent}>
-								<p className={styles.itemDescription}>{item.description}</p>
+								<p className={styles.itemDescription} dangerouslySetInnerHTML={{ __html: item.description }} />
 							</div>
 						)}
 					</div>

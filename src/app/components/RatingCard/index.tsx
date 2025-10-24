@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ICONS } from "../../constants/icons";
+// import { ICONS } from "../../constants/icons";
 import styles from "./RatingCard.module.css";
 
 interface StarRatingProps {
@@ -44,12 +44,15 @@ const RatingCard: React.FC<RatingCardProps> = ({ ratings, review, userImage, use
 			<div className={styles.rating}>{renderStars()}</div>
 
 			<div className={styles.user}>
-				<div className={`${styles.userProfile} user-image`}>
-					<Image src={userImage} alt="User profile" fill className={styles.userImage} />
-				</div>
+				{userImage ? (
+					<div className={`${styles.userProfile} user-image`}>
+						<Image src={userImage} alt="User profile" fill className={styles.userImage} />
+					</div>
+				) : null}
+
 				<div className={styles.userDetail}>
 					<p className={`${styles.username} username`}>{username}</p>
-					<p className={`${styles.designation} designation`}>{designation}</p>
+					{designation ? <p className={`${styles.designation} designation`}>{designation}</p> : null}
 				</div>
 			</div>
 
@@ -57,12 +60,12 @@ const RatingCard: React.FC<RatingCardProps> = ({ ratings, review, userImage, use
 				<p className={`${styles.reviewText} review-text`}>{review}</p>
 			</div>
 
-			<div className={styles.posting}>
+			{/* <div className={styles.posting}>
 				<p className={`${styles.postedOn} posted-on-text`}>Posted on</p>
 				<div className={`${styles.googleLogo} google-logo`}>
 					<Image src={ICONS.google} alt="Google" fill />
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

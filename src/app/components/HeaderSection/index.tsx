@@ -64,9 +64,11 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
 				{extraTitle}
 			</h2>
 			{subtitle ? (
-				<p className={`${styles.subtitle} ${subtitleClassName}`} style={{ color: subtitleColor }}>
-					{subtitle}
-				</p>
+				<p
+					className={`${styles.subtitle} ${subtitleClassName}`}
+					style={{ color: subtitleColor }}
+					dangerouslySetInnerHTML={{ __html: subtitle }}
+				/>
 			) : null}
 		</div>
 	);

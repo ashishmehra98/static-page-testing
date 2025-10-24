@@ -1,8 +1,12 @@
 import styles from "./UserReviewsSection.module.css";
 import HeaderSection from "@/app/components/HeaderSection";
-import UserReviews from "@/app/components/UserReviews";
+import UserReviews, { ReviewData } from "@/app/components/UserReviews";
 
-export default function UserReviewsSection() {
+interface UserReviewsSectionProps {
+	reviews?: ReviewData[];
+}
+
+export default function UserReviewsSection({ reviews }: UserReviewsSectionProps) {
 	return (
 		<div className={styles.userReviewsSection}>
 			<HeaderSection
@@ -13,7 +17,7 @@ export default function UserReviewsSection() {
 				align="start"
 				className="user-reviews--header"
 			/>
-			<UserReviews className="user-reviews" />
+			<UserReviews className="user-reviews" reviews={reviews} />
 		</div>
 	);
 }

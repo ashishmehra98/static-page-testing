@@ -26,6 +26,10 @@
 	margin-top: 66px;
 }
 
+.phoneCTA {
+	display: none;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
 	.content,
 	.infoGroup {
@@ -142,5 +146,9 @@
 	.infoGroup {
 		gap: 7px;
 		margin-top: 30px;
+	}
+
+	.phoneCTA {
+		display: block;
 	}
 }

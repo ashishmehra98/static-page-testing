@@ -2,7 +2,7 @@ export const ICONS = {
 	phone: "/icons/phone.svg",
 	email: "/icons/email.svg",
 	"email-secondary": "/icons/email-secondary.svg",
-	logo: "icons/ecovia-logo.svg",
+	logo: "/icons/ecovia-logo.svg",
 	google: "/icons/google.svg",
 	facebook: "/icons/facebook.svg",
 	instagram: "/icons/instagram.svg",
