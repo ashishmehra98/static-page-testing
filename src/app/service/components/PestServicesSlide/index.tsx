@@ -92,7 +92,7 @@ const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 					onSlideChange={handleSlideChange}
 					className={styles.swiper}>
 					{slides.map((s) => (
-						<SwiperSlide key={s.id} className={styles.slide}>
+						<SwiperSlide key={s.path} className={styles.slide}>
 							<PestInfo
 								imageSrc={s.imageSrc}
 								imageAlt={s.imageAlt}

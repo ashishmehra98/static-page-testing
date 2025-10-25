@@ -24,7 +24,7 @@ export default function Home() {
 		router.push("/blogs");
 	};
 
-	const handleLearnMore = (blogId: string) => {
+	const handleLearnMore = () => {
 		// Handle learn more click
 		router.push("/blogs");
 	};
