@@ -1,7 +1,6 @@
 "use client";
 
-import UserReviewsSection from "../../about-us/components/UserReviewsSection";
-import styles from "./style.module.css";
+import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
 import HeaderSection from "@/app/components/HeaderSection";
@@ -15,6 +14,8 @@ import FAQ from "@/app/components/FAQ";
 import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import { Pages, pestPages } from "@/app/constants/pests";
+import styles from "./style.module.css";
+
 interface PageProps {
 	slug: string;
 }
@@ -236,7 +237,8 @@ const PestStudyClient = ({ slug }: PageProps) => {
 					</Hero>
 				)}
 				{/* User Reviews */}
-				{PEST_REVIEWS_DATA.length ? <UserReviewsSection reviews={PEST_REVIEWS_DATA} /> : null}
+				{/* {PEST_REVIEWS_DATA.length ? <UserReviewsSection reviews={PEST_REVIEWS_DATA} /> : null} */}
+				<UserReviewsSection />
 				{/* Laws */}
 				{PEST_STUDY_CONFIG.extraContent && (
 					<Hero bgImage={PEST_STUDY_CONFIG.extraContent.backgroundImage} className={styles.processListSection}>

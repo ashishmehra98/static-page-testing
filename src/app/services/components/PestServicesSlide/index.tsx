@@ -8,12 +8,6 @@ import HeaderSection from "@/app/components/HeaderSection";
 import PestInfo from "@/app/components/PestInfo";
 import { IMAGES } from "@/app/constants/images";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-
 interface SlideData {
 	id: string;
 	imageSrc: string;
@@ -123,9 +117,9 @@ const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 					autoplay={
 						isMobile
 							? {
-								delay: 3000,
-								disableOnInteraction: false,
-							}
+									delay: 3000,
+									disableOnInteraction: false,
+								}
 							: false
 					}
 					onSwiper={(swiper) => (swiperRef.current = swiper)}

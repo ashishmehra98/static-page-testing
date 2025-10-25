@@ -202,3 +202,8 @@ interface PestStudyConfig {
 	reviews: Review[];
 	faq: FAQ[];
 }
+
+interface ServiceDataConfig {
+	meta: Meta;
+	hero: HeroConfig;
+}

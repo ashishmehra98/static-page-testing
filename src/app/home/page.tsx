@@ -14,6 +14,7 @@ import PesticideInfoSection from "@/app/components/PesticideInfoSection";
 
 import { FAQ_DATA } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
+import { reviews } from "../constants/pests";
 
 export default function Home() {
 	const router = useRouter();
@@ -42,7 +43,7 @@ export default function Home() {
 					phoneNumber="0432 227 227"
 					contactButtonText="Contact us"
 				/>
-				<UserReviews className={styles.userReviewsSection} />
+				<UserReviews reviews={reviews} className={styles.userReviewsSection} />
 				<PestControlServices />
 				<HowWeWork />
 				<PesticideInfoSection />

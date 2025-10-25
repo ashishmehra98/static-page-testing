@@ -11,6 +11,8 @@ interface HeroContentProps {
 	subHeading?: string;
 	description?: string;
 	phoneNumber?: string;
+	headingColor?: string;
+	descriptionColor?: string;
 	contactButtonText?: string;
 	hideButtonSection?: boolean;
 	onPhoneClick?: () => void;
@@ -28,6 +30,8 @@ const HeroContent: React.FC<HeroContentProps> = ({
 	phoneNumber,
 	contactButtonText,
 	hideButtonSection,
+	headingColor,
+	descriptionColor,
 	onPhoneClick,
 	onContactClick,
 	contentClassName,
@@ -39,7 +43,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
 				<div className={styles.tagAndHeading}>
 					{tag && <p className={styles.tag}>{tag}</p>}
 					{heading && (
-						<h1 className={styles.heading}>
+						<h1 className={styles.heading} style={headingColor ? { color: headingColor } : {}}>
 							{heading}
 							{highlightedText && <span className={styles.highlighted}>{highlightedText}</span>}
 							{subHeading}
@@ -49,6 +53,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
 				{description && (
 					<p
 						className={`${styles.description} ${descriptionClassName ?? ""}`}
+						style={descriptionColor ? { color: descriptionColor } : {}}
 						dangerouslySetInnerHTML={{ __html: description }}
 					/>
 				)}

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import EcoviaProcess from "../service/components/EcoviaProcess/EcoviaProcess";
+import EcoviaProcess from "../services/components/EcoviaProcess/EcoviaProcess";
 import UserReviewsSection from "../about-us/components/UserReviewsSection";
 import styles from "./style.module.css";
 import Container from "@/app/components/Container";

@@ -40,6 +40,28 @@
 	width: 100%;
 }
 
+.reverseSection > div {
+	gap: initial;
+	align-items: center;
+	justify-content: space-between !important;
+}
+
+.reverseSection > div {
+	gap: initial;
+	align-items: center;
+	justify-content: space-between !important;
+}
+
+.reverseSectionContent {
+	width: initial !important;
+	flex: 0.9;
+	gap: 18px !important;
+}
+
+.reverseSectionContent button {
+	height: 68px;
+}
+
 /* Content */
 .infoContainer {
 	display: flex;

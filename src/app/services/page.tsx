@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import EcoviaProcess from "../service/components/EcoviaProcess/EcoviaProcess";
+import EcoviaProcess from "./components/EcoviaProcess/EcoviaProcess";
 import UserReviewsSection from "../about-us/components/UserReviewsSection";
 import styles from "./style.module.css";
 import Container from "@/app/components/Container";

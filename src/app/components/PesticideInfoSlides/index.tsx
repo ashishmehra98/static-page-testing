@@ -7,11 +7,6 @@ import PesticideInfo from "../PesticideInfo";
 import useIsMobile from "../../../hooks/useIsMobile";
 import styles from "./PesticideInfoSlides.module.css";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 interface PesticideData {
 	id: string;
 	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents";
@@ -120,9 +115,9 @@ const PesticideInfoSlides: React.FC = () => {
 					autoplay={
 						isMobile
 							? {
-								delay: 3000,
-								disableOnInteraction: false,
-							}
+									delay: 3000,
+									disableOnInteraction: false,
+								}
 							: false
 					}
 					onSwiper={(swiper) => (swiperRef.current = swiper)}

@@ -6,8 +6,6 @@ import { Autoplay } from "swiper/modules";
 import RatingCard from "../RatingCard";
 import styles from "./UserReviews.module.css";
 
-// Import Swiper styles
-import "swiper/css";
 import useIsMobile from "@/hooks/useIsMobile";
 
 export interface ReviewData {

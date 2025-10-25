@@ -1,7 +1,6 @@
 "use client";
 
-import PestServicesSlide from "../services/components/PestServicesSlide";
-import EcoviaProcess from "../services/components/EcoviaProcess/EcoviaProcess";
+import styles from "./style.module.css";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
 import HeaderSection from "@/app/components/HeaderSection";
@@ -14,7 +13,8 @@ import Footer from "@/app/components/Footer";
 import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import { IMAGES } from "@/app/constants/images";
 import { FAQ_DATA } from "@/app/constants/faq";
-import styles from "./style.module.css";
+import PestServicesSlide from "./components/PestServicesSlide";
+import EcoviaProcess from "./components/EcoviaProcess/EcoviaProcess";
 
 const Service = () => {
 	return (
@@ -130,28 +130,6 @@ const Service = () => {
 				</div>
 				{/* User Reviews */}
 				<UserReviewsSection />
-				{/* Service Area Coverage */}
-				<SectionInfo
-					imageSrc={IMAGES.PEST_WORKER}
-					imageAlt="commercial"
-					isReverse
-					className={styles.reverseSection}
-					imageStyle={{ objectPosition: "0 10%" }}>
-					<HeroContent
-						heading="Service "
-						highlightedText="Area & Coverage "
-						subHeading="In Sydney"
-						headingColor="#134021"
-						descriptionColor="#134021"
-						description={`We provide residential pest control in Sydney across many suburbs, including but not limited to:
-							
-							Eastern Suburbs, Northern Beaches, North Shore, Western Sydney, Inner West, Sutherland Shire, and Greater Sydney.
-							
-							If you’re unsure whether we service your suburb, just call us — we’ll confirm`}
-						contentClassName={styles.reverseSectionContent}
-						contactButtonText="Contact Us"
-					/>
-				</SectionInfo>
 				<FAQ items={FAQ_DATA} />
 				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}

@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
+// Import Swiper CSS globally to avoid conflicts
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+
 const openSans = Open_Sans({
 	variable: "--font-open-sans",
 	subsets: ["latin"],
