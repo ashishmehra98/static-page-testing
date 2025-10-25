@@ -24,6 +24,11 @@ export const IMAGES = {
 	ANT_CONTROL_MATTERS: "/images/ant-control-matters.jpg",
 	COMMON_ANT_SPECIES: "/images/common-ant-species.png",
 	DISINFECTING_AREA: "/images/disinfecting-area.jpg",
+	PEST_COCKROACHES: "/images/pest/cockroaches.png",
+	PEST_ANTS: "/images/pest/ants.jpg",
+	PEST_BED_BUGS: "/images/pest/bed-bugs.jpg",
+	PEST_RODENTS: "/images/pest/rodents.jpg",
+	PEST_SPIDER: "/images/pest/spider.jpg",
 };
 
 export type ImageName = keyof typeof IMAGES;

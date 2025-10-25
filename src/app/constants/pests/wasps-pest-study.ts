@@ -1,4 +1,10 @@
 const waspsPestStudyData = {
+	meta: {
+		keywords: ["wasp pest control sydney", "wasp pest contro", "pest control for wasps"],
+		title: "Wasp Pest Control Sydney | Ecovia",
+		description:
+			"Safe, effective wasp pest control Sydney wide. We remove wasp nests fast — licensed, pet-safe and guaranteed. Call Ecovia for a free quote.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Wasp ",

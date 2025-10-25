@@ -1,4 +1,10 @@
 const fliesPestStudyData = {
+	meta: {
+		keywords: ["fly pest control", "flies pest control", "pest control for flies"],
+		title: "Fly Pest Control Sydney | Ecovia",
+		description:
+			"Need fly pest control in Sydney? Ecovia provides safe, effective treatments that stop flies at the source. Call now for trusted residential and commercial fly control.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Fly ",

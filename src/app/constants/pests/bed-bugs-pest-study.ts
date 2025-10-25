@@ -1,4 +1,10 @@
 const bedBugsPestStudyData = {
+	meta: {
+		keywords: ["bed bugs pest control", "bed bug pest control sydney", "bed bug pest control", "pest control for bed bugs"],
+		title: "Bed Bug Pest Control Sydney | Ecovia",
+		description:
+			"Struggling with bed bugs? Ecovia offers professional bed bug pest control Sydney wide. Safe, proven treatments with a service guarantee. Book today.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Bed Bug ",

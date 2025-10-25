@@ -1,4 +1,10 @@
 const mosquitoPestStudyData = {
+	meta: {
+		keywords: ["mosquito pest control", "pest control for mosquitoes"],
+		title: "Mosquito Pest Control Sydney | Ecovia",
+		description:
+			"Get fast, reliable mosquito pest control in Sydney with Ecovia. Safe for kids and pets. Reclaim your outdoor space today with professional pest control.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Mosquito ",

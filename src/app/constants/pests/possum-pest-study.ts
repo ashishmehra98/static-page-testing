@@ -1,4 +1,10 @@
 const possumPestStudyData = {
+	meta: {
+		keywords: ["possum pest contro", "possum pest control sydney", "pest control for possums"],
+		title: "Sydney Possum Pest Control Services | Ecovia",
+		description:
+			"Ecovia provides licensed, humane possum pest control Sydney wide. We inspect, trap, seal & prevent re-entry. Safe for families & pets. Free inspection.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Possum ",

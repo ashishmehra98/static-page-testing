@@ -1,4 +1,10 @@
 const birdPestStudyData = {
+	meta: {
+		keywords: ["bird pest control", "bird pest control sydney", "pest control for birds"],
+		title: "Professional Bird Pest Control in Sydney | Ecovia",
+		description:
+			"Sydney’s trusted specialists in bird pest control. Ecovia protects your property with safe, effective bird exclusion and deterrent systems",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Bird ",

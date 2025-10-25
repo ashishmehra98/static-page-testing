@@ -1,4 +1,10 @@
 const antPestStudyData = {
+	meta: {
+		keywords: ["ant pest control", "pest control for ants", "ant pest control sydney"],
+		title: "Ant Pest Control in Sydney | Ecovia",
+		description:
+			"Looking for pest control for ants in Sydney? Ecovia offers safe, reliable ant treatments to protect your home. Call now for a free inspection.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Ant ",
@@ -328,6 +334,6 @@ const antPestStudyData = {
 			answer: "If ants come back within our guarantee period, we return free of charge.",
 		},
 	],
-} as PestStudyConfig;
+} as Partial<PestStudyConfig>;
 
 export default antPestStudyData;

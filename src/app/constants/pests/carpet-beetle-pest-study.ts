@@ -1,4 +1,10 @@
 const carpetBeetlePestStudyData = {
+	meta: {
+		keywords: ["carpet beetle pest control", "pest control carpet beetles"],
+		title: "Carpet Beetle Pest Control Sydney | Ecovia",
+		description:
+			"Protect your carpets and fabrics from damage. Ecovia offers expert carpet beetle pest control in Sydney using safe, proven treatments and guaranteed results.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Carpet Beetle ",

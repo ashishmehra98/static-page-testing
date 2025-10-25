@@ -1,4 +1,10 @@
 const ratsMicePestStudyData = {
+	meta: {
+		keywords: ["rats and mice pest control", "pest control for rats and mice"],
+		title: "Rats and Mice Pest Control Sydney | Ecovia",
+		description:
+			"Protect your Sydney home or business from rodents. Our professional pest control for rats and mice is safe, effective, and guaranteed. Book now.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Rats & Mice ",

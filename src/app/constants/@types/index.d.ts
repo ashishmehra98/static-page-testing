@@ -45,6 +45,13 @@ interface Button {
 	icon: ButtonIcon;
 }
 
+// Meta section interface
+interface Meta {
+	keywords: string[];
+	title: string;
+	description: string;
+}
+
 // Hero section interface
 interface HeroConfig {
 	backgroundImage: string;
@@ -176,10 +183,12 @@ interface FAQ {
 	answer: string;
 }
 
-interface ExtraContentConfig extends ProcessListConfig {}
+// Type alias for extra content configuration
+type ExtraContentConfig = ProcessListConfig;
 
 // Main pest study config interface
 interface PestStudyConfig {
+	meta: Meta;
 	hero: HeroConfig;
 	controlMatters: ControlMattersConfig;
 	commonSpecies: CommonSpeciesConfig;

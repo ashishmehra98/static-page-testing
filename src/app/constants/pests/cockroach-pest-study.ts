@@ -1,4 +1,10 @@
 const cockroachPestStudyData = {
+	meta: {
+		keywords: ["cockroach pest control", "cockroach pest control sydney", "pest control cockroaches"],
+		title: "Cockroach Pest Control Sydney | Ecovia",
+		description:
+			"Professional cockroach pest control in Sydney. Ecovia eliminates infestations with safe, proven methods. Book your inspection today for lasting results.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Cockroach ",

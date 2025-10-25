@@ -1,4 +1,10 @@
 const storedProductPestStudyData = {
+	meta: {
+		keywords: ["stored product pests", "common stored product pests"],
+		title: "Stored Product Pests Control Sydney | Ecovia",
+		description:
+			"Ecovia provides effective stored product pests control in Sydney. Eliminate pantry moths, beetles, and weevils with safe, lasting results.",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Stored Product Pests ",

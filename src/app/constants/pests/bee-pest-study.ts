@@ -1,4 +1,10 @@
 const beePestStudyData = {
+	meta: {
+		keywords: ["bee pest control", "pest control of bees", "pest control for bees"],
+		title: "Bee Pest Control Sydney | Safe Hive Removal | Ecovia",
+		description:
+			"Need bee removal in Sydney? Ecovia provides safe, humane bee pest control and hive removal across Sydney. Licensed, insured, and eco-friendly",
+	},
 	hero: {
 		backgroundImage: "/images/pest-study-bg.jpg",
 		heading: "Bee ",
