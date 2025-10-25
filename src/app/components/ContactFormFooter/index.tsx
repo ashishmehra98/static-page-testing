@@ -3,6 +3,7 @@ import Hero from "../Hero";
 import HeroContent from "../HeroContent";
 import ContactForm from "../ContactForm";
 import Button from "../Button";
+import Info from "../Info";
 import styles from "./ContactFormFooter.module.css";
 
 interface ContactFormFooterProps {
@@ -24,6 +25,10 @@ const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 	heroContainerClassName,
 	showCallCta,
 }) => {
+	const onPhoneClick = () => {
+		window.open("tel:0432 227 227");
+	};
+
 	return (
 		<div className={styles.jumbotron}>
 			<Hero bgImage={bgImage}>
@@ -34,15 +39,17 @@ const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 					description={description}
 					contentClassName={`${styles.content} ${heroContainerClassName || ""}`.trim()}
 					descriptionClassName={styles.description}
+					hideButtonSection={true}
 				/>
-				{showCallCta && (
-					<Button variant="primary" title="0432 227 227" icon="phone" onPress={() => {}} className={styles.phoneCTA} />
+				{showCallCta ? (
+					<Button variant="primary" title="0432 227 227" icon="phone" onPress={onPhoneClick} className={styles.phoneCTA} />
+				) : (
+					<div className={styles.infoGroup}>
+						<Info variant="col" icon="family" title="Safe for Families & Pets" />
+						<Info variant="col" icon="support" title="Licensed & Certified Badge" />
+						<Info variant="col" icon="thumb" title="Satisfaction Guaranteed" />
+					</div>
 				)}
-				{/* <div className={styles.infoGroup}>
-					<Info variant="col" icon="family" title="Safe for Families & Pets" />
-					<Info variant="col" icon="support" title="Licensed & Certified Badge" />
-					<Info variant="col" icon="thumb" title="Satisfaction Guaranteed" />
-				</div> */}
 				<div className={styles.contactFormContainer}>
 					<ContactForm onSubmit={() => {}} />
 				</div>

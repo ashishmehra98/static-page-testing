@@ -1,7 +1,7 @@
 import { Metadata } from "next/dist/types";
 import { notFound } from "next/navigation";
 import PestStudyClient from "./PestStudyClient";
-import { Pages, pestPages } from "@/app/constants/pests";
+import { PestPages, pestPages } from "@/app/constants/pests";
 
 interface PageProps {
 	params: {
@@ -11,7 +11,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
 	const { slug } = await params;
-	const PEST_STUDY_CONFIG = pestPages[slug as Pages] as PestStudyConfig;
+	const PEST_STUDY_CONFIG = pestPages[slug as PestPages] as PestStudyConfig;
 
 	if (!PEST_STUDY_CONFIG) {
 		notFound();
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 const PestStudy = async ({ params }: PageProps) => {
 	const { slug } = await params;
-	const PEST_STUDY_CONFIG = pestPages[slug as Pages] as PestStudyConfig;
+	const PEST_STUDY_CONFIG = pestPages[slug as PestPages] as PestStudyConfig;
 
 	if (!PEST_STUDY_CONFIG) {
 		notFound();

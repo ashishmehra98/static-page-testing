@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 import styles from "./HomeJumbotron.module.css";
 import Hero from "@/app/components/Hero";
 import HeroContent from "@/app/components/HeroContent";
@@ -27,14 +28,15 @@ const HomeJumbotron: React.FC<HomeJumbotronProps> = ({
 	contactButtonText,
 	className,
 }) => {
+	const router = useRouter();
 	const handlePhoneClick = () => {
-		// Handle phone click
-		console.log("Phone clicked");
+		if (phoneNumber) {
+			window.open(`tel:${phoneNumber}`);
+		}
 	};
 
 	const handleContactClick = () => {
-		// Handle contact click
-		console.log("Contact clicked");
+		router.push("/contact-us");
 	};
 
 	const handleFormSubmit = (formData: ContactFormData) => {

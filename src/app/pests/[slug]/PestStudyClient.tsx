@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./style.module.css";
 import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
@@ -13,15 +14,14 @@ import LocalPestExpert from "@/app/components/LocalPestExpert";
 import FAQ from "@/app/components/FAQ";
 import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
-import { Pages, pestPages } from "@/app/constants/pests";
-import styles from "./style.module.css";
+import { PestPages, pestPages } from "@/app/constants/pests";
 
 interface PageProps {
 	slug: string;
 }
 
 const PestStudyClient = ({ slug }: PageProps) => {
-	const PEST_STUDY_CONFIG = pestPages[slug as Pages] as PestStudyConfig;
+	const PEST_STUDY_CONFIG = pestPages[slug as PestPages] as PestStudyConfig;
 	const PEST_FAQ_DATA = PEST_STUDY_CONFIG.faq || [];
 	const PEST_REVIEWS_DATA = PEST_STUDY_CONFIG.reviews || [];
 
@@ -237,8 +237,7 @@ const PestStudyClient = ({ slug }: PageProps) => {
 					</Hero>
 				)}
 				{/* User Reviews */}
-				{/* {PEST_REVIEWS_DATA.length ? <UserReviewsSection reviews={PEST_REVIEWS_DATA} /> : null} */}
-				<UserReviewsSection />
+				{PEST_REVIEWS_DATA.length ? <UserReviewsSection reviews={PEST_REVIEWS_DATA} /> : null}
 				{/* Laws */}
 				{PEST_STUDY_CONFIG.extraContent && (
 					<Hero bgImage={PEST_STUDY_CONFIG.extraContent.backgroundImage} className={styles.processListSection}>

@@ -4,6 +4,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 300px;
+	height: 355px;
 	padding: 30px 22px;
 	display: flex;
 	flex-direction: column;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { homeScreenreviews } from "../constants/pests";
 import { HomeJumbotron, PestControlServices, HowWeWork, BookConsultation, BestWeOffer, Blogs } from "./components";
 import { blogData } from "./data";
 import styles from "./style.module.css";
@@ -14,7 +15,6 @@ import PesticideInfoSection from "@/app/components/PesticideInfoSection";
 
 import { FAQ_DATA } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
-import { reviews } from "../constants/pests";
 
 export default function Home() {
 	const router = useRouter();
@@ -26,7 +26,7 @@ export default function Home() {
 
 	const handleLearnMore = (blogId: string) => {
 		// Handle learn more click
-		console.log("Learn more clicked for blog:", blogId);
+		router.push("/blogs");
 	};
 
 	return (
@@ -43,7 +43,7 @@ export default function Home() {
 					phoneNumber="0432 227 227"
 					contactButtonText="Contact us"
 				/>
-				<UserReviews reviews={reviews} className={styles.userReviewsSection} />
+				<UserReviews reviews={homeScreenreviews} className={styles.userReviewsSection} />
 				<PestControlServices />
 				<HowWeWork />
 				<PesticideInfoSection />

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import styles from "./HowWeWork.module.css";
 import Hero from "@/app/components/Hero";
 import HeaderSection from "@/app/components/HeaderSection";
@@ -7,6 +8,7 @@ import Info from "@/app/components/Info";
 import { IMAGES } from "@/app/constants/images";
 
 const HowWeWork = () => {
+	const router = useRouter();
 	return (
 		<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} className={styles.heroSection}>
 			<div className={styles.container}>
@@ -21,14 +23,14 @@ const HowWeWork = () => {
 					subtitleClassName={styles.subTitleSection}
 				/>
 				<div className={styles.buttonGroup}>
-					<Button variant="primary" title={" 0432 227 227"} onPress={() => {}} icon={"phone"} />
-					<Button variant="light" title={"Contact us"} onPress={() => {}} icon={"email-secondary"} />
+					<Button variant="primary" title={"0432 227 227"} onPress={() => window.open("tel:0432 227 227")} icon={"phone"} />
+					<Button variant="light" title={"Contact us"} onPress={() => router.push("/contact-us")} icon={"email-secondary"} />
 				</div>
 			</div>
 			<div className={styles.contentWrapper}>
 				<div className={styles.buttonGroup}>
-					<Button variant="primary" title={" 0432 227 227"} onPress={() => {}} icon={"phone"} />
-					<Button variant="light" title={"Contact us"} onPress={() => {}} icon={"email-secondary"} />
+					<Button variant="primary" title={"0432 227 227"} onPress={() => window.open("tel:0432 227 227")} icon={"phone"} />
+					<Button variant="light" title={"Contact us"} onPress={() => router.push("/contact-us")} icon={"email-secondary"} />
 				</div>
 				<div className={styles.imageContainer}>
 					<Image src={IMAGES.INSECTION_SERVICE} alt="Inspection process" fill />

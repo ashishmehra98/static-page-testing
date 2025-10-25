@@ -3,15 +3,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useRouter } from "next/navigation";
 import PesticideInfo from "../PesticideInfo";
-import useIsMobile from "../../../hooks/useIsMobile";
 import styles from "./PesticideInfoSlides.module.css";
+import useIsMobile from "@/hooks/useIsMobile";
+import { PestPages } from "@/app/constants/pests";
 
 interface PesticideData {
 	id: string;
 	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents";
 	name: string;
 	description: string;
+	path: PestPages;
 }
 
 const pesticideData: PesticideData[] = [
@@ -21,6 +24,7 @@ const pesticideData: PesticideData[] = [
 		name: "Ants",
 		description:
 			"Nature's tiny architects—always building, always foraging. If they're showing up inside, your home is likely offering food, moisture, or easy entry points.",
+		path: "ant-pest-control-sydney",
 	},
 	{
 		id: "spider",
@@ -28,6 +32,7 @@ const pesticideData: PesticideData[] = [
 		name: "Spiders",
 		description:
 			"Nature's stealthy agent — always hunting, never resting. But if they're showing up inside, it usually means your home is offering food, shelter, or a way in.",
+		path: "stored-product-pests-control",
 	},
 	{
 		id: "bedbug",
@@ -35,6 +40,7 @@ const pesticideData: PesticideData[] = [
 		name: "Bed bugs",
 		description:
 			"Silent hitchhikers—feeding at night, hiding by day. If they've made their way in, they're likely traveling on luggage, furniture, or clothing.",
+		path: "bed-bug-pest-control",
 	},
 	{
 		id: "bees",
@@ -42,6 +48,7 @@ const pesticideData: PesticideData[] = [
 		name: "Bees and Wasps",
 		description:
 			"Buzzing intruders—sometimes helpful, often harmful when too close. They're usually seeking nesting sites or sweet scents that lure them near.",
+		path: "bee-pest-control",
 	},
 	{
 		id: "rodents",
@@ -49,10 +56,12 @@ const pesticideData: PesticideData[] = [
 		name: "Rodents",
 		description:
 			"Uninvited guests—chewing, nesting, and contaminating. They're drawn by warmth, food scraps, and cozy hiding spots.",
+		path: "rats-mice-pest-control",
 	},
 ];
 
 const PesticideInfoSlides: React.FC = () => {
+	const router = useRouter();
 	const [activeIndex, setActiveIndex] = useState(0);
 	const swiperRef = useRef<SwiperClass | null>(null);
 	const isMobile = useIsMobile({ breakpoint: 768 });
@@ -111,13 +120,13 @@ const PesticideInfoSlides: React.FC = () => {
 					modules={[Navigation, Pagination, Autoplay]}
 					spaceBetween={24}
 					slidesPerView="auto"
-					centeredSlides={false}
+					centeredSlides={isMobile}
 					autoplay={
 						isMobile
 							? {
-									delay: 3000,
-									disableOnInteraction: false,
-								}
+								delay: 3000,
+								disableOnInteraction: false,
+							}
 							: false
 					}
 					onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -130,6 +139,7 @@ const PesticideInfoSlides: React.FC = () => {
 								name={pesticide.name}
 								description={pesticide.description}
 								isSelected={index === activeIndex}
+								onLearnMore={() => router.push(`/pests/${pesticide.path}`)}
 							/>
 						</SwiperSlide>
 					))}

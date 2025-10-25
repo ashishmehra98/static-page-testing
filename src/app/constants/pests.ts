@@ -27,7 +27,7 @@ export const pestPages = {
 	"wasp-pest-control": waspsPestStudyData,
 };
 
-export type Pages = keyof typeof pestPages;
+export type PestPages = keyof typeof pestPages;
 
 export const pestData = [
 	{
@@ -37,7 +37,7 @@ export const pestData = [
 		commonSigns: "Droppings, greasy marks behind appliances, live sightings",
 		treatment:
 			"Use gel baits, residual sprays, and deep cleaning of hiding places. We'll also advise on restricting food and moisture sources",
-		path: "cockroach-pest-control" as Pages,
+		path: "cockroach-pest-control" as PestPages,
 	},
 	{
 		imageSrc: IMAGES.PEST_ANTS,
@@ -46,7 +46,7 @@ export const pestData = [
 		commonSigns: "Trails in kitchens, food cupboards, small mounds near foundations",
 		treatment:
 			"We locate nests, apply targeted baiting (low-toxicity), spray entry points, and seal cracks. Regular follow-ups help stop recurrence",
-		path: "ant-pest-control-sydney" as Pages,
+		path: "ant-pest-control-sydney" as PestPages,
 	},
 	{
 		imageSrc: IMAGES.PEST_RODENTS,
@@ -54,7 +54,7 @@ export const pestData = [
 		pestName: "Rodents (rats & mice)",
 		commonSigns: "Gnawed wires / wood, droppings, scrambling in roof spaces",
 		treatment: "Use enclosed baits, traps, exclusion work (sealing entry points). Inspect attics, walls, subfloors for nests",
-		path: "rats-mice-pest-control" as Pages,
+		path: "rats-mice-pest-control" as PestPages,
 	},
 	{
 		imageSrc: IMAGES.PEST_SPIDER,
@@ -62,7 +62,7 @@ export const pestData = [
 		pestName: "Spiders (including dangerous species)",
 		commonSigns: "Webs in corners, sightings in dark areas",
 		treatment: "We use safe sprays and residual barrier treatments. We also reduce harbourage in storage and garden areas",
-		path: "stored-product-pests-control" as Pages,
+		path: "stored-product-pests-control" as PestPages,
 	},
 	{
 		imageSrc: IMAGES.PEST_BED_BUGS,
@@ -71,11 +71,11 @@ export const pestData = [
 		commonSigns: "Bites, nest in walls or under eaves, holes in fabrics",
 		treatment:
 			"Treatments adapted per pest type — e.g. mattress treatments, insecticide dust in wall voids, spray for wasp nests",
-		path: "bed-bug-pest-control" as Pages,
+		path: "bed-bug-pest-control" as PestPages,
 	},
 ];
 
-export const reviews = [
+export const homeScreenreviews = [
 	...(antPestStudyData.reviews || []),
 	...(bedBugsPestStudyData.reviews || []),
 	...(beePestStudyData.reviews || []),
@@ -87,4 +87,6 @@ export const reviews = [
 	...(ratsMicePestStudyData.reviews || []),
 	...(storedProductPestStudyData.reviews || []),
 	...(waspsPestStudyData.reviews || []),
-].slice(0, 8);
+]
+	.filter((reviews) => reviews.review.length < 180)
+	.map((review, index) => ({ ...review, id: index }));

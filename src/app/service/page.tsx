@@ -1,7 +1,9 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import PestServicesSlide from "./components/PestServicesSlide";
 import EcoviaProcess from "./components/EcoviaProcess/EcoviaProcess";
+import styles from "./style.module.css";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
 import HeaderSection from "@/app/components/HeaderSection";
@@ -14,9 +16,18 @@ import Footer from "@/app/components/Footer";
 import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import { IMAGES } from "@/app/constants/images";
 import { FAQ_DATA } from "@/app/constants/faq";
-import styles from "./style.module.css";
+import { homeScreenreviews } from "@/app/constants/pests";
 
 const Service = () => {
+	const router = useRouter();
+	const onPhoneClick = () => {
+		window.open("tel:0432 227 227");
+	};
+
+	const onContactClick = () => {
+		router.push("/contact-us");
+	};
+
 	return (
 		<Container>
 			<Header />
@@ -32,6 +43,8 @@ const Service = () => {
 						}
 						phoneNumber="0432 227 227"
 						contactButtonText="Contact Us"
+						onPhoneClick={onPhoneClick}
+						onContactClick={onContactClick}
 					/>
 				</Hero>
 				{/* Residential & Commercial Info */}
@@ -129,7 +142,7 @@ const Service = () => {
 					</SectionInfo>
 				</div>
 				{/* User Reviews */}
-				<UserReviewsSection />
+				<UserReviewsSection reviews={homeScreenreviews} />
 				{/* Service Area Coverage */}
 				<SectionInfo
 					imageSrc={IMAGES.PEST_WORKER}
@@ -149,7 +162,8 @@ const Service = () => {
 							
 							If you’re unsure whether we service your suburb, just call us — we’ll confirm`}
 						contentClassName={styles.reverseSectionContent}
-						contactButtonText="Contact Us"
+						contactButtonText="Contact us"
+						onContactClick={onPhoneClick}
 					/>
 				</SectionInfo>
 				<FAQ items={FAQ_DATA} />

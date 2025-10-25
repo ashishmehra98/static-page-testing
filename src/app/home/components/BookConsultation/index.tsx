@@ -5,6 +5,7 @@ import HeaderSection from "@/app/components/HeaderSection";
 import Button from "@/app/components/Button";
 import RatingCard from "@/app/components/RatingCard";
 import { IMAGES } from "@/app/constants/images";
+import { homeScreenreviews } from "@/app/constants/pests";
 
 const handlePhoneClick = () => {
 	// Open phone dialer
@@ -40,11 +41,11 @@ const BookConsultation = () => {
 				{/* Right Section */}
 				<div className={styles.ratingCardContainer}>
 					<RatingCard
-						ratings={4}
-						review={"Great team, professional approach, and always delivers on time. Highly recommend their services."}
-						userImage={"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"}
-						username={"Sarah Johnson"}
-						designation={"CEO"}
+						ratings={5}
+						review={homeScreenreviews[0].review}
+						username={homeScreenreviews[0].username}
+						designation={homeScreenreviews[4].designation}
+						userImage=""
 					/>
 					<div className={styles.buttonContainer}>
 						<Button variant="primary" title={" 0432 227 227"} onPress={handlePhoneClick} icon={"phone"} />

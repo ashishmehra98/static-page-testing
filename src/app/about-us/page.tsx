@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { homeScreenreviews } from "../constants/pests";
 import UserReviewsSection from "./components/UserReviewsSection";
 import styles from "./style.module.css";
 import AboutUsJumbotron from "@/app/components/AboutUsJumbotron";
@@ -18,6 +19,10 @@ import { FAQ_DATA } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
 
 export default function AboutUs() {
+	const onPhoneClick = () => {
+		window.open("tel:0432 227 227");
+	};
+
 	return (
 		<Container>
 			<Header />
@@ -54,7 +59,7 @@ export default function AboutUs() {
 						align="center"
 						className={styles.trustInfo}
 					/>
-					<Button variant="primary" title="0432 227 227" icon="phone" onPress={() => {}} />
+					<Button variant="primary" title="0432 227 227" icon="phone" onPress={onPhoneClick} />
 					<Image src={IMAGES.FRAME_ONE} alt="frame-one" width={206} height={248} className={styles.frame} />
 					<Image src={IMAGES.FRAME_TWO} alt="frame-two" width={207} height={248} className={styles.frame} />
 					<Image src={IMAGES.FRAME_THREE} alt="frame-three" width={207} height={248} className={styles.frame} />
@@ -88,10 +93,10 @@ Partner with a seasoned professional committed to protecting your home and givin
 							align="start"
 							subtitleClassName={styles.midHeroSubtitle}
 						/>
-						<Button variant="primary" title="0432 227 227" icon="phone" onPress={() => {}} />
+						<Button variant="primary" title="0432 227 227" icon="phone" onPress={onPhoneClick} />
 					</div>
 				</Hero>
-				<UserReviewsSection />
+				<UserReviewsSection reviews={homeScreenreviews} />
 				<FAQ items={FAQ_DATA} />
 				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}

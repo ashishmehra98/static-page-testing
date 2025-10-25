@@ -1,49 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-import useIsMobile from "../../../../hooks/useIsMobile";
 import styles from "./PestServicesSlide.module.css";
+import useIsMobile from "@/hooks/useIsMobile";
 import Hero from "@/app/components/Hero";
 import HeaderSection from "@/app/components/HeaderSection";
 import PestInfo from "@/app/components/PestInfo";
 import { IMAGES } from "@/app/constants/images";
+import { pestData } from "@/app/constants/pests";
 
-interface SlideData {
-	id: string;
-	imageSrc: string;
-	imageAlt?: string;
-	pestName: string;
-	commonSigns: string;
-	treatment: string;
-}
-
-const slides: SlideData[] = [
-	{
-		id: "cockroaches",
-		imageSrc: IMAGES.COCKROACHES,
-		imageAlt: "Cockroaches",
-		pestName: "Cockroaches",
-		commonSigns: "Droppings, greasy marks behind appliances, live sightings",
-		treatment:
-			"Use gel baits, residual sprays, and deep cleaning of hiding places. We’ll also advise on restricting food and moisture sources",
-	},
-	{
-		id: "rodents",
-		imageSrc: IMAGES.COCKROACHES,
-		imageAlt: "Rodents",
-		pestName: "Rodents",
-		commonSigns: "Gnaw marks, droppings, scratching noises, nests in hidden areas",
-		treatment: "Seal entry points, deploy bait stations and traps, and remove food/water access to discourage activity",
-	},
-	{
-		id: "spiders",
-		imageSrc: IMAGES.COCKROACHES,
-		imageAlt: "Spiders",
-		pestName: "Spiders",
-		commonSigns: "Webs in corners, window frames, garages and sheds",
-		treatment: "Targeted residual sprays in common nesting and webbing areas and removal of webs to prevent re‑settling",
-	},
-];
+const slides = pestData;
 
 const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -117,9 +83,9 @@ const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 					autoplay={
 						isMobile
 							? {
-									delay: 3000,
-									disableOnInteraction: false,
-								}
+								delay: 3000,
+								disableOnInteraction: false,
+							}
 							: false
 					}
 					onSwiper={(swiper) => (swiperRef.current = swiper)}
