@@ -1,7 +1,7 @@
 "use client";
 
-import PestServicesSlide from "../services/components/PestServicesSlide";
-import EcoviaProcess from "../services/components/EcoviaProcess/EcoviaProcess";
+import PestServicesSlide from "./components/PestServicesSlide";
+import EcoviaProcess from "./components/EcoviaProcess/EcoviaProcess";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
 import HeaderSection from "@/app/components/HeaderSection";
