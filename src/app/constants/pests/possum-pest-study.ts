@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const possumPestStudyData = {
 	meta: {
 		keywords: ["possum pest contro", "possum pest control sydney", "pest control for possums"],
@@ -6,7 +8,7 @@ const possumPestStudyData = {
 			"Ecovia provides licensed, humane possum pest control Sydney wide. We inspect, trap, seal & prevent re-entry. Safe for families & pets. Free inspection.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.POSSUM_STUDY_BG,
 		heading: "Possum ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",
@@ -21,9 +23,9 @@ const possumPestStudyData = {
 		highlightedText: "Possum Control ",
 		extraTitle: "Matters",
 		subtitle:
-			"Possums are part of Australia’s native wildlife. But when they enter your home, they stop being cute and become a serious pest problem. Here are four key reasons why timely <b>possum pest control</b> is critical:",
+			"Possums are part of Australia's native wildlife. But when they enter your home, they stop being cute and become a serious pest problem. Here are four key reasons why timely <b>possum pest control</b> is critical:",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.POSSUM_CONTROL_MATTERS_STUDY,
 		imageAlt: "residential possum",
 		infoItems: [
 			{
@@ -55,7 +57,7 @@ const possumPestStudyData = {
 		extraTitle: "& Risks",
 		subtitle: "",
 		align: "center",
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.POSSUM_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -122,7 +124,7 @@ const possumPestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You ",
 		highlightedText: "May Have ",
 		extraTitle: "a Possum Problem",
@@ -169,7 +171,7 @@ const possumPestStudyData = {
 		extraTitle: "Services",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.POSSUM_PEST_CONTROL_SERVICES_STUDY,
 		imageAlt: "possum pest control service",
 		infoItems: [
 			{
@@ -213,7 +215,7 @@ const possumPestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What to",
 		highlightedText: "Expect: ",
 		extraTitle: "Our Process",
@@ -247,7 +249,7 @@ const possumPestStudyData = {
 	},
 
 	lawsInfo: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "NSW",
 		highlightedText: "Legal & Licence ",
 		extraTitle: "Considerations",
@@ -340,7 +342,7 @@ const possumPestStudyData = {
 	// },
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Possum Control ",
 		subHeading: "Service Today",

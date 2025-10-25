@@ -1,4 +1,5 @@
 import { Metadata } from "next/dist/types";
+import { notFound } from "next/navigation";
 import PestStudyClient from "./PestStudyClient";
 import { Pages, pestPages } from "@/app/constants/pests";
 
@@ -9,13 +10,11 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-	const PEST_STUDY_CONFIG = pestPages[params.slug as Pages] as PestStudyConfig;
+	const { slug } = await params;
+	const PEST_STUDY_CONFIG = pestPages[slug as Pages] as PestStudyConfig;
 
 	if (!PEST_STUDY_CONFIG) {
-		return {
-			title: "Pest Control Services | Ecovia",
-			description: "Professional pest control services in Sydney",
-		};
+		notFound();
 	}
 
 	return {
@@ -25,8 +24,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 	};
 }
 
-const PestStudy = ({ params }: PageProps) => {
-	return <PestStudyClient slug={params.slug} />;
+const PestStudy = async ({ params }: PageProps) => {
+	const { slug } = await params;
+	const PEST_STUDY_CONFIG = pestPages[slug as Pages] as PestStudyConfig;
+
+	if (!PEST_STUDY_CONFIG) {
+		notFound();
+	}
+
+	return <PestStudyClient slug={slug} />;
 };
 
 export default PestStudy;

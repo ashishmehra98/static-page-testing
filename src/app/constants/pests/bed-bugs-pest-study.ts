@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const bedBugsPestStudyData = {
 	meta: {
 		keywords: ["bed bugs pest control", "bed bug pest control sydney", "bed bug pest control", "pest control for bed bugs"],
@@ -6,7 +8,7 @@ const bedBugsPestStudyData = {
 			"Struggling with bed bugs? Ecovia offers professional bed bug pest control Sydney wide. Safe, proven treatments with a service guarantee. Book today.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.BED_BUG_PEST_STUDY_BG,
 		heading: "Bed Bug ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",
@@ -24,7 +26,7 @@ const bedBugsPestStudyData = {
 		extraTitle: "A Serious Problem",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.BED_BUG_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -58,7 +60,7 @@ const bedBugsPestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You ",
 		highlightedText: "Have A Bed Bug ",
 		extraTitle: "Infestation",
@@ -102,7 +104,7 @@ const bedBugsPestStudyData = {
 		subtitle:
 			"At Ecovia, we understand that every infestation is different. Our approach to <b>bed bugs pest control</b> is targeted, safe, and designed to stop the problem at its source.",
 		align: "center",
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.BED_BUG_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -137,7 +139,7 @@ const bedBugsPestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Our Process",
@@ -176,9 +178,8 @@ const bedBugsPestStudyData = {
 		extraTitle: "& Prevention",
 		subtitle:
 			"Professional treatment is the only reliable solution for established infestations, but there are steps you can take to lower the risk:",
-		backgroundImage: "/images/pattern-bg.png",
 		align: "center",
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.BED_BUG_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -210,7 +211,7 @@ const bedBugsPestStudyData = {
 	},
 
 	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Safety, ",
 		highlightedText: "Guarantees & Peace ",
 		extraTitle: "of Mind",
@@ -245,7 +246,7 @@ const bedBugsPestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Bed Bug Pest Control ",
 		subHeading: "Service Today",

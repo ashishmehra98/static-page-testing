@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const cockroachPestStudyData = {
 	meta: {
 		keywords: ["cockroach pest control", "cockroach pest control sydney", "pest control cockroaches"],
@@ -6,7 +8,7 @@ const cockroachPestStudyData = {
 			"Professional cockroach pest control in Sydney. Ecovia eliminates infestations with safe, proven methods. Book your inspection today for lasting results.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.PEST_STUDY_BG,
 		heading: "Cockroach ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
@@ -20,9 +22,9 @@ const cockroachPestStudyData = {
 		highlightedText: "Cockroach Pest Control ",
 		extraTitle: "Matters",
 		subtitle:
-			"Cockroaches aren’t just unpleasant to see scurrying across the kitchen floor. They pose serious health and hygiene risks:",
+			"Cockroaches aren't just unpleasant to see scurrying across the kitchen floor. They pose serious health and hygiene risks:",
 		align: "center",
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.COCKROACHES_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -55,7 +57,7 @@ const cockroachPestStudyData = {
 		subtitle:
 			"Different cockroach species require different treatments. Our technicians identify the exact species to ensure effective control.",
 		align: "center",
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.COCKROACHES_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -85,7 +87,7 @@ const cockroachPestStudyData = {
 		],
 	},
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs of ",
 		highlightedText: "a Cockroach ",
 		extraTitle: "Infestation",
@@ -129,7 +131,7 @@ const cockroachPestStudyData = {
 		subtitle:
 			"At Ecovia, we don't rely on quick sprays that only kill the pests you see. Our approach combines safe, targeted treatments to eliminate infestations at the source.",
 		align: "center",
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.COCKROACH_PEST_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -156,7 +158,7 @@ const cockroachPestStudyData = {
 		],
 	},
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Ecovia",
@@ -196,7 +198,7 @@ const cockroachPestStudyData = {
 		subtitle:
 			"Professional <b>cockroach pest control</b> is the only way to fully eliminate infestations, but you can reduce your risk with these steps:",
 		align: "center",
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.COCKROACH_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -224,7 +226,7 @@ const cockroachPestStudyData = {
 		],
 	},
 	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Safety, ",
 		highlightedText: "Guarantees & Peace ",
 		extraTitle: "of Mind",
@@ -308,7 +310,7 @@ const cockroachPestStudyData = {
 		},
 	],
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Cockroach Control ",
 		subHeading: "Service Today",

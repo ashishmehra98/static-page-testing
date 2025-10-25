@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const antPestStudyData = {
 	meta: {
 		keywords: ["ant pest control", "pest control for ants", "ant pest control sydney"],
@@ -6,7 +8,7 @@ const antPestStudyData = {
 			"Looking for pest control for ants in Sydney? Ecovia offers safe, reliable ant treatments to protect your home. Call now for a free inspection.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.ANT_PEST_STUDY_BG,
 		heading: "Ant ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
@@ -22,7 +24,7 @@ const antPestStudyData = {
 		extraTitle: "Matters",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.ANT_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -55,7 +57,7 @@ const antPestStudyData = {
 		subtitle:
 			"Sydney has a wide range of ant species, each with different habits and risks. Identifying the species is essential for effective treatment.",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.ANT_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -92,7 +94,7 @@ const antPestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You",
 		highlightedText: "May Have ",
 		extraTitle: "An Ant Infestation",
@@ -137,7 +139,7 @@ const antPestStudyData = {
 		subtitle:
 			"At Ecovia, our approach focuses on safe, targeted solutions. We don't just spray and hope for the best — we identify the colony and use proven strategies to stop ants at their source. Our services include:",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.ANT_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -168,7 +170,7 @@ const antPestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Our Process",
@@ -208,7 +210,7 @@ const antPestStudyData = {
 		subtitle:
 			"While professional <b>pest control for ants</b> is the most effective solution, there are steps you can take to make your home less attractive to ants:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.ANT_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -237,7 +239,7 @@ const antPestStudyData = {
 	},
 
 	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Safety, ",
 		highlightedText: "Guarantees & Peace ",
 		extraTitle: "of Mind",
@@ -272,7 +274,7 @@ const antPestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Ant Control ",
 		subHeading: "Service Today",

@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const ratsMicePestStudyData = {
 	meta: {
 		keywords: ["rats and mice pest control", "pest control for rats and mice"],
@@ -6,7 +8,7 @@ const ratsMicePestStudyData = {
 			"Protect your Sydney home or business from rodents. Our professional pest control for rats and mice is safe, effective, and guaranteed. Book now.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.RAT_DIY_STUDY,
 		heading: "Rats & Mice ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
@@ -22,7 +24,7 @@ const ratsMicePestStudyData = {
 		extraTitle: "Matters",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.RAT_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -60,7 +62,7 @@ const ratsMicePestStudyData = {
 		extraTitle: "In Sydney",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.RAT_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -87,7 +89,7 @@ const ratsMicePestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You",
 		highlightedText: "May Have ",
 		extraTitle: "A Rodent Problem",
@@ -135,7 +137,7 @@ const ratsMicePestStudyData = {
 		subtitle:
 			"Our approach focuses on both elimination and prevention. We don't just remove the visible rodents — we stop the problem at its source.",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.RAT_PEST_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -166,7 +168,7 @@ const ratsMicePestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Our Process",
@@ -205,7 +207,7 @@ const ratsMicePestStudyData = {
 		extraTitle: "Tips",
 		subtitle: "You can reduce the chances of rodents entering your home with these simple steps:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.RAT_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -235,7 +237,7 @@ const ratsMicePestStudyData = {
 	},
 
 	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Safety, ",
 		highlightedText: "Guarantees & Peace ",
 		extraTitle: "of Mind",
@@ -267,7 +269,7 @@ const ratsMicePestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Rodent Control ",
 		subHeading: "Service Today",

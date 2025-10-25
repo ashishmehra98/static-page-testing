@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const waspsPestStudyData = {
 	meta: {
 		keywords: ["wasp pest control sydney", "wasp pest contro", "pest control for wasps"],
@@ -6,7 +8,7 @@ const waspsPestStudyData = {
 			"Safe, effective wasp pest control Sydney wide. We remove wasp nests fast — licensed, pet-safe and guaranteed. Call Ecovia for a free quote.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.WASPS_BG_STUDY,
 		heading: "Wasp ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
@@ -22,7 +24,7 @@ const waspsPestStudyData = {
 		extraTitle: "Is Crucial",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.WASPS_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -62,7 +64,7 @@ const waspsPestStudyData = {
 		subtitle:
 			"Understanding which <b>wasp species</b> you might face helps with correct treatment. Here are the ones we commonly see around Sydney / New South Wales:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.WASPS_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -101,7 +103,7 @@ const waspsPestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You've",
 		highlightedText: "Got ",
 		extraTitle: "A Wasp Problem",
@@ -148,7 +150,7 @@ const waspsPestStudyData = {
 		subtitle:
 			"At Ecovia, we use a targeted, safety-first approach to <b>wasp pest control</b> and nest removal. Below are our main methods:",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.WASP_PEST_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -184,7 +186,7 @@ const waspsPestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Our Process",
@@ -222,7 +224,7 @@ const waspsPestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Wasp Control ",
 		subHeading: "Service",

@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const beePestStudyData = {
 	meta: {
 		keywords: ["bee pest control", "pest control of bees", "pest control for bees"],
@@ -6,7 +8,7 @@ const beePestStudyData = {
 			"Need bee removal in Sydney? Ecovia provides safe, humane bee pest control and hive removal across Sydney. Licensed, insured, and eco-friendly",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.PEST_STUDY_BG,
 		heading: "Bee ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",
@@ -21,7 +23,7 @@ const beePestStudyData = {
 		extraTitle: "Matters",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.BEES_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -65,7 +67,7 @@ const beePestStudyData = {
 		subtitle:
 			"Identifying which bees are on your property helps us choose the right removal method. Below are some types you might encounter:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.BEES_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -95,7 +97,7 @@ const beePestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You",
 		highlightedText: "Have ",
 		extraTitle: "A Bee Infestation",
@@ -141,7 +143,7 @@ const beePestStudyData = {
 		extraTitle: "& Removal Methods",
 		subtitle: "At Ecovia, we tailor the <b>bee pest control</b> process to each situation. Here are the methods we use:",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.BEES_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -186,7 +188,7 @@ const beePestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect: ",
 		extraTitle: "Our Process & Frequently Asked Questions",
@@ -222,7 +224,7 @@ const beePestStudyData = {
 		subtitle:
 			"Here are practical actions you can take to reduce the risk of bee infestation — but note that DIY methods rarely remove an active hive fully:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.BEES_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -257,7 +259,7 @@ const beePestStudyData = {
 	},
 
 	extraContent: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Safety, ",
 		highlightedText: "Legality & Environmental ",
 		extraTitle: "Responsibility",
@@ -292,7 +294,7 @@ const beePestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Bee Removal ",
 		subHeading: "Service Now",

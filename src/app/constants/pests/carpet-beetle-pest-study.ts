@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const carpetBeetlePestStudyData = {
 	meta: {
 		keywords: ["carpet beetle pest control", "pest control carpet beetles"],
@@ -6,7 +8,7 @@ const carpetBeetlePestStudyData = {
 			"Protect your carpets and fabrics from damage. Ecovia offers expert carpet beetle pest control in Sydney using safe, proven treatments and guaranteed results.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.PEST_STUDY_BG,
 		heading: "Carpet Beetle ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",
@@ -21,7 +23,7 @@ const carpetBeetlePestStudyData = {
 		extraTitle: "Matters",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.CARPET_BEETLE_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -59,7 +61,7 @@ const carpetBeetlePestStudyData = {
 		extraTitle: "& How to Identify Them",
 		subtitle: "Carpet beetles belong to the Dermestidae family. In Australia, the most common species include:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.CARPET_BEETLE_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -87,7 +89,7 @@ const carpetBeetlePestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You",
 		highlightedText: "Have ",
 		extraTitle: "A Carpet Beetle Infestation",
@@ -124,7 +126,7 @@ const carpetBeetlePestStudyData = {
 	},
 
 	extraContent: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Why",
 		highlightedText: "Choose ",
 		extraTitle: "Ecovia",
@@ -162,7 +164,7 @@ const carpetBeetlePestStudyData = {
 		subtitle:
 			"At Ecovia, we customise treatments depending on infestation severity, fabric type, and location. Our methods include:",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.CARPET_BEETLE_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -198,7 +200,7 @@ const carpetBeetlePestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect: ",
 		extraTitle: "Our Process",
@@ -237,7 +239,7 @@ const carpetBeetlePestStudyData = {
 		extraTitle: "& Best Practices",
 		subtitle: "These actions help minimise risk (though they're not enough alone):",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.CARPET_BEETLE_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -272,7 +274,7 @@ const carpetBeetlePestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Ready to ",
 		highlightedText: "Protect Your Home?",
 		subHeading: "",

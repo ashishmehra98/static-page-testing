@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const fliesPestStudyData = {
 	meta: {
 		keywords: ["fly pest control", "flies pest control", "pest control for flies"],
@@ -6,7 +8,7 @@ const fliesPestStudyData = {
 			"Need fly pest control in Sydney? Ecovia provides safe, effective treatments that stop flies at the source. Call now for trusted residential and commercial fly control.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.PEST_STUDY_BG,
 		heading: "Fly ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",
@@ -20,9 +22,9 @@ const fliesPestStudyData = {
 		title: "Why",
 		highlightedText: "Fly Control ",
 		extraTitle: "Matters",
-		subtitle: "A few flies here and there might seem harmless—until they aren’t. Here’s what’s at stake:",
+		subtitle: "A few flies here and there might seem harmless—until they aren't. Here's what's at stake:",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg", // default image reused
+		imageSrc: IMAGES.FLY_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -56,7 +58,7 @@ const fliesPestStudyData = {
 		extraTitle: "In Sydney",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png", // default image reused
+		imageSrc: IMAGES.FLY_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -95,7 +97,7 @@ const fliesPestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Warning Signs",
 		highlightedText: "of a Fly ",
 		extraTitle: "Infestation",
@@ -140,9 +142,9 @@ const fliesPestStudyData = {
 		highlightedText: "Fly Pest Control ",
 		extraTitle: "Services & Methods",
 		subtitle:
-			"Ecovia’s approach is comprehensive, combining inspection, treatment, prevention, and guarantees. Here’s how we do it for residential and commercial clients.",
+			"Ecovia's approach is comprehensive, combining inspection, treatment, prevention, and guarantees. Here's how we do it for residential and commercial clients.",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg", // default image reused
+		imageSrc: IMAGES.FLY_PEST_CONTROL_SERVICE_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -181,7 +183,7 @@ const fliesPestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Why",
 		highlightedText: "Choose Ecovia ",
 		extraTitle: "for Fly Pest Control ",
@@ -225,7 +227,7 @@ const fliesPestStudyData = {
 		extraTitle: "You Can Use",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png", // default image reused
+		imageSrc: IMAGES.FLY_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -257,7 +259,7 @@ const fliesPestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Fly Control ",
 		subHeading: "Service Today",

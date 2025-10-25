@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const birdPestStudyData = {
 	meta: {
 		keywords: ["bird pest control", "bird pest control sydney", "pest control for birds"],
@@ -6,7 +8,7 @@ const birdPestStudyData = {
 			"Sydney’s trusted specialists in bird pest control. Ecovia protects your property with safe, effective bird exclusion and deterrent systems",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.PEST_STUDY_BG,
 		heading: "Bird ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",
@@ -21,7 +23,7 @@ const birdPestStudyData = {
 		extraTitle: "Matters",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.BIRDS_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -65,7 +67,7 @@ const birdPestStudyData = {
 		extraTitle: "In Sydney & Their Behaviour",
 		subtitle: "Knowing which species you're dealing with helps us tailor the solution:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.BIRDS_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -98,7 +100,7 @@ const birdPestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You",
 		highlightedText: "Have ",
 		extraTitle: "A Bird Problem",
@@ -149,7 +151,7 @@ const birdPestStudyData = {
 		subtitle:
 			"We apply a layered approach that's humane, targeted, and effective. Here's how Ecovia handles <b>bird pest control</b>:",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.BIRD_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -190,7 +192,7 @@ const birdPestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "—  Our Process",
@@ -229,7 +231,7 @@ const birdPestStudyData = {
 		extraTitle: "& Prevention (Between Services)",
 		subtitle: "These aren't full solutions, but they help reduce risk:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.BIRDS_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -265,7 +267,7 @@ const birdPestStudyData = {
 	},
 
 	extraContent: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Why",
 		highlightedText: "Choose Ecovia ",
 		extraTitle: "For Bird Pest Control",
@@ -301,7 +303,7 @@ const birdPestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Free Bird ",
 		subHeading: "Inspection",

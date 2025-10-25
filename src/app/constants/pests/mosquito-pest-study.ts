@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const mosquitoPestStudyData = {
 	meta: {
 		keywords: ["mosquito pest control", "pest control for mosquitoes"],
@@ -6,7 +8,7 @@ const mosquitoPestStudyData = {
 			"Get fast, reliable mosquito pest control in Sydney with Ecovia. Safe for kids and pets. Reclaim your outdoor space today with professional pest control.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.MOSQUITOES_STUDY_BG,
 		heading: "Mosquito ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
@@ -21,7 +23,7 @@ const mosquitoPestStudyData = {
 		extraTitle: "Matters",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.MOSQUITOES_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -57,15 +59,16 @@ const mosquitoPestStudyData = {
 		],
 	},
 
-	commonSpecies: {
+	infestationSigns: {
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs You",
 		highlightedText: "May Have ",
 		extraTitle: "A Mosquito Problem",
 		subtitle: "How do you know mosquitoes are more than just occasional pests? Watch for:",
-		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
-		imageAlt: "commercial",
-		isReverse: true,
+		align: "start" as const,
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
 				boldText: "Frequent bites: ",
@@ -94,16 +97,15 @@ const mosquitoPestStudyData = {
 		],
 	},
 
-	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+	serviceMethods: {
 		title: "Our",
 		highlightedText: "Mosquito Pest Control ",
 		extraTitle: "Services",
 		subtitle: "Our comprehensive <b>mosquito pest control</b> services include:",
-		align: "start" as const,
-		titleColor: "white",
-		subtitleColor: "white",
-		highlightedTextColor: "#b1cf5f",
+		align: "center" as const,
+		imageSrc: IMAGES.MOSQUITOES_CONTROL_SERVICES_STUDY,
+		imageAlt: "commercial",
+		isReverse: true,
 		infoItems: [
 			{
 				boldText: "Property Inspection: ",
@@ -128,14 +130,16 @@ const mosquitoPestStudyData = {
 		],
 	},
 
-	serviceMethods: {
+	processList: {
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "What",
 		highlightedText: "To Expect ",
 		extraTitle: "From Our Process",
 		subtitle: "Our <b>mosquito pest control</b> process is thorough and effective:",
-		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
-		imageAlt: "commercial",
+		align: "start" as const,
+		titleColor: "white",
+		subtitleColor: "white",
+		highlightedTextColor: "#b1cf5f",
 		infoItems: [
 			{
 				boldText: "Inspection: ",
@@ -160,16 +164,15 @@ const mosquitoPestStudyData = {
 		],
 	},
 
-	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+	diyTips: {
 		title: "DIY",
 		highlightedText: "Tips ",
 		extraTitle: "& Prevention",
 		subtitle: "While professional <b>mosquito pest control</b> is most effective, here are some prevention tips:",
-		align: "start" as const,
-		titleColor: "white",
-		subtitleColor: "white",
-		highlightedTextColor: "#b1cf5f",
+		align: "center" as const,
+		imageSrc: IMAGES.MOSQUITOES_DIY_STUDY,
+		imageAlt: "commercial",
+		isReverse: true,
 		infoItems: [
 			{
 				boldText: "Remove standing water ",
@@ -197,49 +200,31 @@ const mosquitoPestStudyData = {
 		] as InfoItem[],
 	},
 
-	diyTips: {
+	processCheck: {
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Safety, ",
 		highlightedText: "Guarantees & Peace ",
 		extraTitle: "of Mind",
 		subtitle: "At Ecovia, we prioritise safety and effectiveness in all our <b>mosquito pest control</b> services:",
-		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
-		imageAlt: "commercial",
-		isReverse: true,
-		infoItems: [
-			{
-				boldText: "Safe treatments that protect your family and pets.",
-			},
-			{
-				boldText: "Effective methods that eliminate mosquitoes at all life stages.",
-			},
-			{
-				boldText: "Written guarantees for complete elimination.",
-			},
-			{
-				boldText: "Ongoing support and monitoring to prevent reinfestation.",
-			},
-			{
-				regularText: "We provide written guarantees and ongoing support to ensure your property remains mosquito-free.",
-			},
-		],
-	},
-
-	processCheck: {
-		backgroundImage: "/images/pattern-bg.png",
-		title: "Book Your ",
-		highlightedText: "Mosquito Pest Control ",
-		extraTitle: "Service Today",
-		subtitle:
-			"Don't let mosquitoes ruin your outdoor enjoyment or pose health risks. Call Ecovia now for professional <b>mosquito pest control</b> services across Sydney. We'll help you reclaim your outdoor space safely and effectively.",
-		align: "center" as const,
+		align: "start" as const,
 		titleColor: "white",
 		subtitleColor: "white",
 		highlightedTextColor: "#b1cf5f",
 		processItems: [
 			{
-				title:
-					"We provide mosquito pest control services across Sydney, including Eastern Suburbs, Northern Beaches, Inner West, Western Sydney, Sutherland Shire, North Shore, and Greater Sydney.",
+				title: "Safe treatments that protect your family and pets.",
+			},
+			{
+				title: "Effective methods that eliminate mosquitoes at all life stages.",
+			},
+			{
+				title: "Written guarantees for complete elimination.",
+			},
+			{
+				title: "Ongoing support and monitoring to prevent reinfestation.",
+			},
+			{
+				title: "We provide written guarantees and ongoing support to ensure your property remains mosquito-free.",
 			},
 		],
 		button: {
@@ -250,7 +235,7 @@ const mosquitoPestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Mosquito Pest Control ",
 		subHeading: "Service Today",
@@ -315,6 +300,6 @@ const mosquitoPestStudyData = {
 				"Common breeding sites include standing water in plant saucers, gutters, buckets, and other containers. We'll identify and treat all potential sites.",
 		},
 	],
-} as PestStudyConfig;
+} as Partial<PestStudyConfig>;
 
 export default mosquitoPestStudyData;

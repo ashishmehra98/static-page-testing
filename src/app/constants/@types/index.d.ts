@@ -60,7 +60,7 @@ interface HeroConfig {
 	subHeading: string;
 	description: string;
 	hideButtonSection: boolean;
-	tag: string;
+	tag?: string;
 }
 
 // Control matters section interface

@@ -12,16 +12,14 @@ import ProcessCheckInfo from "@/app/components/ProcessCheckInfo";
 import Button from "@/app/components/Button";
 import LocalPestExpert from "@/app/components/LocalPestExpert";
 import FAQ from "@/app/components/FAQ";
-import HomeFooterJumbotron from "@/app/components/ContactFormFooter";
+import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import { Pages, pestPages } from "@/app/constants/pests";
-
 interface PageProps {
 	slug: string;
 }
 
 const PestStudyClient = ({ slug }: PageProps) => {
-	console.log({ slug });
 	const PEST_STUDY_CONFIG = pestPages[slug as Pages] as PestStudyConfig;
 	const PEST_FAQ_DATA = PEST_STUDY_CONFIG.faq || [];
 	const PEST_REVIEWS_DATA = PEST_STUDY_CONFIG.reviews || [];
@@ -31,39 +29,45 @@ const PestStudyClient = ({ slug }: PageProps) => {
 			<Header />
 			<div className="flex flex-col gap-[60px] xl:gap-[120px]">
 				{/* Jumbotron */}
-				<Hero bgImage={PEST_STUDY_CONFIG.hero.backgroundImage}>
-					<HeroContent
-						heading={PEST_STUDY_CONFIG.hero.heading}
-						highlightedText={PEST_STUDY_CONFIG.hero.highlightedText}
-						subHeading={PEST_STUDY_CONFIG.hero.subHeading}
-						description={PEST_STUDY_CONFIG.hero.description}
-						hideButtonSection={PEST_STUDY_CONFIG.hero.hideButtonSection}
-						tag={PEST_STUDY_CONFIG.hero.tag}
-					/>
-				</Hero>
+				{PEST_STUDY_CONFIG.hero && (
+					<Hero bgImage={PEST_STUDY_CONFIG.hero.backgroundImage}>
+						<HeroContent
+							heading={PEST_STUDY_CONFIG.hero.heading}
+							highlightedText={PEST_STUDY_CONFIG.hero.highlightedText}
+							subHeading={PEST_STUDY_CONFIG.hero.subHeading}
+							description={PEST_STUDY_CONFIG.hero.description}
+							hideButtonSection={PEST_STUDY_CONFIG.hero.hideButtonSection}
+							tag={PEST_STUDY_CONFIG.hero.tag}
+						/>
+					</Hero>
+				)}
 				{/* Control Matters */}
-				<div className={styles.controlMattersSection}>
-					<HeaderSection
-						title={PEST_STUDY_CONFIG.controlMatters.title}
-						highlightedText={PEST_STUDY_CONFIG.controlMatters.highlightedText}
-						extraTitle={PEST_STUDY_CONFIG.controlMatters.extraTitle}
-						subtitle={PEST_STUDY_CONFIG.controlMatters.subtitle}
-						align={PEST_STUDY_CONFIG.controlMatters.align}
-						className="header"
-					/>
-					<SectionInfo imageSrc={PEST_STUDY_CONFIG.controlMatters.imageSrc} imageAlt={PEST_STUDY_CONFIG.controlMatters.imageAlt}>
-						<div className={styles.infoContent}>
-							{PEST_STUDY_CONFIG.controlMatters.infoItems.map((item, index) => (
-								<div key={index} className={styles.infoItem}>
-									{item.boldText && <span className={styles.boldText}>{item.boldText}</span>}
-									{item.regularText && (
-										<span className={styles.regularText} dangerouslySetInnerHTML={{ __html: item.regularText }} />
-									)}
-								</div>
-							))}
-						</div>
-					</SectionInfo>
-				</div>
+				{PEST_STUDY_CONFIG.controlMatters && (
+					<div className={styles.controlMattersSection}>
+						<HeaderSection
+							title={PEST_STUDY_CONFIG.controlMatters.title}
+							highlightedText={PEST_STUDY_CONFIG.controlMatters.highlightedText}
+							extraTitle={PEST_STUDY_CONFIG.controlMatters.extraTitle}
+							subtitle={PEST_STUDY_CONFIG.controlMatters.subtitle}
+							align={PEST_STUDY_CONFIG.controlMatters.align}
+							className="header"
+						/>
+						<SectionInfo
+							imageSrc={PEST_STUDY_CONFIG.controlMatters.imageSrc}
+							imageAlt={PEST_STUDY_CONFIG.controlMatters.imageAlt}>
+							<div className={styles.infoContent}>
+								{PEST_STUDY_CONFIG.controlMatters.infoItems.map((item, index) => (
+									<div key={index} className={styles.infoItem}>
+										{item.boldText && <span className={styles.boldText}>{item.boldText}</span>}
+										{item.regularText && (
+											<span className={styles.regularText} dangerouslySetInnerHTML={{ __html: item.regularText }} />
+										)}
+									</div>
+								))}
+							</div>
+						</SectionInfo>
+					</div>
+				)}
 				{/* Common Ant Species*/}
 				{PEST_STUDY_CONFIG.commonSpecies && (
 					<div className={styles.commonSpeciesSection}>
@@ -98,42 +102,21 @@ const PestStudyClient = ({ slug }: PageProps) => {
 					</div>
 				)}
 				{/* Infestation Signs */}
-				<Hero bgImage={PEST_STUDY_CONFIG.infestationSigns.backgroundImage} className={styles.infestationSigns}>
-					<HeaderSection
-						title={PEST_STUDY_CONFIG.infestationSigns.title}
-						highlightedText={PEST_STUDY_CONFIG.infestationSigns.highlightedText}
-						extraTitle={PEST_STUDY_CONFIG.infestationSigns.extraTitle}
-						subtitle={PEST_STUDY_CONFIG.infestationSigns.subtitle}
-						align={PEST_STUDY_CONFIG.infestationSigns.align}
-						titleColor={PEST_STUDY_CONFIG.infestationSigns.titleColor}
-						subtitleColor={PEST_STUDY_CONFIG.infestationSigns.subtitleColor}
-						highlightedTextColor={PEST_STUDY_CONFIG.infestationSigns.highlightedTextColor}
-						className="header"
-					/>
-					<div className={styles.infoContent}>
-						{PEST_STUDY_CONFIG.infestationSigns.infoItems.map((item, index) => (
-							<div key={index} className={styles.infoItem}>
-								{item.boldText && <span className={styles.boldText}>{item.boldText}</span>}
-								{item.regularText && (
-									<span className={styles.regularText} dangerouslySetInnerHTML={{ __html: item.regularText }} />
-								)}
-							</div>
-						))}
-					</div>
-				</Hero>
-				{/* Services & Methods */}
-				<div className={styles.serviceMethodsSection}>
-					<HeaderSection
-						title={PEST_STUDY_CONFIG.serviceMethods.title}
-						highlightedText={PEST_STUDY_CONFIG.serviceMethods.highlightedText}
-						extraTitle={PEST_STUDY_CONFIG.serviceMethods.extraTitle}
-						subtitle={PEST_STUDY_CONFIG.serviceMethods.subtitle}
-						align={PEST_STUDY_CONFIG.serviceMethods.align}
-						className="header"
-					/>
-					<SectionInfo imageSrc={PEST_STUDY_CONFIG.serviceMethods.imageSrc} imageAlt={PEST_STUDY_CONFIG.serviceMethods.imageAlt}>
+				{PEST_STUDY_CONFIG.infestationSigns && (
+					<Hero bgImage={PEST_STUDY_CONFIG.infestationSigns.backgroundImage} className={styles.infestationSigns}>
+						<HeaderSection
+							title={PEST_STUDY_CONFIG.infestationSigns.title}
+							highlightedText={PEST_STUDY_CONFIG.infestationSigns.highlightedText}
+							extraTitle={PEST_STUDY_CONFIG.infestationSigns.extraTitle}
+							subtitle={PEST_STUDY_CONFIG.infestationSigns.subtitle}
+							align={PEST_STUDY_CONFIG.infestationSigns.align}
+							titleColor={PEST_STUDY_CONFIG.infestationSigns.titleColor}
+							subtitleColor={PEST_STUDY_CONFIG.infestationSigns.subtitleColor}
+							highlightedTextColor={PEST_STUDY_CONFIG.infestationSigns.highlightedTextColor}
+							className="header"
+						/>
 						<div className={styles.infoContent}>
-							{PEST_STUDY_CONFIG.serviceMethods.infoItems.map((item, index) => (
+							{PEST_STUDY_CONFIG.infestationSigns.infoItems.map((item, index) => (
 								<div key={index} className={styles.infoItem}>
 									{item.boldText && <span className={styles.boldText}>{item.boldText}</span>}
 									{item.regularText && (
@@ -142,8 +125,35 @@ const PestStudyClient = ({ slug }: PageProps) => {
 								</div>
 							))}
 						</div>
-					</SectionInfo>
-				</div>
+					</Hero>
+				)}
+				{/* Services & Methods */}
+				{PEST_STUDY_CONFIG.serviceMethods && (
+					<div className={styles.serviceMethodsSection}>
+						<HeaderSection
+							title={PEST_STUDY_CONFIG.serviceMethods.title}
+							highlightedText={PEST_STUDY_CONFIG.serviceMethods.highlightedText}
+							extraTitle={PEST_STUDY_CONFIG.serviceMethods.extraTitle}
+							subtitle={PEST_STUDY_CONFIG.serviceMethods.subtitle}
+							align={PEST_STUDY_CONFIG.serviceMethods.align}
+							className="header"
+						/>
+						<SectionInfo
+							imageSrc={PEST_STUDY_CONFIG.serviceMethods.imageSrc}
+							imageAlt={PEST_STUDY_CONFIG.serviceMethods.imageAlt}>
+							<div className={styles.infoContent}>
+								{PEST_STUDY_CONFIG.serviceMethods.infoItems.map((item, index) => (
+									<div key={index} className={styles.infoItem}>
+										{item.boldText && <span className={styles.boldText}>{item.boldText}</span>}
+										{item.regularText && (
+											<span className={styles.regularText} dangerouslySetInnerHTML={{ __html: item.regularText }} />
+										)}
+									</div>
+								))}
+							</div>
+						</SectionInfo>
+					</div>
+				)}
 				{/* What to Expect - list variant */}
 				{PEST_STUDY_CONFIG.processList && (
 					<Hero bgImage={PEST_STUDY_CONFIG.processList.backgroundImage} className={styles.processListSection}>
@@ -254,16 +264,18 @@ const PestStudyClient = ({ slug }: PageProps) => {
 					</Hero>
 				)}
 				<LocalPestExpert />
-				<FAQ items={PEST_FAQ_DATA} />
-				<HomeFooterJumbotron
-					bgImage={PEST_STUDY_CONFIG.footer.backgroundImage}
-					heading={PEST_STUDY_CONFIG.footer.heading}
-					highlightedText={PEST_STUDY_CONFIG.footer.highlightedText}
-					subHeading={PEST_STUDY_CONFIG.footer.subHeading}
-					description={PEST_STUDY_CONFIG.footer.description}
-					heroContainerClassName={styles.jumbotronFooterContent}
-					showCallCta={true}
-				/>
+				{PEST_FAQ_DATA.length ? <FAQ items={PEST_FAQ_DATA} /> : null}
+				{PEST_STUDY_CONFIG.footer && (
+					<ContactFormFooter
+						bgImage={PEST_STUDY_CONFIG.footer.backgroundImage}
+						heading={PEST_STUDY_CONFIG.footer.heading}
+						highlightedText={PEST_STUDY_CONFIG.footer.highlightedText}
+						subHeading={PEST_STUDY_CONFIG.footer.subHeading}
+						description={PEST_STUDY_CONFIG.footer.description}
+						heroContainerClassName={styles.jumbotronFooterContent}
+						showCallCta={true}
+					/>
+				)}
 				<Footer className={styles.footer} />
 			</div>
 		</Container>

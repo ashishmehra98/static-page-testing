@@ -1,3 +1,5 @@
+import { IMAGES } from "../images";
+
 const storedProductPestStudyData = {
 	meta: {
 		keywords: ["stored product pests", "common stored product pests"],
@@ -6,7 +8,7 @@ const storedProductPestStudyData = {
 			"Ecovia provides effective stored product pests control in Sydney. Eliminate pantry moths, beetles, and weevils with safe, lasting results.",
 	},
 	hero: {
-		backgroundImage: "/images/pest-study-bg.jpg",
+		backgroundImage: IMAGES.PEST_STUDY_BG,
 		heading: "Stored Product Pests ",
 		highlightedText: "Control ",
 		subHeading: "In Sydney",
@@ -21,7 +23,7 @@ const storedProductPestStudyData = {
 		extraTitle: "Are a Serious Problem",
 		subtitle: "",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.STORED_PRODUCT_CONTROL_MATTERS_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -55,7 +57,7 @@ const storedProductPestStudyData = {
 		subtitle:
 			"Sydney is home to a wide range of <b>common stored product pests</b>, most of which spread quickly once introduced. Some of the most frequent offenders include:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.STORED_PRODUCT_COMMON_SPECIES_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -87,7 +89,7 @@ const storedProductPestStudyData = {
 	},
 
 	infestationSigns: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Signs of",
 		highlightedText: "A Stored Product ",
 		extraTitle: "Pest Infestation",
@@ -131,7 +133,7 @@ const storedProductPestStudyData = {
 		subtitle:
 			"At Ecovia, we don't just treat the symptoms. We eliminate the pests at their source. Our process is transparent, thorough, and designed to give long-lasting results.",
 		align: "center" as const,
-		imageSrc: "/images/ant-control-matters.jpg",
+		imageSrc: IMAGES.STORED_PRODUCT_CONTROL_SERVICES_STUDY,
 		imageAlt: "commercial",
 		infoItems: [
 			{
@@ -171,7 +173,7 @@ const storedProductPestStudyData = {
 	},
 
 	extraContent: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Industries We",
 		highlightedText: "Protect ",
 		extraTitle: "From Stored Product Pests",
@@ -204,7 +206,7 @@ const storedProductPestStudyData = {
 	},
 
 	processList: {
-		backgroundImage: "/images/pattern-bg.png",
+		backgroundImage: IMAGES.PATTERN_BG,
 		title: "Why",
 		highlightedText: "Choose Ecovia ",
 		extraTitle: "For Stored Product Pest Control",
@@ -244,7 +246,7 @@ const storedProductPestStudyData = {
 		subtitle:
 			"While professional treatment is the most reliable solution, prevention plays a big role in keeping food storage pest-free. Here are practical steps you can take:",
 		align: "center" as const,
-		imageSrc: "/images/common-ant-species.png",
+		imageSrc: IMAGES.STORED_PRODUCT_DIY_STUDY,
 		imageAlt: "commercial",
 		isReverse: true,
 		infoItems: [
@@ -276,7 +278,7 @@ const storedProductPestStudyData = {
 	},
 
 	footer: {
-		backgroundImage: "/images/home-footer-bg.jpg",
+		backgroundImage: IMAGES.FOOTER_BG,
 		heading: "Book Your ",
 		highlightedText: "Stored Product Pest Control ",
 		subHeading: "Service Today",
