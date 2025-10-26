@@ -55,6 +55,7 @@ const UserReviews: React.FC<UserReviewsProps> = ({ className, reviews: propRevie
 			<div className={styles.container}>
 				<div className={styles.carouselWrapper}>
 					<Swiper
+						key={isMobileView ? "mobile" : "desktop"}
 						modules={[Autoplay]}
 						spaceBetween={24}
 						slidesPerView="auto"
