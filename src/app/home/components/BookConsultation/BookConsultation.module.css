@@ -80,13 +80,13 @@
 
 	.ratingCardContainer :global(.username),
 	.ratingCardContainer :global(.review-text) {
-		font-size: 18px;
+		font-size: var(--bookConsultation-username-mb);
 		line-height: 22px;
 	}
 
 	.ratingCardContainer :global(.designation),
 	.ratingCardContainer :global(.posted-on-text) {
-		font-size: 13.6px;
+		font-size: var(--bookConsultation-designation-mb);
 		line-height: 17px;
 	}
 

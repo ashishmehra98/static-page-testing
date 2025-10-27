@@ -9,7 +9,7 @@
 	font-family: var(--font-primary);
 	font-weight: 600;
 	font-style: normal;
-	font-size: 20px;
+	font-size: var(--button-text-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	border: none;
@@ -73,7 +73,7 @@
 	.button {
 		min-width: 120px;
 		height: 48px;
-		font-size: 14px;
+		font-size: var(--button-text-mb);
 		padding: 0 25px;
 	}
 	.phone-icon {

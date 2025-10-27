@@ -22,7 +22,7 @@
 
 .text {
 	font-family: var(--font-heading);
-	font-size: 22px;
+	font-size: var(--processCheckInfo-text-ds);
 	font-weight: 400;
 	line-height: 1.15;
 	color: var(--white);

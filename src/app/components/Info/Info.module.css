@@ -45,7 +45,7 @@
 .title {
 	font-family: var(--font-primary);
 	font-weight: 600;
-	font-size: 32px;
+	font-size: var(--info-title-ds);
 	line-height: 1.15;
 	letter-spacing: -0.64px;
 	color: var(--white);
@@ -54,14 +54,14 @@
 }
 
 .infoContainerCol .title {
-	font-size: 26px;
+	font-size: var(--info-title-tb);
 }
 
 /* Description styling */
 .description {
 	font-family: var(--font-secondary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--info-description-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	color: var(--white);
@@ -94,6 +94,6 @@
 	}
 
 	.infoContainerCol .title {
-		font-size: 18px;
+		font-size: var(--info-title-mb);
 	}
 }

@@ -99,11 +99,11 @@
 		flex: 0.9;
 	}
 	.headerSection h2 {
-		font-size: 46px;
+		font-size: var(--blogs-headerTitle-tb);
 	}
 
 	.headerContainer button {
-		font-size: 16px;
+		font-size: var(--blogs-button-tb);
 		padding: 0 25px;
 		height: 50px;
 	}

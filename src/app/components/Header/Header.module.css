@@ -39,7 +39,7 @@
 	align-items: center;
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--header-navLink-ds);
 	line-height: 1.41;
 	color: var(--secondary);
 	text-transform: capitalize;

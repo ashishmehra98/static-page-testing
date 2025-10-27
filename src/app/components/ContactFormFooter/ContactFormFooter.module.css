@@ -55,14 +55,14 @@
 	}
 
 	.infoGroup :global(.info-title) {
-		font-size: 18px;
+		font-size: var(--contactFormFooter-infoTitle-tb);
 	}
 
 	.heroContent button {
 		min-width: 120px;
 		height: 48px;
 		padding: 0 25px;
-		font-size: 14px;
+		font-size: var(--contactFormFooter-button-tb);
 	}
 
 	.contactFormContainer {
@@ -128,7 +128,7 @@
 	}
 
 	.description {
-		font-size: 16px;
+		font-size: var(--contactFormFooter-description-mb);
 	}
 
 	.contactFormContainer {

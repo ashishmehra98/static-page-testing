@@ -14,7 +14,7 @@
 .title {
 	font-family: var(--font-heading);
 	font-weight: 500;
-	font-size: 38px;
+	font-size: var(--contactForm-title-ds);
 	line-height: 1.137;
 	letter-spacing: -0.76px;
 	color: var(--white);
@@ -71,12 +71,12 @@
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 	.title {
-		font-size: 30px;
+		font-size: var(--contactForm-title-tb);
 		margin-bottom: 19px;
 	}
 
 	.formContainer button {
-		font-size: 18px;
+		font-size: var(--contactForm-button-tb);
 		height: 60px;
 	}
 }
@@ -91,7 +91,7 @@
 	}
 
 	.title {
-		font-size: 25px;
+		font-size: var(--contactForm-title-mb);
 		margin-bottom: 19px;
 	}
 
@@ -110,6 +110,6 @@
 	}
 
 	.form label {
-		font-size: 14px;
+		font-size: var(--contactForm-label-mb);
 	}
 }

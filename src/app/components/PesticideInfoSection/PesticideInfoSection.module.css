@@ -23,6 +23,6 @@
 	}
 
 	.headerSection h2 {
-		font-size: 32px;
+		font-size: var(--pesticideInfoSection-header-ds);
 	}
 }

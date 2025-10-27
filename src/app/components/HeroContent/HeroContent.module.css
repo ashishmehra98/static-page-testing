@@ -21,7 +21,7 @@
 .tag {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 18px;
+	font-size: var(--heroContent-tag-ds);
 	line-height: 1.41;
 	letter-spacing: -0.36px;
 	color: var(--color-white);
@@ -30,7 +30,7 @@
 .heading {
 	font-family: var(--font-heading);
 	font-weight: 700;
-	font-size: 60px;
+	font-size: var(--heroContent-heading-ds);
 	line-height: 1.04;
 	letter-spacing: -1.2px;
 	color: var(--color-white);
@@ -43,7 +43,7 @@
 .description {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--heroContent-description-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	color: var(--color-white);
@@ -63,11 +63,11 @@
 
 	.tag,
 	.description {
-		font-size: 18px;
+		font-size: var(--heroContent-tag-tb);
 	}
 
 	.heading {
-		font-size: 44px;
+		font-size: var(--heroContent-heading-tb);
 	}
 }
 
@@ -78,11 +78,11 @@
 
 	.tag,
 	.description {
-		font-size: 14px;
+		font-size: var(--heroContent-tag-mb);
 	}
 
 	.heading {
-		font-size: 38px;
+		font-size: var(--heroContent-heading-mb);
 	}
 	.buttonSection {
 		gap: 11px;

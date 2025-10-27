@@ -69,7 +69,7 @@
 .featureTitle {
 	font-family: var(--font-primary);
 	font-weight: 600;
-	font-size: 24px;
+	font-size: var(--bestWeOffer-featureTitle-ds);
 	line-height: 1.15;
 	letter-spacing: -0.48px;
 	color: var(--secondary);
@@ -79,7 +79,7 @@
 .featureDescription {
 	font-family: var(--font-secondary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--bestWeOffer-featureDescription-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	color: var(--secondary);
@@ -92,11 +92,11 @@
 	}
 
 	.headerSection h2 {
-		font-size: 32px;
+		font-size: var(--bestWeOffer-headerTitle-tb);
 	}
 
 	.headerSection p {
-		font-size: 18px;
+		font-size: var(--bestWeOffer-headerDescription-tb);
 	}
 
 	.content {
@@ -109,11 +109,11 @@
 	}
 
 	.featureTitle {
-		font-size: 22px;
+		font-size: var(--bestWeOffer-featureTitle-tb);
 	}
 
 	.featureDescription {
-		font-size: 16px;
+		font-size: var(--bestWeOffer-featureDescription-tb);
 	}
 }
 
@@ -144,10 +144,10 @@
 	}
 
 	.featureTitle {
-		font-size: 22px;
+		font-size: var(--bestWeOffer-featureTitle-tb);
 	}
 
 	.featureDescription {
-		font-size: 16px;
+		font-size: var(--bestWeOffer-featureDescription-tb);
 	}
 }

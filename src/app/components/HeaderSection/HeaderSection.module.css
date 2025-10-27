@@ -16,7 +16,7 @@
 .mainTitle {
 	font-family: var(--font-heading);
 	font-weight: 700;
-	font-size: 56px;
+	font-size: var(--headerSection-mainTitle-ds);
 	line-height: 1.1;
 	letter-spacing: -1.12px;
 	color: var(--secondary);
@@ -30,7 +30,7 @@
 .subtitle {
 	font-family: var(--font-body);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--headerSection-subtitle-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	color: var(--secondary);
@@ -50,21 +50,21 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
 	.mainTitle {
-		font-size: 42px;
+		font-size: var(--headerSection-mainTitle-tb);
 		letter-spacing: -0.84px;
 	}
 
 	.subtitle {
-		font-size: 18px;
+		font-size: var(--headerSection-subtitle-tb);
 	}
 }
 
 @media screen and (max-width: 480px) {
 	.mainTitle {
-		font-size: 32px;
+		font-size: var(--headerSection-mainTitle-mb);
 	}
 
 	.subtitle {
-		font-size: 16px;
+		font-size: var(--headerSection-subtitle-mb);
 	}
 }

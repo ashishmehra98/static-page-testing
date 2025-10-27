@@ -27,7 +27,7 @@
 .name {
 	font-family: var(--font-heading);
 	font-weight: 500;
-	font-size: 32px;
+	font-size: var(--pesticideInfo-name-ds);
 	line-height: 1.15;
 	color: var(--secondary);
 	letter-spacing: -0.64px;
@@ -38,7 +38,7 @@
 .description {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 16px;
+	font-size: var(--pesticideInfo-description-ds);
 	line-height: 1.41;
 	color: var(--secondary);
 	letter-spacing: -0.32px;
@@ -53,7 +53,7 @@
 .learnMoreText {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--pesticideInfo-learnMoreText-ds);
 	line-height: 1.41;
 	color: var(--secondary);
 	text-decoration: underline;
@@ -81,14 +81,14 @@
 
 @media screen and (max-width: 480px) {
 	.name {
-		font-size: 28px;
+		font-size: var(--pesticideInfo-name-mb);
 	}
 
 	.description {
-		font-size: 16px;
+		font-size: var(--pesticideInfo-description-mb);
 	}
 
 	.learnMoreText {
-		font-size: 18px;
+		font-size: var(--pesticideInfo-learnMoreText-mb);
 	}
 }

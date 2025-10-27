@@ -73,7 +73,7 @@
 	position: relative;
 	flex-shrink: 0;
 	color: var(--light-green);
-	font-size: 24px;
+	font-size: var(--process-stepNumber-ds);
 	text-align: center;
 	white-space: nowrap;
 	letter-spacing: -0.48px;
@@ -99,7 +99,7 @@
 	font-style: normal;
 	position: relative;
 	flex-shrink: 0;
-	font-size: 28px;
+	font-size: var(--process-stepTitle-ds);
 	letter-spacing: -0.56px;
 	width: 100%;
 }
@@ -110,7 +110,7 @@
 	line-height: 1.41;
 	position: relative;
 	flex-shrink: 0;
-	font-size: 16px;
+	font-size: var(--process-stepDescription-ds);
 	letter-spacing: -0.32px;
 	width: 100%;
 }
@@ -177,11 +177,11 @@
 
 @media screen and (max-width: 480px) {
 	.stepTitle {
-		font-size: 22px;
+		font-size: var(--process-stepTitle-mb);
 	}
 
 	.stepDescription {
-		font-size: 14px;
+		font-size: var(--process-stepDescription-mb);
 	}
 
 	.flowOne .stepContent,

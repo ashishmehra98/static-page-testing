@@ -44,7 +44,7 @@
 .policyLink {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--footer-navLink-ds);
 	line-height: 1.41;
 	color: var(--secondary);
 	text-transform: capitalize;
@@ -103,7 +103,7 @@
 .copyright {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--footer-copyright-ds);
 	line-height: 1.5;
 	color: var(--secondary);
 	margin: 0;
@@ -118,7 +118,7 @@
 .policyLink {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--footer-link-ds);
 	line-height: 1.5;
 	color: var(--secondary);
 	background: none;

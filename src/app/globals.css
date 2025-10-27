@@ -65,6 +65,168 @@
 	--viewport-desktop: 1024px;
 	--viewport-large: 1280px;
 	--viewport-xl: 1536px;
+
+	/* Component Font-Size Variables */
+	/* Accordion Component */
+	--accordion-itemTitle-ds: 26px;
+	--accordion-itemTitle-tb: 22px;
+	--accordion-itemTitle-mb: 20px;
+	--accordion-itemDescription-ds: 20px;
+	--accordion-itemDescription-mb: 16px;
+
+	/* BlogCard Component */
+	--blogCard-date-ds: 16px;
+	--blogCard-title-ds: 22px;
+	--blogCard-readMore-ds: 16px;
+	--blogCard-author-ds: 16px;
+	--blogCard-heading-ds: 28px;
+
+	/* Button Component */
+	--button-text-ds: 20px;
+	--button-text-mb: 14px;
+
+	/* ContactForm Component */
+	--contactForm-title-ds: 38px;
+	--contactForm-title-tb: 30px;
+	--contactForm-title-mb: 25px;
+	--contactForm-button-tb: 18px;
+	--contactForm-label-mb: 14px;
+
+	/* ContactFormFooter Component */
+	--contactFormFooter-infoTitle-tb: 18px;
+	--contactFormFooter-button-tb: 14px;
+	--contactFormFooter-description-mb: 16px;
+
+	/* Footer Component */
+	--footer-navLink-ds: 20px;
+	--footer-link-ds: 20px;
+	--footer-copyright-ds: 20px;
+
+	/* Header Component */
+	--header-navLink-ds: 20px;
+
+	/* HeaderSection Component */
+	--headerSection-mainTitle-ds: 56px;
+	--headerSection-mainTitle-tb: 42px;
+	--headerSection-mainTitle-mb: 32px;
+	--headerSection-subtitle-ds: 20px;
+	--headerSection-subtitle-tb: 18px;
+	--headerSection-subtitle-mb: 16px;
+
+	/* HeroContent Component */
+	--heroContent-tag-ds: 18px;
+	--heroContent-tag-tb: 18px;
+	--heroContent-tag-mb: 14px;
+	--heroContent-heading-ds: 60px;
+	--heroContent-heading-tb: 44px;
+	--heroContent-heading-mb: 38px;
+	--heroContent-description-ds: 20px;
+	--heroContent-description-tb: 18px;
+	--heroContent-description-mb: 14px;
+
+	/* Info Component */
+	--info-title-ds: 32px;
+	--info-title-tb: 26px;
+	--info-title-mb: 18px;
+	--info-description-ds: 20px;
+
+	/* Input Component */
+	--input-label-ds: 18px;
+	--input-input-ds: 16px;
+	--input-placeholder-ds: 16px;
+
+	/* LocalPestExpert Component */
+	--localPestExpert-description-ds: 20px;
+	--localPestExpert-infoText-ds: 22px;
+	--localPestExpert-mapPlaceholder-tb: 18px;
+	--localPestExpert-infoText-tb: 20px;
+	--localPestExpert-mapPlaceholder-mb: 16px;
+	--localPestExpert-infoText-mb: 18px;
+
+	/* MobileNavigation Component */
+	--mobileNavigation-navLink-ds: 18px;
+	--mobileNavigation-additionalLink-ds: 14px;
+	--mobileNavigation-navLink-mb: 16px;
+	--mobileNavigation-additionalLink-mb: 13px;
+
+	/* PesticideInfo Component */
+	--pesticideInfo-name-ds: 32px;
+	--pesticideInfo-name-mb: 28px;
+	--pesticideInfo-description-ds: 16px;
+	--pesticideInfo-description-mb: 16px;
+	--pesticideInfo-learnMoreText-ds: 20px;
+	--pesticideInfo-learnMoreText-mb: 18px;
+
+	/* PesticideInfoSection Component */
+	--pesticideInfoSection-header-ds: 32px;
+
+	/* PestInfo Component */
+	--pestInfo-tag-ds: 20px;
+	--pestInfo-pestName-ds: 36px;
+	--pestInfo-pestName-mb: 28px;
+	--pestInfo-paragraph-ds: 20px;
+	--pestInfo-paragraph-mb: 16px;
+
+	/* Process Component */
+	--process-stepNumber-ds: 24px;
+	--process-stepTitle-ds: 28px;
+	--process-stepTitle-mb: 22px;
+	--process-stepDescription-ds: 16px;
+	--process-stepDescription-mb: 14px;
+
+	/* ProcessCheckInfo Component */
+	--processCheckInfo-text-ds: 22px;
+
+	/* RatingCard Component */
+	--ratingCard-name-ds: 18.133px;
+	--ratingCard-name-mb: 14px;
+	--ratingCard-designation-ds: 13.6px;
+	--ratingCard-designation-mb: 10px;
+	--ratingCard-reviewText-ds: 18.133px;
+	--ratingCard-reviewText-mb: 14px;
+	--ratingCard-postedOn-ds: 13.6px;
+	--ratingCard-postedOn-mb: 10px;
+
+	/* ServiceCard Component */
+	--serviceCard-tag-ds: 20px;
+	--serviceCard-serviceName-ds: 42px;
+	--serviceCard-description-ds: 20px;
+	--serviceCard-cta-ds: 20px;
+	--serviceCard-serviceName-mb: 32px;
+	--serviceCard-description-mb: 16px;
+	--serviceCard-cta-mb: 16px;
+
+	/* Home Components */
+	/* BestWeOffer Component */
+	--bestWeOffer-featureTitle-ds: 24px;
+	--bestWeOffer-featureTitle-tb: 22px;
+	--bestWeOffer-featureTitle-mb: 22px;
+	--bestWeOffer-featureDescription-ds: 20px;
+	--bestWeOffer-featureDescription-tb: 16px;
+	--bestWeOffer-featureDescription-mb: 16px;
+	--bestWeOffer-headerTitle-tb: 32px;
+	--bestWeOffer-headerDescription-tb: 18px;
+
+	/* Blogs Component */
+	--blogs-headerTitle-tb: 46px;
+	--blogs-button-tb: 16px;
+
+	/* BookConsultation Component */
+	--bookConsultation-username-mb: 18px;
+	--bookConsultation-designation-mb: 13.6px;
+
+	/* HomeJumbotron Component */
+	--homeJumbotron-button-tb: 14px;
+
+	/* HowWeWork Component */
+	--howWeWork-headerTitle-tb: 36px;
+	--howWeWork-subTitle-tb: 16px;
+	--howWeWork-infoTitle-tb: 24px;
+	--howWeWork-infoDescription-tb: 16px;
+	--howWeWork-button-tb: 16px;
+	--howWeWork-headerTitle-mb: 32px;
+	--howWeWork-infoTitle-mb: 22px;
+	--howWeWork-infoDescription-mb: 14px;
 }
 
 @theme inline {

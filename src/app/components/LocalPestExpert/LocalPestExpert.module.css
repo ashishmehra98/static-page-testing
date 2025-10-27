@@ -24,7 +24,7 @@
 .mapPlaceholder {
 	font-family: var(--font-body);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--localPestExpert-description-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	color: var(--secondary);
@@ -47,7 +47,7 @@
 
 .infoText {
 	font-family: var(--font-heading);
-	font-size: 22px;
+	font-size: var(--localPestExpert-infoText-ds);
 	line-height: 1.15;
 	letter-spacing: -0.44px;
 	color: var(--secondary);
@@ -86,11 +86,11 @@
 	}
 
 	.mapPlaceholder {
-		font-size: 18px;
+		font-size: var(--localPestExpert-mapPlaceholder-tb);
 	}
 
 	.infoText {
-		font-size: 20px;
+		font-size: var(--localPestExpert-infoText-tb);
 	}
 }
 
@@ -109,10 +109,10 @@
 	}
 
 	.mapPlaceholder {
-		font-size: 16px;
+		font-size: var(--localPestExpert-mapPlaceholder-mb);
 	}
 
 	.infoText {
-		font-size: 18px;
+		font-size: var(--localPestExpert-infoText-mb);
 	}
 }

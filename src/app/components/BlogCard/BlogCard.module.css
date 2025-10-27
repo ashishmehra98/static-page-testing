@@ -54,7 +54,7 @@
 	line-height: 1.41;
 	position: relative;
 	flex-shrink: 0;
-	font-size: 16px;
+	font-size: var(--blogCard-date-ds);
 	letter-spacing: -0.32px;
 	width: 100%;
 	margin: 0;
@@ -68,7 +68,7 @@
 	font-style: normal;
 	position: relative;
 	flex-shrink: 0;
-	font-size: 22px;
+	font-size: var(--blogCard-title-ds);
 	letter-spacing: -0.44px;
 	width: 100%;
 	margin: 0;
@@ -82,7 +82,7 @@
 	line-height: 1.41;
 	position: relative;
 	flex-shrink: 0;
-	font-size: 16px;
+	font-size: var(--blogCard-readMore-ds);
 	letter-spacing: -0.32px;
 	text-decoration: underline;
 	text-underline-position: from-font;
@@ -148,7 +148,7 @@
 	font-weight: 400;
 	font-style: normal;
 	line-height: 1.41;
-	font-size: 16px;
+	font-size: var(--blogCard-author-ds);
 	letter-spacing: -0.32px;
 	margin: 0;
 	width: 100%;
@@ -192,7 +192,7 @@
 	font-weight: 600;
 	line-height: 1.15;
 	font-style: normal;
-	font-size: 28px; /* larger heading */
+	font-size: var(--blogCard-heading-ds);
 	letter-spacing: -0.56px;
 	margin: 0;
 	width: 100%;

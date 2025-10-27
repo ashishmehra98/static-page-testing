@@ -29,7 +29,7 @@
 	font-family: var(--font-heading);
 	font-style: normal;
 	font-weight: 800;
-	font-size: 20px;
+	font-size: var(--serviceCard-tag-ds);
 	line-height: 1.15;
 	letter-spacing: -0.4px;
 	color: var(--section-label-color, var(--hightlight-text));
@@ -39,7 +39,7 @@
 	font-family: var(--font-heading);
 	font-style: normal;
 	font-weight: 700;
-	font-size: 42px;
+	font-size: var(--serviceCard-serviceName-ds);
 	line-height: 1.15;
 	letter-spacing: -0.84px;
 	color: var(--service-name-color, var(--primary-text));
@@ -49,7 +49,7 @@
 	font-family: var(--font-body);
 	font-style: normal;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--serviceCard-description-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	color: var(--paragraph-color, var(--primary-text));
@@ -60,7 +60,7 @@
 	font-family: var(--font-heading);
 	font-style: normal;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: var(--serviceCard-cta-ds);
 	line-height: 1.15;
 	letter-spacing: -0.4px;
 	color: var(--cta-color, var(--primary-text));
@@ -117,14 +117,14 @@
 	}
 
 	.serviceName {
-		font-size: 32px;
+		font-size: var(--serviceCard-serviceName-mb);
 	}
 
 	.serviceDescription {
-		font-size: 16px;
+		font-size: var(--serviceCard-description-mb);
 	}
 
 	.cta {
-		font-size: 16px;
+		font-size: var(--serviceCard-cta-mb);
 	}
 }

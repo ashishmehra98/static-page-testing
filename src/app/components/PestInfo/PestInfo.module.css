@@ -51,7 +51,7 @@
 	font-family: var(--font-heading);
 	font-style: normal;
 	font-weight: 800;
-	font-size: 20px;
+	font-size: var(--pestInfo-tag-ds);
 	line-height: 1.15;
 	letter-spacing: -0.4px;
 	color: var(--section-label-color, var(--hightlight-text));
@@ -61,7 +61,7 @@
 	font-family: var(--font-heading);
 	font-style: normal;
 	font-weight: 700;
-	font-size: 36px;
+	font-size: var(--pestInfo-pestName-ds);
 	letter-spacing: -0.72px;
 	color: var(--pest-name-color, var(--white));
 	width: 400px;
@@ -71,7 +71,7 @@
 	font-family: var(--font-body);
 	font-style: normal;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: var(--pestInfo-paragraph-ds);
 	line-height: 1.41;
 	letter-spacing: -0.4px;
 	color: var(--paragraph-color, var(--white));
@@ -102,10 +102,10 @@
 	}
 
 	.pestName {
-		font-size: 28px;
+		font-size: var(--pestInfo-pestName-mb);
 	}
 
 	.paragraph {
-		font-size: 16px;
+		font-size: var(--pestInfo-paragraph-mb);
 	}
 }

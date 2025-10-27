@@ -66,7 +66,7 @@
 .username {
 	font-family: var(--font-primary);
 	font-weight: 600;
-	font-size: 18.133px;
+	font-size: var(--ratingCard-name-ds);
 	line-height: 22.667px;
 	color: #1a1a1a;
 	margin: 0;
@@ -76,7 +76,7 @@
 .designation {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 13.6px;
+	font-size: var(--ratingCard-designation-ds);
 	line-height: 17px;
 	color: rgba(0, 0, 0, 0.5);
 	margin: 0;
@@ -95,7 +95,7 @@
 .reviewText {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 18.133px;
+	font-size: var(--ratingCard-reviewText-ds);
 	line-height: 22.667px;
 	color: #1a1a1a;
 	margin: 0;
@@ -115,7 +115,7 @@
 .postedOn {
 	font-family: var(--font-primary);
 	font-weight: 400;
-	font-size: 13.6px;
+	font-size: var(--ratingCard-postedOn-ds);
 	line-height: 17px;
 	color: rgba(0, 0, 0, 0.5);
 	margin: 0;
@@ -153,22 +153,22 @@
 		gap: 7px;
 	}
 	.username {
-		font-size: 14px;
+		font-size: var(--ratingCard-name-mb);
 		line-height: 18.1px;
 	}
 	.designation {
-		font-size: 10px;
+		font-size: var(--ratingCard-designation-mb);
 		line-height: 13.6px;
 	}
 	.reviewText {
-		font-size: 14px;
+		font-size: var(--ratingCard-reviewText-mb);
 		line-height: 18.1px;
 	}
 	.posting {
 		gap: 7px;
 	}
 	.postedOn {
-		font-size: 10px;
+		font-size: var(--ratingCard-postedOn-mb);
 	}
 	.googleLogo {
 		width: 57px;
