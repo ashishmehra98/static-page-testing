@@ -5,7 +5,7 @@ import Insects from "../Insects";
 import styles from "./PesticideInfo.module.css";
 
 export interface PesticideInfoProps {
-	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents";
+	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents" | null;
 	name: string;
 	description: string;
 	isSelected: boolean;

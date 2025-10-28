@@ -7,11 +7,15 @@ import Rodents from "./Rodents";
 import { InsectsProps } from "./types";
 
 export interface InsectVariantProps extends InsectsProps {
-	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents";
+	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents" | null;
 }
 
 const Insects: React.FC<InsectVariantProps> = ({ insectType, variant = "small", color = "#134021" }) => {
 	const props = { variant, color };
+
+	if (insectType === null) {
+		return null;
+	}
 
 	switch (insectType) {
 		case "spider":

@@ -207,3 +207,23 @@ interface ServiceDataConfig {
 	meta: Meta;
 	hero: HeroConfig;
 }
+
+interface Service {
+	id: string;
+	title: string;
+	description: string;
+}
+interface FAQItem {
+	id: string;
+	question: string;
+	answer: string;
+}
+
+interface BlogData {
+	id: string;
+	image: string;
+	date: string;
+	title: string;
+	content: string;
+	meta: Meta;
+}

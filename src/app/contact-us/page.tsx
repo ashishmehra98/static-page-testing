@@ -10,8 +10,8 @@ import HeaderSection from "@/app/components/HeaderSection";
 import ContactFormFooter from "@/app/components/ContactFormFooter";
 import LocalPestExpert from "@/app/components/LocalPestExpert";
 import SectionInfo from "@/app/components/SectionInfo";
-import { FAQ_DATA } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
+import { homeScreenFaqs } from "@/app/constants/faq";
 
 const ContactUs = () => {
 	return (
@@ -67,7 +67,7 @@ const ContactUs = () => {
 						</div>
 					</SectionInfo>
 				</div>
-				<FAQ items={FAQ_DATA} />
+				<FAQ items={homeScreenFaqs} />
 				{/* User Reviews */}
 				<UserReviewsSection />
 				<ContactFormFooter

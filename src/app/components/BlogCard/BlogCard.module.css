@@ -72,6 +72,11 @@
 	letter-spacing: -0.44px;
 	width: 100%;
 	margin: 0;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 /* Shared: Learn more button */
@@ -196,4 +201,9 @@
 	letter-spacing: -0.56px;
 	margin: 0;
 	width: 100%;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }

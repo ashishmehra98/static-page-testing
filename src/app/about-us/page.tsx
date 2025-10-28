@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { homeScreenreviews } from "../constants/pests";
 import UserReviewsSection from "./components/UserReviewsSection";
 import styles from "./style.module.css";
 import AboutUsJumbotron from "@/app/components/AboutUsJumbotron";
@@ -15,8 +14,9 @@ import PesticideInfoSection from "@/app/components/PesticideInfoSection";
 import FAQ from "@/app/components/FAQ";
 import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
-import { FAQ_DATA } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
+import { homeScreenreviews } from "@/app/constants/reviews";
+import { homeScreenFaqs } from "@/app/constants/faq";
 
 export default function AboutUs() {
 	const onPhoneClick = () => {
@@ -83,7 +83,11 @@ Partner with a seasoned professional committed to protecting your home and givin
 					isReverse={true}
 				/>
 				<PesticideInfoSection className={styles.pesticideInfo} />
-				<Hero bgImage={IMAGES.PATTERN_BG} hideGradient={true} className={styles.midHeroSection}>
+				<Hero
+					bgImage={IMAGES.PATTERN_BG}
+					hideGradient={true}
+					contentViewClassName={styles.midHeroSectionContent}
+					className={styles.midHeroSection}>
 					<div className={styles.midHeroContent}>
 						<HeaderSection
 							title="Your Local Sydney Pest Experts"
@@ -95,9 +99,12 @@ Partner with a seasoned professional committed to protecting your home and givin
 						/>
 						<Button variant="primary" title="0432 227 227" icon="phone" onPress={onPhoneClick} />
 					</div>
+					<div className={styles.midHeroImage}>
+						<Image src={IMAGES.LOCAL_SYDNEY_EXPERT} fill={true} alt="Local sydney expert" />
+					</div>
 				</Hero>
 				<UserReviewsSection reviews={homeScreenreviews} />
-				<FAQ items={FAQ_DATA} />
+				<FAQ items={homeScreenFaqs} />
 				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book your quick & free "

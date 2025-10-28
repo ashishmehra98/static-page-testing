@@ -5,7 +5,7 @@ import HeaderSection from "@/app/components/HeaderSection";
 import Button from "@/app/components/Button";
 import RatingCard from "@/app/components/RatingCard";
 import { IMAGES } from "@/app/constants/images";
-import { homeScreenreviews } from "@/app/constants/pests";
+import { homeScreenreviews } from "@/app/constants/reviews";
 
 const handlePhoneClick = () => {
 	// Open phone dialer

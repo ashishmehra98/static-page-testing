@@ -10,9 +10,16 @@ import BlogCard from "@/app/components/BlogCard";
 import Footer from "@/app/components/Footer";
 import HomeFooterJumbotron from "@/app/components/ContactFormFooter";
 import { IMAGES } from "@/app/constants/images";
+import blogs from "@/app/constants/blogs";
 
 const Blogs = () => {
 	const isMobile = useIsMobile();
+
+	// Get latest posts (next 4 blogs)
+	const latestPosts = blogs.slice(0, 4);
+
+	// Get featured posts (first 7 blogs)
+	const featuredPosts = blogs.slice(5, 12);
 
 	return (
 		<Container>
@@ -39,69 +46,29 @@ const Blogs = () => {
 						<div className={styles.sectionDivider} />
 					</div>
 					<div className={styles.featuredPosts}>
-						<BlogCard
-							variant="lg"
-							image="/images/pest-service-thumbnail.jpg"
-							date="01/05/2025"
-							title="Top 5 common pests in Sydney homes (and how to handle them)"
-							content="Discover the most common pests in Sydney and practical steps to keep them out of your home."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant={isMobile ? "lg" : "md"}
-							image="/images/pest-service-thumbnail.jpg"
-							date="01/05/2025"
-							title="Are cockroaches dangerous? What every homeowner must know"
-							content="Learn the risks and how to prevent infestations with expert tips."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant={isMobile ? "lg" : "md"}
-							image="/images/pest-service-thumbnail.jpg"
-							date="02/05/2025"
-							title="Termite warning signs you should never ignore"
-							content="Spot early indicators and save on costly repairs with timely action."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant={isMobile ? "lg" : "sm"}
-							image="/images/pest-service-thumbnail.jpg"
-							date="02/05/2025"
-							title="Termite warning signs you should never ignore"
-							content="Learn the risks and how to prevent infestations with expert tips."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant={isMobile ? "lg" : "sm"}
-							image="/images/pest-service-thumbnail.jpg"
-							date="02/05/2025"
-							title="Termite warning signs you should never ignore"
-							content="Learn the risks and how to prevent infestations with expert tips."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant={isMobile ? "lg" : "sm"}
-							image="/images/pest-service-thumbnail.jpg"
-							date="02/05/2025"
-							title="Termite warning signs you should never ignore"
-							content="Learn the risks and how to prevent infestations with expert tips."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant={isMobile ? "lg" : "sm"}
-							image="/images/pest-service-thumbnail.jpg"
-							date="02/05/2025"
-							title="Termite warning signs you should never ignore"
-							content="Learn the risks and how to prevent infestations with expert tips."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
+						{featuredPosts.map((blog, index) => {
+							// Determine variant based on position and mobile state
+							let variant = "sm";
+							if (index === 0) variant = "lg";
+							else if (index === 1 || index === 2) variant = isMobile ? "lg" : "md";
+							else variant = isMobile ? "lg" : "sm";
+
+							return (
+								<BlogCard
+									key={blog.id}
+									variant={variant as "sm" | "md" | "lg"}
+									image={blog.image}
+									date={blog.date}
+									title={blog.title}
+									content={blog.meta.description}
+									onLearnMore={() => {
+										// TODO: Navigate to blog detail page
+										console.log(`Navigate to blog: ${blog.id}`);
+									}}
+									className="blog-card"
+								/>
+							);
+						})}
 					</div>
 				</div>
 				{/* Latest Posts */}
@@ -111,42 +78,21 @@ const Blogs = () => {
 						<div className={styles.sectionDivider} />
 					</div>
 					<div className={styles.latestPostsGrid}>
-						<BlogCard
-							variant="lg"
-							image="/images/pest-service-thumbnail.jpg"
-							date="01/05/2025"
-							title="Top 5 Common Pests in Sydney Homes (and How to Handle Them)"
-							content="Lorem ipsum dolor sit amet consectetur. Ultrices suspendisse suspendisse posuere volutpat odio sed vitae egestas sit."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant="lg"
-							image="/images/pest-service-thumbnail.jpg"
-							date="28/04/2025"
-							title="How to Prevent Cockroach Infestations in Your Home"
-							content="Learn effective strategies to keep cockroaches away from your home with these proven prevention methods."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant="lg"
-							image="/images/pest-service-thumbnail.jpg"
-							date="25/04/2025"
-							title="Safe Pest Control for Families with Children"
-							content="Discover child-safe pest control methods that protect your family while effectively eliminating pests."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
-						<BlogCard
-							variant="lg"
-							image="/images/pest-service-thumbnail.jpg"
-							date="22/04/2025"
-							title="Common Spider Species in Sydney and How to Identify Them"
-							content="Identify the most common spider species found in Sydney homes and learn which ones require professional attention."
-							onLearnMore={() => {}}
-							className="blog-card"
-						/>
+						{latestPosts.map((blog) => (
+							<BlogCard
+								key={blog.id}
+								variant="lg"
+								image={blog.image}
+								date={blog.date}
+								title={blog.title}
+								content={blog.meta.description}
+								onLearnMore={() => {
+									// TODO: Navigate to blog detail page
+									console.log(`Navigate to blog: ${blog.id}`);
+								}}
+								className="blog-card"
+							/>
+						))}
 					</div>
 				</div>
 				<HomeFooterJumbotron

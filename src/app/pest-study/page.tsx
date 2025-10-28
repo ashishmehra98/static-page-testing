@@ -12,7 +12,7 @@ import ProcessCheckInfo from "@/app/components/ProcessCheckInfo";
 import Button from "@/app/components/Button";
 import LocalPestExpert from "@/app/components/LocalPestExpert";
 import FAQ from "@/app/components/FAQ";
-import { FAQ_DATA } from "@/app/constants/faq";
+import { homeScreenFaqs } from "@/app/constants/faq";
 import HomeFooterJumbotron from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import { IMAGES } from "@/app/constants/images";
@@ -340,7 +340,7 @@ const PestStudy = () => {
 				{/* User Reviews */}
 				<UserReviewsSection />
 				<LocalPestExpert />
-				<FAQ items={FAQ_DATA} />
+				<FAQ items={homeScreenFaqs} />
 				<HomeFooterJumbotron
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book Your "

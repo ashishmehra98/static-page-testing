@@ -1,9 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { homeScreenreviews } from "../constants/pests";
 import { HomeJumbotron, PestControlServices, HowWeWork, BookConsultation, BestWeOffer, Blogs } from "./components";
-import { blogData } from "./data";
 import styles from "./style.module.css";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
@@ -13,8 +11,11 @@ import Footer from "@/app/components/Footer";
 import ContactFormFooter from "@/app/components/ContactFormFooter";
 import PesticideInfoSection from "@/app/components/PesticideInfoSection";
 
-import { FAQ_DATA } from "@/app/constants/faq";
+import { homeScreenFaqs } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
+import { homeScreenreviews } from "@/app/constants/reviews";
+import blogs from "@/app/constants/blogs";
+
 
 export default function Home() {
 	const router = useRouter();
@@ -49,8 +50,8 @@ export default function Home() {
 				<PesticideInfoSection />
 				<BookConsultation />
 				<BestWeOffer />
-				<FAQ items={FAQ_DATA} />
-				<Blogs blogs={blogData} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
+				<FAQ items={homeScreenFaqs} />
+				<Blogs blogs={blogs} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
 				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book Your Quick & Free "

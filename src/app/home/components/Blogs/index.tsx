@@ -4,13 +4,6 @@ import HeaderSection from "@/app/components/HeaderSection";
 import Button from "@/app/components/Button";
 import BlogCard from "@/app/components/BlogCard";
 
-interface BlogData {
-	id: string;
-	image: string;
-	date: string;
-	title: string;
-}
-
 interface BlogsProps {
 	blogs: BlogData[];
 	onSeeMoreBlogs: () => void;

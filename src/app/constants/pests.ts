@@ -74,19 +74,3 @@ export const pestData = [
 		path: "bed-bug-pest-control" as PestPages,
 	},
 ];
-
-export const homeScreenreviews = [
-	...(antPestStudyData.reviews || []),
-	...(bedBugsPestStudyData.reviews || []),
-	...(beePestStudyData.reviews || []),
-	...(carpetBeetlePestStudyData.reviews || []),
-	...(cockroachPestStudyData.reviews || []),
-	...(fliesPestStudyData.reviews || []),
-	...(mosquitoPestStudyData.reviews || []),
-	...(possumPestStudyData.reviews || []),
-	...(ratsMicePestStudyData.reviews || []),
-	...(storedProductPestStudyData.reviews || []),
-	...(waspsPestStudyData.reviews || []),
-]
-	.filter((reviews) => reviews.review.length < 180)
-	.map((review, index) => ({ ...review, id: index }));

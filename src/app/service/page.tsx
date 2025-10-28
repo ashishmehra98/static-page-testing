@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { homeScreenreviews } from "../constants/reviews";
 import PestServicesSlide from "./components/PestServicesSlide";
 import EcoviaProcess from "./components/EcoviaProcess/EcoviaProcess";
 import styles from "./style.module.css";
@@ -15,8 +16,7 @@ import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import { IMAGES } from "@/app/constants/images";
-import { FAQ_DATA } from "@/app/constants/faq";
-import { homeScreenreviews } from "@/app/constants/pests";
+import { homeScreenFaqs } from "@/app/constants/faq";
 
 const Service = () => {
 	const router = useRouter();
@@ -166,7 +166,7 @@ const Service = () => {
 						onContactClick={onPhoneClick}
 					/>
 				</SectionInfo>
-				<FAQ items={FAQ_DATA} />
+				<FAQ items={homeScreenFaqs} />
 				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book your quick & free "

@@ -29,6 +29,7 @@ export const IMAGES = {
 	PEST_BED_BUGS: "/images/pest/bed-bugs.jpg",
 	PEST_RODENTS: "/images/pest/rodents.jpg",
 	PEST_SPIDER: "/images/pest/spider.jpg",
+	LOCAL_SYDNEY_EXPERT: "/images/local-sydney-experts.jpg",
 
 	// Ant Pest Study Images
 	ANT_PEST_STUDY_BG: "/images/pest-study/ant/pest-study-bg.jpg",

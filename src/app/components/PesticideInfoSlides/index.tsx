@@ -11,7 +11,7 @@ import { PestPages } from "@/app/constants/pests";
 
 interface PesticideData {
 	id: string;
-	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents";
+	insectType: "spider" | "ants" | "bedbug" | "bees" | "rodents" | null;
 	name: string;
 	description: string;
 	path: PestPages;
@@ -25,14 +25,6 @@ const pesticideData: PesticideData[] = [
 		description:
 			"Nature's tiny architects—always building, always foraging. If they're showing up inside, your home is likely offering food, moisture, or easy entry points.",
 		path: "ant-pest-control-sydney",
-	},
-	{
-		id: "spider",
-		insectType: "spider",
-		name: "Spiders",
-		description:
-			"Nature's stealthy agent — always hunting, never resting. But if they're showing up inside, it usually means your home is offering food, shelter, or a way in.",
-		path: "stored-product-pests-control",
 	},
 	{
 		id: "bedbug",
@@ -57,6 +49,70 @@ const pesticideData: PesticideData[] = [
 		description:
 			"Uninvited guests—chewing, nesting, and contaminating. They're drawn by warmth, food scraps, and cozy hiding spots.",
 		path: "rats-mice-pest-control",
+	},
+	{
+		id: "mosquitoes",
+		insectType: null,
+		name: "Mosquitoes",
+		description:
+			"Unwelcome buzzers—small but relentless. They breed in standing water and thrive in Sydney's humid months. Controlling moisture and treating breeding sites keeps these biters away.",
+		path: "mosquito-pest-control",
+	},
+	{
+		id: "flies",
+		insectType: null,
+		name: "Flies",
+		description:
+			"Persistent invaders—always circling where there's food or waste. If they're hanging around, it's often a sign of uncovered bins or unnoticed spills. Clean habits and expert treatment stop them fast.",
+		path: "fly-pest-control",
+	},
+	{
+		id: "stored-product-pests",
+		insectType: null,
+		name: "Stored Product Pests",
+		description:
+			"Silent pantry raiders—grain moths, beetles, and weevils that feast on dry goods. They spread fast and contaminate food storage. Our targeted treatments protect your kitchen and stock.",
+		path: "stored-product-pests-control",
+	},
+	{
+		id: "possums",
+		insectType: null,
+		name: "Possums",
+		description:
+			"Noisy night visitors—climbing roofs and nesting in ceilings. Cute from afar, but destructive up close. We safely and humanely remove and proof your property to keep them out for good.",
+		path: "possum-pest-control",
+	},
+	{
+		id: "cockroaches",
+		insectType: null,
+		name: "Cockroaches",
+		description:
+			"The classic survivors—fast, tough, and unhygienic. If you're spotting them, they're already settled in. Our treatments reach deep into cracks and breeding sites to stop them at the source.",
+		path: "cockroach-pest-control",
+	},
+	{
+		id: "carpet-beetles",
+		insectType: null,
+		name: "Carpet Beetles",
+		description:
+			"Tiny fabric feeders—quietly damaging carpets, clothes, and upholstery. Their larvae thrive on natural fibres. Early detection and precise treatment prevent costly damage.",
+		path: "carpet-beetle-pest-control",
+	},
+	{
+		id: "birds",
+		insectType: null,
+		name: "Birds",
+		description:
+			"Feathered freeloaders—roosting on ledges and leaving a mess behind. Whether pigeons or seagulls, we use humane deterrents and proofing systems to protect your property and health.",
+		path: "bird-pest-control",
+	},
+	{
+		id: "wasps",
+		insectType: null,
+		name: "Wasps",
+		description:
+			"Stinging defenders—aggressive when threatened and quick to build nests in sheltered spots. They're drawn to sweet scents and protected areas. Our safe removal and prevention keeps your space wasp-free.",
+		path: "wasp-pest-control",
 	},
 ];
 

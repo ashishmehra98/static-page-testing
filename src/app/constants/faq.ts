@@ -1,22 +1,32 @@
-import { FAQItem } from "../components/FAQ";
-
-export const FAQ_DATA: FAQItem[] = [
+export const homeScreenFaqs: FAQItem[] = [
 	{
-		id: "what-is-pest-control",
-		question: "What is pest control?",
+		id: "how-quickly-attend",
+		question: "How quickly can you attend a pest problem?",
 		answer:
-			"Pest control is the management and regulation of species defined as pests, which are harmful to human health, the environment, or economic interests. Our professional pest control services help protect your home and business from unwanted insects, rodents, and other pests using safe and effective methods.",
+			"We offer same-day or next-day service across Sydney, depending on your location and the type of pest issue. Our team prioritises urgent infestations and works around your schedule.",
 	},
 	{
-		id: "how-often-sprays",
-		question: "How Often Should You Get Sprays?",
+		id: "leave-home-during-treatment",
+		question: "Do I need to leave home during treatment?",
 		answer:
-			"The frequency of pest control treatments depends on several factors including the type of pest, severity of infestation, and environmental conditions. For most residential properties, we recommend quarterly treatments (every 3 months) to maintain effective pest control. However, for severe infestations or commercial properties, more frequent treatments may be necessary.",
+			"In most cases, no. Ecovia uses low-toxicity and eco-friendly products that are safe to remain around once applied. Your technician will advise if short-term ventilation is needed for specific treatments.",
 	},
 	{
-		id: "are-products-safe",
-		question: "Are your products safe?",
+		id: "how-long-treatments-last",
+		question: "How long do pest treatments last?",
 		answer:
-			"Yes, all our pest control products are EPA-approved and safe for use in residential and commercial environments. We use environmentally friendly methods and products that are effective against pests while being safe for humans, pets, and the environment. Our technicians are fully trained and certified to apply treatments safely and effectively.",
+			"The protection period varies by pest type and environmental factors, but most treatments last between three to six months. We also offer maintenance plans for year-round prevention.",
+	},
+	{
+		id: "prepare-before-arrival",
+		question: "What should I do to prepare before you arrive?",
+		answer:
+			"We'll provide simple prep steps before your appointment — like clearing floors, covering pet bowls, and storing food away. This helps ensure our treatments reach all key areas effectively.",
+	},
+	{
+		id: "technicians-licensed-insured",
+		question: "Are your technicians licensed and insured?",
+		answer:
+			"Yes. All Ecovia technicians are fully licensed under NSW Health and trained to Australian pest management standards. We're also fully insured for your peace of mind.",
 	},
 ];

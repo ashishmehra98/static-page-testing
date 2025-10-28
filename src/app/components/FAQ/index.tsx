@@ -5,12 +5,6 @@ import Accordion, { AccordionItem } from "../Accordion";
 import HeaderSection from "../HeaderSection";
 import styles from "./FAQ.module.css";
 
-export interface FAQItem {
-	id: string;
-	question: string;
-	answer: string;
-}
-
 interface FAQProps {
 	items: FAQItem[];
 	className?: string;
