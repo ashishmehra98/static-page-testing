@@ -14,7 +14,7 @@ export interface PesticideInfoProps {
 
 const PesticideInfo: React.FC<PesticideInfoProps> = ({ insectType, name, description, isSelected, onLearnMore }) => {
 	return (
-		<div className={`${styles.container} ${isSelected ? styles.selected : ""}`}>
+		<div onClick={onLearnMore} className={`${styles.container} ${isSelected ? styles.selected : ""}`}>
 			<div className={styles.content}>
 				<Insects insectType={insectType} variant="small" color={!isSelected ? " #134021" : "#b1cf5f"} />
 				<h3 className={styles.name}>{name}</h3>

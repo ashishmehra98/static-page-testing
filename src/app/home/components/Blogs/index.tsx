@@ -32,7 +32,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, onSeeMoreBlogs, onLearnMore }) => 
 								image={blog.image}
 								date={blog.date}
 								title={blog.title}
-								onLearnMore={() => onLearnMore(blog.id)}
+								onLearnMore={() => onLearnMore(blog.title)}
 							/>
 						))}
 					</div>

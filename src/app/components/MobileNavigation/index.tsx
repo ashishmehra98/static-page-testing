@@ -34,29 +34,29 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
 						<button className={styles.navLink} onClick={() => handleLinkClick("/about-us")}>
 							about
 						</button>
-						<button className={styles.navLink} onClick={() => handleLinkClick("/blogs")}>
-							blog
+						<button className={styles.navLink} onClick={() => handleLinkClick("/pests")}>
+							pests
 						</button>
 						<button className={styles.navLink} onClick={() => handleLinkClick("/services")}>
 							services
 						</button>
-						<button className={styles.navLink} onClick={() => handleLinkClick("/pest")}>
-							pests
+						<button className={styles.navLink} onClick={() => handleLinkClick("/blogs")}>
+							blogs
 						</button>
 					</nav>
 
 					{/* Divider */}
-					<div className={styles.divider} />
+					{/* <div className={styles.divider} /> */}
 
 					{/* Additional Links */}
-					<div className={styles.additionalLinks}>
+					{/* <div className={styles.additionalLinks}>
 						<button className={styles.additionalLink} onClick={() => handleLinkClick("/privacy-policy")}>
 							Privacy Policy
 						</button>
 						<button className={styles.additionalLink} onClick={() => handleLinkClick("/cookies-settings")}>
 							Cookies Settings
 						</button>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

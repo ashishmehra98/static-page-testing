@@ -34,11 +34,14 @@ const Header: React.FC = () => {
 							<Link href="/about-us" className={styles.navLink}>
 								about
 							</Link>
+							<Link href="/pests" className={styles.navLink}>
+								pests
+							</Link>
 							<Link href="/services" className={styles.navLink}>
 								services
 							</Link>
 							<Link href="/blogs" className={styles.navLink}>
-								blog
+								blogs
 							</Link>
 						</nav>
 					</div>

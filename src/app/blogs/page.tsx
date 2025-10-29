@@ -1,7 +1,9 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import useIsMobile from "../../hooks/useIsMobile";
 import styles from "./style.module.css";
+import { createSlug } from "./[slug]/utils";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
 import Hero from "@/app/components/Hero";
@@ -13,6 +15,7 @@ import { IMAGES } from "@/app/constants/images";
 import blogs from "@/app/constants/blogs";
 
 const Blogs = () => {
+	const router = useRouter();
 	const isMobile = useIsMobile();
 
 	// Get latest posts (next 4 blogs)
@@ -20,6 +23,12 @@ const Blogs = () => {
 
 	// Get featured posts (first 7 blogs)
 	const featuredPosts = blogs.slice(5, 12);
+
+	// Navigate to blog details
+	const handleBlogClick = (title: string) => {
+		const slug = createSlug(title);
+		router.push(`/blogs/${slug}`);
+	};
 
 	return (
 		<Container>
@@ -61,10 +70,7 @@ const Blogs = () => {
 									date={blog.date}
 									title={blog.title}
 									content={blog.meta.description}
-									onLearnMore={() => {
-										// TODO: Navigate to blog detail page
-										console.log(`Navigate to blog: ${blog.id}`);
-									}}
+									onLearnMore={() => handleBlogClick(blog.title)}
 									className="blog-card"
 								/>
 							);
@@ -86,10 +92,7 @@ const Blogs = () => {
 								date={blog.date}
 								title={blog.title}
 								content={blog.meta.description}
-								onLearnMore={() => {
-									// TODO: Navigate to blog detail page
-									console.log(`Navigate to blog: ${blog.id}`);
-								}}
+								onLearnMore={() => handleBlogClick(blog.id, blog.title)}
 								className="blog-card"
 							/>
 						))}

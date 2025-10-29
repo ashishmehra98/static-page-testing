@@ -144,10 +144,10 @@
 	}
 
 	.featureTitle {
-		font-size: var(--bestWeOffer-featureTitle-tb);
+		font-size: var(--bestWeOffer-featureTitle-mb);
 	}
 
 	.featureDescription {
-		font-size: var(--bestWeOffer-featureDescription-tb);
+		font-size: var(--bestWeOffer-featureDescription-mb);
 	}
 }

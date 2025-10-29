@@ -10,6 +10,7 @@
 	flex-direction: column;
 	transition: all 0.25s ease-in-out;
 	gap: 42px;
+	cursor: pointer;
 }
 
 .content {
@@ -77,6 +78,10 @@
 
 .selected .insectLarge {
 	opacity: 1;
+}
+
+.container:hover {
+	transform: translateY(-5);
 }
 
 @media screen and (max-width: 480px) {

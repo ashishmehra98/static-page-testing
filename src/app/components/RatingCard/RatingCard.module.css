@@ -4,13 +4,13 @@
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	gap: 18.133px;
+	gap: 12px;
 	align-items: flex-start;
 	padding: 27.2px;
 	position: relative;
 	border-radius: 18.133px;
 	width: 306px;
-	min-height: 325px;
+	min-height: 300px;
 }
 
 /* Rating Stars */
@@ -133,7 +133,7 @@
 
 @media screen and (max-width: 768px) {
 	.ratingCard {
-		width: 244px;
+		width: 275px;
 		padding: 22px;
 		min-height: 270px;
 		gap: 14px;
@@ -162,7 +162,7 @@
 	}
 	.reviewText {
 		font-size: var(--ratingCard-reviewText-mb);
-		line-height: 18.1px;
+		line-height: 20.1px;
 	}
 	.posting {
 		gap: 7px;

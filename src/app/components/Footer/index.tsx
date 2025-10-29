@@ -18,7 +18,8 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 		const routes: { [key: string]: string } = {
 			about: "/about-us",
 			services: "/services",
-			testimonials: "/blogs", // Assuming testimonials are in blogs
+			blogs: "/blogs", // Assuming testimonials are in blogs
+			pests: "/pests",
 		};
 
 		if (routes[section]) {
@@ -29,11 +30,6 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 	const handleSocialClick = (platform: string) => {
 		console.log(`Open ${platform} profile`);
 		// Add social media link logic here
-	};
-
-	const handlePolicyClick = (policy: string) => {
-		console.log(`Open ${policy} page`);
-		// Add policy page navigation logic here
 	};
 
 	return (
@@ -50,18 +46,21 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 					<button className={styles.navLink} onClick={() => handleNavigationClick("about")}>
 						About
 					</button>
+					<button className={styles.navLink} onClick={() => handleNavigationClick("pests")}>
+						Pests
+					</button>
 					<button className={styles.navLink} onClick={() => handleNavigationClick("services")}>
 						Services
 					</button>
-					<button className={styles.navLink} onClick={() => handleNavigationClick("testimonials")}>
-						Testimonials
+					<button className={styles.navLink} onClick={() => handleNavigationClick("blogs")}>
+						Blogs
 					</button>
-					<button className={styles.policyLink} onClick={() => handlePolicyClick("privacy")}>
+					{/* <button className={styles.policyLink} onClick={() => handlePolicyClick("privacy")}>
 						Privacy Policy
 					</button>
 					<button className={styles.policyLink} onClick={() => handlePolicyClick("cookies")}>
 						Cookies Settings
-					</button>
+					</button> */}
 				</nav>
 
 				<div className={styles.divider} />
@@ -89,14 +88,14 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 			{/* Footer Meta */}
 			<div className={styles.footerMeta}>
 				<p className={styles.copyright}>© 2025 Ecovia Pest Control. All rights reserved.</p>
-				<div className={styles.policyLinks}>
+				{/* <div className={styles.policyLinks}>
 					<button className={styles.policyLink} onClick={() => handlePolicyClick("privacy")}>
 						Privacy Policy
 					</button>
 					<button className={styles.policyLink} onClick={() => handlePolicyClick("cookies")}>
 						Cookies Settings
 					</button>
-				</div>
+				</div> */}
 			</div>
 		</footer>
 	);

@@ -78,8 +78,7 @@
 		height: 45px;
 	}
 
-	.ratingCardContainer :global(.username),
-	.ratingCardContainer :global(.review-text) {
+	.ratingCardContainer :global(.username) {
 		font-size: var(--bookConsultation-username-mb);
 		line-height: 22px;
 	}

@@ -68,16 +68,19 @@
 
 	/* Component Font-Size Variables */
 	/* Accordion Component */
-	--accordion-itemTitle-ds: 26px;
-	--accordion-itemTitle-tb: 22px;
-	--accordion-itemTitle-mb: 20px;
-	--accordion-itemDescription-ds: 20px;
-	--accordion-itemDescription-mb: 16px;
+	--accordion-itemTitle-ds: 20px;
+	--accordion-itemTitle-tb: 20px;
+	--accordion-itemTitle-mb: 16px;
+	--accordion-itemDescription-ds: 16px;
+	--accordion-itemDescription-mb: 14px;
 
 	/* BlogCard Component */
 	--blogCard-date-ds: 16px;
+	--blogCard-date-mb: 14px;
 	--blogCard-title-ds: 22px;
+	--blogCard-title-mb: 16px;
 	--blogCard-readMore-ds: 16px;
+	--blogCard-readMore-mb: 14px;
 	--blogCard-author-ds: 16px;
 	--blogCard-heading-ds: 28px;
 
@@ -86,7 +89,7 @@
 	--button-text-mb: 14px;
 
 	/* ContactForm Component */
-	--contactForm-title-ds: 38px;
+	--contactForm-title-ds: 32px;
 	--contactForm-title-tb: 30px;
 	--contactForm-title-mb: 25px;
 	--contactForm-button-tb: 18px;
@@ -101,6 +104,9 @@
 	--footer-navLink-ds: 20px;
 	--footer-link-ds: 20px;
 	--footer-copyright-ds: 20px;
+	--footer-navLink-mb: 18px;
+	--footer-link-mb: 18px;
+	--footer-copyright-mb: 16px;
 
 	/* Header Component */
 	--header-navLink-ds: 20px;
@@ -109,26 +115,29 @@
 	--headerSection-mainTitle-ds: 56px;
 	--headerSection-mainTitle-tb: 42px;
 	--headerSection-mainTitle-mb: 32px;
-	--headerSection-subtitle-ds: 20px;
+	--headerSection-subtitle-ds: 18px;
 	--headerSection-subtitle-tb: 18px;
-	--headerSection-subtitle-mb: 16px;
+	--headerSection-subtitle-mb: 14px;
 
 	/* HeroContent Component */
-	--heroContent-tag-ds: 18px;
-	--heroContent-tag-tb: 18px;
+	--heroContent-tag-ds: 16px;
+	--heroContent-tag-tb: 16px;
 	--heroContent-tag-mb: 14px;
-	--heroContent-heading-ds: 60px;
-	--heroContent-heading-tb: 44px;
-	--heroContent-heading-mb: 38px;
-	--heroContent-description-ds: 20px;
+	--heroContent-heading-ds: 56px;
+	--heroContent-heading-tb: 48px;
+	--heroContent-heading-mb: 36px;
+	--heroContent-description-ds: 18px;
 	--heroContent-description-tb: 18px;
 	--heroContent-description-mb: 14px;
 
 	/* Info Component */
-	--info-title-ds: 32px;
+	--info-title-ds: 28px;
 	--info-title-tb: 26px;
 	--info-title-mb: 18px;
-	--info-description-ds: 20px;
+	--info-title-col-ds: 24px;
+	--info-title-col-tb: 26px;
+	--info-title-col-mb: 18px;
+	--info-description-ds: 18px;
 
 	/* Input Component */
 	--input-label-ds: 18px;
@@ -153,9 +162,9 @@
 	--pesticideInfo-name-ds: 32px;
 	--pesticideInfo-name-mb: 28px;
 	--pesticideInfo-description-ds: 16px;
-	--pesticideInfo-description-mb: 16px;
-	--pesticideInfo-learnMoreText-ds: 20px;
-	--pesticideInfo-learnMoreText-mb: 18px;
+	--pesticideInfo-description-mb: 15px;
+	--pesticideInfo-learnMoreText-ds: 18px;
+	--pesticideInfo-learnMoreText-mb: 16px;
 
 	/* PesticideInfoSection Component */
 	--pesticideInfoSection-header-ds: 32px;
@@ -182,7 +191,7 @@
 	--ratingCard-name-mb: 14px;
 	--ratingCard-designation-ds: 13.6px;
 	--ratingCard-designation-mb: 10px;
-	--ratingCard-reviewText-ds: 18.133px;
+	--ratingCard-reviewText-ds: 14px;
 	--ratingCard-reviewText-mb: 14px;
 	--ratingCard-postedOn-ds: 13.6px;
 	--ratingCard-postedOn-mb: 10px;
@@ -198,12 +207,12 @@
 
 	/* Home Components */
 	/* BestWeOffer Component */
-	--bestWeOffer-featureTitle-ds: 24px;
+	--bestWeOffer-featureTitle-ds: 22px;
 	--bestWeOffer-featureTitle-tb: 22px;
 	--bestWeOffer-featureTitle-mb: 22px;
-	--bestWeOffer-featureDescription-ds: 20px;
-	--bestWeOffer-featureDescription-tb: 16px;
-	--bestWeOffer-featureDescription-mb: 16px;
+	--bestWeOffer-featureDescription-ds: 16px;
+	--bestWeOffer-featureDescription-tb: 15px;
+	--bestWeOffer-featureDescription-mb: 14px;
 	--bestWeOffer-headerTitle-tb: 32px;
 	--bestWeOffer-headerDescription-tb: 18px;
 

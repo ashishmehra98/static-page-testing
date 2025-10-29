@@ -12,7 +12,7 @@
 .content {
 	display: flex;
 	/* gap: 368px; */
-	align-items: flex-start;
+	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 }
@@ -165,6 +165,15 @@
 
 	.navigation .policyLink {
 		display: block;
+		font-size: var(--footer-link-mb);
+	}
+
+	.navLink {
+		font-size: var(--footer-link-mb);
+	}
+
+	.copyright {
+		font-size: var(--footer-copyright-mb);
 	}
 
 	.socialContainer {
@@ -180,7 +189,7 @@
 		display: none;
 	}
 
-	.copyright {
-		width: 80%;
+	.content {
+		align-items: flex-start;
 	}
 }

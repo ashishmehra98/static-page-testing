@@ -59,9 +59,11 @@
 
 	.container {
 		margin-bottom: 50px;
-		flex-direction: column;
-		align-items: flex-start;
 		gap: 20px;
+	}
+
+	.headerSection {
+		flex: 1;
 	}
 
 	.headerSection h2 {
@@ -85,8 +87,8 @@
 	}
 
 	.infoContainer {
-		flex: 0 0 60%;
-		gap: 40px;
+		flex: 1;
+		gap: 25px;
 	}
 
 	.infoContainer > div {

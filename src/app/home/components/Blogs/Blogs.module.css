@@ -130,4 +130,10 @@
 	.headerContainer {
 		width: 100%;
 	}
+
+	.cardsWrapper > * {
+		flex-shrink: 0;
+		width: 290px;
+		height: 330px;
+	}
 }

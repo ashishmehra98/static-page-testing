@@ -59,7 +59,7 @@
 	}
 	/* Configure slide width same as RatingCard width below 768px  */
 	.slide {
-		width: 244px !important;
+		width: 275px !important;
 	}
 
 	.carouselWrapper {

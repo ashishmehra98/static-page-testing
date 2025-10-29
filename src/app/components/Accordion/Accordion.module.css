@@ -42,6 +42,7 @@
 	color: var(--secondary);
 	margin: 0;
 	transition: color 0.3s ease;
+	flex: 0.9;
 }
 
 .activeTitle {
@@ -145,7 +146,7 @@
 	}
 
 	.chevron {
-		width: 28px;
-		height: 28px;
+		width: 22px;
+		height: 22px;
 	}
 }

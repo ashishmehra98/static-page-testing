@@ -1,7 +1,7 @@
 /* Info component container */
 .infoContainer {
 	display: flex;
-	gap: 41px;
+	gap: 30px;
 	align-items: flex-end;
 	width: 100%;
 }
@@ -9,8 +9,8 @@
 /* Icon container with circular background */
 .iconContainer {
 	position: relative;
-	width: 78px;
-	height: 78px;
+	width: 65px;
+	height: 65px;
 	background-color: var(--light-green);
 	border-radius: 50%;
 	display: flex;
@@ -35,7 +35,7 @@
 .contentContainer {
 	display: flex;
 	flex-direction: column;
-	gap: 18px;
+	gap: 12px;
 	align-items: flex-start;
 	flex: 1;
 	max-width: 456px;
@@ -54,7 +54,7 @@
 }
 
 .infoContainerCol .title {
-	font-size: var(--info-title-tb);
+	font-size: var(--info-title-col-ds);
 }
 
 /* Description styling */
@@ -94,6 +94,6 @@
 	}
 
 	.infoContainerCol .title {
-		font-size: var(--info-title-mb);
+		font-size: var(--info-title-col-mb);
 	}
 }

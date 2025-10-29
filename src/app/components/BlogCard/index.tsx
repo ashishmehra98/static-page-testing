@@ -50,7 +50,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ variant = "sm", image, date, title,
 	const rootClassName = className ? ` ${className}` : "";
 	if (variant === "lg") {
 		return (
-			<div className={`${styles.blogCardLg}${rootClassName}`}>
+			<div onClick={onLearnMore} className={`${styles.blogCardLg}${rootClassName}`}>
 				<div className={styles.imageContainerLg}>
 					<Image src={image} alt="Blog post image" fill className={styles.image} />
 				</div>
@@ -67,7 +67,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ variant = "sm", image, date, title,
 	}
 	if (variant === "md") {
 		return (
-			<div className={`${styles.blogCardMd}${rootClassName}`}>
+			<div onClick={onLearnMore} className={`${styles.blogCardMd}${rootClassName}`}>
 				<div className={styles.imageContainerMd}>
 					<Image src={image} alt="Blog post image" fill className={styles.image} />
 				</div>
@@ -84,7 +84,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ variant = "sm", image, date, title,
 	}
 
 	return (
-		<div className={`${styles.blogCard}${rootClassName}`}>
+		<div onClick={onLearnMore} className={`${styles.blogCard}${rootClassName}`}>
 			<div className={styles.imageContainer}>
 				<Image src={image} alt="Blog post image" fill className={styles.image} />
 			</div>

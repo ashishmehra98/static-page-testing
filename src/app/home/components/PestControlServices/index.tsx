@@ -20,7 +20,8 @@ const PestControlServices = () => {
 				{/* Header Section */}
 				<HeaderSection
 					title="Our"
-					highlightedText="Pest Control"
+					highlightedText="Pest Control "
+					extraTitle="Services"
 					subtitle="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
 					align="center"
 					className={styles.headerSection}
