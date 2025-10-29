@@ -92,7 +92,7 @@ const Blogs = () => {
 								date={blog.date}
 								title={blog.title}
 								content={blog.meta.description}
-								onLearnMore={() => handleBlogClick(blog.id, blog.title)}
+								onLearnMore={() => handleBlogClick(blog.id)}
 								className="blog-card"
 							/>
 						))}
