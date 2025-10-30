@@ -96,6 +96,10 @@
 }
 
 @media screen and (max-width: 480px) {
+	.content {
+		gap: 20px;
+	}
+
 	.imageContainer {
 		width: 100%;
 		height: 231px;

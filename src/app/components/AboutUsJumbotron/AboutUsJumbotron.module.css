@@ -13,10 +13,10 @@
 /* Responsive adjustments */
 
 @media screen and (max-width: 1280px) {
-	.jumbotron > section {
-		height: 690px;
-		padding-top: 46px;
-	}
+	/* .jumbotron > section {
+		height: calc(100vh - 86px);
+		min-height: calc(100vh - 86px);
+	} */
 
 	.contactFormContainer {
 		position: static;

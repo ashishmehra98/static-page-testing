@@ -176,6 +176,13 @@
 }
 
 @media screen and (max-width: 480px) {
+	.step {
+		gap: 20px;
+	}
+	.numberText {
+		font-size: var(--process-stepNumber-mb);
+	}
+
 	.stepTitle {
 		font-size: var(--process-stepTitle-mb);
 	}

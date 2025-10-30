@@ -115,7 +115,7 @@
 }
 
 .infoItem {
-	font-size: 22px;
+	font-size: var(--pestStudy-infoItem-ds);
 	line-height: 1.15;
 	color: var(--secondary);
 	letter-spacing: -0.44px;
@@ -226,11 +226,11 @@
 
 	.infestationSigns .infoItem,
 	.processListSection .infoItem {
-		font-size: 20px;
+		font-size: var(--pestStudy-infoItem-tb);
 	}
 
 	.infestationSigns .infoItem:nth-of-type(1) {
-		margin-bottom: 8px;
+		font-size: var(--pestStudy-infoItem-heading-ds);
 	}
 }
 
@@ -247,15 +247,25 @@
 		flex-direction: column;
 		gap: 40px;
 	}
+
+	.infestationSigns .infoItem:nth-of-type(1) {
+		font-size: var(--pestStudy-infoItem-heading-tb);
+	}
 }
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
 	.footer {
 		margin-top: 300px !important;
 	}
+	.infestationSigns .infoItem:nth-of-type(1) {
+		font-size: var(--pestStudy-infoItem-heading-mb);
+	}
 }
 
 @media screen and (max-width: 480px) {
+	.infoItem {
+		font-size: var(--pestStudy-infoItem-mb);
+	}
 	.controlMattersSection :global(.header) p,
 	.commonSpeciesSection :global(.header) p,
 	.serviceMethodsSection :global(.header) p,
@@ -265,5 +275,9 @@
 
 	.footer {
 		margin-top: 350px !important;
+	}
+
+	.infestationSigns .infoItem:nth-of-type(1) {
+		font-size: var(--pestStudy-infoItem-heading-mb);
 	}
 }

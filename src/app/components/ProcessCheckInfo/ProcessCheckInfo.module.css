@@ -40,3 +40,18 @@
 	text-decoration: underline;
 	font-weight: bold;
 }
+
+@media screen and (max-width: 480px) {
+	.container {
+		gap: 12px;
+	}
+
+	.text {
+		font-size: var(--processCheckInfo-text-mb);
+	}
+
+	.iconContainer {
+		width: 24px;
+		height: 24px;
+	}
+}

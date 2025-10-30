@@ -114,7 +114,7 @@
 	/* HeaderSection Component */
 	--headerSection-mainTitle-ds: 56px;
 	--headerSection-mainTitle-tb: 42px;
-	--headerSection-mainTitle-mb: 32px;
+	--headerSection-mainTitle-mb: 30px;
 	--headerSection-subtitle-ds: 18px;
 	--headerSection-subtitle-tb: 18px;
 	--headerSection-subtitle-mb: 14px;
@@ -146,11 +146,11 @@
 
 	/* LocalPestExpert Component */
 	--localPestExpert-description-ds: 20px;
-	--localPestExpert-infoText-ds: 22px;
+	--localPestExpert-infoText-ds: 18px;
 	--localPestExpert-mapPlaceholder-tb: 18px;
-	--localPestExpert-infoText-tb: 20px;
+	--localPestExpert-infoText-tb: 18px;
 	--localPestExpert-mapPlaceholder-mb: 16px;
-	--localPestExpert-infoText-mb: 18px;
+	--localPestExpert-infoText-mb: 16px;
 
 	/* MobileNavigation Component */
 	--mobileNavigation-navLink-ds: 18px;
@@ -172,19 +172,21 @@
 	/* PestInfo Component */
 	--pestInfo-tag-ds: 20px;
 	--pestInfo-pestName-ds: 36px;
-	--pestInfo-pestName-mb: 28px;
+	--pestInfo-pestName-mb: 24px;
 	--pestInfo-paragraph-ds: 20px;
-	--pestInfo-paragraph-mb: 16px;
+	--pestInfo-paragraph-mb: 14px;
 
 	/* Process Component */
 	--process-stepNumber-ds: 24px;
 	--process-stepTitle-ds: 28px;
 	--process-stepTitle-mb: 22px;
+	--process-stepNumber-mb: 20px;
 	--process-stepDescription-ds: 16px;
 	--process-stepDescription-mb: 14px;
 
 	/* ProcessCheckInfo Component */
 	--processCheckInfo-text-ds: 22px;
+	--processCheckInfo-text-mb: 16px;
 
 	/* RatingCard Component */
 	--ratingCard-name-ds: 18.133px;
@@ -236,6 +238,14 @@
 	--howWeWork-headerTitle-mb: 32px;
 	--howWeWork-infoTitle-mb: 22px;
 	--howWeWork-infoDescription-mb: 14px;
+
+	/* Pest Study Pages */
+	--pestStudy-infoItem-ds: 22px;
+	--pestStudy-infoItem-tb: 20px;
+	--pestStudy-infoItem-mb: 16px;
+	--pestStudy-infoItem-heading-ds: 20px;
+	--pestStudy-infoItem-heading-tb: 18px;
+	--pestStudy-infoItem-heading-mb: 14px;
 }
 
 @theme inline {
