@@ -24,7 +24,7 @@ const mosquitoPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.MOSQUITOES_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Illustration of mosquito biting skin highlighting need for mosquito pest control",
 		infoItems: [
 			{
 				regularText:
@@ -104,7 +104,7 @@ const mosquitoPestStudyData = {
 		subtitle: "Our comprehensive <b>mosquito pest control</b> services include:",
 		align: "center" as const,
 		imageSrc: IMAGES.MOSQUITOES_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Macro shot of mosquito feeding on skin showing importance of mosquito pest control",
 		isReverse: true,
 		infoItems: [
 			{
@@ -171,7 +171,7 @@ const mosquitoPestStudyData = {
 		subtitle: "While professional <b>mosquito pest control</b> is most effective, here are some prevention tips:",
 		align: "center" as const,
 		imageSrc: IMAGES.MOSQUITOES_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Mosquito sucking blood on human skin requiring pest control for mosquitoes service",
 		isReverse: true,
 		infoItems: [
 			{

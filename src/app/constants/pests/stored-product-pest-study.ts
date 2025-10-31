@@ -24,7 +24,7 @@ const storedProductPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.STORED_PRODUCT_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Weevils infesting stored grain showing signs of common stored product pests",
 		infoItems: [
 			{
 				regularText:
@@ -58,7 +58,7 @@ const storedProductPestStudyData = {
 			"Sydney is home to a wide range of <b>common stored product pests</b>, most of which spread quickly once introduced. Some of the most frequent offenders include:",
 		align: "center" as const,
 		imageSrc: IMAGES.STORED_PRODUCT_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Stored grain beetles on wheat grains indicating presence of stored product pests",
 		isReverse: true,
 		infoItems: [
 			{
@@ -134,7 +134,7 @@ const storedProductPestStudyData = {
 			"At Ecovia, we don't just treat the symptoms. We eliminate the pests at their source. Our process is transparent, thorough, and designed to give long-lasting results.",
 		align: "center" as const,
 		imageSrc: IMAGES.STORED_PRODUCT_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Professional treating warehouse for common stored product pests infestation",
 		infoItems: [
 			{
 				boldText: "Inspection — ",
@@ -247,7 +247,7 @@ const storedProductPestStudyData = {
 			"While professional treatment is the most reliable solution, prevention plays a big role in keeping food storage pest-free. Here are practical steps you can take:",
 		align: "center" as const,
 		imageSrc: IMAGES.STORED_PRODUCT_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Close-up of weevils on stored seeds highlighting need for stored product pests contro",
 		isReverse: true,
 		infoItems: [
 			{

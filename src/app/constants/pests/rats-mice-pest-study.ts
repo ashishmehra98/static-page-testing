@@ -25,7 +25,7 @@ const ratsMicePestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.RAT_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Close-up of rat on pavement highlighting need for rats and mice pest control",
 		infoItems: [
 			{
 				regularText:
@@ -63,7 +63,7 @@ const ratsMicePestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.RAT_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Brown rat outside home before professional pest control for rats and mice treatment",
 		isReverse: true,
 		infoItems: [
 			{
@@ -138,7 +138,7 @@ const ratsMicePestStudyData = {
 			"Our approach focuses on both elimination and prevention. We don't just remove the visible rodents — we stop the problem at its source.",
 		align: "center" as const,
 		imageSrc: IMAGES.RAT_PEST_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Rat hiding in attic insulation before pest control for rats and mice removal",
 		infoItems: [
 			{
 				boldText: "Inspection: ",
@@ -208,7 +208,7 @@ const ratsMicePestStudyData = {
 		subtitle: "You can reduce the chances of rodents entering your home with these simple steps:",
 		align: "center" as const,
 		imageSrc: IMAGES.RAT_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Rat eating food scraps in kitchen needing rats and mice pest control service",
 		isReverse: true,
 		infoItems: [
 			{

@@ -25,7 +25,7 @@ const cockroachPestStudyData = {
 			"Cockroaches aren't just unpleasant to see scurrying across the kitchen floor. They pose serious health and hygiene risks:",
 		align: "center",
 		imageSrc: IMAGES.COCKROACHES_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "German cockroaches infestation on floor needing cockroach pest control treatment",
 		infoItems: [
 			{
 				boldText: "Food contamination: ",
@@ -58,7 +58,7 @@ const cockroachPestStudyData = {
 			"Different cockroach species require different treatments. Our technicians identify the exact species to ensure effective control.",
 		align: "center",
 		imageSrc: IMAGES.COCKROACHES_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Macro shot of cockroach showing detail for pest control cockroaches inspection",
 		isReverse: true,
 		infoItems: [
 			{
@@ -132,7 +132,7 @@ const cockroachPestStudyData = {
 			"At Ecovia, we don't rely on quick sprays that only kill the pests you see. Our approach combines safe, targeted treatments to eliminate infestations at the source.",
 		align: "center",
 		imageSrc: IMAGES.COCKROACH_PEST_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Professional applying cockroach pest control treatment indoors",
 		infoItems: [
 			{
 				boldText: "Gel baiting: ",
@@ -199,7 +199,7 @@ const cockroachPestStudyData = {
 			"Professional <b>cockroach pest control</b> is the only way to fully eliminate infestations, but you can reduce your risk with these steps:",
 		align: "center",
 		imageSrc: IMAGES.COCKROACH_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Cockroach on kitchen surface before pest control cockroaches service",
 		isReverse: true,
 		infoItems: [
 			{

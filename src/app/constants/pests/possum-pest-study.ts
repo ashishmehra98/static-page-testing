@@ -26,7 +26,7 @@ const possumPestStudyData = {
 			"Possums are part of Australia's native wildlife. But when they enter your home, they stop being cute and become a serious pest problem. Here are four key reasons why timely <b>possum pest control</b> is critical:",
 		align: "center" as const,
 		imageSrc: IMAGES.POSSUM_CONTROL_MATTERS_STUDY,
-		imageAlt: "residential possum",
+		imageAlt: "Possum climbing tree near home highlighting need for possum pest control services",
 		infoItems: [
 			{
 				boldText: "Structural damage & fire risk: ",
@@ -58,7 +58,7 @@ const possumPestStudyData = {
 		subtitle: "",
 		align: "center",
 		imageSrc: IMAGES.POSSUM_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Family of possums on tree branch before humane pest control for possums service",
 		isReverse: true,
 		infoItems: [
 			{
@@ -80,41 +80,6 @@ const possumPestStudyData = {
 				boldText: "Protected animal status: ",
 				regularText:
 					"In NSW, possums are protected under the <a href='https://legislation.nsw.gov.au/view/html/inforce/current/act-1974-080' target='_blank'>National Parks and Wildlife Act 1974</a>. You must follow rules around trapping, relocating or handling them.",
-			},
-			{
-				regularText:
-					"Because of these protections, <b>pest control for possums</b> is not the same as for rats or insects. Unlicensed or illegal removal can result in fines or worse.",
-			},
-		],
-	},
-
-	speciesRisks: {
-		title: "Possums in Sydney: ",
-		highlightedText: "Species, Behaviour & Risks",
-		extraTitle: "Understanding & Removing",
-		subtitle: "Understanding possum habits helps us remove them safely and permanently—here's what you need to know:",
-		align: "center" as const,
-		isReverse: true,
-		imageSrc: "/images/common-ant-species.png",
-		imageAlt: "possum species in Sydney",
-		infoItems: [
-			{
-				boldText: "Common species: ",
-				regularText:
-					"In Sydney, the <b>common brushtail possum</b> and <b>ringtail possum</b> are the ones most likely to invade homes",
-			},
-			{
-				boldText: "Nocturnal & territorial: ",
-				regularText: "Active at night, sleeping in hollows or roof voids during the day.",
-			},
-			{
-				boldText: "Excellent climbers: ",
-				regularText: "They use trees, guttering, pipes, overhanging branches—anything close to your roof—to gain access.",
-			},
-			{
-				boldText: "Protected animal status: ",
-				regularText:
-					"In NSW, possums are protected under the <a href='https://legislation.nsw.gov.au/view/html/inforce/current/act-1974-080'>National Parks and Wildlife Act 1974.</a> You must follow rules around trapping, relocating or handling them.",
 			},
 			{
 				regularText:
@@ -172,7 +137,7 @@ const possumPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.POSSUM_PEST_CONTROL_SERVICES_STUDY,
-		imageAlt: "possum pest control service",
+		imageAlt: "Possum spotted on tree branch requiring pest control for possums in residential area",
 		infoItems: [
 			{
 				regularText:

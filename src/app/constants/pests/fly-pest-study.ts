@@ -25,7 +25,7 @@ const fliesPestStudyData = {
 		subtitle: "A few flies here and there might seem harmless—until they aren't. Here's what's at stake:",
 		align: "center" as const,
 		imageSrc: IMAGES.FLY_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Macro shot of a black housefly on outdoor stone, used in fly pest control prevention tips",
 		infoItems: [
 			{
 				boldText: "Health risks: ",
@@ -59,7 +59,7 @@ const fliesPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.FLY_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Green bottle fly on a leaf, often targeted in pest control for flies around homes and gardens",
 		isReverse: true,
 		infoItems: [
 			{
@@ -145,7 +145,7 @@ const fliesPestStudyData = {
 			"Ecovia's approach is comprehensive, combining inspection, treatment, prevention, and guarantees. Here's how we do it for residential and commercial clients.",
 		align: "center" as const,
 		imageSrc: IMAGES.FLY_PEST_CONTROL_SERVICE_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Common housefly resting on a surface, highlighting the need for pest control for flies",
 		infoItems: [
 			{
 				boldText: "Inspection & Assessment: ",
@@ -228,7 +228,7 @@ const fliesPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.FLY_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Close-up of a striped housefly on green leaves, ideal for fly pest control services",
 		isReverse: true,
 		infoItems: [
 			{

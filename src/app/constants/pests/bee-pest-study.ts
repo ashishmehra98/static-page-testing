@@ -24,7 +24,7 @@ const beePestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.BEES_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Group of honeybees on wood surface, a typical scenario for pest control for bees",
 		infoItems: [
 			{
 				regularText:
@@ -68,7 +68,7 @@ const beePestStudyData = {
 			"Identifying which bees are on your property helps us choose the right removal method. Below are some types you might encounter:",
 		align: "center" as const,
 		imageSrc: IMAGES.BEES_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Close-up of a bee on a green leaf, commonly seen in bee pest control inspections",
 		isReverse: true,
 		infoItems: [
 			{
@@ -144,7 +144,7 @@ const beePestStudyData = {
 		subtitle: "At Ecovia, we tailor the <b>bee pest control</b> process to each situation. Here are the methods we use:",
 		align: "center" as const,
 		imageSrc: IMAGES.BEES_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Beekeeper removing a bee swarm from a tree branch, illustrating safe bee pest control methods",
 		infoItems: [
 			{
 				boldText: "Inspection & identification — ",
@@ -225,7 +225,7 @@ const beePestStudyData = {
 			"Here are practical actions you can take to reduce the risk of bee infestation — but note that DIY methods rarely remove an active hive fully:",
 		align: "center" as const,
 		imageSrc: IMAGES.BEES_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Honeybee collecting pollen from flowers, part of pest control for bees and hive management awareness",
 		isReverse: true,
 		infoItems: [
 			{

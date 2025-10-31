@@ -27,7 +27,7 @@ const bedBugsPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.BED_BUG_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Bed bugs crawling along a mattress edge, common sign requiring pest control for bed bugs",
 		infoItems: [
 			{
 				regularText:
@@ -105,7 +105,7 @@ const bedBugsPestStudyData = {
 			"At Ecovia, we understand that every infestation is different. Our approach to <b>bed bugs pest control</b> is targeted, safe, and designed to stop the problem at its source.",
 		align: "center",
 		imageSrc: IMAGES.BED_BUG_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Close-up of multiple bed bugs on fabric, example for bed bugs pest control services",
 		infoItems: [
 			{
 				regularText: "Our services include:",
@@ -180,7 +180,7 @@ const bedBugsPestStudyData = {
 			"Professional treatment is the only reliable solution for established infestations, but there are steps you can take to lower the risk:",
 		align: "center",
 		imageSrc: IMAGES.BED_BUG_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Single bed bug on bedding with droppings, used to illustrate pest control for bed bugs in homes",
 		isReverse: true,
 		infoItems: [
 			{

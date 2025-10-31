@@ -24,7 +24,7 @@ const birdPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.BIRDS_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Small bird perched on a thin branch, representing bird pest control in gardens",
 		infoItems: [
 			{
 				regularText: "Bird infestation is more than a nuisance — it brings real risks:",
@@ -68,7 +68,7 @@ const birdPestStudyData = {
 		subtitle: "Knowing which species you're dealing with helps us tailor the solution:",
 		align: "center" as const,
 		imageSrc: IMAGES.BIRDS_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Sparrow sitting on a house gutter, a common target for pest control for birds",
 		isReverse: true,
 		infoItems: [
 			{
@@ -152,7 +152,7 @@ const birdPestStudyData = {
 			"We apply a layered approach that's humane, targeted, and effective. Here's how Ecovia handles <b>bird pest control</b>:",
 		align: "center" as const,
 		imageSrc: IMAGES.BIRD_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Yellow wagtail on soil field, ideal example for bird pest control in farms",
 		infoItems: [
 			{
 				boldText: "Inspection & Assessment — ",
@@ -232,7 +232,7 @@ const birdPestStudyData = {
 		subtitle: "These aren't full solutions, but they help reduce risk:",
 		align: "center" as const,
 		imageSrc: IMAGES.BIRDS_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Brown bird cleaning feathers near reeds, illustrating natural pest control for birds in wetland areas",
 		isReverse: true,
 		infoItems: [
 			{

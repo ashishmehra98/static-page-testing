@@ -25,7 +25,7 @@ const spiderPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.SPIDER_CONTROL_MATTERS_STUDY,
-		imageAlt: "spider control matters",
+		imageAlt: "Example of pest control for spiders showing spider activity and web structure in Sydney homes",
 		infoItems: [
 			{
 				boldText: "Health & safety risk: ",
@@ -55,7 +55,7 @@ const spiderPestStudyData = {
 			"Here are a few of the spiders we frequently encounter in the Sydney region. By identifying the species correctly, our <b>spider pest control Sydney</b> solutions are tailored to the exact problem, ensuring long-lasting results.",
 		align: "center" as const,
 		imageSrc: IMAGES.SPIDER_COMMON_SPECIES_STUDY,
-		imageAlt: "common spider species",
+		imageAlt: "Spider pest control Sydney treatment targets outdoor spiders and webs around homes.",
 		isReverse: true,
 		infoItems: [
 			{
@@ -82,7 +82,8 @@ const spiderPestStudyData = {
 				regularText: "Slender body with a white-tail marking; wanders indoors, especially in cooler months; medium risk.",
 			},
 			{
-				regularText: "By <a href=\"https://sydney.pestcontrol.org.au/spider-identification.html\" target=\"_blank\">identifying the spider species</a> you're dealing with, our team can tailor the right approach — from urgency of treatment to exclusion methods.",
+				regularText:
+					'By <a href="https://sydney.pestcontrol.org.au/spider-identification.html" target="_blank">identifying the spider species</a> you\'re dealing with, our team can tailor the right approach — from urgency of treatment to exclusion methods.',
 			},
 		],
 	},
@@ -133,7 +134,7 @@ const spiderPestStudyData = {
 			"At Ecovia Pest Control, our approach to <b>spider pest control</b> covers inspection, treatment and prevention. Here's what we deliver:",
 		align: "center" as const,
 		imageSrc: IMAGES.SPIDER_CONTROL_SERVICES_STUDY,
-		imageAlt: "spider control services",
+		imageAlt: "Sydney funnel-web spider example highlighting need for professional spider pest control",
 		infoItems: [
 			{
 				boldText: "Full inspection: ",
@@ -205,7 +206,7 @@ const spiderPestStudyData = {
 			"While professional assistance is best for established issues, here are some steps you can take now to make your home less attractive to spiders:",
 		align: "center" as const,
 		imageSrc: IMAGES.SPIDER_DIY_STUDY,
-		imageAlt: "spider DIY tips",
+		imageAlt: "Spider removal in Sydney with technician treatments focus on spiders nesting around homes and gardens",
 		isReverse: true,
 		infoItems: [
 			{

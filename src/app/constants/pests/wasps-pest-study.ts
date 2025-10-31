@@ -25,7 +25,7 @@ const waspsPestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.WASPS_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Wasp crawling outdoors highlighting need for pest control for wasps",
 		infoItems: [
 			{
 				regularText: "Wasps are more than just annoying. Ignoring them can lead to serious consequences:",
@@ -65,7 +65,7 @@ const waspsPestStudyData = {
 			"Understanding which <b>wasp species</b> you might face helps with correct treatment. Here are the ones we commonly see around Sydney / New South Wales:",
 		align: "center" as const,
 		imageSrc: IMAGES.WASPS_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Cicadas wasps resting on tree bark before wasp pest control Sydney inspection",
 		isReverse: true,
 		infoItems: [
 			{
@@ -151,7 +151,7 @@ const waspsPestStudyData = {
 			"At Ecovia, we use a targeted, safety-first approach to <b>wasp pest control</b> and nest removal. Below are our main methods:",
 		align: "center" as const,
 		imageSrc: IMAGES.WASP_PEST_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Macro shot of wasp showing detail for wasp pest control Sydney service",
 		infoItems: [
 			{
 				boldText: "Nest Removal & Direct Treatment: ",

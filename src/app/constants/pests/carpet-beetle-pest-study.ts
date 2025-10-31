@@ -24,7 +24,7 @@ const carpetBeetlePestStudyData = {
 		subtitle: "",
 		align: "center" as const,
 		imageSrc: IMAGES.CARPET_BEETLE_CONTROL_MATTERS_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Detailed view of carpet beetle species requiring pest control carpet beetles service",
 		infoItems: [
 			{
 				boldText: "Damage to fabrics & valuables: ",
@@ -62,7 +62,7 @@ const carpetBeetlePestStudyData = {
 		subtitle: "Carpet beetles belong to the Dermestidae family. In Australia, the most common species include:",
 		align: "center" as const,
 		imageSrc: IMAGES.CARPET_BEETLE_COMMON_SPECIES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Adult carpet beetle crawling indoors before carpet beetle pest control treatment",
 		isReverse: true,
 		infoItems: [
 			{
@@ -165,7 +165,7 @@ const carpetBeetlePestStudyData = {
 			"At Ecovia, we customise treatments depending on infestation severity, fabric type, and location. Our methods include:",
 		align: "center" as const,
 		imageSrc: IMAGES.CARPET_BEETLE_CONTROL_SERVICES_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Carpet beetle larvae infesting carpet fibres before pest control carpet beetles treatment",
 		infoItems: [
 			{
 				boldText: "Comprehensive inspection: ",
@@ -240,7 +240,7 @@ const carpetBeetlePestStudyData = {
 		subtitle: "These actions help minimise risk (though they're not enough alone):",
 		align: "center" as const,
 		imageSrc: IMAGES.CARPET_BEETLE_DIY_STUDY,
-		imageAlt: "commercial",
+		imageAlt: "Macro shot of carpet beetle showing detail for carpet beetle pest control identification",
 		isReverse: true,
 		infoItems: [
 			{
