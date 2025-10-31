@@ -8,7 +8,7 @@ const storedProductPestStudyData = {
 			"Ecovia provides effective stored product pests control in Sydney. Eliminate pantry moths, beetles, and weevils with safe, lasting results.",
 	},
 	hero: {
-		backgroundImage: IMAGES.PEST_STUDY_BG,
+		backgroundImage: IMAGES.STORED_PRODUCT_PESTS_PEST_STUDY_BG,
 		heading: "Stored Product Pests ",
 		highlightedText: "Control ",
 		subHeading: "In Sydney",

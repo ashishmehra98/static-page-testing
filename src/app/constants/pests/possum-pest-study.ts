@@ -8,7 +8,7 @@ const possumPestStudyData = {
 			"Ecovia provides licensed, humane possum pest control Sydney wide. We inspect, trap, seal & prevent re-entry. Safe for families & pets. Free inspection.",
 	},
 	hero: {
-		backgroundImage: IMAGES.POSSUM_STUDY_BG,
+		backgroundImage: IMAGES.POSSUM_PEST_STUDY_BG,
 		heading: "Possum ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",

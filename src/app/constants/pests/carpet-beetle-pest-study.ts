@@ -8,7 +8,7 @@ const carpetBeetlePestStudyData = {
 			"Protect your carpets and fabrics from damage. Ecovia offers expert carpet beetle pest control in Sydney using safe, proven treatments and guaranteed results.",
 	},
 	hero: {
-		backgroundImage: IMAGES.PEST_STUDY_BG,
+		backgroundImage: IMAGES.CARPET_BEETLE_PEST_STUDY_BG,
 		heading: "Carpet Beetle ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",

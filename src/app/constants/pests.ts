@@ -9,6 +9,7 @@ import fliesPestStudyData from "./pests/fly-pest-study";
 import mosquitoPestStudyData from "./pests/mosquito-pest-study";
 import possumPestStudyData from "./pests/possum-pest-study";
 import ratsMicePestStudyData from "./pests/rats-mice-pest-study";
+import spiderPestStudyData from "./pests/spider-pest-study";
 import storedProductPestStudyData from "./pests/stored-product-pest-study";
 import waspsPestStudyData from "./pests/wasps-pest-study";
 
@@ -23,6 +24,7 @@ export const pestPages = {
 	"mosquito-pest-control": mosquitoPestStudyData,
 	"possum-pest-control": possumPestStudyData,
 	"rats-mice-pest-control": ratsMicePestStudyData,
+	"spider-pest-control-study": spiderPestStudyData,
 	"stored-product-pests-control": storedProductPestStudyData,
 	"wasp-pest-control": waspsPestStudyData,
 };
@@ -62,7 +64,7 @@ export const pestData = [
 		pestName: "Spiders (including dangerous species)",
 		commonSigns: "Webs in corners, sightings in dark areas",
 		treatment: "We use safe sprays and residual barrier treatments. We also reduce harbourage in storage and garden areas",
-		path: "stored-product-pests-control" as PestPages,
+		path: "spider-pest-control-study" as PestPages,
 	},
 	{
 		imageSrc: IMAGES.PEST_BED_BUGS,

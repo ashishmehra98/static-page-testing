@@ -8,7 +8,7 @@ const waspsPestStudyData = {
 			"Safe, effective wasp pest control Sydney wide. We remove wasp nests fast — licensed, pet-safe and guaranteed. Call Ecovia for a free quote.",
 	},
 	hero: {
-		backgroundImage: IMAGES.WASPS_BG_STUDY,
+		backgroundImage: IMAGES.WASPS_PEST_STUDY_BG,
 		heading: "Wasp ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",

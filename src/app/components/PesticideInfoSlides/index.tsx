@@ -27,6 +27,14 @@ const pesticideData: PesticideData[] = [
 		path: "ant-pest-control-sydney",
 	},
 	{
+		id: "spider",
+		insectType: "spider",
+		name: "Spiders",
+		description:
+			"Nature's stealthy agent — always hunting, never resting. But if they're showing up inside, it usually means your home is offering food, shelter, or a way in.",
+		path: "spider-pest-control-study",
+	},
+	{
 		id: "bedbug",
 		insectType: "bedbug",
 		name: "Bed bugs",

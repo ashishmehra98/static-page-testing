@@ -8,7 +8,7 @@ const mosquitoPestStudyData = {
 			"Get fast, reliable mosquito pest control in Sydney with Ecovia. Safe for kids and pets. Reclaim your outdoor space today with professional pest control.",
 	},
 	hero: {
-		backgroundImage: IMAGES.MOSQUITOES_STUDY_BG,
+		backgroundImage: IMAGES.MOSQUITOES_PEST_STUDY_BG,
 		heading: "Mosquito ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",

@@ -8,7 +8,7 @@ const ratsMicePestStudyData = {
 			"Protect your Sydney home or business from rodents. Our professional pest control for rats and mice is safe, effective, and guaranteed. Book now.",
 	},
 	hero: {
-		backgroundImage: IMAGES.RAT_DIY_STUDY,
+		backgroundImage: IMAGES.RAT_AND_MICE_PEST_STUDY_BG,
 		heading: "Rats & Mice ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",

@@ -8,7 +8,7 @@ const fliesPestStudyData = {
 			"Need fly pest control in Sydney? Ecovia provides safe, effective treatments that stop flies at the source. Call now for trusted residential and commercial fly control.",
 	},
 	hero: {
-		backgroundImage: IMAGES.PEST_STUDY_BG,
+		backgroundImage: IMAGES.FLIES_PEST_STUDY_BG,
 		heading: "Fly ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",

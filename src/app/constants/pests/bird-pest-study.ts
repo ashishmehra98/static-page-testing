@@ -8,7 +8,7 @@ const birdPestStudyData = {
 			"Sydney’s trusted specialists in bird pest control. Ecovia protects your property with safe, effective bird exclusion and deterrent systems",
 	},
 	hero: {
-		backgroundImage: IMAGES.PEST_STUDY_BG,
+		backgroundImage: IMAGES.BIRD_PEST_STUDY_BG,
 		heading: "Bird ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",

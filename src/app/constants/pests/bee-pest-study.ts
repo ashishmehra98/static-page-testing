@@ -8,7 +8,7 @@ const beePestStudyData = {
 			"Need bee removal in Sydney? Ecovia provides safe, humane bee pest control and hive removal across Sydney. Licensed, insured, and eco-friendly",
 	},
 	hero: {
-		backgroundImage: IMAGES.PEST_STUDY_BG,
+		backgroundImage: IMAGES.BEES_PEST_STUDY_BG,
 		heading: "Bee ",
 		highlightedText: "Pest Control ",
 		subHeading: "In Sydney",

@@ -8,7 +8,7 @@ const cockroachPestStudyData = {
 			"Professional cockroach pest control in Sydney. Ecovia eliminates infestations with safe, proven methods. Book your inspection today for lasting results.",
 	},
 	hero: {
-		backgroundImage: IMAGES.PEST_STUDY_BG,
+		backgroundImage: IMAGES.COCKROACHES_PEST_STUDY_BG,
 		heading: "Cockroach ",
 		highlightedText: "Pest Control ",
 		subHeading: "Sydney",
