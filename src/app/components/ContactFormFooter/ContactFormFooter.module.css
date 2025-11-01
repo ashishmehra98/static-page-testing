@@ -9,8 +9,8 @@
 	width: 55% !important;
 }
 
-.description {
-	width: 55% !important;
+.content > div {
+	width: 80%;
 }
 
 .contactFormContainer {
@@ -80,11 +80,7 @@
 @media screen and (min-width: 481px) and (max-width: 1023px) {
 	.content,
 	.infoGroup {
-		width: 90% !important;
-	}
-
-	.description {
-		width: 70% !important;
+		width: 100% !important;
 	}
 
 	.infoGroup {
@@ -122,8 +118,7 @@
 	}
 
 	.content,
-	.infoGroup,
-	.description {
+	.infoGroup {
 		width: 100% !important;
 	}
 

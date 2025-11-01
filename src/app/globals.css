@@ -134,8 +134,8 @@
 	--info-title-ds: 28px;
 	--info-title-tb: 26px;
 	--info-title-mb: 18px;
-	--info-title-col-ds: 24px;
-	--info-title-col-tb: 26px;
+	--info-title-col-ds: 22px;
+	--info-title-col-tb: 22px;
 	--info-title-col-mb: 18px;
 	--info-description-ds: 18px;
 
@@ -146,7 +146,7 @@
 
 	/* LocalPestExpert Component */
 	--localPestExpert-description-ds: 20px;
-	--localPestExpert-infoText-ds: 18px;
+	--localPestExpert-infoText-ds: 17px;
 	--localPestExpert-mapPlaceholder-tb: 18px;
 	--localPestExpert-infoText-tb: 18px;
 	--localPestExpert-mapPlaceholder-mb: 16px;
@@ -159,11 +159,11 @@
 	--mobileNavigation-additionalLink-mb: 13px;
 
 	/* PesticideInfo Component */
-	--pesticideInfo-name-ds: 32px;
-	--pesticideInfo-name-mb: 28px;
-	--pesticideInfo-description-ds: 16px;
-	--pesticideInfo-description-mb: 15px;
-	--pesticideInfo-learnMoreText-ds: 18px;
+	--pesticideInfo-name-ds: 24px;
+	--pesticideInfo-name-mb: 24px;
+	--pesticideInfo-description-ds: 15px;
+	--pesticideInfo-description-mb: 14px;
+	--pesticideInfo-learnMoreText-ds: 16px;
 	--pesticideInfo-learnMoreText-mb: 16px;
 
 	/* PesticideInfoSection Component */
@@ -185,7 +185,7 @@
 	--process-stepDescription-mb: 14px;
 
 	/* ProcessCheckInfo Component */
-	--processCheckInfo-text-ds: 22px;
+	--processCheckInfo-text-ds: 20px;
 	--processCheckInfo-text-mb: 16px;
 
 	/* RatingCard Component */
@@ -240,8 +240,8 @@
 	--howWeWork-infoDescription-mb: 14px;
 
 	/* Pest Study Pages */
-	--pestStudy-infoItem-ds: 22px;
-	--pestStudy-infoItem-tb: 20px;
+	--pestStudy-infoItem-ds: 20px;
+	--pestStudy-infoItem-tb: 18px;
 	--pestStudy-infoItem-mb: 16px;
 	--pestStudy-infoItem-heading-ds: 20px;
 	--pestStudy-infoItem-heading-tb: 18px;

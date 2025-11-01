@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { createSlug } from "../blogs/[slug]/utils";
 import { HomeJumbotron, PestControlServices, HowWeWork, BookConsultation, BestWeOffer, Blogs } from "./components";
 import styles from "./style.module.css";
 import Container from "@/app/components/Container";
@@ -26,8 +25,7 @@ export default function Home() {
 	};
 
 	const handleLearnMore = (title: string) => {
-		const slug = createSlug(title);
-		router.push(`/blogs/${slug}`);
+		router.push(`/blogs/${title}`);
 	};
 
 	return (

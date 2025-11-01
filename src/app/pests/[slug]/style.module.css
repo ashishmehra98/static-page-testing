@@ -137,6 +137,7 @@
 .regularText a,
 .infoItem a {
 	color: var(--hightlight-text);
+	text-decoration: underline;
 }
 
 /* Image container */

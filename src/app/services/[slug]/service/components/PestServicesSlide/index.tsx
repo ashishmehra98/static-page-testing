@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import styles from "./PestServicesSlide.module.css";
@@ -11,17 +11,23 @@ import { pestData } from "@/app/constants/pests";
 
 const slides = pestData;
 
-const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
+const PestServicesSlide: React.FC<{ className?: string; data?: PestServiceSlideData[] }> = ({ className, data }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const swiperRef = useRef<SwiperClass | null>(null);
 	const isMobile = useIsMobile({ breakpoint: 768 });
+	const currentData = data ? data : slides;
+
+	const swiperKey = useMemo(() => {
+		const dataKey = currentData.map((s) => s.pestName).join("-");
+		return `${isMobile ? "mobile" : "desktop"}-${dataKey}`;
+	}, [currentData, isMobile]);
 
 	const handleSlideChange = (swiper: SwiperClass) => {
 		setActiveIndex(swiper.activeIndex);
 	};
 
 	const onNext = () => {
-		if (activeIndex < slides.length - 1) {
+		if (activeIndex < currentData.length - 1) {
 			const newIndex = activeIndex + 1;
 			setActiveIndex(newIndex);
 			if (swiperRef.current) {
@@ -72,7 +78,7 @@ const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 
 			<div className={styles.sliderWrapper}>
 				<Swiper
-					key={isMobile ? "mobile" : "desktop"}
+					key={swiperKey}
 					modules={[Navigation, Pagination, Autoplay, EffectFade]}
 					spaceBetween={0}
 					slidesPerView={1}
@@ -91,8 +97,8 @@ const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 					onSwiper={(swiper) => (swiperRef.current = swiper)}
 					onSlideChange={handleSlideChange}
 					className={styles.swiper}>
-					{slides.map((s) => (
-						<SwiperSlide key={s.path} className={styles.slide}>
+					{currentData.map((s) => (
+						<SwiperSlide key={s.pestName} className={styles.slide}>
 							<PestInfo
 								imageSrc={s.imageSrc}
 								imageAlt={s.imageAlt}
@@ -107,7 +113,7 @@ const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 				<div className={styles.actionView}>
 					<div className={styles.progressContainer}>
 						<div className={styles.progressBar}>
-							<div className={styles.progressFill} style={{ width: `${((activeIndex + 1) / slides.length) * 100}%` }} />
+							<div className={styles.progressFill} style={{ width: `${((activeIndex + 1) / currentData.length) * 100}%` }} />
 						</div>
 					</div>
 					<div className={styles.slideButtonContainer}>
@@ -119,7 +125,7 @@ const PestServicesSlide: React.FC<{ className?: string }> = ({ className }) => {
 						<button
 							className={`${styles.navButton} ${styles.nextButton}`}
 							onClick={onNext}
-							disabled={activeIndex === slides.length - 1}>
+							disabled={activeIndex === currentData.length - 1}>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 							</svg>

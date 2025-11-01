@@ -1,3 +1,7 @@
+.jumbotronContent > div {
+	width: 600px;
+}
+
 .residentialInfoSection,
 .safetyMeasureSection,
 .userReviewsSection {
@@ -56,6 +60,25 @@
 	height: 68px;
 }
 
+.processListSection {
+	min-height: initial;
+	padding: 60px 0;
+}
+
+.processListSection > div {
+	display: flex;
+	flex-direction: row;
+	gap: 144px;
+}
+
+.processListSection :global(.header) {
+	flex: 0.5;
+}
+
+.processListSection .infoItem {
+	color: var(--white);
+}
+
 /* Content */
 .infoContainer {
 	display: flex;
@@ -72,7 +95,7 @@
 }
 
 .infoItem {
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 1.15;
 	color: var(--secondary);
 	letter-spacing: -0.44px;
@@ -101,6 +124,12 @@
 
 .footer {
 	padding-top: 80px;
+}
+
+.regularText a,
+.infoItem a {
+	color: var(--hightlight-text);
+	text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) {
@@ -135,6 +164,15 @@
 	.reverseSectionContent button {
 		height: 48px;
 	}
+
+	.processListSection > div {
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.processListSection .infoItem {
+		font-size: 20px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -160,5 +198,9 @@
 
 	.footer {
 		margin-top: 350px !important;
+	}
+
+	.processListSection .infoItem {
+		font-size: 16px;
 	}
 }

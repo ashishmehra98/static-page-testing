@@ -72,7 +72,8 @@ interface ControlMattersConfig {
 	align: AlignType;
 	imageSrc: string;
 	imageAlt: string;
-	infoItems: InfoItem[];
+	infoItems?: InfoItem[];
+	description?: string;
 }
 
 // Common species section interface
@@ -166,6 +167,14 @@ interface FooterConfig {
 	showCallCTAOnMobile: boolean;
 }
 
+// Coverage section interface
+interface CoverageConfig {
+	title: string;
+	highlightedText: string;
+	subHeading: string;
+	description: string;
+}
+
 // Review interface
 interface Review {
 	id: number;
@@ -185,6 +194,7 @@ interface FAQ {
 
 // Type alias for extra content configuration
 type ExtraContentConfig = ProcessListConfig;
+type WhyChooseConfig = InfestationSignsConfig;
 
 // Main pest study config interface
 interface PestStudyConfig {
@@ -219,6 +229,35 @@ interface FAQItem {
 	answer: string;
 }
 
+// Process step interface
+interface ProcessStep {
+	number: string;
+	title: string;
+	description: string;
+}
+
+// Process config interface
+interface ProcessConfig {
+	steps: ProcessStep[];
+}
+
+// Eco-friendly pest control service config (residential pest service config)
+interface ServiceConfig {
+	meta: Meta;
+	hero: Partial<HeroConfig>;
+	whyChoose: Partial<WhyChooseConfig>;
+	controlMatters: Partial<ControlMattersConfig>;
+	serviceMethods: Partial<ServiceMethodsConfig>;
+	process: Partial<ProcessConfig>;
+	safetyMeasures: Partial<ControlMattersConfig>;
+	reviews: Review[];
+	faq: FAQ[];
+	coverage: Partial<CoverageConfig>;
+	footer: Partial<FooterConfig>;
+	pests: PestServiceSlideData[];
+}
+
+//Blog Data
 interface BlogData {
 	id: string;
 	image: string;
@@ -226,4 +265,13 @@ interface BlogData {
 	title: string;
 	content: string;
 	meta: Meta;
+	slug: string;
+}
+
+interface PestServiceSlideData {
+	imageSrc: string;
+	imageAlt: string;
+	pestName: string;
+	commonSigns: string;
+	treatment: string;
 }

@@ -55,6 +55,7 @@
 
 .infoContainerCol .title {
 	font-size: var(--info-title-col-ds);
+	width: 85%;
 }
 
 /* Description styling */
@@ -95,5 +96,6 @@
 
 	.infoContainerCol .title {
 		font-size: var(--info-title-col-mb);
+		width: 100%;
 	}
 }

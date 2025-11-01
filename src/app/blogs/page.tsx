@@ -1,9 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import useIsMobile from "../../hooks/useIsMobile";
 import styles from "./style.module.css";
-import { createSlug } from "./[slug]/utils";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
 import Hero from "@/app/components/Hero";
@@ -13,6 +11,7 @@ import Footer from "@/app/components/Footer";
 import HomeFooterJumbotron from "@/app/components/ContactFormFooter";
 import { IMAGES } from "@/app/constants/images";
 import blogs from "@/app/constants/blogs";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const Blogs = () => {
 	const router = useRouter();
@@ -22,12 +21,11 @@ const Blogs = () => {
 	const latestPosts = blogs.slice(0, 4);
 
 	// Get featured posts (first 7 blogs)
-	const featuredPosts = blogs.slice(5, 12);
+	// const featuredPosts = blogs.slice(5, 12);
 
 	// Navigate to blog details
 	const handleBlogClick = (title: string) => {
-		const slug = createSlug(title);
-		router.push(`/blogs/${slug}`);
+		router.push(`/blogs/${title}`);
 	};
 
 	return (
@@ -49,7 +47,7 @@ const Blogs = () => {
 					</Hero>
 				</div>
 				{/* Feature Posts */}
-				<div className={styles.featuredPostsSection}>
+				{/* <div className={styles.featuredPostsSection}>
 					<div className={styles.sectionHeading}>
 						<h2 className={styles.sectionTitle}>Featured posts</h2>
 						<div className={styles.sectionDivider} />
@@ -76,7 +74,7 @@ const Blogs = () => {
 							);
 						})}
 					</div>
-				</div>
+				</div> */}
 				{/* Latest Posts */}
 				<div className={styles.latestPostsSection}>
 					<div className={styles.sectionHeading}>
@@ -87,12 +85,12 @@ const Blogs = () => {
 						{latestPosts.map((blog) => (
 							<BlogCard
 								key={blog.id}
-								variant="lg"
+								variant={isMobile ? "lg" : "md"}
 								image={blog.image}
 								date={blog.date}
 								title={blog.title}
 								content={blog.meta.description}
-								onLearnMore={() => handleBlogClick(blog.id)}
+								onLearnMore={() => handleBlogClick(blog.slug)}
 								className="blog-card"
 							/>
 						))}

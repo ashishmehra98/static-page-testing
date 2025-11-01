@@ -137,8 +137,9 @@
 }
 
 .blogContent a {
-	color: var(--primary);
+	color: var(--hightlight-text);
 	text-decoration: underline;
+	font-weight: bold;
 	transition: opacity 0.2s ease;
 }
 

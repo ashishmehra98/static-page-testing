@@ -10,17 +10,6 @@ interface BlogDetailsProps {
 	};
 }
 
-export async function generateStaticParams() {
-	return blogs.map((blog) => ({
-		slug: blog.title
-			.toLowerCase()
-			.replace(/[^a-z0-9\s-]/g, "")
-			.replace(/\s+/g, "-")
-			.replace(/-+/g, "-")
-			.trim(),
-	}));
-}
-
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
 	const blog = findBlogBySlug(blogs, params.slug);
 

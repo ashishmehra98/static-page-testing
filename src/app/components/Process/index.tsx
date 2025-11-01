@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "./Process.module.css";
 
-const processSteps = [
+const defaultProcessSteps = [
 	{
 		number: "01",
 		title: "Inspection & assessment",
@@ -36,12 +36,22 @@ const processSteps = [
 	},
 ];
 
-const Process: React.FC = () => {
+interface ProcessStep {
+	number: string;
+	title: string;
+	description: string;
+}
+
+interface ProcessProps {
+	steps?: ProcessStep[];
+}
+
+const Process: React.FC<ProcessProps> = ({ steps = defaultProcessSteps }) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.separator} />
 			<div className={styles.flowOne}>
-				{processSteps.slice(0, 3).map((step, index) => (
+				{steps.slice(0, 3).map((step, index) => (
 					<div key={index} className={styles.step}>
 						{index !== 2 && <div className={styles.separator} />}
 						<div className={styles.stepNumber}>
@@ -56,7 +66,7 @@ const Process: React.FC = () => {
 			</div>
 
 			<div className={styles.flowTwo}>
-				{processSteps.slice(3).map((step, index) => (
+				{steps.slice(3).map((step, index) => (
 					<div key={index + 3} className={styles.step}>
 						{index === 0 && <div className={styles.separator} />}
 						<div className={styles.stepNumber}>

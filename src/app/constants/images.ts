@@ -31,6 +31,14 @@ export const IMAGES = {
 	PEST_SPIDER: "/images/pest/spider.jpg",
 	LOCAL_SYDNEY_EXPERT: "/images/local-sydney-experts.jpg",
 
+	// Services Images
+	COMMERCIAL_PEST_CONTROL: "/images/services/commercial-pest-control.webp",
+	CONSTRUCTION_SITE_PEST_CONTROL: "/images/services/construction-site-pest-control.jpeg",
+	ECO_FRIENDLY_PEST_CONTROL: "/images/services/eco-friendly-pest-control.jpeg",
+	INDUSTRIAL_PEST_CONTROL: "/images/services/industrial-pest-control.jpg",
+	RESIDENTIAL_PEST_CONTROL: "/images/services/residential-pest-control.webp",
+	STRATA_PEST_CONTROL: "/images/services/strata-pest-control.jpg",
+
 	// Ant Pest Study Images
 	ANT_PEST_STUDY_BG: "/images/pest-study/ant/pest-study-bg.jpg",
 	ANT_CONTROL_MATTERS_STUDY: "/images/pest-study/ant/ant-control-matters.jpg",
@@ -118,6 +126,11 @@ export const IMAGES = {
 	SPIDER_CONTROL_SERVICES_STUDY: "/images/pest-study/spider/spider-control-services.jpg",
 	SPIDER_DIY_STUDY: "/images/pest-study/spider/spider-diy.jpg",
 	SPIDER_COMMON_SPECIES_STUDY: "/images/pest-study/spider/common-spider-species.jpg",
+
+	// Blog
+	BLOG_THUMBNAIL: "/images/blog/thumbnail.jpg",
+	BLOG_INDOOR_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",
+	BLOG_LICENSED_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",
 };
 
 export type ImageName = keyof typeof IMAGES;

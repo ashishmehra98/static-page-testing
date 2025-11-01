@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Home from "./home/page";
 
 export const metadata: Metadata = {
 	title: "Ecovia Pest Control | Trusted Pest Control for Homes & Businesses in Sydney",
@@ -8,6 +7,10 @@ export const metadata: Metadata = {
 	keywords: ["pest control", "pest control sydney"],
 };
 
-export default function RootPage() {
-	return <Home />;
+export default function HomeLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
+	return <>{children}</>;
 }

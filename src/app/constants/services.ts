@@ -1,3 +1,11 @@
+import ecoFriendlyPestServiceData from "./services/eco-friendly-pest-control-service";
+import industrialPestControlServiceData from "./services/industrial-pest-control-service";
+import commercialPestControlServiceData from "./services/commercial-pest-control-service";
+import constructionSitePestControlServiceData from "./services/construction-site-pest-control-service";
+import residentialPestControlServiceData from "./services/residential-pest-control-service";
+import strataPestControlServiceData from "./services/strata-pest-control-service";
+import { IMAGES } from "./images";
+
 const services: Service[] = [
 	{
 		id: "general-pest-control",
@@ -56,7 +64,83 @@ const services: Service[] = [
 ];
 
 const servicesPages = {
-	"residential-pest-control": "",
+	"eco-friendly-pest-control": ecoFriendlyPestServiceData,
+	"industrial-pest-control": industrialPestControlServiceData,
+	"commercial-pest-control": commercialPestControlServiceData,
+	"construction-site-pest-control": constructionSitePestControlServiceData,
+	"residential-pest-control": residentialPestControlServiceData,
+	"strata-pest-control": strataPestControlServiceData,
 };
 
-export { services, servicesPages };
+export type ServicePages = keyof typeof servicesPages;
+
+const servicesIndexPage = [
+	{
+		id: 1,
+		imageSrc: IMAGES.RESIDENTIAL_PEST_CONTROL,
+		imageAlt: "Residential pest control service",
+		serviceNumber: "01/",
+		serviceName: "Residential pest control",
+		serviceDescription:
+			"Keep your Sydney home pest-free with Ecovia's fast, safe residential pest control. We tackle ants, rodents, cockroaches, and more with family-friendly methods.",
+		ctaText: "Book a free consultation",
+		path: "residential-pest-control" as ServicePages,
+	},
+	{
+		id: 2,
+		imageSrc: IMAGES.INDUSTRIAL_PEST_CONTROL,
+		imageAlt: "Industrial pest control service",
+		serviceNumber: "02/",
+		serviceName: "Industrial pest control",
+		serviceDescription:
+			"Protect your industrial site with Ecovia's professional pest control. Treatments and prevention plans that meet strict industry standards across Sydney.",
+		ctaText: "Book a free consultation",
+		path: "industrial-pest-control" as ServicePages,
+	},
+	{
+		id: 3,
+		imageSrc: IMAGES.COMMERCIAL_PEST_CONTROL,
+		imageAlt: "Commercial pest control service",
+		serviceNumber: "03/",
+		serviceName: "Commercial pest control",
+		serviceDescription:
+			"Keep your business safe and compliant with Ecovia's professional commercial pest control. Discreet, effective pest management for Sydney businesses.",
+		ctaText: "Book a free consultation",
+		path: "commercial-pest-control" as ServicePages,
+	},
+	{
+		id: 4,
+		imageSrc: IMAGES.CONSTRUCTION_SITE_PEST_CONTROL,
+		imageAlt: "Construction site pest control service",
+		serviceNumber: "04/",
+		serviceName: "Construction site pest control",
+		serviceDescription:
+			"Protect your construction site from rodents, cockroaches, and ants with Ecovia. Fast, safe, fully insured pest control for Sydney builders and developers.",
+		ctaText: "Book a free consultation",
+		path: "construction-site-pest-control" as ServicePages,
+	},
+	{
+		id: 5,
+		imageSrc: IMAGES.ECO_FRIENDLY_PEST_CONTROL,
+		imageAlt: "Eco friendly pest control service",
+		serviceNumber: "05/",
+		serviceName: "Eco friendly pest control",
+		serviceDescription:
+			"Protect your property without harming your family or environment. Ecovia's eco-friendly pest control uses low-toxicity methods safe for children and pets.",
+		ctaText: "Book a free consultation",
+		path: "eco-friendly-pest-control" as ServicePages,
+	},
+	{
+		id: 6,
+		imageSrc: IMAGES.STRATA_PEST_CONTROL,
+		imageAlt: "Strata pest control service",
+		serviceNumber: "06/",
+		serviceName: "Strata pest control",
+		serviceDescription:
+			"Keep your strata complex pest-free with Ecovia. We work with strata managers and body corporates to deliver fast, eco-friendly solutions across Sydney.",
+		ctaText: "Book a free consultation",
+		path: "strata-pest-control" as ServicePages,
+	},
+];
+
+export { services, servicesPages, servicesIndexPage };
