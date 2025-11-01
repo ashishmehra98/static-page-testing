@@ -16,6 +16,7 @@ import { homeScreenFaqs } from "@/app/constants/faq";
 import HomeFooterJumbotron from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import { IMAGES } from "@/app/constants/images";
+import { CONTACT_NUMBER } from "@/app/constants/services";
 
 const PestStudy = () => {
 	return (
@@ -335,7 +336,7 @@ const PestStudy = () => {
 							<ProcessCheckInfo key={index} {...item} />
 						))}
 					</div>
-					<Button variant="primary" title=" 0432 227 227" icon="phone" onPress={() => {}} />
+					<Button variant="primary" title={` ${CONTACT_NUMBER}`} icon="phone" onPress={() => {}} />
 				</Hero>
 				{/* User Reviews */}
 				<UserReviewsSection />

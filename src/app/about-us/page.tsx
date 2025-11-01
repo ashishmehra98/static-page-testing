@@ -17,10 +17,11 @@ import Footer from "@/app/components/Footer";
 import { IMAGES } from "@/app/constants/images";
 import { homeScreenreviews } from "@/app/constants/reviews";
 import { homeScreenFaqs } from "@/app/constants/faq";
+import { CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
 
 export default function AboutUs() {
 	const onPhoneClick = () => {
-		window.open("tel:0432 227 227");
+		window.open(`tel:${CONTACT_NUMBER_TEL}`);
 	};
 
 	return (
@@ -59,7 +60,7 @@ export default function AboutUs() {
 						align="center"
 						className={styles.trustInfo}
 					/>
-					<Button variant="primary" title="0432 227 227" icon="phone" onPress={onPhoneClick} />
+					<Button variant="primary" title={CONTACT_NUMBER} icon="phone" onPress={onPhoneClick} />
 					<Image src={IMAGES.FRAME_ONE} alt="frame-one" width={206} height={248} className={styles.frame} />
 					<Image src={IMAGES.FRAME_TWO} alt="frame-two" width={207} height={248} className={styles.frame} />
 					<Image src={IMAGES.FRAME_THREE} alt="frame-three" width={207} height={248} className={styles.frame} />
@@ -97,7 +98,7 @@ Partner with a seasoned professional committed to protecting your home and givin
 							align="start"
 							subtitleClassName={styles.midHeroSubtitle}
 						/>
-						<Button variant="primary" title="0432 227 227" icon="phone" onPress={onPhoneClick} />
+						<Button variant="primary" title={CONTACT_NUMBER} icon="phone" onPress={onPhoneClick} />
 					</div>
 					<div className={styles.midHeroImage}>
 						<Image src={IMAGES.LOCAL_SYDNEY_EXPERT} fill={true} alt="Local sydney expert" />

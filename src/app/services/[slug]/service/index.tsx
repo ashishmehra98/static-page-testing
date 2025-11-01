@@ -15,7 +15,7 @@ import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import { IMAGES } from "@/app/constants/images";
-import { ServicePages, servicesPages } from "@/app/constants/services";
+import { ServicePages, servicesPages, CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
 
 interface PageProps {
 	slug: string;
@@ -28,7 +28,7 @@ const Service = ({ slug }: PageProps) => {
 	const SERVICE_REVIEWS_DATA = SERVICE_CONFIG.reviews || [];
 
 	const onPhoneClick = () => {
-		window.open("tel:0432 227 227");
+		window.open(`tel:${CONTACT_NUMBER_TEL}`);
 	};
 
 	const onContactClick = () => {
@@ -47,7 +47,7 @@ const Service = ({ slug }: PageProps) => {
 							highlightedText={SERVICE_CONFIG.hero.highlightedText}
 							subHeading={SERVICE_CONFIG.hero.subHeading}
 							description={SERVICE_CONFIG.hero.description}
-							phoneNumber="0432 227 227"
+							phoneNumber={CONTACT_NUMBER}
 							contactButtonText="Contact Us"
 							onPhoneClick={onPhoneClick}
 							onContactClick={onContactClick}

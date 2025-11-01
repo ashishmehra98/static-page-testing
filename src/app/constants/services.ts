@@ -6,6 +6,9 @@ import residentialPestControlServiceData from "./services/residential-pest-contr
 import strataPestControlServiceData from "./services/strata-pest-control-service";
 import { IMAGES } from "./images";
 
+export const CONTACT_NUMBER = "0413 054 112";
+export const CONTACT_NUMBER_TEL = "+61413054112";
+
 const services: Service[] = [
 	{
 		id: "general-pest-control",

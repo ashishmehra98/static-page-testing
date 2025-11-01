@@ -7,6 +7,7 @@ import { ICONS } from "../../constants/icons";
 import MenuButton from "../MenuButton";
 import MobileNavigation from "../MobileNavigation";
 import styles from "./Header.module.css";
+import { CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
 
 const Header: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header: React.FC = () => {
 
 	const handlePhoneClick = () => {
 		// Handle phone button click - could open phone dialer
-		window.location.href = "tel:0432227227";
+		window.location.href = `tel:${CONTACT_NUMBER_TEL}`;
 	};
 
 	const handleContactClick = () => {
@@ -46,7 +47,7 @@ const Header: React.FC = () => {
 						</nav>
 					</div>
 					<div className={styles.buttonsContainer}>
-						<Button variant="primary" title="0432 227 227" onPress={handlePhoneClick} icon="phone" />
+						<Button variant="primary" title={CONTACT_NUMBER} onPress={handlePhoneClick} icon="phone" />
 						<Button variant="secondary" title="Contact us" onPress={handleContactClick} icon="email" />
 					</div>
 					<MenuButton onToggle={() => setIsMenuOpen((prev) => !prev)} isOpen={isMenuOpen} className={styles.menuBtn} />

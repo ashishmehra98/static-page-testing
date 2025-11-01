@@ -166,9 +166,6 @@
 	--pesticideInfo-learnMoreText-ds: 16px;
 	--pesticideInfo-learnMoreText-mb: 16px;
 
-	/* PesticideInfoSection Component */
-	--pesticideInfoSection-header-ds: 32px;
-
 	/* PestInfo Component */
 	--pestInfo-tag-ds: 20px;
 	--pestInfo-pestName-ds: 36px;
@@ -246,6 +243,11 @@
 	--pestStudy-infoItem-heading-ds: 20px;
 	--pestStudy-infoItem-heading-tb: 18px;
 	--pestStudy-infoItem-heading-mb: 14px;
+
+	/* Service Study Pages */
+	--serviceStudy-infoItem-ds: 20px;
+	--serviceStudy-infoItem-tb: 18px;
+	--serviceStudy-infoItem-mb: 16px;
 }
 
 @theme inline {

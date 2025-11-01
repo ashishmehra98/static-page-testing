@@ -1,4 +1,5 @@
 import { IMAGES } from "../images";
+import { CONTACT_NUMBER } from "../services";
 
 const mosquitoPestStudyData = {
 	meta: {
@@ -229,7 +230,7 @@ const mosquitoPestStudyData = {
 		],
 		button: {
 			variant: "primary" as const,
-			title: " 0432 227 227",
+			title: ` ${CONTACT_NUMBER}`,
 			icon: "phone" as const,
 		},
 	},

@@ -7,7 +7,7 @@
 }
 
 .headerSection {
-	width: 100%;
+	width: 570px;
 }
 
 /* Responsive styles */
@@ -24,6 +24,6 @@
 	}
 
 	.headerSection h2 {
-		font-size: var(--pesticideInfoSection-header-ds);
+		font-size: 42px;
 	}
 }

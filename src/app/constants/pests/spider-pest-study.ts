@@ -1,4 +1,5 @@
 import { IMAGES } from "../images";
+import { CONTACT_NUMBER } from "../services";
 
 const spiderPestStudyData = {
 	meta: {
@@ -263,7 +264,7 @@ const spiderPestStudyData = {
 		],
 		button: {
 			variant: "primary" as const,
-			title: " 0432 227 227",
+			title: ` ${CONTACT_NUMBER}`,
 			icon: "phone" as const,
 		},
 	},

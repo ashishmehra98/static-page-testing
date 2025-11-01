@@ -128,6 +128,7 @@ export const IMAGES = {
 	SPIDER_COMMON_SPECIES_STUDY: "/images/pest-study/spider/common-spider-species.jpg",
 
 	// Blog
+	BLOG_HEADER: "/images/blogs-header-bg.jpg",
 	BLOG_THUMBNAIL: "/images/blog/thumbnail.jpg",
 	BLOG_INDOOR_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",
 	BLOG_LICENSED_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",

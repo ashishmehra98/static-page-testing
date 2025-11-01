@@ -38,8 +38,12 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, onSeeMoreBlogs, onLearnMore }) => 
 					</div>
 				</div>
 				{/* Gradient overlays for smooth edges */}
-				<div className={styles.gradientLeft}></div>
-				<div className={styles.gradientRight}></div>
+				{blogs.length > 1 && (
+					<>
+						<div className={styles.gradientLeft}></div>
+						<div className={styles.gradientRight}></div>
+					</>
+				)}
 			</div>
 		</div>
 	);

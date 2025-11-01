@@ -1,4 +1,5 @@
 import { IMAGES } from "../images";
+import { CONTACT_NUMBER } from "../services";
 
 const cockroachPestStudyData = {
 	meta: {
@@ -252,7 +253,7 @@ const cockroachPestStudyData = {
 		],
 		button: {
 			variant: "primary",
-			title: "0432 227 227",
+			title: ` ${CONTACT_NUMBER}`,
 			icon: "phone",
 		},
 	},

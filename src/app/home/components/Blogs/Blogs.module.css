@@ -127,8 +127,14 @@
 }
 
 @media screen and (max-width: 480px) {
+	/* Remove style when we've multiple blogs */
+	.cardsContainer {
+		display: flex;
+		justify-content: center;
+	}
+
 	.headerContainer {
-		width: 100%;
+		width: 90%;
 	}
 
 	.cardsWrapper > * {

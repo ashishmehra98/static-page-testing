@@ -34,7 +34,7 @@ const Blogs = () => {
 			<div className="flex flex-col gap-[60px] xl:gap-[120px]">
 				{/* Jumbotron */}
 				<div className={styles.jumbotron}>
-					<Hero bgImage={IMAGES.HOME_BG}>
+					<Hero bgImage={IMAGES.BLOG_HEADER}>
 						<HeroContent
 							heading={"Expert Pest "}
 							highlightedText={"Control Insights "}

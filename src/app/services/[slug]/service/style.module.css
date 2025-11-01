@@ -95,7 +95,7 @@
 }
 
 .infoItem {
-	font-size: 18px;
+	font-size: var(--serviceStudy-infoItem-ds);
 	line-height: 1.15;
 	color: var(--secondary);
 	letter-spacing: -0.44px;
@@ -176,6 +176,14 @@
 }
 
 @media screen and (max-width: 768px) {
+	.jumbotronContent > div {
+		width: 90%;
+	}
+
+	.infoItem {
+		font-size: var(--serviceStudy-infoItem-tb);
+	}
+
 	.residentialInfoSection :global(.image-container),
 	.safetyMeasureSection :global(.image-container) {
 		width: 100%;
@@ -194,6 +202,10 @@
 		background-image:
 			linear-gradient(278.35deg, rgba(19, 64, 33, 0) 5.67%, var(--secondary) 74.02%), url(/images/service-bg.jpg) !important;
 		background-position: -140px 0 !important;
+	}
+
+	.infoItem {
+		font-size: var(--serviceStudy-infoItem-mb);
 	}
 
 	.footer {

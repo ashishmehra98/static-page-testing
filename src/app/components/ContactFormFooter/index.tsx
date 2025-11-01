@@ -5,6 +5,7 @@ import ContactForm from "../ContactForm";
 import Button from "../Button";
 import Info from "../Info";
 import styles from "./ContactFormFooter.module.css";
+import { CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
 
 interface ContactFormFooterProps {
 	bgImage: string;
@@ -26,7 +27,7 @@ const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 	showCallCta,
 }) => {
 	const onPhoneClick = () => {
-		window.open("tel:0432 227 227");
+		window.open(`tel:${CONTACT_NUMBER_TEL}`);
 	};
 
 	return (
@@ -42,7 +43,7 @@ const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 					hideButtonSection={true}
 				/>
 				{showCallCta ? (
-					<Button variant="primary" title="0432 227 227" icon="phone" onPress={onPhoneClick} className={styles.phoneCTA} />
+					<Button variant="primary" title={CONTACT_NUMBER} icon="phone" onPress={onPhoneClick} className={styles.phoneCTA} />
 				) : (
 					<div className={styles.infoGroup}>
 						<Info variant="col" icon="family" title="Safe for Families & Pets" />

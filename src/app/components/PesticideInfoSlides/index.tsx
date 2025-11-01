@@ -129,7 +129,7 @@ const PesticideInfoSlides: React.FC = () => {
 	const router = useRouter();
 	const [activeIndex, setActiveIndex] = useState(0);
 	const swiperRef = useRef<SwiperClass | null>(null);
-	const isMobile = useIsMobile({ breakpoint: 768 });
+	const isMobile = useIsMobile({ breakpoint: 600 });
 
 	const handleSlideChange = (swiper: SwiperClass) => {
 		setActiveIndex(swiper.activeIndex);
