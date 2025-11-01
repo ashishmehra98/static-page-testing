@@ -3,16 +3,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { AutoplayOptions } from "swiper/types";
 import { useRouter } from "next/navigation";
 import PesticideInfo from "../PesticideInfo";
-import { InsectVariantProps } from "../Insects";
 import styles from "./PesticideInfoSlides.module.css";
 import useIsMobile from "@/hooks/useIsMobile";
 import { PestPages } from "@/app/constants/pests";
 
 interface PesticideData {
 	id: string;
-	insectType: InsectVariantProps["insectType"];
+	insectType: Insects;
 	name: string;
 	description: string;
 	path: PestPages;
@@ -125,6 +125,11 @@ const pesticideData: PesticideData[] = [
 	},
 ];
 
+const swiperConfig: AutoplayOptions = {
+	delay: 3000,
+	disableOnInteraction: false,
+};
+
 const PesticideInfoSlides: React.FC = () => {
 	const router = useRouter();
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -186,14 +191,7 @@ const PesticideInfoSlides: React.FC = () => {
 					spaceBetween={24}
 					slidesPerView="auto"
 					centeredSlides={isMobile}
-					autoplay={
-						isMobile
-							? {
-								delay: 3000,
-								disableOnInteraction: false,
-							}
-							: false
-					}
+					autoplay={isMobile ? swiperConfig : false}
 					onSwiper={(swiper) => (swiperRef.current = swiper)}
 					onSlideChange={handleSlideChange}
 					className={styles.swiper}>

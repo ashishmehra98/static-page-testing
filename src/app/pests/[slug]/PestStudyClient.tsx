@@ -57,7 +57,7 @@ const PestStudyClient = ({ slug }: PageProps) => {
 							imageSrc={PEST_STUDY_CONFIG.controlMatters.imageSrc}
 							imageAlt={PEST_STUDY_CONFIG.controlMatters.imageAlt}>
 							<div className={styles.infoContent}>
-								{PEST_STUDY_CONFIG.controlMatters.infoItems.map((item, index) => (
+								{PEST_STUDY_CONFIG.controlMatters.infoItems?.map((item, index) => (
 									<div key={index} className={styles.infoItem}>
 										{item.boldText && <span className={styles.boldText}>{item.boldText}</span>}
 										{item.regularText && (

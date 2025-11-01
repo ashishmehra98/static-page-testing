@@ -15,21 +15,7 @@ import Beetle from "./Beetle";
 import { InsectsProps } from "./types";
 
 export interface InsectVariantProps extends InsectsProps {
-	insectType:
-		| "spider"
-		| "ants"
-		| "bedbug"
-		| "bees"
-		| "rodents"
-		| "bird"
-		| "cockroach"
-		| "fly"
-		| "mosquito"
-		| "moth"
-		| "possum"
-		| "wasp"
-		| "beetle"
-		| null;
+	insectType: Insects;
 }
 
 const Insects: React.FC<InsectVariantProps> = ({ insectType, variant = "small", color = "#134021" }) => {

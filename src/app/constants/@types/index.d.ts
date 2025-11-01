@@ -24,6 +24,22 @@ type ButtonIcon =
 	| "vercel"
 	| "window";
 
+type Insects =
+	| "spider"
+	| "ants"
+	| "bedbug"
+	| "bees"
+	| "rodents"
+	| "bird"
+	| "cockroach"
+	| "fly"
+	| "mosquito"
+	| "moth"
+	| "possum"
+	| "wasp"
+	| "beetle"
+	| null;
+
 // Base interfaces
 interface InfoItem {
 	boldText?: string;
