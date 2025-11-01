@@ -29,6 +29,29 @@
 	font-weight: 600;
 }
 
+/* Input wrapper for date inputs */
+.inputWrapper {
+	position: relative;
+	width: 100%;
+}
+
+/* Visual calendar icon on the right side for date inputs */
+.inputWrapper:has(.input[type="date"])::after {
+	content: "";
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	pointer-events: none;
+	z-index: 3;
+}
+
 /* Input styles */
 .input {
 	width: 100%;
@@ -43,6 +66,12 @@
 	color: var(--white);
 	transition: all 0.2s ease-in-out;
 	box-sizing: border-box;
+}
+
+/* Add extra padding for date inputs to accommodate icon and make cursor pointer */
+.input[type="date"] {
+	padding-right: 45px;
+	cursor: pointer;
 }
 
 /* Input placeholder */
@@ -76,18 +105,87 @@
 	background-color: rgba(217, 217, 217, 0.08);
 }
 
-/* Hide date input calendar icon but preserve functionality */
+/* Date placeholder overlay - only visible when input is empty */
+.datePlaceholder {
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: rgba(255, 255, 255, 0.6);
+	font-family: var(--font-primary);
+	font-size: var(--input-placeholder-ds);
+	font-weight: 400;
+	z-index: 2;
+}
+
+/* Hide placeholder when date has value */
+.input[type="date"]:not(.dateEmpty) + .datePlaceholder,
+.inputWrapper:has(.input[type="date"]:not(.dateEmpty)) .datePlaceholder {
+	display: none;
+}
+
+/* Hide browser's default date format placeholder when empty */
+.input[type="date"].dateEmpty {
+	color: transparent !important;
+}
+
+/* Ensure date value is visible when selected */
+.input[type="date"]:not(.dateEmpty) {
+	color: var(--white) !important;
+}
+
+/* Hide browser's date format hint components when empty */
+.input[type="date"].dateEmpty::-webkit-datetime-edit-text,
+.input[type="date"].dateEmpty::-webkit-datetime-edit-ampm-field,
+.input[type="date"].dateEmpty::-webkit-datetime-edit-day-field,
+.input[type="date"].dateEmpty::-webkit-datetime-edit-month-field,
+.input[type="date"].dateEmpty::-webkit-datetime-edit-year-field {
+	color: transparent !important;
+}
+
+/* Show date values in white when selected */
+.input[type="date"]:not(.dateEmpty)::-webkit-datetime-edit-text,
+.input[type="date"]:not(.dateEmpty)::-webkit-datetime-edit-ampm-field,
+.input[type="date"]:not(.dateEmpty)::-webkit-datetime-edit-day-field,
+.input[type="date"]:not(.dateEmpty)::-webkit-datetime-edit-month-field,
+.input[type="date"]:not(.dateEmpty)::-webkit-datetime-edit-year-field {
+	color: var(--white) !important;
+}
+
+/* Make entire date input clickable - calendar picker indicator covers full area */
 .input[type="date"]::-webkit-calendar-picker-indicator {
 	opacity: 0;
 	position: absolute;
 	right: 0;
+	top: 0;
 	width: 100%;
 	height: 100%;
+	cursor: pointer;
+	z-index: 2;
+}
+
+/* Firefox - hide calendar icon but make input clickable */
+.input[type="date"]::-moz-calendar-picker-indicator {
+	opacity: 0;
 	cursor: pointer;
 }
 
 @media screen and (max-width: 480px) {
 	.input {
 		height: 35px;
+		font-size: 12px;
+	}
+
+	.input::placeholder {
+		font-size: 12px;
+	}
+
+	.label {
+		font-size: 14px;
+	}
+
+	.datePlaceholder {
+		font-size: 12px;
 	}
 }
