@@ -59,11 +59,11 @@
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
-	flex: 0.7;
+	flex: 0.85;
 }
 
 .infoItem {
-	font-size: 22px;
+	font-size: var(--contactUs-infoItem-ds);
 	line-height: 1.15;
 	color: var(--secondary);
 	letter-spacing: -0.44px;
@@ -121,6 +121,10 @@
 	.footer {
 		margin-top: 300px !important;
 	}
+
+	.infoItem {
+		font-size: var(--contactUs-infoItem-tb);
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -154,5 +158,9 @@
 
 	.footer {
 		margin-top: 350px !important;
+	}
+
+	.infoItem {
+		font-size: var(--contactUs-infoItem-mb);
 	}
 }

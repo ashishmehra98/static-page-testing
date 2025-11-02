@@ -132,7 +132,7 @@
 	--pestInfo-tag-ds: 20px;
 	--pestInfo-pestName-ds: 36px;
 	--pestInfo-pestName-mb: 24px;
-	--pestInfo-paragraph-ds: 20px;
+	--pestInfo-paragraph-ds: 18px;
 	--pestInfo-paragraph-mb: 14px;
 
 	/* Process Component */
@@ -160,7 +160,7 @@
 	/* ServiceCard Component */
 	--serviceCard-tag-ds: 20px;
 	--serviceCard-serviceName-ds: 42px;
-	--serviceCard-description-ds: 20px;
+	--serviceCard-description-ds: 18px;
 	--serviceCard-cta-ds: 20px;
 	--serviceCard-serviceName-mb: 32px;
 	--serviceCard-description-mb: 16px;
@@ -199,7 +199,7 @@
 	--howWeWork-infoDescription-mb: 14px;
 
 	/* Pest Study Pages */
-	--pestStudy-infoItem-ds: 20px;
+	--pestStudy-infoItem-ds: 18px;
 	--pestStudy-infoItem-tb: 18px;
 	--pestStudy-infoItem-mb: 16px;
 	--pestStudy-infoItem-heading-ds: 20px;
@@ -207,9 +207,14 @@
 	--pestStudy-infoItem-heading-mb: 14px;
 
 	/* Service Study Pages */
-	--serviceStudy-infoItem-ds: 20px;
+	--serviceStudy-infoItem-ds: 18px;
 	--serviceStudy-infoItem-tb: 18px;
 	--serviceStudy-infoItem-mb: 16px;
+
+	/* Contact us */
+	--contactUs-infoItem-ds: 18px;
+	--contactUs-infoItem-tb: 18px;
+	--contactUs-infoItem-mb: 16px;
 }
 
 @theme inline {

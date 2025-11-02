@@ -19,7 +19,7 @@ const Info: React.FC<InfoProps> = ({ variant = "row", icon, title, description }
 				<Image src={ICONS[icon]} alt="Info icon" width={28} height={28} />
 			</div>
 			<div className={styles.contentContainer}>
-				{title ? <h3 className={`${styles.title} info-title`}>{title}</h3> : null}
+				{title ? <span className={`${styles.title} info-title`}>{title}</span> : null}
 				{description ? <p className={`${styles.description} info-description`}>{description}</p> : null}
 			</div>
 		</div>

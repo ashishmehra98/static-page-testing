@@ -20,7 +20,7 @@ const Pest = () => {
 			<Header />
 			<div className="flex flex-col gap-[60px] xl:gap-[120px]">
 				{/* Jumbotron */}
-				<Hero bgImage={IMAGES.DISINFECTING_AREA}>
+				<Hero bgImage={IMAGES.DISINFECTING_AREA} bgPosition="center 10%">
 					<HeroContent
 						heading={"Our Residential "}
 						highlightedText={"Pest Services "}
