@@ -29,7 +29,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs, onSeeMoreBlogs, onLearnMore }) => 
 						{blogs.map((blog) => (
 							<BlogCard
 								key={blog.id}
-								image={blog.image}
+								image={blog.thumbnail}
 								date={blog.date}
 								title={blog.title}
 								onLearnMore={() => onLearnMore(blog.slug)}

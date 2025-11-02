@@ -125,6 +125,7 @@ export const IMAGES = {
 	// Blog
 	BLOG_HEADER: "/images/blogs-header-bg.webp",
 	BLOG_THUMBNAIL: "/images/blog/thumbnail.png",
+	BLOGS_THUMBNAIL_DS: "/images/blog/thumbnail-ds.webp",
 	BLOG_INDOOR_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",
 	BLOG_LICENSED_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",
 };

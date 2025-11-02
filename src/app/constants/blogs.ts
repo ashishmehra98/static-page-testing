@@ -4,7 +4,8 @@ const blogs: BlogData[] = [
 	{
 		id: "1",
 		slug: "why-pest-control-is-important",
-		image: IMAGES.BLOG_THUMBNAIL,
+		thumbnail: IMAGES.BLOG_THUMBNAIL,
+		image: IMAGES.BLOGS_THUMBNAIL_DS,
 		date: "2025-01-20",
 		title: "The Importance of Pest Control: Protecting Health, Property and Peace of Mind",
 		meta: {

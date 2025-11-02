@@ -276,6 +276,7 @@ interface ServiceConfig {
 //Blog Data
 interface BlogData {
 	id: string;
+	thumbnail: string;
 	image: string;
 	date: string;
 	title: string;

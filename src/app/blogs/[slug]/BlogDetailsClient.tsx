@@ -9,7 +9,6 @@ import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
-
 interface BlogDetailsClientProps {
 	blog: BlogData;
 	relatedBlogs: BlogData[];
