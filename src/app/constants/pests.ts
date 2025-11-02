@@ -75,4 +75,76 @@ export const pestData = [
 			"Treatments adapted per pest type — e.g. mattress treatments, insecticide dust in wall voids, spray for wasp nests",
 		path: "bed-bug-pest-control" as PestPages,
 	},
+	{
+		imageSrc: IMAGES.BEES_PEST_STUDY_BG,
+		imageAlt: "Bees",
+		pestName: "Bees (including honey bees and carpenter bees)",
+		commonSigns: "Buzzing in walls, visible hives, increased activity around eaves",
+		treatment:
+			"We use humane relocation where possible, hive removal, and cavity sealing. Professional handling ensures safe removal and prevents recurrence",
+		path: "bee-pest-control" as PestPages,
+	},
+	{
+		imageSrc: IMAGES.BIRD_PEST_STUDY_BG,
+		imageAlt: "Birds",
+		pestName: "Birds (pigeons, ibis, mynas, starlings)",
+		commonSigns: "Droppings accumulation, nesting materials in gutters, noise at dawn",
+		treatment:
+			"We install proofing systems (netting, spikes, mesh), remove nests safely, and clean affected areas. Regular monitoring prevents return",
+		path: "bird-pest-control" as PestPages,
+	},
+	{
+		imageSrc: IMAGES.CARPET_BEETLE_PEST_STUDY_BG,
+		imageAlt: "Carpet Beetle",
+		pestName: "Carpet beetles (and fabric pests)",
+		commonSigns: "Holes in fabrics, shed larvae skins, damage to wool and silk items",
+		treatment:
+			"We apply targeted treatments to affected areas, treat larvae hiding spots, and provide advice on protecting fabrics. Follow-ups ensure complete removal",
+		path: "carpet-beetle-pest-control" as PestPages,
+	},
+	{
+		imageSrc: IMAGES.FLIES_PEST_STUDY_BG,
+		imageAlt: "Flies",
+		pestName: "Flies (house flies, fruit flies, blowflies)",
+		commonSigns: "Frequent sightings, buzzing sounds, presence near food sources",
+		treatment:
+			"We identify breeding sites, apply residual treatments, and install fly control systems. We'll advise on sanitation to eliminate attractants",
+		path: "fly-pest-control" as PestPages,
+	},
+	{
+		imageSrc: IMAGES.MOSQUITOES_PEST_STUDY_BG,
+		imageAlt: "Mosquitoes",
+		pestName: "Mosquitoes (disease vectors and nuisance species)",
+		commonSigns: "Biting at dawn/dusk, standing water nearby, buzzing in outdoor areas",
+		treatment:
+			"We treat breeding sites, apply barrier sprays, and remove water sources. Our methods reduce mosquito populations while being safe for families",
+		path: "mosquito-pest-control" as PestPages,
+	},
+	{
+		imageSrc: IMAGES.POSSUM_PEST_STUDY_BG,
+		imageAlt: "Possum",
+		pestName: "Possums (brushtail and ringtail possums)",
+		commonSigns: "Noise in roof at night, droppings, entry points visible on roof",
+		treatment:
+			"We use humane exclusion methods, install one-way doors, and seal entry points. We follow regulations for protected wildlife handling",
+		path: "possum-pest-control" as PestPages,
+	},
+	{
+		imageSrc: IMAGES.STORED_PRODUCT_PESTS_PEST_STUDY_BG,
+		imageAlt: "Stored Product Pests",
+		pestName: "Stored product pests (pantry moths, grain beetles)",
+		commonSigns: "Larvae in food packages, webbing in cupboards, small beetles in grains",
+		treatment:
+			"We inspect and treat pantry areas, dispose of infested food, and apply targeted treatments. We'll guide on proper food storage practices",
+		path: "stored-product-pests-control" as PestPages,
+	},
+	{
+		imageSrc: IMAGES.WASPS_PEST_STUDY_BG,
+		imageAlt: "Wasps",
+		pestName: "Wasps (European wasps and paper wasps)",
+		commonSigns: "Nests under eaves, aggressive behaviour, visible wasp activity",
+		treatment:
+			"We locate and remove nests safely, apply residual treatments to prevent return, and provide advice on preventing future nesting. Safety is our priority",
+		path: "wasp-pest-control" as PestPages,
+	},
 ];

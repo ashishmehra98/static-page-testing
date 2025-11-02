@@ -115,14 +115,8 @@ const commercialPestControlServiceData = {
 			},
 			{
 				number: "05",
-				title: "Reporting & audit-ready documentation",
-				description:
-					"After each visit, we deliver reports with findings, chemical usage, recommendations, and photos — ideal for food or council audits.",
-			},
-			{
-				number: "06",
-				title: "Review & improvement",
-				description: "We periodically review strategy, adjust to seasonal changes and operational changes.",
+				title: "Reporting, documentation & continuous improvement",
+				description: "Detailed reports after each visit, ideal for audits. Periodic strategy reviews and adjustments as needed.",
 			},
 		],
 	},
