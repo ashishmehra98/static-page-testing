@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import RatingCard from "../RatingCard";
 import styles from "./UserReviews.module.css";
-
 import useIsMobile from "@/hooks/useIsMobile";
+import "../swiper-styles.css";
 
 export interface ReviewData {
 	id: number;

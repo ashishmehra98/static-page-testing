@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef } from "react";
+import React, { forwardRef, useId } from "react";
 import styles from "./Input.module.css";
 
 interface InputProps {
@@ -21,19 +21,21 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 		{ label, type = "text", placeholder, value, onChange, disabled = false, required = false, error, className = "", min },
 		ref,
 	) => {
+		const inputId = useId();
 		const isEmpty = !value || value === "";
 		const isDateType = type === "date";
 		const showDatePlaceholder = isDateType && isEmpty && placeholder;
 
 		return (
 			<div className={`${styles.field} ${className}`}>
-				<label className={styles.label}>
+				<label htmlFor={inputId} className={styles.label}>
 					{label}
 					{required && <span className={styles.required}>*</span>}
 				</label>
 				<div className={styles.inputWrapper}>
 					<input
 						ref={ref}
+						id={inputId}
 						type={type}
 						placeholder={isDateType ? undefined : placeholder}
 						value={value}
@@ -43,7 +45,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 						min={min}
 						className={`${styles.input} ${error ? styles.error : ""} ${disabled ? styles.disabled : ""} ${isDateType && isEmpty ? styles.dateEmpty : ""}`}
 						aria-invalid={!!error}
-						aria-describedby={error ? `${label}-error` : ""}
+						aria-describedby={error ? `${inputId}-error` : ""}
 					/>
 					{showDatePlaceholder && (
 						<span className={styles.datePlaceholder} aria-hidden="true">
@@ -52,7 +54,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 					)}
 				</div>
 				{error && (
-					<span id={`${label}-error`} className={styles.errorMessage} role="alert">
+					<span id={`${inputId}-error`} className={styles.errorMessage} role="alert">
 						{error}
 					</span>
 				)}

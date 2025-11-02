@@ -1,17 +1,44 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { FlashMessageProvider } from "./components/FlashMessage";
-
-// Import Swiper CSS globally to avoid conflicts
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
 
 const openSans = Open_Sans({
 	variable: "--font-open-sans",
 	subsets: ["latin"],
+	display: "swap",
+	preload: true,
+});
+
+// Optimize custom Rebond Grotesque fonts using Next.js font optimization
+// Note: localFont paths are relative to the file location
+const rebondGrotesque = localFont({
+	src: [
+		{
+			path: "../../public/fonts/rebond-grotesque/RebondGrotesque-Regular.woff2",
+			weight: "400",
+			style: "normal",
+		},
+		{
+			path: "../../public/fonts/rebond-grotesque/RebondGrotesque-Medium.woff2",
+			weight: "500",
+			style: "normal",
+		},
+		{
+			path: "../../public/fonts/rebond-grotesque/RebondGrotesque-SemiBold.woff2",
+			weight: "600",
+			style: "normal",
+		},
+		{
+			path: "../../public/fonts/rebond-grotesque/RebondGrotesque-Bold.woff2",
+			weight: "700",
+			style: "normal",
+		},
+	],
+	variable: "--font-rebond-grotesque",
+	display: "swap",
+	preload: true,
 });
 
 export const metadata: Metadata = {
@@ -37,7 +64,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${openSans.variable} antialiased`}>
+			<body className={`${openSans.variable} ${rebondGrotesque.variable} antialiased`}>
 				<FlashMessageProvider>{children}</FlashMessageProvider>
 			</body>
 		</html>

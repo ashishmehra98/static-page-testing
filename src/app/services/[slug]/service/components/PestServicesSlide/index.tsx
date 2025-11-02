@@ -8,8 +8,13 @@ import HeaderSection from "@/app/components/HeaderSection";
 import PestInfo from "@/app/components/PestInfo";
 import { IMAGES } from "@/app/constants/images";
 import { pestData } from "@/app/constants/pests";
+import "@/app/components/swiper-styles.css";
 
 const slides = pestData;
+const swiperConfig = {
+	delay: 3000,
+	disableOnInteraction: false,
+};
 
 const PestServicesSlide: React.FC<{ className?: string; data?: PestServiceSlideData[] }> = ({ className, data }) => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -86,14 +91,7 @@ const PestServicesSlide: React.FC<{ className?: string; data?: PestServiceSlideD
 					effect="fade"
 					fadeEffect={{ crossFade: true }}
 					speed={500}
-					autoplay={
-						isMobile
-							? {
-								delay: 3000,
-								disableOnInteraction: false,
-							}
-							: false
-					}
+					autoplay={isMobile ? swiperConfig : false}
 					onSwiper={(swiper) => (swiperRef.current = swiper)}
 					onSlideChange={handleSlideChange}
 					className={styles.swiper}>

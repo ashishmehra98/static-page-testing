@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef } from "react";
+import React, { forwardRef, useId } from "react";
 import styles from "./Select.module.css";
 
 interface SelectOption {
@@ -22,21 +22,23 @@ interface SelectProps {
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
 	({ label, options, value, onChange, disabled = false, required = false, error, className = "", placeholder }, ref) => {
+		const selectId = useId();
 		return (
 			<div className={`${styles.field} ${className}`}>
-				<label className={styles.label}>
+				<label htmlFor={selectId} className={styles.label}>
 					{label}
 					{required && <span className={styles.required}>*</span>}
 				</label>
 				<select
 					ref={ref}
+					id={selectId}
 					value={value}
 					onChange={onChange}
 					disabled={disabled}
 					required={required}
 					className={`${styles.select} ${error ? styles.error : ""} ${disabled ? styles.disabled : ""}`}
 					aria-invalid={!!error}
-					aria-describedby={error ? `${label}-error` : ""}>
+					aria-describedby={error ? `${selectId}-error` : ""}>
 					{placeholder && (
 						<option value="" disabled>
 							{placeholder}
@@ -49,7 +51,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
 					))}
 				</select>
 				{error && (
-					<span id={`${label}-error`} className={styles.errorMessage} role="alert">
+					<span id={`${selectId}-error`} className={styles.errorMessage} role="alert">
 						{error}
 					</span>
 				)}

@@ -9,6 +9,7 @@ import PesticideInfo from "../PesticideInfo";
 import styles from "./PesticideInfoSlides.module.css";
 import useIsMobile from "@/hooks/useIsMobile";
 import { PestPages } from "@/app/constants/pests";
+import "../swiper-styles.css";
 
 interface PesticideData {
 	id: string;

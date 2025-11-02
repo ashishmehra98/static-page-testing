@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
 			},
 		],
 	},
+	// Optimize resource loading
+	experimental: {
+		optimizePackageImports: ["swiper"],
+	},
+	// Enable compression
+	compress: true,
 };
 
 export default nextConfig;
