@@ -9,7 +9,8 @@ import PesticideInfo from "../PesticideInfo";
 import styles from "./PesticideInfoSlides.module.css";
 import useIsMobile from "@/hooks/useIsMobile";
 import { PestPages } from "@/app/constants/pests";
-import "../swiper-styles.css";
+// Import Swiper styles - Next.js will optimize and code-split these
+import "@/utils/load-swiper-styles";
 
 interface PesticideData {
 	id: string;

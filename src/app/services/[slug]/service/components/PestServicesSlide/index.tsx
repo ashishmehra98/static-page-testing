@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
@@ -8,7 +10,8 @@ import HeaderSection from "@/app/components/HeaderSection";
 import PestInfo from "@/app/components/PestInfo";
 import { IMAGES } from "@/app/constants/images";
 import { pestData } from "@/app/constants/pests";
-import "@/app/components/swiper-styles.css";
+// Import Swiper styles - Next.js will optimize and code-split these
+import "@/utils/load-swiper-styles";
 
 const slides = pestData;
 const swiperConfig = {

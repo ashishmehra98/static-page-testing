@@ -1,5 +1,5 @@
-/* Swiper CSS - Imported dynamically to prevent blocking initial render */
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
-@import "swiper/css/effect-fade";
+/* 
+ * Swiper CSS is now imported directly in components via load-swiper-styles.ts
+ * This file is kept for backwards compatibility but should not be imported directly.
+ * Next.js optimizes direct CSS imports better than @import statements.
+ */

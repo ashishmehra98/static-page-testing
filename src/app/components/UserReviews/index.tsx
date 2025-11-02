@@ -6,7 +6,8 @@ import { Autoplay } from "swiper/modules";
 import RatingCard from "../RatingCard";
 import styles from "./UserReviews.module.css";
 import useIsMobile from "@/hooks/useIsMobile";
-import "../swiper-styles.css";
+// Import Swiper styles - Next.js will optimize and code-split these
+import "@/utils/load-swiper-styles";
 
 export interface ReviewData {
 	id: number;

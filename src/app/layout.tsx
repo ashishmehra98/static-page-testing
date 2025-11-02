@@ -9,9 +9,12 @@ const openSans = Open_Sans({
 	subsets: ["latin"],
 	display: "swap",
 	preload: true,
+	// Only preload the regular weight to reduce render blocking
+	weight: ["400", "600", "700"],
 });
 
 // Optimize custom Rebond Grotesque fonts using Next.js font optimization
+// Only preload the most commonly used weight (Regular) to reduce render blocking
 // Note: localFont paths are relative to the file location
 const rebondGrotesque = localFont({
 	src: [
@@ -38,7 +41,9 @@ const rebondGrotesque = localFont({
 	],
 	variable: "--font-rebond-grotesque",
 	display: "swap",
+	// Only preload the regular weight to reduce initial render blocking
 	preload: true,
+	adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
