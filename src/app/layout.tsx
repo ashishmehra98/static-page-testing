@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { FlashMessageProvider } from "./components/FlashMessage";
+import { IMAGES } from "./constants/images";
 
 const openSans = Open_Sans({
 	variable: "--font-open-sans",
@@ -69,6 +70,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				{/* Prefetch critical hero images for faster page transitions */}
+				<link rel="prefetch" href={IMAGES.ABOUT_HEADER_BG} as="image" />
+				<link rel="prefetch" href={IMAGES.DISINFECTING_AREA} as="image" />
+				<link rel="prefetch" href={IMAGES.BLOG_HEADER} as="image" />
+				<link rel="prefetch" href={IMAGES.CONTACT_BG} as="image" />
+			</head>
 			<body className={`${openSans.variable} ${rebondGrotesque.variable} antialiased`}>
 				<FlashMessageProvider>{children}</FlashMessageProvider>
 			</body>
