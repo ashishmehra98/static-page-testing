@@ -129,7 +129,7 @@ export const IMAGES = {
 
 	// Blog
 	BLOG_HEADER: "/images/blogs-header-bg.png",
-	BLOG_THUMBNAIL: "/images/blog/thumbnail.jpg",
+	BLOG_THUMBNAIL: "/images/blog/thumbnail.png",
 	BLOG_INDOOR_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",
 	BLOG_LICENSED_PEST_CONTROL: "/images/blog/indoor-pest-control-treatment.jpg",
 };
