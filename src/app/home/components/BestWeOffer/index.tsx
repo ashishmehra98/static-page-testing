@@ -35,6 +35,7 @@ const BestWeOffer = () => {
 				<Image
 					src={IMAGES.PEST_WORKER}
 					alt="Pest control professional"
+					loading="lazy"
 					fill
 					style={{ objectFit: "cover", objectPosition: "0 50%" }}
 				/>

@@ -52,7 +52,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ variant = "sm", image, date, title,
 		return (
 			<div onClick={onLearnMore} className={`${styles.blogCardLg}${rootClassName}`}>
 				<div className={styles.imageContainerLg}>
-					<Image src={image} alt="Blog post image" fill className={styles.image} />
+					<Image src={image} alt="Blog post image" loading="lazy" fill className={styles.image} />
 				</div>
 				<div className={styles.contentLg}>
 					<p className={`${styles.date} blog-card---date`}>{date}</p>

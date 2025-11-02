@@ -32,7 +32,13 @@ const PestControlServices = () => {
 					{/* Image Section */}
 					<div className={styles.imageSection}>
 						<div className={styles.imageContainer}>
-							<Image src={IMAGES.PEST_CONTROL_SERVICES} alt="Pest Control Services" fill className={styles.serviceImage} />
+							<Image
+								src={IMAGES.PEST_CONTROL_SERVICES}
+								alt="Pest Control Services"
+								fill
+								loading="lazy"
+								className={styles.serviceImage}
+							/>
 						</div>
 					</div>
 

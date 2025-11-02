@@ -44,7 +44,7 @@ const HowWeWork = () => {
 					<Button variant="light" title={"Contact us"} onPress={() => router.push("/contact-us")} icon={"email-secondary"} />
 				</div>
 				<div className={styles.imageContainer}>
-					<Image src={IMAGES.INSECTION_SERVICE} alt="Inspection process" fill />
+					<Image src={IMAGES.INSECTION_SERVICE} alt="Inspection process" loading="lazy" fill />
 				</div>
 				<div className={styles.infoContainer}>
 					<Info icon="support" title="Initial Consultation" description="We begin with a detailed assessment of your home" />
