@@ -22,19 +22,37 @@ interface PesticideApplicationDetailsData {
 }
 
 const areaOptions = [
+	{ value: "interior", label: "Interior" },
+	{ value: "skirtings", label: "Skirtings" },
+	{ value: "cupboards", label: "Cupboards" },
 	{ value: "kitchen", label: "Kitchen" },
+	{ value: "roof-void", label: "Roof Void" },
+	{ value: "sub-floor", label: "Sub Floor" },
+	{ value: "wall-cavities", label: "Wall Cavities" },
+	{ value: "lower-outer-walls", label: "Lower Outer Walls" },
+	{ value: "full-outer-wall", label: "Full Outer Wall" },
+	{ value: "eaves-gutters", label: "Eaves/Gutters" },
 	{ value: "garage", label: "Garage" },
 	{ value: "garden", label: "Garden" },
-	{ value: "bathroom", label: "Bathroom" },
-	{ value: "bedroom", label: "Bedroom" },
-	{ value: "living-room", label: "Living Room" },
+	{ value: "fences", label: "Fences" },
+	{ value: "pool-surrounds", label: "Pool Surrounds" },
+	{ value: "electricals", label: "Electrical's" },
+	{ value: "storeroom", label: "Storeroom" },
+	{ value: "shop-area", label: "Shop Area" },
+	{ value: "warehouse", label: "Warehouse" },
+	{ value: "offices", label: "Offices" },
+	{ value: "carpark", label: "Carpark" },
+	{ value: "basement", label: "Basement" },
+	{ value: "bait-station", label: "Bait Station" },
 ];
 
 const pesticideOptions = [
-	{ value: "battle-axe-roach-bait", label: "Battle Axe Roach Bait" },
-	{ value: "termite-killer", label: "Termite Killer" },
-	{ value: "ant-bait", label: "Ant Bait" },
-	{ value: "spider-spray", label: "Spider Spray" },
+	{ value: "battle-axe-roach-bait", label: "Battle Axe Roach Bait", config: { chemicalUsed: "0.5g/kg Fipronil" } },
+	{ value: "temprid-75", label: "Temprid 75", config: { chemichalUsed: "50g/l Imidacloprid & 25g/1 Beta-Cyfluthrin" } },
+	{ value: "country-bifenthrin-100SC", label: "Country Bifenthrin 100SC", config: { chemichalUsed: "Bifenthrin 100g/L" } },
+	{ value: "dragon-dust", label: "Dragnet Dust", config: { chemichalUsed: "20g/kg Permethrin & 5g/kg Triflumuron" } },
+	{ value: "seclira-wsg", label: "Seclira WSG", config: { chemichalUsed: " 400g/kg Dinotefuran" } },
+	{ value: "contrac-blox", label: "Contrac Blox", config: { chemichalUsed: "0.005% Bromadiolone" } },
 ];
 
 const unitOptions = [
@@ -128,20 +146,6 @@ const PesticideApplicationDetails: React.FC = () => {
 		setFormData((prev) => ({
 			...prev,
 			mixedRateUnit: event.target.value,
-		}));
-	};
-
-	const handleDefaultUnitChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setFormData((prev) => ({
-			...prev,
-			defaultUnit: event.target.value,
-		}));
-	};
-
-	const handleDefaultUnitUnitChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-		setFormData((prev) => ({
-			...prev,
-			defaultUnitUnit: event.target.value,
 		}));
 	};
 
@@ -270,36 +274,6 @@ const PesticideApplicationDetails: React.FC = () => {
 								options={unitOptions}
 								value={formData.mixedRateUnit}
 								onChange={handleMixedRateUnitChange}
-								placeholder="Unit"
-								variant="primary"
-								className={styles.hideLabel}
-							/>
-						}
-						className={styles.field}
-					/>
-				</div>
-
-				{/* Row 3 */}
-				<div className={styles.row}>
-					<CombinedField
-						label="Default Unit"
-						inputField={
-							<Input
-								label=""
-								variant="text"
-								type="text"
-								value={formData.defaultUnit}
-								onChange={handleDefaultUnitChange}
-								placeholder="Enter unit"
-								className={styles.hideLabel}
-							/>
-						}
-						unitField={
-							<Select
-								label=""
-								options={unitOptions}
-								value={formData.defaultUnitUnit}
-								onChange={handleDefaultUnitUnitChange}
 								placeholder="Unit"
 								variant="primary"
 								className={styles.hideLabel}

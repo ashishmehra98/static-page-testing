@@ -25,6 +25,7 @@ interface RiskAssessmentControlsData {
 	slipperyFloorsSignage: boolean;
 	asbestosIdentified: string;
 	asbestosRisk: string;
+	otherRisksNoted: string;
 	otherRisks: string;
 }
 
@@ -34,9 +35,134 @@ const yesNoOptions = [
 ];
 
 const asbestosOptions = [
-	{ value: "no", label: "No" },
 	{ value: "yes", label: "Yes" },
+	{ value: "no", label: "No" },
 	{ value: "not-sure", label: "Not sure" },
+];
+
+interface CheckboxFieldConfig {
+	label: string;
+	field: keyof RiskAssessmentControlsData;
+	options: { value: string; label: string }[];
+	additionalCheckbox?: {
+		field: keyof RiskAssessmentControlsData;
+		value: string;
+		label: string;
+	};
+}
+
+interface RowConfig {
+	fields: CheckboxFieldConfig[];
+}
+
+const checkboxConfig: RowConfig[] = [
+	{
+		fields: [
+			{
+				label: "People",
+				field: "people",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "peopleAskedToVacate",
+					value: "asked-to-vacate",
+					label: "Asked to vacate premise",
+				},
+			},
+			{
+				label: "Children",
+				field: "children",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "childrenParentalSupervision",
+					value: "parental-supervision",
+					label: "Parental Supervision whilst on site",
+				},
+			},
+			{
+				label: "Dogs/Cats",
+				field: "dogsCats",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "dogsCatsRemoved",
+					value: "removed",
+					label: "Removed from treatment area",
+				},
+			},
+			{
+				label: "Lighting",
+				field: "lighting",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "lightingCarryTorch",
+					value: "carry-torch",
+					label: "Carry Torch on site, obey all signage regarding entry",
+				},
+			},
+		],
+	},
+	{
+		fields: [
+			{
+				label: "Excessive Noise",
+				field: "excessiveNoise",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "excessiveNoiseEarmuffs",
+					value: "earmuffs",
+					label: "Wear earmuffs if needed",
+				},
+			},
+			{
+				label: "Heat and/or Cold",
+				field: "heatCold",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "heatColdSafetyGear",
+					value: "safety-gear",
+					label: "Wear appropriate safety gear",
+				},
+			},
+			{
+				label: "Asbestos",
+				field: "asbestos",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "asbestosProcedures",
+					value: "procedures",
+					label: "Adhere to safe work practices for dealing with asbestos",
+				},
+			},
+			{
+				label: "Slippery Floors",
+				field: "slipperyFloors",
+				options: yesNoOptions,
+				additionalCheckbox: {
+					field: "slipperyFloorsSignage",
+					value: "signage",
+					label: "Obey all signage regarding entry",
+				},
+			},
+		],
+	},
+	{
+		fields: [
+			{
+				label: "Did you identify any asbestos on site?",
+				field: "asbestosIdentified",
+				options: asbestosOptions,
+			},
+			{
+				label: "Risk of asbestos disturbance?",
+				field: "asbestosRisk",
+				options: asbestosOptions,
+			},
+			{
+				label: "Other Risks Noted",
+				field: "otherRisksNoted",
+				options: yesNoOptions,
+			},
+		],
+	},
 ];
 
 const RiskAssessmentControls: React.FC = () => {
@@ -59,25 +185,61 @@ const RiskAssessmentControls: React.FC = () => {
 		slipperyFloorsSignage: false,
 		asbestosIdentified: "",
 		asbestosRisk: "",
+		otherRisksNoted: "",
 		otherRisks: "",
 	});
 
-	const handleCheckboxChange = (field: keyof RiskAssessmentControlsData, value: string) => {
+	const handleCheckboxChange = (
+		field: keyof RiskAssessmentControlsData,
+		value: string,
+		additionalCheckboxField?: keyof RiskAssessmentControlsData,
+	) => {
 		setFormData((prev) => {
-			// Set the new value (only one can be selected at a time, like radio buttons)
-			// If the same value is clicked, keep it selected (don't toggle off)
-			return {
+			const updatedData: RiskAssessmentControlsData = {
 				...prev,
 				[field]: value,
 			};
+
+			// If "Yes" is selected and there's an associated solution checkbox, automatically tick it
+			if (value === "yes" && additionalCheckboxField) {
+				return {
+					...updatedData,
+					[additionalCheckboxField]: true,
+				};
+			}
+			// If "No" is selected, uncheck the associated solution checkbox
+			if (value === "no" && additionalCheckboxField) {
+				return {
+					...updatedData,
+					[additionalCheckboxField]: false,
+				};
+			}
+
+			return updatedData;
 		});
 	};
 
-	const handleAdditionalCheckboxChange = (field: keyof RiskAssessmentControlsData, checked: boolean) => {
-		setFormData((prev) => ({
-			...prev,
-			[field]: checked,
-		}));
+	const handleAdditionalCheckboxChange = (
+		field: keyof RiskAssessmentControlsData,
+		checked: boolean,
+		mainField?: keyof RiskAssessmentControlsData,
+	) => {
+		setFormData((prev) => {
+			const updatedData: RiskAssessmentControlsData = {
+				...prev,
+				[field]: checked,
+			};
+
+			// If the solution checkbox is being checked and the main field is "no", change it to "yes"
+			if (checked && mainField && (prev[mainField] as string) === "no") {
+				return {
+					...updatedData,
+					[mainField]: "yes",
+				};
+			}
+
+			return updatedData;
+		});
 	};
 
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -100,167 +262,51 @@ const RiskAssessmentControls: React.FC = () => {
 	return (
 		<>
 			<div className={styles.contentWrapper}>
-				{/* First Row */}
-				<div className={styles.row}>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="People"
-							options={yesNoOptions}
-							value={formData.people}
-							onChange={(value) => handleCheckboxChange("people", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "asked-to-vacate", label: "Asked to vacate premise" }]}
-							value={formData.peopleAskedToVacate ? "asked-to-vacate" : ""}
-							onChange={(value) => handleAdditionalCheckboxChange("peopleAskedToVacate", value === "asked-to-vacate")}
-							className={styles.checkboxField}
-						/>
-					</div>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Children"
-							options={yesNoOptions}
-							value={formData.children}
-							onChange={(value) => handleCheckboxChange("children", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "parental-supervision", label: "Parental Supervision whilst on site" }]}
-							value={formData.childrenParentalSupervision ? "parental-supervision" : ""}
-							onChange={(value) =>
-								handleAdditionalCheckboxChange("childrenParentalSupervision", value === "parental-supervision")
-							}
-							className={styles.checkboxField}
-						/>
-					</div>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Dogs/Cats"
-							options={yesNoOptions}
-							value={formData.dogsCats}
-							onChange={(value) => handleCheckboxChange("dogsCats", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "removed", label: "Removed from treatment area" }]}
-							value={formData.dogsCatsRemoved ? "removed" : ""}
-							onChange={(value) => handleAdditionalCheckboxChange("dogsCatsRemoved", value === "removed")}
-							className={styles.checkboxField}
-						/>
-					</div>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Lighting"
-							options={yesNoOptions}
-							value={formData.lighting}
-							onChange={(value) => handleCheckboxChange("lighting", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "carry-torch", label: "Carry torch, follow anti-slip signs" }]}
-							value={formData.lightingCarryTorch ? "carry-torch" : ""}
-							onChange={(value) => handleAdditionalCheckboxChange("lightingCarryTorch", value === "carry-torch")}
-							className={styles.checkboxField}
-						/>
-					</div>
-				</div>
+				{checkboxConfig.map((row, rowIndex) => (
+					<div key={rowIndex} className={styles.row}>
+						{row.fields.map((fieldConfig) => {
+							const additionalCheckbox = fieldConfig.additionalCheckbox;
+							const isOtherRisksNoted = fieldConfig.field === "otherRisksNoted";
+							const showOtherRisksInput = isOtherRisksNoted && formData.otherRisksNoted === "yes";
 
-				{/* Second Row */}
-				<div className={styles.row}>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Excessive Noise"
-							options={yesNoOptions}
-							value={formData.excessiveNoise}
-							onChange={(value) => handleCheckboxChange("excessiveNoise", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "earmuffs", label: "Wear earmuffs if needed" }]}
-							value={formData.excessiveNoiseEarmuffs ? "earmuffs" : ""}
-							onChange={(value) => handleAdditionalCheckboxChange("excessiveNoiseEarmuffs", value === "earmuffs")}
-							className={styles.checkboxField}
-						/>
+							return (
+								<div key={fieldConfig.field} className={styles.fieldGroup}>
+									<Checkbox
+										label={fieldConfig.label}
+										options={fieldConfig.options}
+										value={formData[fieldConfig.field] as string}
+										onChange={(value) => handleCheckboxChange(fieldConfig.field, value, additionalCheckbox?.field)}
+										className={styles.checkboxField}
+									/>
+									{additionalCheckbox && (
+										<Checkbox
+											options={[{ value: additionalCheckbox.value, label: additionalCheckbox.label }]}
+											value={(formData[additionalCheckbox.field] as boolean) ? additionalCheckbox.value : ""}
+											onChange={(value) =>
+												handleAdditionalCheckboxChange(
+													additionalCheckbox.field,
+													value === additionalCheckbox.value,
+													fieldConfig.field,
+												)
+											}
+											className={styles.checkboxField}
+										/>
+									)}
+									{showOtherRisksInput && (
+										<Input
+											label="Custom Risk Line"
+											variant="text"
+											value={formData.otherRisks}
+											onChange={handleInputChange}
+											placeholder="Enter other risks"
+											className={styles.inputField}
+										/>
+									)}
+								</div>
+							);
+						})}
 					</div>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Heat and/or Cold"
-							options={yesNoOptions}
-							value={formData.heatCold}
-							onChange={(value) => handleCheckboxChange("heatCold", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "safety-gear", label: "Wear appropriate safety gear" }]}
-							value={formData.heatColdSafetyGear ? "safety-gear" : ""}
-							onChange={(value) => handleAdditionalCheckboxChange("heatColdSafetyGear", value === "safety-gear")}
-							className={styles.checkboxField}
-						/>
-					</div>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Asbestos"
-							options={yesNoOptions}
-							value={formData.asbestos}
-							onChange={(value) => handleCheckboxChange("asbestos", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "procedures", label: "Follow safe asbestos procedures" }]}
-							value={formData.asbestosProcedures ? "procedures" : ""}
-							onChange={(value) => handleAdditionalCheckboxChange("asbestosProcedures", value === "procedures")}
-							className={styles.checkboxField}
-						/>
-					</div>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Slippery Floors"
-							options={yesNoOptions}
-							value={formData.slipperyFloors}
-							onChange={(value) => handleCheckboxChange("slipperyFloors", value)}
-							className={styles.checkboxField}
-						/>
-						<Checkbox
-							options={[{ value: "signage", label: "Obey all signage regarding entry" }]}
-							value={formData.slipperyFloorsSignage ? "signage" : ""}
-							onChange={(value) => handleAdditionalCheckboxChange("slipperyFloorsSignage", value === "signage")}
-							className={styles.checkboxField}
-						/>
-					</div>
-				</div>
-
-				{/* Third Row */}
-				<div className={styles.row}>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Did you identify any asbestos on site?"
-							options={asbestosOptions}
-							value={formData.asbestosIdentified}
-							onChange={(value) => handleCheckboxChange("asbestosIdentified", value)}
-							className={styles.checkboxField}
-						/>
-					</div>
-					<div className={styles.fieldGroup}>
-						<Checkbox
-							label="Risk of asbestos disturbance?"
-							options={asbestosOptions}
-							value={formData.asbestosRisk}
-							onChange={(value) => handleCheckboxChange("asbestosRisk", value)}
-							className={styles.checkboxField}
-						/>
-					</div>
-					<div className={styles.fieldGroup}>
-						<Input
-							label="Other Risks Noted"
-							variant="text"
-							value={formData.otherRisks}
-							onChange={handleInputChange}
-							placeholder="Enter other risks"
-							className={styles.inputField}
-						/>
-					</div>
-				</div>
+				))}
 			</div>
 
 			{/* Action Buttons */}

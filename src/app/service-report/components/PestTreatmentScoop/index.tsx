@@ -14,16 +14,17 @@ interface PestTreatmentScoopData {
 const pestOptions = [
 	{ value: "general-pest", label: "General Pest" },
 	{ value: "ant", label: "Ant" },
+	{ value: "silverfish", label: "Silverfish" },
 	{ value: "webbing-spiders", label: "Webbing Spiders" },
 	{ value: "cockroaches", label: "Cockroaches" },
 	{ value: "fleas", label: "Fleas" },
 	{ value: "ticks", label: "Ticks" },
+	{ value: "carpet-beetles", label: "Carpet Beetles" },
+	{ value: "bird-mites", label: "Bird Mites" },
 	{ value: "rodent", label: "Rodent" },
 	{ value: "mosquito", label: "Mosquito" },
 	{ value: "bed-bug", label: "Bed Bug" },
 	{ value: "rodent-removal", label: "Rodent Removal" },
-	{ value: "silverfish", label: "Silverfish" },
-	{ value: "other", label: "Other" },
 ];
 
 const PestTreatmentScoop: React.FC = () => {
@@ -69,7 +70,6 @@ const PestTreatmentScoop: React.FC = () => {
 					value={formData.otherPest}
 					onChange={handleOtherPestChange}
 					placeholder="Enter other pest"
-					disabled={true}
 					className={styles.field}
 				/>
 			</div>

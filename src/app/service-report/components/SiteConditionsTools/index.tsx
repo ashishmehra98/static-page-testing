@@ -15,34 +15,30 @@ interface SiteConditionsToolsData {
 }
 
 const windSpeedOptions = [
-	{ value: "0-6.3", label: "0 - 6.3" },
+	{ value: "<1.6", label: "Less than 1.6" },
+	{ value: "1.6-4.8", label: "1.6 - 4.8" },
 	{ value: "6.4-11.3", label: "6.4 - 11.3" },
-	{ value: "11.4-17.1", label: "11.4 - 17.1" },
-	{ value: "17.2-24.1", label: "17.2 - 24.1" },
-	{ value: "24.2-32.6", label: "24.2 - 32.6" },
-	{ value: "32.7+", label: "32.7+" },
+	{ value: "12.9-19.3", label: "12.9 - 19.3" },
+	{ value: "20.9-29.0", label: "20.9 - 29.0" },
+	{ value: "30.6-38.6", label: "30.6 - 38.6" },
 ];
 
 const housekeepingRatingOptions = [
-	{ value: "1", label: "1" },
-	{ value: "2", label: "2" },
-	{ value: "3", label: "3" },
-	{ value: "4", label: "4" },
-	{ value: "5", label: "5" },
-	{ value: "10", label: "10" },
-	{ value: "15", label: "15" },
-	{ value: "20", label: "20" },
+	{ value: "0", label: "0" },
 	{ value: "25", label: "25" },
-	{ value: "30", label: "30" },
+	{ value: "50", label: "50" },
+	{ value: "75", label: "75" },
+	{ value: "100", label: "100" },
 ];
 
 const toolsUsedOptions = [
 	{ value: "spray", label: "Spray" },
 	{ value: "dust", label: "Dust" },
-	{ value: "bait", label: "Bait" },
+	{ value: "cockroach-bait", label: "Cockroach Bait" },
+	{ value: "rodent-bait", label: "Rodent Bait" },
 	{ value: "trap", label: "Trap" },
-	{ value: "monitoring", label: "Monitoring" },
-	{ value: "other", label: "Other" },
+	{ value: "mist", label: "Mist" },
+	{ value: "fog", label: "Fog" },
 ];
 
 const siteActiveOptions = [
