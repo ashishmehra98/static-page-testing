@@ -98,12 +98,18 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
 		const getDisplayText = () => {
 			if (isMultipleSelect && multipleValue.length > 0) {
-				return multipleValue
-					.map((val) => {
-						const option = options.find((opt) => opt.value === val);
-						return option ? option.label : val;
-					})
-					.join(", ");
+				const selectedLabels = multipleValue.map((val) => {
+					const option = options.find((opt) => opt.value === val);
+					return option ? option.label : val;
+				});
+
+				if (selectedLabels.length <= 3) {
+					return selectedLabels.join(", ");
+				}
+
+				const firstThree = selectedLabels.slice(0, 3).join(", ");
+				const remainingCount = selectedLabels.length - 3;
+				return `${firstThree} & ${remainingCount} other${remainingCount > 1 ? "s" : ""}`;
 			}
 			return "";
 		};
@@ -220,7 +226,10 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
 														</svg>
 													)}
 												</div>
-												<label htmlFor={`${selectId}-${option.value}`} className={styles.checkboxLabel}>
+												<label
+													htmlFor={`${selectId}-${option.value}`}
+													className={styles.checkboxLabel}
+													onClick={(e) => e.stopPropagation()}>
 													{option.label}
 												</label>
 											</div>

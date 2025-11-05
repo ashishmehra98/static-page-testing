@@ -30,6 +30,18 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 			}
 		};
 
+		const handleWrapperClick = (e: React.MouseEvent<HTMLDivElement>, optionValue: string) => {
+			// Don't handle if the click originated from the label (let htmlFor handle it)
+			if ((e.target as HTMLElement).tagName === "LABEL" || (e.target as HTMLElement).closest("label")) {
+				return;
+			}
+			// Don't handle if the click originated from the input (let onChange handle it)
+			if ((e.target as HTMLElement).tagName === "INPUT") {
+				return;
+			}
+			handleChange(optionValue);
+		};
+
 		return (
 			<div className={`${styles.field} ${className}`}>
 				{label && (
@@ -46,7 +58,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 							<div
 								key={option.value}
 								className={`${styles.checkboxOption} ${disabled ? styles.disabled : ""}`}
-								onClick={() => handleChange(option.value)}
+								onClick={(e) => handleWrapperClick(e, option.value)}
 								role="button"
 								tabIndex={disabled ? -1 : 0}
 								onKeyDown={(e) => {
@@ -64,7 +76,11 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 										id={optionId}
 										name={name || fieldId}
 										checked={isChecked}
-										onChange={() => handleChange(option.value)}
+										onChange={(e) => {
+											e.stopPropagation();
+											handleChange(option.value);
+										}}
+										onClick={(e) => e.stopPropagation()}
 										disabled={disabled}
 										required={required && !value}
 										className={styles.checkboxInput}

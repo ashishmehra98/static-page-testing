@@ -1,3 +1,85 @@
+/* Section Wrapper */
+.sectionWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+/* Section Header */
+.sectionHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	border-radius: 8px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.sectionTag {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	color: var(--secondary);
+}
+
+.sectionLabel {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	color: var(--secondary);
+}
+
+/* Remove Button */
+.removeButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	background-color: #dc2626;
+	border: 1px solid #b91c1c;
+	border-radius: 6px;
+	cursor: pointer;
+	padding: 8px 16px;
+	transition: all 0.2s ease;
+	color: #ffffff;
+	font-family: var(--font-primary);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.41;
+	letter-spacing: -0.28px;
+}
+
+.removeButton:hover {
+	background-color: #b91c1c;
+	border-color: #991b1b;
+	color: #ffffff;
+	transform: translateY(-1px);
+	box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+}
+
+.removeButton:active {
+	background-color: #991b1b;
+	border-color: #7f1d1d;
+	transform: translateY(0);
+	box-shadow: 0 1px 2px rgba(220, 38, 38, 0.2);
+}
+
+.removeText {
+	display: inline-block;
+}
+
+.removeButton svg {
+	flex-shrink: 0;
+}
+
 /* Fields Container */
 .fieldsContainer {
 	display: flex;
@@ -75,6 +157,13 @@
 	gap: 0;
 }
 
+/* Separator */
+.separator {
+	width: 100%;
+	height: 47px;
+	margin: 20px 0;
+}
+
 /* Add New Area */
 .addNewArea {
 	width: 100%;
@@ -132,6 +221,19 @@
 }
 
 @media screen and (max-width: 768px) {
+	.sectionHeader {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		padding: 0;
+	}
+
+	.removeButton {
+		width: auto;
+		justify-content: center;
+	}
+
 	.fieldsContainer {
 		gap: 20px;
 	}

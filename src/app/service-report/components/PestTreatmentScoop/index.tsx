@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input, Select } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import pageStyles from "../../style.module.css";
 import styles from "./PestTreatmentScoop.module.css";
+import { useServiceReport } from "../../context/ServiceReportContext";
+import { useFlashMessage } from "../../../components/FlashMessage";
 
 interface PestTreatmentScoopData {
 	pestType: string[];
@@ -28,10 +30,23 @@ const pestOptions = [
 ];
 
 const PestTreatmentScoop: React.FC = () => {
+	const { data, updateData, refresh } = useServiceReport();
+	const { showMessage } = useFlashMessage();
 	const [formData, setFormData] = useState<PestTreatmentScoopData>({
 		pestType: [],
 		otherPest: "",
 	});
+	const [isLoading, setIsLoading] = useState(false);
+
+	// Initialize form data from context when data is loaded
+	useEffect(() => {
+		if (data) {
+			setFormData({
+				pestType: data.pest_types || [],
+				otherPest: data.other_pest || "",
+			});
+		}
+	}, [data]);
 
 	const handlePestTypeChange = (values: string[]) => {
 		setFormData((prev) => ({
@@ -47,10 +62,63 @@ const PestTreatmentScoop: React.FC = () => {
 		}));
 	};
 
-	const handleSaveChanges = () => {
-		// Handle save changes logic here
-		console.log("Form data:", formData);
+	const handleSaveChanges = async () => {
+		if (!data?.id) {
+			showMessage("Error: Service report ID not found", "error");
+			return;
+		}
+
+		setIsLoading(true);
+
+		try {
+			const updatePayload = {
+				pest_types: formData.pestType.length > 0 ? formData.pestType : null,
+				other_pest: formData.otherPest || null,
+			};
+
+			const response = await fetch(`/api/service-report/${data.id}`, {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(updatePayload),
+			});
+
+			const result = await response.json();
+
+			if (!response.ok) {
+				throw new Error(result.error || "Failed to update service report");
+			}
+
+			if (result.success && result.data) {
+				// Update local context data
+				updateData(updatePayload);
+				// Refresh data from server to ensure consistency
+				await refresh();
+				showMessage("Pest treatment details saved successfully", "success");
+			} else {
+				throw new Error("Invalid response format");
+			}
+		} catch (error) {
+			const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred";
+			console.error("Error saving pest treatment details:", error);
+			showMessage(`Failed to save changes: ${errorMessage}`, "error");
+		} finally {
+			setIsLoading(false);
+		}
 	};
+
+	// Check if all fields are blank
+	const areAllFieldsBlank = formData.pestType.length === 0 && !formData.otherPest;
+
+	// Check if formData is the same as data
+	const isFormDataSameAsData = data
+		? JSON.stringify([...formData.pestType].sort()) === JSON.stringify([...(data.pest_types || [])].sort()) &&
+			formData.otherPest === (data.other_pest || "")
+		: areAllFieldsBlank;
+
+	// Disable button if all fields are blank OR if formData is same as data
+	const isButtonDisabled = areAllFieldsBlank || isFormDataSameAsData;
 
 	return (
 		<>
@@ -75,7 +143,13 @@ const PestTreatmentScoop: React.FC = () => {
 			</div>
 			<div className={styles.buttonsWrapper}>
 				{/* <Button variant="light" title="Sheets" onPress={() => {}} className={styles.sheetsButton} /> */}
-				<Button variant="primary" title="Save Changes" onPress={handleSaveChanges} className={pageStyles.saveButton} />
+				<Button
+					variant="primary"
+					title={isLoading ? "Saving..." : "Save Changes"}
+					onPress={handleSaveChanges}
+					className={pageStyles.saveButton}
+					disabled={isButtonDisabled || isLoading}
+				/>
 			</div>
 		</>
 	);

@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
 import FormExpand from "../components/FormExpand";
@@ -9,14 +10,28 @@ import PesticideApplicationDetails from "../components/PesticideApplicationDetai
 import SiteConditionsTools from "../components/SiteConditionsTools";
 import RiskAssessmentControls from "../components/RiskAssessmentControls";
 import TechnicianDetails from "../components/TechnicianDetails";
+import { ServiceReportProvider, useServiceReport } from "../context/ServiceReportContext";
 
 interface ServiceReportPageProps {
-	params: {
+	params: Promise<{
 		id: string;
-	};
+	}>;
 }
 
-const ServiceReport = ({ params }: ServiceReportPageProps) => {
+const ServiceReportContent = () => {
+	const { loading } = useServiceReport();
+
+	if (loading) {
+		return (
+			<div className="flex items-center justify-center min-h-screen">
+				<div className="text-center">
+					<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+					<p className="text-gray-600 text-lg">Please hold on, this will just take a few seconds...</p>
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<Container>
 			<Header />
@@ -41,6 +56,15 @@ const ServiceReport = ({ params }: ServiceReportPageProps) => {
 				</FormExpand>
 			</div>
 		</Container>
+	);
+};
+
+const ServiceReport = ({ params }: ServiceReportPageProps) => {
+	const { id } = use(params);
+	return (
+		<ServiceReportProvider reportId={id}>
+			<ServiceReportContent />
+		</ServiceReportProvider>
 	);
 };
 
