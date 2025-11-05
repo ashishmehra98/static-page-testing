@@ -254,11 +254,6 @@ const RiskAssessmentControls: React.FC = () => {
 		console.log("Risk Assessment & Controls data:", formData);
 	};
 
-	const handleSheets = () => {
-		// Handle sheets logic here
-		console.log("Sheets clicked");
-	};
-
 	return (
 		<>
 			<div className={styles.contentWrapper}>
@@ -311,9 +306,7 @@ const RiskAssessmentControls: React.FC = () => {
 
 			{/* Action Buttons */}
 			<div className={styles.actions}>
-				<button className={styles.sheetsButton} onClick={handleSheets}>
-					Sheets
-				</button>
+				{/* <Button variant="light" title="Sheets" onPress={() => {}} className={styles.sheetsButton} /> */}
 				<Button variant="primary" title="Save Changes" onPress={handleSaveChanges} className={pageStyles.saveButton} />
 			</div>
 		</>

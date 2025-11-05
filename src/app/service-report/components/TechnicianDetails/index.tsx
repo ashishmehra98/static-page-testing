@@ -26,11 +26,6 @@ const TechnicianDetails: React.FC = () => {
 		}));
 	};
 
-	const handleSheets = () => {
-		// Handle sheets logic here
-		console.log("Sheets clicked");
-	};
-
 	const handleCompleteJob = () => {
 		// Handle complete job logic here
 		console.log("Complete Job clicked");
@@ -66,9 +61,7 @@ const TechnicianDetails: React.FC = () => {
 				/>
 			</div>
 			<div className={styles.actions}>
-				<button className={styles.sheetsButton} onClick={handleSheets}>
-					Sheets
-				</button>
+				{/* <Button variant="light" title="Sheets" onPress={() => {}} className={styles.sheetsButton} /> */}
 				<Button variant="primary" title="Complete Job" onPress={handleCompleteJob} className={pageStyles.saveButton} />
 			</div>
 		</>

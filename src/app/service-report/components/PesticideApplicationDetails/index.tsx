@@ -287,7 +287,7 @@ const PesticideApplicationDetails: React.FC = () => {
 			<div className={styles.addNewArea}>{/* Add New Area button/image would go here */}</div>
 
 			<div className={styles.buttonsWrapper}>
-				<Button variant="light" title="Sheets" onPress={() => {}} className={styles.sheetsButton} />
+				{/* <Button variant="light" title="Sheets" onPress={() => {}} className={styles.sheetsButton} /> */}
 				<Button variant="primary" title="Save Changes" onPress={handleSaveChanges} className={pageStyles.saveButton} />
 			</div>
 		</>
