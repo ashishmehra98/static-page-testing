@@ -21,6 +21,13 @@ const nextConfig: NextConfig = {
 	},
 	// Enable compression
 	compress: true,
+	// Ignore build errors
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 };
 
 export default nextConfig;

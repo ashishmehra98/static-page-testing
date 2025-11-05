@@ -3,7 +3,7 @@ import { createServerClient } from "@/utils/supabase/server";
 import { validateRequestOrigin } from "@/utils/api/request-validation";
 import type { TablesInsert } from "@/utils/supabase/database.types";
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
 	try {
 		// Validate request origin before processing
 		const originValidation = validateRequestOrigin(request);
@@ -11,7 +11,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 			return NextResponse.json({ error: originValidation.error || "Unauthorized request" }, { status: 403 });
 		}
 
-		const { id } = params;
+		const { id } = await params;
 
 		// Validate ID is provided
 		if (!id || typeof id !== "string") {
@@ -85,7 +85,7 @@ const transformFormDataToDB = (
 	};
 };
 
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
 	try {
 		// Validate request origin before processing
 		const originValidation = validateRequestOrigin(request);
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 			return NextResponse.json({ error: originValidation.error || "Unauthorized request" }, { status: 403 });
 		}
 
-		const { id } = params;
+		const { id } = await params;
 
 		// Validate ID is provided
 		if (!id || typeof id !== "string") {
