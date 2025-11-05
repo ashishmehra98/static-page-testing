@@ -20,6 +20,7 @@ export const ICONS = {
 	next: "/next.svg",
 	vercel: "/vercel.svg",
 	window: "/window.svg",
+	arrow: "/icons/arrow.svg",
 } as const;
 
 export type IconName = keyof typeof ICONS;

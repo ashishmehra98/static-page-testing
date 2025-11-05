@@ -1,0 +1,198 @@
+/* Fields Container */
+.fieldsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Row */
+.row {
+	display: flex;
+	gap: 25px;
+	align-items: flex-start;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+/* Field */
+.field {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* Combined Field (for amount + unit fields) */
+.combinedField {
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* Label for combined fields (amount + unit) */
+.label {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	color: var(--secondary);
+	width: 100%;
+}
+
+/* Amount and Unit Wrapper */
+.amountUnitWrapper {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	width: 100%;
+}
+
+/* Amount Input Wrapper - fixed width on desktop, flexible on mobile */
+.amountInputWrapper {
+	min-width: 0;
+	flex: 1;
+	max-width: 238px;
+}
+
+/* Unit Select Wrapper - min width for primary variant */
+.unitSelectWrapper {
+	flex-shrink: 0;
+	min-width: 66px;
+}
+
+/* Hide label when it's empty (for nested Input/Select components) */
+.hideLabel :global(.field > label) {
+	display: none;
+}
+
+/* Override field gap for nested components without labels */
+.hideLabel :global(.field) {
+	gap: 0;
+}
+
+/* Add New Area */
+.addNewArea {
+	width: 100%;
+	height: 47px;
+	margin-top: 20px;
+	/* Add New Area button/image would be styled here */
+}
+
+/* Buttons Wrapper */
+.buttonsWrapper {
+	display: flex;
+	gap: 12px;
+	justify-content: flex-end;
+	margin-top: 20px;
+	width: 100%;
+}
+
+/* Sheets Button */
+.sheetsButton {
+	background-color: #f7f7f7;
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	height: 41px;
+	border-radius: 94px;
+	padding: 11px 15px;
+	min-width: auto;
+	width: auto;
+	box-shadow: none;
+	font-size: 16px;
+	letter-spacing: -0.32px;
+	color: var(--secondary);
+}
+
+.sheetsButton:hover {
+	background-color: #eeeeee;
+}
+
+.sheetsButton:active {
+	background-color: #e5e5e5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+	.row {
+		gap: 20px;
+	}
+
+	.field {
+		flex: 1 1 calc(50% - 10px);
+		min-width: calc(50% - 10px);
+	}
+
+	.combinedField {
+		flex: 0 0 auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.fieldsContainer {
+		gap: 20px;
+	}
+
+	.row {
+		gap: 20px;
+	}
+
+	.field {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+
+	.combinedField {
+		flex: 0 0 auto;
+		width: 100%;
+	}
+
+	.buttonsWrapper {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.buttonsWrapper > * {
+		width: 100%;
+	}
+
+	.amountUnitWrapper {
+		flex-wrap: wrap;
+	}
+
+	.amountInputWrapper {
+		width: 100%;
+	}
+
+	.unitSelectWrapper {
+		width: 100%;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.row {
+		gap: 20px;
+	}
+
+	.label {
+		font-size: 16px;
+	}
+
+	.amountUnitWrapper {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.amountInputWrapper {
+		width: 100%;
+	}
+
+	.unitSelectWrapper {
+		width: 100%;
+		margin-top: 0;
+	}
+}

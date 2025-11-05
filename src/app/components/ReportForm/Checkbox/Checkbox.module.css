@@ -1,0 +1,135 @@
+/* Field container */
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+	align-items: flex-start;
+	width: 100%;
+	position: relative;
+}
+
+/* Label styles */
+.label {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	color: var(--secondary);
+	text-transform: none;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+/* Required asterisk */
+.required {
+	color: var(--hightlight-text);
+	font-weight: 600;
+}
+
+/* Checkbox group */
+.checkboxGroup {
+	display: flex;
+	gap: 26px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* Checkbox option */
+.checkboxOption {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	cursor: pointer;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.checkboxOption:hover:not(.disabled) {
+	opacity: 0.8;
+}
+
+.checkboxOption:focus-visible {
+	outline: 2px solid var(--secondary);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* Checkbox */
+.checkbox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+}
+
+.checkboxInput {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+
+.checkboxIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.checkboxLabel {
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(19, 64, 33, 0.44);
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+	cursor: pointer;
+	user-select: none;
+}
+
+/* Disabled state */
+.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.disabledWrapper {
+	opacity: 0.5;
+}
+
+.disabledLabel {
+	opacity: 0.5;
+}
+
+/* Error state */
+.error {
+	border-color: #ff4444;
+}
+
+.errorMessage {
+	color: #ff4444;
+	font-size: 14px;
+	margin-top: -4px;
+	font-family: var(--font-primary);
+}
+
+@media screen and (max-width: 480px) {
+	.checkboxLabel {
+		font-size: 14px;
+	}
+
+	.label {
+		font-size: 16px;
+	}
+
+	.checkboxGroup {
+		gap: 20px;
+	}
+}

@@ -1,0 +1,49 @@
+/* Combined Field Container */
+.combinedField {
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+/* Label for combined fields */
+.label {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	color: var(--secondary);
+	width: 100%;
+}
+
+/* Field Wrapper - contains input/select and unit field side by side */
+.fieldWrapper {
+	display: flex;
+	gap: 5px;
+	align-items: flex-end;
+	width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.combinedField {
+		width: 100%;
+	}
+
+	.fieldWrapper {
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.label {
+		font-size: 16px;
+	}
+
+	.fieldWrapper {
+		flex-direction: column;
+		gap: 10px;
+	}
+}

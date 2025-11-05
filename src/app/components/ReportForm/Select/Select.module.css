@@ -1,0 +1,361 @@
+/* Field container */
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+	width: 100%;
+	position: relative;
+}
+
+/* Label styles */
+.label {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	color: var(--secondary);
+	text-transform: none;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+/* Required asterisk */
+.required {
+	color: var(--hightlight-text);
+	font-weight: 600;
+}
+
+/* Select wrapper */
+.selectWrapper {
+	position: relative;
+	width: 100%;
+	background-color: #f7f7f7;
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	border-radius: 94px;
+	height: 41px;
+	overflow: hidden;
+}
+
+/* Primary variant wrapper */
+.selectWrapper.primary {
+	background-color: #134021;
+	border: 1px solid rgba(19, 64, 33, 0.28);
+}
+
+/* Select wrapper with multiple select - allow overflow for dropdown */
+.selectWrapper.open {
+	overflow: visible;
+}
+
+/* Select styles */
+.select {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	padding: 0 45px 0 20px;
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(19, 64, 33, 0.8);
+	transition: all 0.2s ease-in-out;
+	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
+}
+
+/* Primary variant select */
+.select_primary {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: -0.32px;
+}
+
+/* Hide select text when empty and placeholder exists */
+.select.empty {
+	color: transparent !important;
+}
+
+/* Select placeholder option */
+.select option[value=""][disabled] {
+	color: rgba(19, 64, 33, 0.6);
+}
+
+/* Select option styles */
+.select option {
+	background-color: #f7f7f7;
+	color: rgba(19, 64, 33, 0.8);
+	padding: 8px;
+}
+
+/* Primary variant option styles */
+.select_primary option {
+	background-color: #134021;
+	color: white;
+}
+
+/* Placeholder overlay - only visible when select is empty */
+.placeholder {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: rgba(19, 64, 33, 0.6);
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: capitalize;
+	z-index: 2;
+}
+
+/* Primary variant placeholder */
+.placeholder_primary {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: -0.32px;
+}
+
+/* Icon container for dropdown arrow */
+.icon {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12px;
+	height: 8px;
+}
+
+/* Select focus state */
+.selectWrapper:focus-within {
+	outline: none;
+	border-color: var(--hightlight-text);
+	box-shadow: 0 0 0 2px rgba(19, 64, 33, 0.1);
+}
+
+/* Select hover state */
+.select:hover:not(:disabled) {
+	cursor: pointer;
+}
+
+/* Disabled state */
+.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	background-color: rgba(247, 247, 247, 0.5);
+}
+
+.disabled:hover {
+	background-color: rgba(247, 247, 247, 0.5);
+}
+
+/* Error state */
+.error {
+	border-color: #ff4444;
+}
+
+.selectWrapper.error {
+	border-color: #ff4444;
+}
+
+.errorMessage {
+	color: #ff4444;
+	font-size: 14px;
+	margin-top: -4px;
+	font-family: var(--font-primary);
+}
+
+/* Multiple Select Trigger */
+.multipleSelectTrigger {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	padding: 0 45px 0 20px;
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(19, 64, 33, 0.8);
+	transition: all 0.2s ease-in-out;
+	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Primary variant multiple select trigger */
+.multipleSelectTrigger_primary {
+	color: white;
+}
+
+.multipleSelectTrigger.empty {
+	color: transparent;
+}
+
+.multipleSelectDisplay {
+	color: rgba(19, 64, 33, 0.8);
+	text-transform: capitalize;
+}
+
+/* Primary variant multiple select display */
+.multipleSelectDisplay_primary {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: -0.32px;
+}
+
+/* Dropdown - positioned relative to selectWrapper */
+
+.dropdown {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	min-width: 100%;
+	background-color: #f7f7f7;
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	border-radius: 11px;
+	z-index: 1000;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.dropdownContent {
+	padding: 19px 18px;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	gap: 12px;
+	min-width: 100%;
+}
+
+/* Row layout (default) - grid with multiple columns */
+.dropdownContent_row {
+	grid-template-columns: repeat(3, auto);
+	gap: 12px;
+}
+
+/* Column layout - single column */
+.dropdownContent_column {
+	grid-template-columns: 1fr;
+	min-width: 100%;
+}
+
+/* Checkbox Option */
+.checkboxOption {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	cursor: pointer;
+	transition: opacity 0.2s ease-in-out;
+	white-space: nowrap;
+}
+
+.checkboxOption:hover {
+	opacity: 0.8;
+}
+
+.checkbox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+}
+
+.checkboxInput {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+
+.checkboxIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.checkboxLabel {
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(19, 64, 33, 0.44);
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	cursor: pointer;
+	user-select: none;
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+	.select {
+		height: 41px;
+		font-size: 14px;
+		padding: 0 40px 0 16px;
+	}
+
+	.placeholder {
+		font-size: 14px;
+		left: 16px;
+	}
+
+	.icon {
+		right: 16px;
+		width: 11px;
+		height: 7px;
+	}
+
+	.label {
+		font-size: 16px;
+	}
+
+	.selectWrapper {
+		height: 41px;
+	}
+
+	.multipleSelectTrigger {
+		padding: 0 40px 0 16px;
+		font-size: 14px;
+	}
+
+	.dropdownContent {
+		padding: 16px 14px;
+		gap: 10px;
+	}
+
+	.dropdownContent_row {
+		grid-template-columns: repeat(2, auto);
+	}
+
+	.dropdownContent_column {
+		grid-template-columns: 1fr;
+	}
+
+	.checkboxLabel {
+		font-size: 14px;
+	}
+}

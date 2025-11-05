@@ -1,0 +1,38 @@
+/* Fields Wrapper */
+.fieldsWrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 24px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Field */
+.field {
+	flex: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.fieldsWrapper {
+		flex-wrap: wrap;
+	}
+
+	.field {
+		flex: 1 1 calc(50% - 12px);
+		min-width: calc(50% - 12px);
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.field {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.fieldsWrapper {
+		gap: 20px;
+	}
+}

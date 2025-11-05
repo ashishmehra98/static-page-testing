@@ -1,0 +1,77 @@
+/* Input/Select Wrapper - for the main input field */
+.inputWrapper {
+	min-width: 0;
+	flex: 1;
+	max-width: 238px;
+}
+
+/* Unit Field Wrapper - for the unit select or button */
+.unitWrapper {
+	flex-shrink: 0;
+	min-width: 66px;
+}
+
+/* Unit Button - for static unit display (like km/h) */
+.unitButton {
+	background-color: var(--secondary);
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	border-radius: 94px;
+	height: 41px;
+	padding: 11px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: -0.32px;
+	flex-shrink: 0;
+	width: fit-content;
+	min-width: 60px;
+	box-sizing: border-box;
+}
+
+/* Hide label when it's empty (for nested Input/Select components) */
+.hideLabel :global(.field > label) {
+	display: none;
+}
+
+/* Override field gap for nested components without labels */
+.hideLabel :global(.field) {
+	gap: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.inputWrapper {
+		width: 100%;
+		max-width: none;
+	}
+
+	.unitWrapper {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.unitButton {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.inputWrapper {
+		width: 100%;
+	}
+
+	.unitWrapper {
+		width: 100%;
+		margin-top: 0;
+	}
+
+	.unitButton {
+		width: 100%;
+	}
+}

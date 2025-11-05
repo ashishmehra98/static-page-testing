@@ -1,0 +1,134 @@
+/* Content Wrapper */
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Row */
+.row {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	gap: 20px;
+}
+
+/* Field Group */
+.fieldGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: flex-start;
+	flex: 0 0 306px;
+	min-width: 306px;
+}
+
+/* Hide label for checkbox fields when used as single checkbox */
+.checkboxField :global(.field > label:first-child) {
+	display: none;
+}
+
+/* Adjust gap for checkbox field to match design */
+.checkboxField :global(.field) {
+	gap: 0;
+}
+
+/* Checkbox Field */
+.checkboxField {
+	width: 100%;
+}
+
+/* Input Field */
+.inputField {
+	width: 100%;
+}
+
+/* Actions */
+.actions {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	margin-top: 0;
+}
+
+/* Sheets Button */
+.sheetsButton {
+	background-color: #f7f7f7;
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	height: 41px;
+	border-radius: 94px;
+	padding: 11px 15px;
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	color: var(--secondary);
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	min-width: auto;
+	box-shadow: none;
+}
+
+.sheetsButton:hover {
+	background-color: #ededed;
+}
+
+.sheetsButton:active {
+	background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1280px) {
+	.row {
+		flex-wrap: wrap;
+	}
+
+	.fieldGroup {
+		flex: 1 1 calc(50% - 10px);
+		min-width: calc(50% - 10px);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.contentWrapper {
+		gap: 24px;
+	}
+
+	.row {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.fieldGroup {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+
+	.actions {
+		flex-direction: column;
+		width: 100%;
+		gap: 12px;
+	}
+
+	.sheetsButton {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.contentWrapper {
+		gap: 20px;
+	}
+
+	.row {
+		gap: 20px;
+	}
+
+	.fieldGroup {
+		gap: 16px;
+	}
+}

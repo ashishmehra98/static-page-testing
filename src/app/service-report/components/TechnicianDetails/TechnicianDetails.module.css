@@ -1,0 +1,90 @@
+/* Fields Wrapper */
+.fieldsWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Field */
+.field {
+	flex: 1;
+	min-width: 304px;
+}
+
+/* Signature Field - rounded corners */
+.signatureField :global(.inputWrapper) {
+	border-radius: 20px;
+}
+
+/* Actions */
+.actions {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	margin-top: 0;
+}
+
+/* Sheets Button */
+.sheetsButton {
+	background-color: #f7f7f7;
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	height: 41px;
+	border-radius: 94px;
+	padding: 11px 15px;
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	color: var(--secondary);
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	min-width: auto;
+	box-shadow: none;
+}
+
+.sheetsButton:hover {
+	background-color: #ededed;
+}
+
+.sheetsButton:active {
+	background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.fieldsWrapper {
+		flex-wrap: wrap;
+	}
+
+	.field {
+		flex: 1 1 calc(50% - 12px);
+		min-width: calc(50% - 12px);
+	}
+
+	.actions {
+		flex-direction: column;
+		width: 100%;
+		gap: 12px;
+	}
+
+	.sheetsButton {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.field {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.fieldsWrapper {
+		gap: 20px;
+	}
+}

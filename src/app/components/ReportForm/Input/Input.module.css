@@ -1,0 +1,251 @@
+/* Field container */
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+	width: 100%;
+	position: relative;
+}
+
+/* Label styles */
+.label {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	color: var(--secondary);
+	text-transform: none;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+/* Required asterisk */
+.required {
+	color: var(--hightlight-text);
+	font-weight: 600;
+}
+
+/* Input wrapper */
+.inputWrapper {
+	position: relative;
+	width: 100%;
+	background-color: #f7f7f7;
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	border-radius: 94px;
+	height: 41px;
+	overflow: hidden;
+}
+
+/* Input styles */
+.input {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(19, 64, 33, 0.8);
+	transition: all 0.2s ease-in-out;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+}
+
+/* Text variant - normal padding, visible text */
+.inputWrapper.text .input {
+	padding: 0 20px;
+	color: rgba(19, 64, 33, 0.8);
+	cursor: text;
+}
+
+/* Text variant placeholder */
+.inputWrapper.text .input::placeholder {
+	color: rgba(19, 64, 33, 0.6);
+	opacity: 1;
+}
+
+/* Time and Date variants - padding for icon, transparent text */
+.inputWrapper.time .input,
+.inputWrapper.date .input {
+	padding: 0 45px 0 20px;
+	color: transparent;
+	cursor: pointer;
+}
+
+/* Hide browser's default time/date format when empty */
+.input.empty {
+	color: transparent !important;
+}
+
+.input.empty::-webkit-datetime-edit-text,
+.input.empty::-webkit-datetime-edit-hour-field,
+.input.empty::-webkit-datetime-edit-minute-field,
+.input.empty::-webkit-datetime-edit-ampm-field,
+.input.empty::-webkit-datetime-edit-day-field,
+.input.empty::-webkit-datetime-edit-month-field,
+.input.empty::-webkit-datetime-edit-year-field {
+	color: transparent !important;
+}
+
+/* Make entire time/date input clickable - picker indicator covers full area */
+.input.pickerInput::-webkit-calendar-picker-indicator {
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 3;
+}
+
+/* Firefox - hide time/date picker icon but make input clickable */
+.input.pickerInput::-moz-calendar-picker-indicator {
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Placeholder overlay - only visible when input is empty (for time/date variants) */
+.placeholder {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: rgba(19, 64, 33, 0.8);
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: capitalize;
+	z-index: 2;
+}
+
+/* Display value overlay - shows formatted time when input has value */
+.displayValue {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: rgba(19, 64, 33, 0.8);
+	font-family: var(--font-heading);
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: capitalize;
+	z-index: 2;
+}
+
+/* Icon container for time and date variants */
+.icon {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Time icon specific sizing */
+.inputWrapper.time .icon {
+	width: 13px;
+	height: 13px;
+}
+
+/* Date icon specific sizing */
+.inputWrapper.date .icon {
+	width: 12px;
+	height: 11px;
+}
+
+/* Input focus state */
+.inputWrapper:focus-within {
+	outline: none;
+	border-color: var(--hightlight-text);
+	box-shadow: 0 0 0 2px rgba(19, 64, 33, 0.1);
+}
+
+/* Disabled state */
+.disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	background-color: rgba(247, 247, 247, 0.5);
+}
+
+.disabled:hover {
+	background-color: rgba(247, 247, 247, 0.5);
+}
+
+.disabledWrapper {
+	opacity: 0.5;
+}
+
+.disabledLabel {
+	opacity: 0.5;
+}
+
+/* Error state */
+.error {
+	border-color: #ff4444;
+}
+
+.inputWrapper.error {
+	border-color: #ff4444;
+}
+
+.errorMessage {
+	color: #ff4444;
+	font-size: 14px;
+	margin-top: -4px;
+	font-family: var(--font-primary);
+}
+
+@media screen and (max-width: 480px) {
+	.input {
+		height: 41px;
+		font-size: 14px;
+	}
+
+	.inputWrapper.text .input {
+		padding: 0 16px;
+	}
+
+	.inputWrapper.time .input,
+	.inputWrapper.date .input {
+		padding: 0 40px 0 16px;
+	}
+
+	.placeholder,
+	.displayValue {
+		font-size: 14px;
+		left: 16px;
+	}
+
+	.inputWrapper.time .icon {
+		right: 16px;
+		width: 12px;
+		height: 12px;
+	}
+
+	.inputWrapper.date .icon {
+		right: 16px;
+		width: 11px;
+		height: 10px;
+	}
+
+	.label {
+		font-size: 16px;
+	}
+
+	.inputWrapper {
+		height: 41px;
+	}
+}

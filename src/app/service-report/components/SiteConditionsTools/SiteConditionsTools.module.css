@@ -1,0 +1,84 @@
+/* Fields Wrapper */
+.fieldsWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Field */
+.field {
+	flex: 1;
+	min-width: 304px;
+}
+
+/* Hide label when it's empty (for nested Input/Select components) */
+.hideLabel :global(.field > label:first-child) {
+	display: none;
+}
+
+/* Job Comments TextArea - should be wider */
+.fieldsWrapper > .field:last-of-type {
+	flex: 1 1 635px;
+	min-width: 635px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+	.fieldsWrapper > .field:last-of-type {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.fieldsWrapper {
+		flex-wrap: wrap;
+	}
+
+	.field {
+		flex: 1 1 calc(50% - 12px);
+		min-width: calc(50% - 12px);
+	}
+
+	.windSpeedField {
+		flex-direction: row;
+		align-items: flex-end;
+		gap: 0;
+	}
+
+	.windSpeedSelect {
+		flex: 1;
+	}
+
+	.unitButton {
+		margin-top: 0;
+		margin-left: 8px;
+		height: 41px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.field {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+
+	.windSpeedField {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.unitButton {
+		margin-left: 0;
+		margin-top: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.fieldsWrapper {
+		gap: 20px;
+	}
+}

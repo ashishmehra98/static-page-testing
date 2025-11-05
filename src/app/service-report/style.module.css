@@ -1,0 +1,30 @@
+/* Service Report Page Styles */
+
+/* Save Button */
+.saveButton {
+	background-color: var(--primary);
+	border: 1px solid rgba(19, 64, 33, 0.28);
+	height: 41px;
+	border-radius: 94px;
+	padding: 11px 15px;
+	min-width: auto;
+	width: auto;
+	box-shadow: none;
+	font-size: 16px;
+	letter-spacing: -0.32px;
+}
+
+.saveButton:hover {
+	background-color: #d4f075;
+}
+
+.saveButton:active {
+	background-color: #c9e066;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.saveButton {
+		width: 100%;
+	}
+}
