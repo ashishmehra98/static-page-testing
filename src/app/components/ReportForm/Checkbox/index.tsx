@@ -44,12 +44,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 
 		return (
 			<div className={`${styles.field} ${className}`}>
-				{label && (
-					<label className={`${styles.label} ${disabled ? styles.disabledLabel : ""}`}>
-						{label}
-						{required && <span className={styles.required}>*</span>}
-					</label>
-				)}
+				{label && <label className={`${styles.label} ${disabled ? styles.disabledLabel : ""}`}>{label} *</label>}
 				<div className={`${styles.checkboxGroup} ${error ? styles.error : ""} ${disabled ? styles.disabledWrapper : ""}`}>
 					{options.map((option) => {
 						const isChecked = value === option.value;

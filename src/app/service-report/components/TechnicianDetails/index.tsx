@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Input } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import pageStyles from "../../style.module.css";
-import styles from "./TechnicianDetails.module.css";
 import { useServiceReport } from "../../context/ServiceReportContext";
 import { useFlashMessage } from "../../../components/FlashMessage";
+import styles from "./TechnicianDetails.module.css";
 
 interface TechnicianDetailsData {
 	name: string;
@@ -45,6 +45,12 @@ const TechnicianDetails: React.FC = () => {
 	const handleSaveChanges = async () => {
 		if (!data?.id) {
 			showMessage("Error: Service report ID not found", "error");
+			return;
+		}
+
+		// Validate all fields are required
+		if (!formData.name || !formData.licence || !formData.signature) {
+			showMessage("All fields are required", "error");
 			return;
 		}
 
@@ -89,24 +95,24 @@ const TechnicianDetails: React.FC = () => {
 		}
 	};
 
-	// Check if all fields are blank
-	const areAllFieldsBlank = !formData.name && !formData.licence && !formData.signature;
+	// Check if all required fields are filled
+	const areAllFieldsFilled = formData.name && formData.licence && formData.signature;
 
 	// Check if formData is the same as data
 	const isFormDataSameAsData = data
 		? formData.name === (data.technician_name || "") &&
 			formData.licence === (data.technician_licence || "") &&
 			formData.signature === (data.technician_signature || "")
-		: areAllFieldsBlank;
+		: false;
 
-	// Disable button if all fields are blank OR if formData is same as data
-	const isButtonDisabled = areAllFieldsBlank || isFormDataSameAsData;
+	// Disable button if not all fields are filled OR if formData is same as data
+	const isButtonDisabled = !areAllFieldsFilled || isFormDataSameAsData;
 
 	return (
 		<>
 			<div className={styles.fieldsWrapper}>
 				<Input
-					label="Name"
+					label="Name *"
 					variant="text"
 					value={formData.name}
 					onChange={handleInputChange("name")}
@@ -114,7 +120,7 @@ const TechnicianDetails: React.FC = () => {
 					className={styles.field}
 				/>
 				<Input
-					label="Licence"
+					label="Licence *"
 					variant="text"
 					value={formData.licence}
 					onChange={handleInputChange("licence")}
@@ -122,7 +128,7 @@ const TechnicianDetails: React.FC = () => {
 					className={styles.field}
 				/>
 				<Input
-					label="Signature"
+					label="Signature *"
 					variant="text"
 					value={formData.signature}
 					onChange={handleInputChange("signature")}

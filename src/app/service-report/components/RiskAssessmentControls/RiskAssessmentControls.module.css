@@ -21,8 +21,8 @@
 	flex-direction: column;
 	gap: 20px;
 	align-items: flex-start;
-	flex: 0 0 306px;
-	min-width: 306px;
+	flex: 0 0 325px;
+	min-width: 325px;
 }
 
 /* Hide label for checkbox fields when used as single checkbox */

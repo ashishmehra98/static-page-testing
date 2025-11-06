@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Select, TextArea, Checkbox, CombinedField } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import pageStyles from "../../style.module.css";
-import styles from "./SiteConditionsTools.module.css";
 import { useServiceReport } from "../../context/ServiceReportContext";
 import { useFlashMessage } from "../../../components/FlashMessage";
+import styles from "./SiteConditionsTools.module.css";
 
 interface SiteConditionsToolsData {
 	siteActive: string;
@@ -111,6 +111,18 @@ const SiteConditionsTools: React.FC = () => {
 			return;
 		}
 
+		// Validate all fields are required
+		if (
+			!formData.siteActive ||
+			!formData.windSpeed ||
+			!formData.housekeepingRating ||
+			formData.toolsUsed.length === 0 ||
+			!formData.jobComments
+		) {
+			showMessage("All fields are required", "error");
+			return;
+		}
+
 		setIsLoading(true);
 
 		try {
@@ -154,13 +166,13 @@ const SiteConditionsTools: React.FC = () => {
 		}
 	};
 
-	// Check if all fields are blank
-	const areAllFieldsBlank =
-		!formData.siteActive &&
-		!formData.windSpeed &&
-		!formData.housekeepingRating &&
-		formData.toolsUsed.length === 0 &&
-		!formData.jobComments;
+	// Check if all required fields are filled
+	const areAllFieldsFilled =
+		formData.siteActive &&
+		formData.windSpeed &&
+		formData.housekeepingRating &&
+		formData.toolsUsed.length > 0 &&
+		formData.jobComments;
 
 	// Check if formData is the same as data
 	const isFormDataSameAsData = data
@@ -169,23 +181,23 @@ const SiteConditionsTools: React.FC = () => {
 			formData.housekeepingRating === (data.housekeeping_rating || "") &&
 			JSON.stringify(formData.toolsUsed.sort()) === JSON.stringify((data.tools_used || []).sort()) &&
 			formData.jobComments === (data.job_comments || "")
-		: areAllFieldsBlank;
+		: false;
 
-	// Disable button if all fields are blank OR if formData is same as data
-	const isButtonDisabled = areAllFieldsBlank || isFormDataSameAsData;
+	// Disable button if not all fields are filled OR if formData is same as data
+	const isButtonDisabled = !areAllFieldsFilled || isFormDataSameAsData;
 
 	return (
 		<>
 			<div className={styles.fieldsWrapper}>
 				<Checkbox
-					label="Site Active?"
+					label="Site Active? *"
 					options={siteActiveOptions}
 					value={formData.siteActive}
 					onChange={handleSiteActiveChange}
 					className={styles.field}
 				/>
 				<CombinedField
-					label="Wind Speed"
+					label="Wind Speed *"
 					inputField={
 						<Select
 							label=""
@@ -201,7 +213,7 @@ const SiteConditionsTools: React.FC = () => {
 					className={styles.field}
 				/>
 				<Select
-					label="House Keeping Rating"
+					label="House Keeping Rating *"
 					options={housekeepingRatingOptions}
 					value={formData.housekeepingRating}
 					onChange={handleSelectChange("housekeepingRating")}
@@ -209,7 +221,7 @@ const SiteConditionsTools: React.FC = () => {
 					className={styles.field}
 				/>
 				<Select
-					label="Tools Used"
+					label="Tools Used *"
 					options={toolsUsedOptions}
 					isMultipleSelect={true}
 					multipleValue={formData.toolsUsed}
@@ -218,7 +230,7 @@ const SiteConditionsTools: React.FC = () => {
 					className={styles.field}
 				/>
 				<TextArea
-					label="Job Comments"
+					label="Job Comments *"
 					value={formData.jobComments}
 					onChange={handleJobCommentsChange}
 					placeholder="Enter job comments"

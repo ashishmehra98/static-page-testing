@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Input } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import pageStyles from "../../style.module.css";
-import styles from "./JobDetail.module.css";
 import { useServiceReport } from "../../context/ServiceReportContext";
 import { useFlashMessage } from "../../../components/FlashMessage";
+import styles from "./JobDetail.module.css";
 
 interface JobDetailData {
 	date: string;
@@ -51,15 +51,19 @@ const JobDetail: React.FC = () => {
 			return;
 		}
 
-		// Validate start time and end time
-		if (formData.startTime && formData.endTime) {
-			const startTime = new Date(`2000-01-01T${formData.startTime}`);
-			const endTime = new Date(`2000-01-01T${formData.endTime}`);
+		// Validate all fields are required
+		if (!formData.date || !formData.startTime || !formData.endTime || !formData.propertyAddress) {
+			showMessage("All fields are required", "error");
+			return;
+		}
 
-			if (startTime >= endTime) {
-				showMessage("End time must be later than start time", "error");
-				return;
-			}
+		// Validate start time and end time
+		const startTime = new Date(`2000-01-01T${formData.startTime}`);
+		const endTime = new Date(`2000-01-01T${formData.endTime}`);
+
+		if (startTime >= endTime) {
+			showMessage("End time must be later than start time", "error");
+			return;
 		}
 
 		setIsLoading(true);
@@ -104,8 +108,8 @@ const JobDetail: React.FC = () => {
 		}
 	};
 
-	// Check if all fields are blank
-	const areAllFieldsBlank = !formData.date && !formData.startTime && !formData.endTime && !formData.propertyAddress;
+	// Check if all required fields are filled
+	const areAllFieldsFilled = formData.date && formData.startTime && formData.endTime && formData.propertyAddress;
 
 	// Check if formData is the same as data
 	const isFormDataSameAsData = data
@@ -113,16 +117,16 @@ const JobDetail: React.FC = () => {
 			formData.startTime === (data.start_time || "") &&
 			formData.endTime === (data.end_time || "") &&
 			formData.propertyAddress === (data.property_address || "")
-		: areAllFieldsBlank;
+		: false;
 
-	// Disable button if all fields are blank OR if formData is same as data
-	const isButtonDisabled = areAllFieldsBlank || isFormDataSameAsData;
+	// Disable button if not all fields are filled OR if formData is same as data
+	const isButtonDisabled = !areAllFieldsFilled || isFormDataSameAsData;
 
 	return (
 		<>
 			<div className={styles.fieldsWrapper}>
 				<Input
-					label="Date"
+					label="Date *"
 					variant="date"
 					value={formData.date}
 					onChange={handleInputChange("date")}
@@ -130,7 +134,7 @@ const JobDetail: React.FC = () => {
 					className={styles.field}
 				/>
 				<Input
-					label="Start time"
+					label="Start time *"
 					variant="time"
 					value={formData.startTime}
 					onChange={handleInputChange("startTime")}
@@ -138,7 +142,7 @@ const JobDetail: React.FC = () => {
 					className={styles.field}
 				/>
 				<Input
-					label="End time"
+					label="End time *"
 					variant="time"
 					value={formData.endTime}
 					onChange={handleInputChange("endTime")}
@@ -146,7 +150,7 @@ const JobDetail: React.FC = () => {
 					className={styles.field}
 				/>
 				<Input
-					label="Property address"
+					label="Property address *"
 					variant="text"
 					value={formData.propertyAddress}
 					onChange={handleInputChange("propertyAddress")}

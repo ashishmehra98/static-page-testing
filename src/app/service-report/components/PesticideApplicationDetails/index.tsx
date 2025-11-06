@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Input, Select, CombinedField } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import { useFlashMessage } from "../../../components/FlashMessage";
@@ -49,12 +49,48 @@ const areaOptions = [
 ];
 
 const pesticideOptions = [
-	{ value: "battle-axe-roach-bait", label: "Battle Axe Roach Bait", config: { chemicalUsed: "0.5g/kg Fipronil" } },
-	{ value: "temprid-75", label: "Temprid 75", config: { chemicalUsed: "50g/l Imidacloprid & 25g/1 Beta-Cyfluthrin" } },
-	{ value: "country-bifenthrin-100SC", label: "Country Bifenthrin 100SC", config: { chemicalUsed: "Bifenthrin 100g/L" } },
-	{ value: "dragon-dust", label: "Dragnet Dust", config: { chemicalUsed: "20g/kg Permethrin & 5g/kg Triflumuron" } },
-	{ value: "seclira-wsg", label: "Seclira WSG", config: { chemicalUsed: "400g/kg Dinotefuran" } },
-	{ value: "contrac-blox", label: "Contrac Blox", config: { chemicalUsed: "0.005% Bromadiolone" } },
+	{
+		value: "battle-axe-roach-bait",
+		label: "Battle Axe Roach Bait",
+		config: { chemicalUsed: "0.5g/kg Fipronil", mixedRate: null, mixedRateUnit: null, rawAmount: null, rawAmountUnit: null },
+	},
+	{
+		value: "temprid-75",
+		label: "Temprid 75",
+		config: {
+			chemicalUsed: "50g/l Imidacloprid & 25g/1 Beta-Cyfluthrin",
+			mixedRate: null,
+			mixedRateUnit: null,
+			rawAmount: null,
+			rawAmountUnit: null,
+		},
+	},
+	{
+		value: "country-bifenthrin-100SC",
+		label: "Country Bifenthrin 100SC",
+		config: { chemicalUsed: "Bifenthrin 100g/L", mixedRate: 26, mixedRateUnit: null, rawAmount: null, rawAmountUnit: null },
+	},
+	{
+		value: "dragon-dust",
+		label: "Dragnet Dust",
+		config: {
+			chemicalUsed: "20g/kg Permethrin & 5g/kg Triflumuron",
+			mixedRate: null,
+			mixedRateUnit: null,
+			rawAmount: null,
+			rawAmountUnit: null,
+		},
+	},
+	{
+		value: "seclira-wsg",
+		label: "Seclira WSG",
+		config: { chemicalUsed: "400g/kg Dinotefuran", mixedRate: 400, mixedRateUnit: null, rawAmount: 28, rawAmountUnit: "g" },
+	},
+	{
+		value: "contrac-blox",
+		label: "Contrac Blox",
+		config: { chemicalUsed: "0.005% Bromadiolone", mixedRate: null, mixedRateUnit: null, rawAmount: 28, rawAmountUnit: "g" },
+	},
 ];
 
 const unitOptions = [
@@ -122,6 +158,7 @@ const PesticideApplicationDetails: React.FC = () => {
 	const { data, loading } = useServiceReport();
 	const { showMessage } = useFlashMessage();
 	const [formDataArray, setFormDataArray] = useState<PesticideApplicationDetailsData[]>([{ ...defaultFormData }]);
+	const fetchedDataArrayRef = useRef<PesticideApplicationDetailsData[]>([{ ...defaultFormData }]);
 	const [isLoading, setIsLoading] = useState(false);
 
 	// Fetch pesticide applications when service report data is loaded
@@ -147,15 +184,20 @@ const PesticideApplicationDetails: React.FC = () => {
 					if (result.data.length > 0) {
 						const transformedData = result.data.map((dbItem: PesticideApplicationDB) => transformDBToFormData(dbItem));
 						setFormDataArray(transformedData);
+						fetchedDataArrayRef.current = transformedData;
 					} else {
 						// No data found, keep default empty form
-						setFormDataArray([{ ...defaultFormData }]);
+						const emptyForm = [{ ...defaultFormData }];
+						setFormDataArray(emptyForm);
+						fetchedDataArrayRef.current = emptyForm;
 					}
 				}
 			} catch (error) {
 				console.error("Error fetching pesticide applications:", error);
 				// On error, keep default empty form
-				setFormDataArray([{ ...defaultFormData }]);
+				const emptyForm = [{ ...defaultFormData }];
+				setFormDataArray(emptyForm);
+				fetchedDataArrayRef.current = emptyForm;
 			} finally {
 				setIsLoading(false);
 			}
@@ -179,36 +221,59 @@ const PesticideApplicationDetails: React.FC = () => {
 	const handleInputChange = <
 		K extends keyof Pick<PesticideApplicationDetailsData, "batch" | "rawAmount" | "appliedAmount" | "chemicalUsed" | "mixedRate">,
 	>(
-		index: number,
-		field: K,
-		event: React.ChangeEvent<HTMLInputElement>,
-	) => {
+			index: number,
+			field: K,
+			event: React.ChangeEvent<HTMLInputElement>,
+		) => {
 		setFormDataArray((prev) => prev.map((data, i) => (i === index ? { ...data, [field]: event.target.value } : data)));
 	};
 
 	const handleSelectChange = <
 		K extends keyof Pick<PesticideApplicationDetailsData, "rawAmountUnit" | "appliedAmountUnit" | "mixedRateUnit" | "pesticide">,
 	>(
-		index: number,
-		field: K,
-		event: React.ChangeEvent<HTMLSelectElement>,
-	) => {
+			index: number,
+			field: K,
+			event: React.ChangeEvent<HTMLSelectElement>,
+		) => {
 		setFormDataArray((prev) => {
 			return prev.map((data, i) => {
 				if (i === index) {
 					const updatedData = { ...data, [field]: event.target.value };
 
-					// Auto-fill chemicalUsed when pesticide is selected
+					// Auto-fill config fields when pesticide is selected
 					if (field === "pesticide") {
 						const selectedValue = event.target.value;
 						if (selectedValue) {
 							const option = pesticideOptions.find((opt) => opt.value === selectedValue);
-							// Handle both chemicalUsed and chemichalUsed (typo) for backward compatibility
-							const chemicalUsed = option?.config?.chemicalUsed || option?.config?.chemicalUsed || "";
-							updatedData.chemicalUsed = chemicalUsed;
+							if (option?.config) {
+								// Prefill chemicalUsed if it exists
+								if (option.config.chemicalUsed) {
+									updatedData.chemicalUsed = option.config.chemicalUsed;
+								}
+								// Prefill mixedRate if it exists
+								if (option.config.mixedRate !== null && option.config.mixedRate !== undefined) {
+									updatedData.mixedRate = String(option.config.mixedRate);
+								}
+								// Prefill mixedRateUnit if it exists
+								if (option.config.mixedRateUnit) {
+									updatedData.mixedRateUnit = option.config.mixedRateUnit;
+								}
+								// Prefill rawAmount if it exists
+								if (option.config.rawAmount !== null && option.config.rawAmount !== undefined) {
+									updatedData.rawAmount = String(option.config.rawAmount);
+								}
+								// Prefill rawAmountUnit if it exists
+								if (option.config.rawAmountUnit) {
+									updatedData.rawAmountUnit = option.config.rawAmountUnit;
+								}
+							}
 						} else {
-							// Clear chemicalUsed if no pesticide is selected
+							// Clear all config fields if no pesticide is selected
 							updatedData.chemicalUsed = "";
+							updatedData.mixedRate = "";
+							updatedData.mixedRateUnit = "";
+							updatedData.rawAmount = "";
+							updatedData.rawAmountUnit = "";
 						}
 					}
 
@@ -227,29 +292,55 @@ const PesticideApplicationDetails: React.FC = () => {
 		setFormDataArray((prev) => prev.map((data, i) => (i === index ? { ...data, [field]: values } : data)));
 	};
 
-	// Check if a single form data object has at least one field with a value
-	const hasAnyFieldValue = (formData: PesticideApplicationDetailsData): boolean => {
+	// Check if a single form data object has all required fields filled
+	const areAllFieldsFilled = (formData: PesticideApplicationDetailsData): boolean => {
 		return (
-			(formData.areasCovered?.length ?? 0) > 0 ||
-			(formData.pesticide?.trim() ?? "") !== "" ||
-			(formData.batch?.trim() ?? "") !== "" ||
-			(formData.rawAmount?.trim() ?? "") !== "" ||
-			(formData.rawAmountUnit?.trim() ?? "") !== "" ||
-			(formData.appliedAmount?.trim() ?? "") !== "" ||
-			(formData.appliedAmountUnit?.trim() ?? "") !== "" ||
-			(formData.chemicalUsed?.trim() ?? "") !== "" ||
-			(formData.mixedRate?.trim() ?? "") !== "" ||
-			(formData.mixedRateUnit?.trim() ?? "") !== "" ||
-			(formData.defaultUnit?.trim() ?? "") !== "" ||
-			(formData.defaultUnitUnit?.trim() ?? "") !== ""
+			(formData.areasCovered?.length ?? 0) > 0 &&
+			(formData.pesticide?.trim() ?? "") !== "" &&
+			(formData.batch?.trim() ?? "") !== "" &&
+			(formData.rawAmount?.trim() ?? "") !== "" &&
+			(formData.rawAmountUnit?.trim() ?? "") !== "" &&
+			(formData.appliedAmount?.trim() ?? "") !== "" &&
+			(formData.appliedAmountUnit?.trim() ?? "") !== "" &&
+			(formData.chemicalUsed?.trim() ?? "") !== "" &&
+			(formData.mixedRate?.trim() ?? "") !== "" &&
+			(formData.mixedRateUnit?.trim() ?? "") !== ""
 		);
 	};
 
+	// Check if all entries in the array have all required fields filled
+	const areAllEntriesFilled = formDataArray.length > 0 && formDataArray.every((formData) => areAllFieldsFilled(formData));
+
+	// Check if formData is the same as fetched data (similar to JobDetail's isFormDataSameAsData)
+	const isFormDataSameAsData = (): boolean => {
+		const fetchedDataArray = fetchedDataArrayRef.current;
+		if (formDataArray.length !== fetchedDataArray.length) {
+			return false;
+		}
+
+		return formDataArray.every((formData, index) => {
+			const fetched = fetchedDataArray[index];
+			if (!fetched) return false;
+
+			return (
+				JSON.stringify(formData.areasCovered?.sort()) === JSON.stringify(fetched.areasCovered?.sort()) &&
+				formData.pesticide === fetched.pesticide &&
+				formData.batch === fetched.batch &&
+				formData.rawAmount === fetched.rawAmount &&
+				formData.rawAmountUnit === fetched.rawAmountUnit &&
+				formData.appliedAmount === fetched.appliedAmount &&
+				formData.appliedAmountUnit === fetched.appliedAmountUnit &&
+				formData.chemicalUsed === fetched.chemicalUsed &&
+				formData.mixedRate === fetched.mixedRate &&
+				formData.mixedRateUnit === fetched.mixedRateUnit
+			);
+		});
+	};
+
 	const handleSaveChanges = async () => {
-		// Check if form is invalid (empty array or not all items have at least one field with a value)
-		const isInvalid = formDataArray.length === 0 || !formDataArray.every((formData) => hasAnyFieldValue(formData));
-		if (isInvalid) {
-			showMessage("Please fill in at least one field in all pesticide application entries", "error");
+		// Validate all fields are required
+		if (!areAllEntriesFilled) {
+			showMessage("All fields are required", "error");
 			return;
 		}
 
@@ -284,6 +375,7 @@ const PesticideApplicationDetails: React.FC = () => {
 				if (result.data && result.data.length > 0) {
 					const transformedData = result.data.map((dbItem: PesticideApplicationDB) => transformDBToFormData(dbItem));
 					setFormDataArray(transformedData);
+					fetchedDataArrayRef.current = transformedData;
 				}
 			}
 		} catch (error) {
@@ -340,7 +432,7 @@ const PesticideApplicationDetails: React.FC = () => {
 							<div className={styles.row}>
 								<div className={styles.field}>
 									<Select
-										label="Areas covered"
+										label="Areas covered *"
 										options={areaOptions}
 										isMultipleSelect={true}
 										multipleValue={formData.areasCovered}
@@ -350,7 +442,7 @@ const PesticideApplicationDetails: React.FC = () => {
 								</div>
 								<div className={styles.field}>
 									<Select
-										label="Pesticide"
+										label="Pesticide *"
 										options={pesticideOptions}
 										value={formData.pesticide}
 										onChange={(e) => handleSelectChange(index, "pesticide", e)}
@@ -359,7 +451,7 @@ const PesticideApplicationDetails: React.FC = () => {
 								</div>
 								<div className={styles.field}>
 									<Input
-										label="Batch"
+										label="Batch *"
 										variant="text"
 										type="text"
 										value={formData.batch}
@@ -368,7 +460,7 @@ const PesticideApplicationDetails: React.FC = () => {
 									/>
 								</div>
 								<CombinedField
-									label="Raw Amount"
+									label="Raw Amount *"
 									inputField={
 										<Input
 											label=""
@@ -398,7 +490,7 @@ const PesticideApplicationDetails: React.FC = () => {
 							{/* Row 2 */}
 							<div className={styles.row}>
 								<CombinedField
-									label="Applied Amount"
+									label="Applied Amount *"
 									inputField={
 										<Input
 											label=""
@@ -425,7 +517,7 @@ const PesticideApplicationDetails: React.FC = () => {
 								/>
 								<div className={styles.field}>
 									<Input
-										label="Chemical Used"
+										label="Chemical Used *"
 										variant="text"
 										type="text"
 										value={formData.chemicalUsed}
@@ -434,7 +526,7 @@ const PesticideApplicationDetails: React.FC = () => {
 									/>
 								</div>
 								<CombinedField
-									label="Mixed Rate"
+									label="Mixed Rate *"
 									inputField={
 										<Input
 											label=""
@@ -483,11 +575,11 @@ const PesticideApplicationDetails: React.FC = () => {
 				{/* <Button variant="light" title="Sheets" onPress={() => {}} className={styles.sheetsButton} /> */}
 				<Button
 					variant="primary"
-					title="Save Changes"
+					title={isLoading ? "Saving..." : "Save Changes"}
 					onPress={handleSaveChanges}
 					className={pageStyles.saveButton}
+					disabled={!areAllEntriesFilled || isFormDataSameAsData() || isLoading}
 					isLoading={isLoading}
-					disabled={isLoading}
 				/>
 			</div>
 		</>

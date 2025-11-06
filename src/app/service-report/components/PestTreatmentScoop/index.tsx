@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Input, Select } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import pageStyles from "../../style.module.css";
-import styles from "./PestTreatmentScoop.module.css";
 import { useServiceReport } from "../../context/ServiceReportContext";
 import { useFlashMessage } from "../../../components/FlashMessage";
+import styles from "./PestTreatmentScoop.module.css";
 
 interface PestTreatmentScoopData {
 	pestType: string[];
@@ -68,6 +68,12 @@ const PestTreatmentScoop: React.FC = () => {
 			return;
 		}
 
+		// Validate required field
+		if (formData.pestType.length === 0) {
+			showMessage("Pest type is required", "error");
+			return;
+		}
+
 		setIsLoading(true);
 
 		try {
@@ -108,23 +114,23 @@ const PestTreatmentScoop: React.FC = () => {
 		}
 	};
 
-	// Check if all fields are blank
-	const areAllFieldsBlank = formData.pestType.length === 0 && !formData.otherPest;
+	// Check if required field is filled
+	const isPestTypeFilled = formData.pestType.length > 0;
 
 	// Check if formData is the same as data
 	const isFormDataSameAsData = data
 		? JSON.stringify([...formData.pestType].sort()) === JSON.stringify([...(data.pest_types || [])].sort()) &&
 			formData.otherPest === (data.other_pest || "")
-		: areAllFieldsBlank;
+		: false;
 
-	// Disable button if all fields are blank OR if formData is same as data
-	const isButtonDisabled = areAllFieldsBlank || isFormDataSameAsData;
+	// Disable button if required field is not filled OR if formData is same as data
+	const isButtonDisabled = !isPestTypeFilled || isFormDataSameAsData;
 
 	return (
 		<>
 			<div className={styles.fieldsWrapper}>
 				<Select
-					label="Pest type"
+					label="Pest type *"
 					options={pestOptions}
 					isMultipleSelect={true}
 					multipleValue={formData.pestType}

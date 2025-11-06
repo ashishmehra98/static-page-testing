@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Checkbox, Input } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import pageStyles from "../../style.module.css";
-import styles from "./RiskAssessmentControls.module.css";
 import { useServiceReport } from "../../context/ServiceReportContext";
 import { useFlashMessage } from "../../../components/FlashMessage";
+import styles from "./RiskAssessmentControls.module.css";
 
 interface RiskAssessmentControlsData {
 	people: string;
@@ -166,6 +166,20 @@ const checkboxConfig: RowConfig[] = [
 	},
 ];
 
+// Required fields for validation (all fields except otherRisksNoted)
+const requiredFields: (keyof RiskAssessmentControlsData)[] = [
+	"people",
+	"children",
+	"dogsCats",
+	"lighting",
+	"excessiveNoise",
+	"heatCold",
+	"asbestos",
+	"slipperyFloors",
+	"asbestosIdentified",
+	"asbestosRisk",
+];
+
 const RiskAssessmentControls: React.FC = () => {
 	const { data, updateData, refresh } = useServiceReport();
 	const { showMessage } = useFlashMessage();
@@ -208,9 +222,10 @@ const RiskAssessmentControls: React.FC = () => {
 	};
 
 	// Helper function to convert yes/no string to boolean
-	const yesNoToBoolean = (value: string): boolean | null => {
-		if (value === "yes") return true;
-		if (value === "no") return false;
+	const yesNoToBoolean = (value: string): boolean | null | string => {
+		if (value === "yes") return "yes";
+		if (value === "no") return "no";
+		if (value === "not-sure") return "not-sure";
 		return null;
 	};
 
@@ -218,6 +233,7 @@ const RiskAssessmentControls: React.FC = () => {
 	const asbestosOptionToString = (value: string): string | null => {
 		if (value === "yes") return "yes";
 		if (value === "no") return "no";
+		if (value === "not-sure") return "not-sure";
 		return null; // "not-sure" maps to null
 	};
 
@@ -316,6 +332,14 @@ const RiskAssessmentControls: React.FC = () => {
 			return;
 		}
 
+		// Validate all required fields are filled (except otherRisksNoted)
+		const missingFields = requiredFields.filter((field) => !formData[field] || (formData[field] as string).trim() === "");
+
+		if (missingFields.length > 0) {
+			showMessage("All fields are required", "error");
+			return;
+		}
+
 		setIsLoading(true);
 
 		try {
@@ -373,6 +397,35 @@ const RiskAssessmentControls: React.FC = () => {
 		}
 	};
 
+	// Check if all required fields are filled (except otherRisksNoted)
+	const areAllFieldsFilled = requiredFields.every((field) => formData[field] && (formData[field] as string).trim() !== "");
+
+	// Check if formData is the same as data
+	const isFormDataSameAsData = data
+		? formData.people === booleanToYesNo(data.people_present) &&
+			formData.peopleAskedToVacate === (data.people_asked_to_vacate || false) &&
+			formData.children === booleanToYesNo(data.children_present) &&
+			formData.childrenParentalSupervision === (data.children_parental_supervision || false) &&
+			formData.dogsCats === booleanToYesNo(data.dogs_cats_present) &&
+			formData.dogsCatsRemoved === (data.dogs_cats_removed || false) &&
+			formData.lighting === booleanToYesNo(data.lighting_issue) &&
+			formData.lightingCarryTorch === (data.lighting_carry_torch || false) &&
+			formData.excessiveNoise === booleanToYesNo(data.excessive_noise) &&
+			formData.excessiveNoiseEarmuffs === (data.excessive_noise_earmuffs || false) &&
+			formData.heatCold === booleanToYesNo(data.heat_cold_issue) &&
+			formData.heatColdSafetyGear === (data.heat_cold_safety_gear || false) &&
+			formData.asbestos === booleanToYesNo(data.asbestos_present) &&
+			formData.asbestosProcedures === (data.asbestos_procedures || false) &&
+			formData.slipperyFloors === booleanToYesNo(data.slippery_floors) &&
+			formData.slipperyFloorsSignage === (data.slippery_floors_signage || false) &&
+			formData.asbestosIdentified === stringToAsbestosOption(data.asbestos_identified) &&
+			formData.asbestosRisk === stringToAsbestosOption(data.asbestos_risk) &&
+			formData.otherRisksNoted === (data.other_risks_noted || "")
+		: false;
+
+	// Disable button if not all fields are filled OR if formData is same as data
+	const isButtonDisabled = !areAllFieldsFilled || isFormDataSameAsData;
+
 	return (
 		<>
 			<div className={styles.contentWrapper}>
@@ -391,6 +444,7 @@ const RiskAssessmentControls: React.FC = () => {
 										value={formData[fieldConfig.field] as string}
 										onChange={(value) => handleCheckboxChange(fieldConfig.field, value, additionalCheckbox?.field)}
 										className={styles.checkboxField}
+										required
 									/>
 									{additionalCheckbox && (
 										<Checkbox
@@ -402,6 +456,7 @@ const RiskAssessmentControls: React.FC = () => {
 												handleAdditionalCheckboxChange(additionalCheckbox.field, !isCurrentlyChecked, fieldConfig.field);
 											}}
 											className={styles.checkboxField}
+											required
 										/>
 									)}
 								</div>
@@ -431,7 +486,7 @@ const RiskAssessmentControls: React.FC = () => {
 					title={isLoading ? "Saving..." : "Save Changes"}
 					onPress={handleSaveChanges}
 					className={pageStyles.saveButton}
-					disabled={isLoading}
+					disabled={isButtonDisabled || isLoading}
 				/>
 			</div>
 		</>
