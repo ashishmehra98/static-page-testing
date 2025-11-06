@@ -162,6 +162,21 @@
 	width: 100%;
 	height: 47px;
 	margin: 20px 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.separatorLine {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 3px;
+	background-color: #dcdcdc;
+	width: 100%;
 }
 
 /* Add New Area */
@@ -169,7 +184,73 @@
 	width: 100%;
 	height: 47px;
 	margin-top: 20px;
-	/* Add New Area button/image would be styled here */
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+
+.addNewArea:hover {
+	opacity: 0.8;
+}
+
+.addNewArea:active {
+	opacity: 0.6;
+}
+
+.addNewAreaLine {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 3px;
+	background-color: #134021;
+	width: 100%;
+}
+
+.addNewAreaCircle {
+	position: relative;
+	width: 47px;
+	height: 47px;
+	border-radius: 50%;
+	background-color: #134021;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	flex-shrink: 0;
+}
+
+.addNewAreaPlus {
+	position: relative;
+	width: 18px;
+	height: 18px;
+}
+
+.addNewAreaPlus::before,
+.addNewAreaPlus::after {
+	content: "";
+	position: absolute;
+	background-color: white;
+}
+
+.addNewAreaPlus::before {
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	width: 2.5px;
+	height: 100%;
+}
+
+.addNewAreaPlus::after {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 2.5px;
 }
 
 /* Buttons Wrapper */

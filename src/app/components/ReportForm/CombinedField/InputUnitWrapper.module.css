@@ -46,32 +46,34 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
 	.inputWrapper {
-		width: 100%;
+		display: flex;
+		flex: 0.7;
 		max-width: none;
 	}
 
 	.unitWrapper {
-		width: 100%;
-		margin-top: 10px;
+		flex: 0.3;
+		margin-top: 0;
 	}
 
 	.unitButton {
-		width: 100%;
+		flex: 0.3;
 		margin-top: 0;
 	}
 }
 
 @media screen and (max-width: 480px) {
 	.inputWrapper {
-		width: 100%;
+		display: flex;
+		flex: 0.7;
 	}
 
 	.unitWrapper {
-		width: 100%;
+		flex: 0.3;
 		margin-top: 0;
 	}
 
 	.unitButton {
-		width: 100%;
+		flex: 0.3;
 	}
 }

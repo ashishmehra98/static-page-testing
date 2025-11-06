@@ -388,13 +388,7 @@ const PesticideApplicationDetails: React.FC = () => {
 
 	const Separator = () => (
 		<div className={styles.separator}>
-			<svg width="1296" height="47" viewBox="0 0 1296 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M0 22H1296V25H0V22Z" fill="#dcdcdc" />
-				{/* <path
-					d="M671 23.5C671 36.4787 660.479 47 647.5 47C634.521 47 624 36.4787 624 23.5C624 10.5213 634.521 0 647.5 0C660.479 0 671 10.5213 671 23.5Z"
-					fill="#134021"
-				/> */}
-			</svg>
+			<div className={styles.separatorLine}></div>
 		</div>
 	);
 
@@ -557,18 +551,11 @@ const PesticideApplicationDetails: React.FC = () => {
 				</div>
 			))}
 
-			<div className={styles.addNewArea} onClick={handleAddNewArea} style={{ cursor: "pointer" }}>
-				<svg width="1296" height="47" viewBox="0 0 1296 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M0 22H1296V25H0V22Z" fill="#134021" />
-					<path
-						d="M671 23.5C671 36.4787 660.479 47 647.5 47C634.521 47 624 36.4787 624 23.5C624 10.5213 634.521 0 647.5 0C660.479 0 671 10.5213 671 23.5Z"
-						fill="#134021"
-					/>
-					<path
-						d="M649.359 22.6866H655V25.3711H649.359V31H646.612V25.3711H641V22.6866H646.612V17H649.359V22.6866Z"
-						fill="white"
-					/>
-				</svg>
+			<div className={styles.addNewArea} onClick={handleAddNewArea}>
+				<div className={styles.addNewAreaLine}></div>
+				<div className={styles.addNewAreaCircle}>
+					<div className={styles.addNewAreaPlus}></div>
+				</div>
 			</div>
 
 			<div className={styles.buttonsWrapper}>

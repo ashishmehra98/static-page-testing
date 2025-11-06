@@ -43,7 +43,7 @@
 	}
 
 	.fieldWrapper {
-		flex-direction: column;
-		gap: 10px;
+		flex-direction: row;
+		gap: 5px;
 	}
 }
