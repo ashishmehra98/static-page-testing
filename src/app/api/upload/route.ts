@@ -99,3 +99,59 @@ export async function POST(request: NextRequest) {
 		);
 	}
 }
+
+/**
+ * DELETE /api/upload
+ * Handles file deletion from Supabase storage bucket "ecovia"
+ */
+export async function DELETE(request: NextRequest) {
+	try {
+		// Validate request origin before processing
+		const originValidation = validateRequestOrigin(request);
+		if (!originValidation.isValid) {
+			return NextResponse.json({ error: originValidation.error || "Unauthorized request" }, { status: 403 });
+		}
+
+		// Parse the request body
+		const body = await request.json();
+		const filePath = body.path as string | null;
+
+		if (!filePath) {
+			return NextResponse.json({ error: "File path is required" }, { status: 400 });
+		}
+
+		// Create server-side Supabase client
+		const supabase = createServerClient();
+
+		// Delete file from Supabase storage
+		const { error: deleteError } = await supabase.storage.from("ecovia").remove([filePath]);
+
+		if (deleteError) {
+			console.error("Supabase delete error:", deleteError);
+			return NextResponse.json({ error: "Failed to delete file. Please try again." }, { status: 500 });
+		}
+
+		return NextResponse.json(
+			{
+				success: true,
+				message: "File deleted successfully",
+			},
+			{ status: 200 },
+		);
+	} catch (error) {
+		console.error("API route error:", error);
+
+		// Handle JSON parsing errors
+		if (error instanceof SyntaxError || error instanceof TypeError) {
+			return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+		}
+
+		// Handle other errors
+		return NextResponse.json(
+			{
+				error: error instanceof Error ? error.message : "An unexpected error occurred",
+			},
+			{ status: 500 },
+		);
+	}
+}

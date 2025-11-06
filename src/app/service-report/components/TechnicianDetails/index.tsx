@@ -55,7 +55,13 @@ const TechnicianDetails: React.FC = () => {
 			if (data.technician_signature && signatureCanvasRef.current) {
 				const canvas = signatureCanvasRef.current;
 				const img = new Image();
-				img.src = data.technician_signature;
+
+				// Set crossOrigin to prevent canvas tainting when loading from external URLs
+				// If it's a data URL, crossOrigin is not needed
+				if (!data.technician_signature.startsWith("data:")) {
+					img.crossOrigin = "anonymous";
+				}
+
 				img.onload = () => {
 					const ctx = canvas.getCanvas().getContext("2d");
 					if (ctx) {
@@ -63,6 +69,18 @@ const TechnicianDetails: React.FC = () => {
 						ctx.drawImage(img, 0, 0, canvasSize.width, canvasSize.height);
 					}
 				};
+
+				img.onerror = (error) => {
+					console.error("Failed to load signature image:", error);
+					// If loading fails (e.g., CORS issue), clear the canvas
+					canvas.clear();
+					setFormData((prev) => ({
+						...prev,
+						signature: "",
+					}));
+				};
+
+				img.src = data.technician_signature;
 			} else if (signatureCanvasRef.current) {
 				signatureCanvasRef.current.clear();
 			}
@@ -131,6 +149,7 @@ const TechnicianDetails: React.FC = () => {
 
 		try {
 			let signatureUrl = formData.signature;
+			const oldSignaturePath = data.technician_signature;
 
 			// If signature is a base64 data URL, upload it to Supabase storage
 			if (formData.signature.startsWith("data:image/")) {
@@ -155,6 +174,30 @@ const TechnicianDetails: React.FC = () => {
 
 				if (uploadResult.success && uploadResult.url) {
 					signatureUrl = uploadResult.url;
+
+					// Delete old signature if it exists and is different from the new one
+					if (oldSignaturePath && oldSignaturePath !== signatureUrl && oldSignaturePath.startsWith("http")) {
+						try {
+							// Extract file path from public URL
+							// URL format: https://[project].supabase.co/storage/v1/object/public/ecovia/signatures/filename.png
+							// We need: signatures/filename.png
+							const urlObj = new URL(oldSignaturePath);
+							const pathMatch = urlObj.pathname.match(/\/storage\/v1\/object\/public\/ecovia\/(.+)$/);
+							if (pathMatch && pathMatch[1]) {
+								const filePath = pathMatch[1];
+								await fetch("/api/upload", {
+									method: "DELETE",
+									headers: {
+										"Content-Type": "application/json",
+									},
+									body: JSON.stringify({ path: filePath }),
+								});
+							}
+						} catch (deleteError) {
+							// Log error but don't fail the entire operation if deletion fails
+							console.error("Failed to delete old signature:", deleteError);
+						}
+					}
 				} else {
 					throw new Error("Invalid upload response");
 				}
