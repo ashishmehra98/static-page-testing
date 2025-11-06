@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import SignatureCanvas from "react-signature-canvas";
 import { Input } from "../../../components/ReportForm";
 import Button from "../../../components/Button";
 import pageStyles from "../../style.module.css";
 import { useServiceReport } from "../../context/ServiceReportContext";
 import { useFlashMessage } from "../../../components/FlashMessage";
+import inputStyles from "../../../components/ReportForm/Input/Input.module.css";
 import styles from "./TechnicianDetails.module.css";
 
 interface TechnicianDetailsData {
@@ -23,6 +25,23 @@ const TechnicianDetails: React.FC = () => {
 		signature: "",
 	});
 	const [isLoading, setIsLoading] = useState(false);
+	const signatureCanvasRef = useRef<SignatureCanvas>(null);
+	const signatureWrapperRef = useRef<HTMLDivElement>(null);
+	const [canvasSize, setCanvasSize] = useState({ width: 500, height: 200 });
+
+	// Set canvas size based on container width
+	useEffect(() => {
+		const updateCanvasSize = () => {
+			if (signatureWrapperRef.current) {
+				const width = signatureWrapperRef.current.offsetWidth;
+				setCanvasSize({ width, height: 200 });
+			}
+		};
+
+		updateCanvasSize();
+		window.addEventListener("resize", updateCanvasSize);
+		return () => window.removeEventListener("resize", updateCanvasSize);
+	}, []);
 
 	// Initialize form data from context when data is loaded
 	useEffect(() => {
@@ -32,14 +51,68 @@ const TechnicianDetails: React.FC = () => {
 				licence: data.technician_licence || "",
 				signature: data.technician_signature || "",
 			});
+			// Load signature into canvas if it exists
+			if (data.technician_signature && signatureCanvasRef.current) {
+				const canvas = signatureCanvasRef.current;
+				const img = new Image();
+				img.src = data.technician_signature;
+				img.onload = () => {
+					const ctx = canvas.getCanvas().getContext("2d");
+					if (ctx) {
+						canvas.clear();
+						ctx.drawImage(img, 0, 0, canvasSize.width, canvasSize.height);
+					}
+				};
+			} else if (signatureCanvasRef.current) {
+				signatureCanvasRef.current.clear();
+			}
 		}
-	}, [data]);
+	}, [data, canvasSize]);
 
 	const handleInputChange = (field: keyof TechnicianDetailsData) => (event: React.ChangeEvent<HTMLInputElement>) => {
 		setFormData((prev) => ({
 			...prev,
 			[field]: event.target.value,
 		}));
+	};
+
+	const handleSignatureEnd = () => {
+		if (signatureCanvasRef.current) {
+			const signatureData = signatureCanvasRef.current.toDataURL("image/png");
+			setFormData((prev) => ({
+				...prev,
+				signature: signatureData,
+			}));
+		}
+	};
+
+	const handleClearSignature = () => {
+		if (signatureCanvasRef.current) {
+			signatureCanvasRef.current.clear();
+			setFormData((prev) => ({
+				...prev,
+				signature: "",
+			}));
+		}
+	};
+
+	// Helper function to convert base64 data URL to File
+	const base64ToFile = (base64String: string, fileName: string): File => {
+		// Remove data URL prefix (e.g., "data:image/png;base64,")
+		const base64Data = base64String.split(",")[1] || base64String;
+		const mimeMatch = base64String.match(/data:([^;]+);base64/);
+		const mimeType = mimeMatch ? mimeMatch[1] : "image/png";
+
+		// Convert base64 to binary
+		const byteCharacters = atob(base64Data);
+		const byteNumbers = new Array(byteCharacters.length);
+		for (let i = 0; i < byteCharacters.length; i++) {
+			byteNumbers[i] = byteCharacters.charCodeAt(i);
+		}
+		const byteArray = new Uint8Array(byteNumbers);
+		const blob = new Blob([byteArray], { type: mimeType });
+
+		return new File([blob], fileName, { type: mimeType });
 	};
 
 	const handleSaveChanges = async () => {
@@ -57,10 +130,41 @@ const TechnicianDetails: React.FC = () => {
 		setIsLoading(true);
 
 		try {
+			let signatureUrl = formData.signature;
+
+			// If signature is a base64 data URL, upload it to Supabase storage
+			if (formData.signature.startsWith("data:image/")) {
+				// Convert base64 to File
+				const signatureFile = base64ToFile(formData.signature, `signature-${data.id}.png`);
+
+				// Upload signature to Supabase storage
+				const uploadFormData = new FormData();
+				uploadFormData.append("file", signatureFile);
+				uploadFormData.append("folder", "signatures");
+
+				const uploadResponse = await fetch("/api/upload", {
+					method: "POST",
+					body: uploadFormData,
+				});
+
+				const uploadResult = await uploadResponse.json();
+
+				if (!uploadResponse.ok) {
+					throw new Error(uploadResult.error || "Failed to upload signature");
+				}
+
+				if (uploadResult.success && uploadResult.url) {
+					signatureUrl = uploadResult.url;
+				} else {
+					throw new Error("Invalid upload response");
+				}
+			}
+			// If signature is already a URL (from previous upload), use it as is
+
 			const updatePayload = {
 				technician_name: formData.name || null,
 				technician_licence: formData.licence || null,
-				technician_signature: formData.signature || null,
+				technician_signature: signatureUrl || null,
 			};
 
 			const response = await fetch(`/api/service-report/${data.id}`, {
@@ -127,14 +231,31 @@ const TechnicianDetails: React.FC = () => {
 					placeholder="Enter licence"
 					className={styles.field}
 				/>
-				<Input
-					label="Signature *"
-					variant="text"
-					value={formData.signature}
-					onChange={handleInputChange("signature")}
-					placeholder="Enter signature"
-					className={`${styles.field} ${styles.signatureField}`}
-				/>
+				<div className={`${styles.field} ${inputStyles.field} ${styles.signatureField}`}>
+					<label className={`${inputStyles.label}`}>
+						Signature <span className={inputStyles.required}>*</span>
+					</label>
+					<div ref={signatureWrapperRef} className={`${inputStyles.inputWrapper} ${styles.signatureCanvasWrapper}`}>
+						<SignatureCanvas
+							ref={signatureCanvasRef}
+							canvasProps={{
+								className: styles.signatureCanvas,
+								width: canvasSize.width,
+								height: canvasSize.height,
+							}}
+							onEnd={handleSignatureEnd}
+						/>
+						{formData.signature && (
+							<button
+								type="button"
+								onClick={handleClearSignature}
+								className={styles.clearSignatureButton}
+								aria-label="Clear signature">
+								Clear
+							</button>
+						)}
+					</div>
+				</div>
 			</div>
 			<div className={styles.actions}>
 				{/* <Button variant="light" title="Sheets" onPress={() => {}} className={styles.sheetsButton} /> */}
