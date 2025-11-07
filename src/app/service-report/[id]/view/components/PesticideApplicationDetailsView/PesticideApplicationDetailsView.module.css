@@ -1,0 +1,111 @@
+/* Pesticide Application Details View */
+.pesticideApplicationDetailsView {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Card Group */
+.cardGroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Card Label */
+.cardLabel {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	text-transform: uppercase;
+	color: var(--secondary);
+	margin: 0;
+	width: 100%;
+}
+
+/* Value */
+.value {
+	font-family: var(--font-heading);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+	color: rgba(19, 64, 33, 0.8);
+	margin: 0;
+	width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+	.cardGroup {
+		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.pesticideApplicationDetailsView {
+		gap: 20px;
+	}
+
+	.cardGroup {
+		gap: 16px;
+	}
+
+	.cardLabel {
+		font-size: 16px;
+		letter-spacing: -0.32px;
+	}
+
+	.value {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.pesticideApplicationDetailsView {
+		gap: 18px;
+	}
+
+	.cardGroup {
+		gap: 12px;
+	}
+
+	.cardLabel {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+
+	.value {
+		font-size: 14px;
+		letter-spacing: -0.28px;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.pesticideApplicationDetailsView {
+		page-break-inside: avoid;
+	}
+
+	.cardGroup {
+		gap: 15px !important;
+	}
+
+	.cardLabel {
+		font-size: 14px !important;
+		color: var(--secondary) !important;
+	}
+
+	.value {
+		font-size: 13px !important;
+		color: rgba(19, 64, 33, 0.9) !important;
+	}
+}

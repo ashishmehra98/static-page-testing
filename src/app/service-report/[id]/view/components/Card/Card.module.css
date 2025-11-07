@@ -1,0 +1,60 @@
+/* Card */
+.card {
+	background-color: #f7f7f7;
+	border-left: 3px solid var(--secondary);
+	border-radius: 10px;
+	position: relative;
+	width: 416px;
+}
+
+.cardContent {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+	align-items: flex-start;
+	justify-content: center;
+	overflow: hidden;
+	padding: 20px 33px;
+	width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+	.card {
+		width: calc(50% - 12px);
+		min-width: 300px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.card {
+		width: 100%;
+	}
+
+	.cardContent {
+		padding: 16px 24px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cardContent {
+		padding: 14px 20px;
+		gap: 8px;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.card {
+		background-color: #f9f9f9 !important;
+		border-left: 2px solid var(--secondary) !important;
+		page-break-inside: avoid;
+		width: 100% !important;
+		margin-bottom: 15px;
+	}
+
+	.cardContent {
+		padding: 15px 20px !important;
+	}
+}

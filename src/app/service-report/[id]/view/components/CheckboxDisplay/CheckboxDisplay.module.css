@@ -1,0 +1,53 @@
+/* Checkbox Display */
+.checkboxDisplay {
+	display: flex;
+	gap: 11px;
+	align-items: center;
+	width: 100%;
+}
+
+.checkbox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+}
+
+.checkboxIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.label {
+	font-family: var(--font-heading);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+	color: rgba(19, 64, 33, 0.8);
+	margin: 0;
+	white-space: nowrap;
+}
+
+/* Print Styles */
+@media print {
+	.checkboxDisplay {
+		gap: 8px;
+	}
+
+	.checkbox {
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	.label {
+		font-size: 13px !important;
+		color: rgba(19, 64, 33, 0.9) !important;
+	}
+}

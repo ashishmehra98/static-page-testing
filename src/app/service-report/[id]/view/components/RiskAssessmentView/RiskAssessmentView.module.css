@@ -1,0 +1,235 @@
+/* Risk Assessment View */
+.riskAssessmentView {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Cards Group */
+.cardsGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Risk Card */
+.riskCard {
+	background-color: #f7f7f7;
+	border-left: 3px solid var(--secondary);
+	border-radius: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 16px 33px;
+	box-sizing: border-box;
+}
+
+/* Card Header */
+.cardHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+/* Card Label */
+.cardLabel {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	text-transform: uppercase;
+	color: var(--secondary);
+	margin: 0;
+	white-space: nowrap;
+}
+
+/* Badge */
+.badge {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 28px;
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+
+.badgeYes {
+	background-color: #ff6b6b;
+}
+
+.badgeNo {
+	background-color: #27ae60;
+}
+
+.badgeText {
+	font-family: var(--font-heading);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+	color: var(--white);
+	margin: 0;
+	white-space: nowrap;
+}
+
+/* Solution Message */
+.solutionMessage {
+	background-color: #e8f5e9;
+	border-left: 1.931px solid #27ae60;
+	border-radius: 6.437px;
+	padding: 19px 29px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.solutionText {
+	font-family: var(--font-heading);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+	color: rgba(19, 64, 33, 0.8);
+	margin: 0;
+	white-space: nowrap;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+	.cardsGroup {
+		gap: 18px;
+	}
+
+	.riskCard {
+		padding: 14px 28px;
+		gap: 14px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.riskAssessmentView {
+		gap: 20px;
+	}
+
+	.cardsGroup {
+		gap: 16px;
+	}
+
+	.riskCard {
+		padding: 12px 24px;
+		gap: 12px;
+	}
+
+	.cardLabel {
+		font-size: 16px;
+		letter-spacing: -0.32px;
+	}
+
+	.badgeText {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+
+	.solutionText {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+
+	.cardHeader {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.riskAssessmentView {
+		gap: 18px;
+	}
+
+	.cardsGroup {
+		gap: 14px;
+	}
+
+	.riskCard {
+		padding: 10px 20px;
+		gap: 10px;
+	}
+
+	.cardLabel {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+
+	.badge {
+		padding: 8px 16px;
+	}
+
+	.badgeText {
+		font-size: 14px;
+		letter-spacing: -0.28px;
+	}
+
+	.solutionMessage {
+		padding: 16px 24px;
+	}
+
+	.solutionText {
+		font-size: 14px;
+		letter-spacing: -0.28px;
+		white-space: normal;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.riskAssessmentView {
+		page-break-inside: avoid;
+	}
+
+	.cardsGroup {
+		gap: 15px !important;
+	}
+
+	.riskCard {
+		background-color: #f9f9f9 !important;
+		border-left: 2px solid var(--secondary) !important;
+		page-break-inside: avoid;
+		padding: 12px 20px !important;
+	}
+
+	.cardLabel {
+		font-size: 14px !important;
+		color: var(--secondary) !important;
+	}
+
+	.badge {
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	.badgeText {
+		font-size: 13px !important;
+	}
+
+	.solutionMessage {
+		background-color: #f0f8f0 !important;
+		border-left: 2px solid #27ae60 !important;
+		padding: 12px 20px !important;
+		page-break-inside: avoid;
+	}
+
+	.solutionText {
+		font-size: 13px !important;
+		color: rgba(19, 64, 33, 0.9) !important;
+	}
+}

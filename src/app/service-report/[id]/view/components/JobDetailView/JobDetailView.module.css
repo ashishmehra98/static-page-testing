@@ -1,0 +1,106 @@
+/* Job Detail View */
+.jobDetailView {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Card Group */
+.cardGroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Card Label */
+.label {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	text-transform: uppercase;
+	color: var(--secondary);
+	margin: 0;
+	width: 100%;
+}
+
+/* Card Value */
+.value {
+	font-family: var(--font-heading);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.15;
+	letter-spacing: -0.32px;
+	text-transform: capitalize;
+	color: rgba(19, 64, 33, 0.8);
+	margin: 0;
+	width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+	.cardGroup {
+		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.jobDetailView {
+		gap: 20px;
+	}
+
+	.cardGroup {
+		gap: 16px;
+	}
+
+	.label {
+		font-size: 16px;
+		letter-spacing: -0.32px;
+	}
+
+	.value {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.jobDetailView {
+		gap: 18px;
+	}
+
+	.cardGroup {
+		gap: 12px;
+	}
+
+	.label {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.jobDetailView {
+		page-break-inside: avoid;
+	}
+
+	.cardGroup {
+		gap: 15px !important;
+	}
+
+	.label {
+		font-size: 14px !important;
+		color: var(--secondary) !important;
+	}
+
+	.value {
+		font-size: 13px !important;
+		color: rgba(19, 64, 33, 0.9) !important;
+	}
+}

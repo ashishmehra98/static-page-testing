@@ -1,0 +1,117 @@
+/* Pest Treatment Scope View */
+.pestTreatmentScopeView {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Card Group */
+.cardGroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Wider cards for pest treatment - using CSS module composition */
+.pestCard {
+	width: 635px !important;
+}
+
+@media screen and (max-width: 1024px) {
+	.pestCard {
+		width: calc(50% - 12px) !important;
+		min-width: 300px !important;
+	}
+}
+
+/* Card Label */
+.cardLabel {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.15;
+	letter-spacing: -0.36px;
+	text-transform: uppercase;
+	color: var(--secondary);
+	margin: 0;
+	width: 100%;
+}
+
+/* Checkbox List */
+.checkboxList {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+	.cardGroup {
+		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.pestTreatmentScopeView {
+		gap: 20px;
+	}
+
+	.cardGroup {
+		gap: 16px;
+	}
+
+	.cardLabel {
+		font-size: 16px;
+		letter-spacing: -0.32px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.pestTreatmentScopeView {
+		gap: 18px;
+	}
+
+	.cardGroup {
+		gap: 12px;
+	}
+
+	.cardLabel {
+		font-size: 15px;
+		letter-spacing: -0.3px;
+	}
+
+	.checkboxList {
+		gap: 10px;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.pestTreatmentScopeView {
+		page-break-inside: avoid;
+	}
+
+	.cardGroup {
+		gap: 15px !important;
+	}
+
+	.pestCard {
+		width: 100% !important;
+		page-break-inside: avoid;
+	}
+
+	.cardLabel {
+		font-size: 14px !important;
+		color: var(--secondary) !important;
+	}
+
+	.checkboxList {
+		gap: 8px !important;
+	}
+}
