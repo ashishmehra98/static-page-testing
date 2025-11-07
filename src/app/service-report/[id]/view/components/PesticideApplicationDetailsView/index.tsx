@@ -97,18 +97,29 @@ const PesticideApplicationDetailsView: React.FC = () => {
 	return (
 		<div className={styles.pesticideApplicationDetailsView}>
 			<SectionTitle heading="03. Pesticides Used & Application Details" />
-			{pesticideApplications.map((pesticide) => (
-				<div key={pesticide.id} className={styles.cardGroup}>
-					{Object.keys(pesticide).map((key) => {
-						if (!labels[key]) return null;
-						return (
-							<Card key={key}>
-								<p className={styles.cardLabel}>{labels[key]}</p>
-								<p className={styles.value}>{pesticide[key as keyof PesticideApplicationDB]}</p>
-							</Card>
-						);
-					})}
-				</div>
+			{pesticideApplications.map((pesticide, index) => (
+				<React.Fragment key={pesticide.id}>
+					{pesticideApplications.length > 1 ? (
+						<h4>
+							<strong>Application #{index + 1}</strong>
+						</h4>
+					) : null}
+					<div key={pesticide.id} className={styles.cardGroup}>
+						{Object.keys(pesticide).map((key) => {
+							if (!labels[key]) return null;
+							let value = pesticide[key as keyof PesticideApplicationDB];
+							if (Array.isArray(value) && typeof value[0] === "string") {
+								value = value.join(", ").replaceAll("-", " ");
+							}
+							return (
+								<Card key={key}>
+									<p className={styles.cardLabel}>{labels[key]}</p>
+									<p className={styles.value}>{value}</p>
+								</Card>
+							);
+						})}
+					</div>
+				</React.Fragment>
 			))}
 		</div>
 	);

@@ -17,7 +17,7 @@ interface SiteConditionsToolsData {
 }
 
 const windSpeedOptions = [
-	{ value: "<1.6", label: "Less than 1.6" },
+	{ value: "Less than 1.6", label: "Less than 1.6" },
 	{ value: "1.6-4.8", label: "1.6 - 4.8" },
 	{ value: "6.4-11.3", label: "6.4 - 11.3" },
 	{ value: "12.9-19.3", label: "12.9 - 19.3" },
