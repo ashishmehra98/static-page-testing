@@ -35,6 +35,12 @@ export const ServiceReportProvider: React.FC<ServiceReportProviderProps> = ({ ch
 				const result = await response.json();
 
 				if (!response.ok) {
+					// Explicitly handle 404 - ensure data is null
+					if (response.status === 404) {
+						setData(null);
+						setError(result.error || "Service report not found");
+						return;
+					}
 					throw new Error(result.error || "Failed to fetch service report");
 				}
 
@@ -46,6 +52,7 @@ export const ServiceReportProvider: React.FC<ServiceReportProviderProps> = ({ ch
 			} catch (err) {
 				const errorMessage = err instanceof Error ? err.message : "An unexpected error occurred";
 				setError(errorMessage);
+				setData(null); // Ensure data is null on error
 				console.error("Error fetching service report:", err);
 			} finally {
 				if (!disableLoading) setLoading(false);

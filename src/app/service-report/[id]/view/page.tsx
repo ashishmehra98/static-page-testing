@@ -3,6 +3,7 @@
 import { use } from "react";
 import Container from "../../../components/Container";
 import { ServiceReportProvider, useServiceReport } from "../../context/ServiceReportContext";
+import NotFound from "../../../not-found";
 import JobDetailView from "./components/JobDetailView";
 import PestTreatmentScopeView from "./components/PestTreatmentScopeView";
 import PesticideApplicationDetailsView from "./components/PesticideApplicationDetailsView";
@@ -19,7 +20,7 @@ interface ServiceReportViewPageProps {
 }
 
 const ServiceReportViewContent = () => {
-	const { data, loading } = useServiceReport();
+	const { data, loading, error } = useServiceReport();
 
 	if (loading) {
 		return (
@@ -30,6 +31,11 @@ const ServiceReportViewContent = () => {
 				</div>
 			</div>
 		);
+	}
+
+	// Handle 404 - if data doesn't exist or error indicates not found
+	if (!loading && (!data || (error && error.toLowerCase().includes("not found")))) {
+		return <NotFound />;
 	}
 
 	// Format date for footer
