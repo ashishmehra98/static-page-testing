@@ -1,8 +1,10 @@
 "use client";
 
 import { use } from "react";
+import Link from "next/link";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
+import Button from "../../components/Button";
 import FormExpand from "../components/FormExpand";
 import JobDetail from "../components/JobDetail";
 import PestTreatmentScoop from "../components/PestTreatmentScoop";
@@ -18,8 +20,8 @@ interface ServiceReportPageProps {
 	}>;
 }
 
-const ServiceReportContent = () => {
-	const { loading } = useServiceReport();
+const ServiceReportContent = ({ reportId }: { reportId: string }) => {
+	const { loading, isFormCompleted } = useServiceReport();
 
 	if (loading) {
 		return (
@@ -35,7 +37,17 @@ const ServiceReportContent = () => {
 	return (
 		<Container>
 			<Header />
-			<div className="flex flex-col gap-[60px] xl:gap-[80px] pt-[120px]">
+			{isFormCompleted && (
+				<div className="w-[90%] mx-auto flex flex-row items-center justify-between gap-6 py-4 px-6 bg-green-50 rounded-lg border-2 border-green-200">
+					<h2 className="text-lg xl:text-xl font-medium text-gray-900">
+						Your service report has been completed and is ready to view
+					</h2>
+					<Link href={`/service-report/${reportId}/view`} target="_blank">
+						<Button variant="primary" title="View it" onPress={() => {}} className="!h-[55px]" />
+					</Link>
+				</div>
+			)}
+			<div className="flex flex-col gap-[60px] xl:gap-[80px] pt-[60px] pb-[60px]">
 				<FormExpand title="Job & Property Details" number="01">
 					<JobDetail />
 				</FormExpand>
@@ -63,7 +75,7 @@ const ServiceReport = ({ params }: ServiceReportPageProps) => {
 	const { id } = use(params);
 	return (
 		<ServiceReportProvider reportId={id}>
-			<ServiceReportContent />
+			<ServiceReportContent reportId={id} />
 		</ServiceReportProvider>
 	);
 };

@@ -155,58 +155,28 @@ const transformDBToFormData = (dbData: PesticideApplicationDB): PesticideApplica
 };
 
 const PesticideApplicationDetails: React.FC = () => {
-	const { data, loading } = useServiceReport();
+	const { data, pesticideApplicationData, loading, updatePesticideApplicationData } = useServiceReport();
 	const { showMessage } = useFlashMessage();
 	const [formDataArray, setFormDataArray] = useState<PesticideApplicationDetailsData[]>([{ ...defaultFormData }]);
 	const fetchedDataArrayRef = useRef<PesticideApplicationDetailsData[]>([{ ...defaultFormData }]);
 	const [isLoading, setIsLoading] = useState(false);
 
-	// Fetch pesticide applications when service report data is loaded
+	// Initialize form data from context when pesticide application data is loaded
 	useEffect(() => {
-		const fetchPesticideApplications = async () => {
-			if (!data?.id) {
-				// If no service report ID, keep default empty form
-				return;
-			}
-
-			setIsLoading(true);
-
-			try {
-				const response = await fetch(`/api/service-report/${data.id}/pesticide-application`);
-				const result = await response.json();
-
-				if (!response.ok) {
-					throw new Error(result.error || "Failed to fetch pesticide applications");
-				}
-
-				if (result.success && result.data) {
-					// Transform database data to form data
-					if (result.data.length > 0) {
-						const transformedData = result.data.map((dbItem: PesticideApplicationDB) => transformDBToFormData(dbItem));
-						setFormDataArray(transformedData);
-						fetchedDataArrayRef.current = transformedData;
-					} else {
-						// No data found, keep default empty form
-						const emptyForm = [{ ...defaultFormData }];
-						setFormDataArray(emptyForm);
-						fetchedDataArrayRef.current = emptyForm;
-					}
-				}
-			} catch (error) {
-				console.error("Error fetching pesticide applications:", error);
-				// On error, keep default empty form
+		if (!loading && pesticideApplicationData !== null) {
+			// Transform database data to form data
+			if (pesticideApplicationData.length > 0) {
+				const transformedData = pesticideApplicationData.map((dbItem: PesticideApplicationDB) => transformDBToFormData(dbItem));
+				setFormDataArray(transformedData);
+				fetchedDataArrayRef.current = transformedData;
+			} else {
+				// No data found, keep default empty form
 				const emptyForm = [{ ...defaultFormData }];
 				setFormDataArray(emptyForm);
 				fetchedDataArrayRef.current = emptyForm;
-			} finally {
-				setIsLoading(false);
 			}
-		};
-
-		if (!loading && data) {
-			fetchPesticideApplications();
 		}
-	}, [data, loading]);
+	}, [pesticideApplicationData, loading]);
 
 	const handleAddNewArea = () => {
 		setFormDataArray((prev) => [...prev, { ...defaultFormData }]);
@@ -376,6 +346,11 @@ const PesticideApplicationDetails: React.FC = () => {
 					const transformedData = result.data.map((dbItem: PesticideApplicationDB) => transformDBToFormData(dbItem));
 					setFormDataArray(transformedData);
 					fetchedDataArrayRef.current = transformedData;
+					// Update context with the saved data
+					updatePesticideApplicationData(result.data);
+				} else {
+					// If no data returned, update context with empty array
+					updatePesticideApplicationData([]);
 				}
 			}
 		} catch (error) {

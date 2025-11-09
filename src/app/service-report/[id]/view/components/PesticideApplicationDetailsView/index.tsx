@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import SectionTitle from "../SectionTitle";
 import Card from "../Card";
 import styles from "./PesticideApplicationDetailsView.module.css";
@@ -37,51 +37,14 @@ interface PesticideApplicationDB {
 }
 
 const PesticideApplicationDetailsView: React.FC = () => {
-	const { data, loading } = useServiceReport();
-	const [pesticideApplications, setPesticideApplications] = useState<PesticideApplicationDB[]>([]);
-	const [isLoading, setIsLoading] = useState(false);
+	const { data, pesticideApplicationData, loading } = useServiceReport();
 
-	// Fetch pesticide applications when service report data is loaded
-	useEffect(() => {
-		const fetchPesticideApplications = async () => {
-			if (!data?.id) {
-				return;
-			}
-
-			setIsLoading(true);
-
-			try {
-				const response = await fetch(`/api/service-report/${data.id}/pesticide-application`);
-				const result = await response.json();
-
-				if (!response.ok) {
-					throw new Error(result.error || "Failed to fetch pesticide applications");
-				}
-
-				if (result.success && result.data) {
-					setPesticideApplications(result.data || []);
-				}
-			} catch (error) {
-				console.error("Error fetching pesticide applications:", error);
-				setPesticideApplications([]);
-			} finally {
-				setIsLoading(false);
-			}
-		};
-
-		if (!loading && data) {
-			fetchPesticideApplications();
-		}
-	}, [data, loading]);
-
-	if (loading || isLoading || !data) {
+	if (loading || !data || pesticideApplicationData === null) {
 		return null;
 	}
 
-	console.log({ pesticideApplications });
-
 	// If there are no pesticides, show one card with "N/A"
-	if (pesticideApplications.length === 0) {
+	if (pesticideApplicationData.length === 0) {
 		return (
 			<div className={styles.pesticideApplicationDetailsView}>
 				<SectionTitle heading="03. Pesticides Used & Application Details" />
@@ -97,9 +60,9 @@ const PesticideApplicationDetailsView: React.FC = () => {
 	return (
 		<div className={styles.pesticideApplicationDetailsView}>
 			<SectionTitle heading="03. Pesticides Used & Application Details" />
-			{pesticideApplications.map((pesticide, index) => (
+			{pesticideApplicationData.map((pesticide, index) => (
 				<React.Fragment key={pesticide.id}>
-					{pesticideApplications.length > 1 ? (
+					{pesticideApplicationData.length > 1 ? (
 						<h4>
 							<strong>Application #{index + 1}</strong>
 						</h4>
