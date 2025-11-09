@@ -15,7 +15,6 @@
 	border: none;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
-	box-shadow: 7px 17px 14.3px 0px rgba(0, 0, 0, 0.09);
 	border-radius: 128px;
 }
 
@@ -31,15 +30,34 @@
 	color: var(--secondary);
 }
 
+.primary:hover:not(:disabled) {
+	background-color: var(--primary);
+	transform: translateY(-1px);
+	box-shadow: 10px 20px 18px 0px rgba(0, 0, 0, 0.15);
+}
+
 /* Secondary variant */
 .secondary {
 	background-color: var(--secondary);
 	color: var(--white);
 }
 
+.secondary:hover:not(:disabled) {
+	background-color: var(--secondary);
+	transform: translateY(-1px);
+	box-shadow: 10px 20px 18px 0px rgba(0, 0, 0, 0.15);
+	filter: brightness(1.05);
+}
+
 .light {
 	background-color: var(--white);
 	color: var(--secondary);
+}
+
+.light:hover:not(:disabled) {
+	background-color: var(--white);
+	transform: translateY(-1px);
+	box-shadow: 10px 20px 18px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* Loading spinner */
