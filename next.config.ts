@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
 	},
 	// Enable compression
 	compress: true,
+	onDemandEntries: {
+		maxInactiveAge: 60 * 1000,
+		pagesBufferLength: 3,
+	},
 	// Ignore build errors
 	typescript: {
 		ignoreBuildErrors: true,
