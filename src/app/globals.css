@@ -14,11 +14,13 @@
 	--gray: #d9d9d9;
 	--light-gray: #ededed;
 
-	/* Font Family Variables - Using Next.js optimized fonts */
-	--font-primary:
-		var(--font-open-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	--font-heading:
-		var(--font-rebond-grotesque), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        /* Font Family Variables - Using locally available fallbacks to avoid build-time fetches */
+        --font-open-sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-primary:
+                var(--font-open-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-heading:
+                var(--font-rebond-grotesque, "Rebond Grotesque"), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif;
 	--font-body: var(--font-primary);
 
 	/* Viewport Variables */

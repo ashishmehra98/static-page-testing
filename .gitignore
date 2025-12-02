@@ -9,12 +9,14 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.yarnrc.yml
 
 # testing
 /coverage
 
 # next.js
 /.next/
+/.next-turbo-cache/
 /out/
 
 # production

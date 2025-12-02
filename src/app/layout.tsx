@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { FlashMessageProvider } from "./components/FlashMessage";
 import { IMAGES } from "./constants/images";
-
-const openSans = Open_Sans({
-	variable: "--font-open-sans",
-	subsets: ["latin"],
-	display: "swap",
-	preload: true,
-	// Only preload the regular weight to reduce render blocking
-	weight: ["400", "600", "700"],
-});
 
 // Optimize custom Rebond Grotesque fonts using Next.js font optimization
 // Only preload the most commonly used weight (Regular) to reduce render blocking
@@ -77,7 +67,7 @@ export default function RootLayout({
 				<link rel="prefetch" href={IMAGES.BLOG_HEADER} as="image" />
 				<link rel="prefetch" href={IMAGES.CONTACT_BG} as="image" />
 			</head>
-			<body className={`${openSans.variable} ${rebondGrotesque.variable} antialiased`}>
+			<body className={`${rebondGrotesque.variable} font-sans antialiased`}>
 				<FlashMessageProvider>{children}</FlashMessageProvider>
 			</body>
 		</html>
