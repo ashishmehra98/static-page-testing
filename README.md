@@ -77,15 +77,6 @@ yarn format:check # Check formatting without making changes
 # Pre-commit: Runs prettier and eslint --fix on staged files
 ```
 
-#### Package manager
-
-- The repository uses **Yarn Classic (1.22.x)**. Running Yarn 2+/Berry will rewrite `yarn.lock` and introduce `.yarnrc.yml`/
-  `.yarn/` metadata that we do not commit. If you have Corepack enabled, pin to `yarn@1.22.22` (already declared in
-  `package.json`) to keep the lockfile stable.
-- The build script no longer deletes `.next/` outright (some hosts mount it as a volume, which makes `rm -rf .next` fail with
-  EBUSY). When `NEXT_CACHE_DIR` is not set, it falls back to a standalone `.next-turbo-cache` location and clears only that
-  directory, letting Next.js overwrite `.next/` contents in-place during the build.
-
 ### Memory diagnostics
 
 Deploys include a lightweight memory report endpoint to help investigate issues like the rising baseline seen in hosting metrics.

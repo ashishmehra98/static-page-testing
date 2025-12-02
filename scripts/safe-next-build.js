@@ -4,26 +4,20 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const projectRoot = process.cwd();
+const nextDir = path.join(projectRoot, '.next');
 const fallbackCache = path.join(projectRoot, '.next-turbo-cache');
 
-function cleanFallbackCache(target) {
+function cleanNextDir() {
   try {
-    fs.rmSync(target, { recursive: true, force: true });
+    fs.rmSync(nextDir, { recursive: true, force: true });
   } catch (error) {
     console.warn(
-      `[safe-next-build] Unable to clear ${target}: ${error.message}. Continuing; Next.js will manage cache contents automatically.`,
+      `[safe-next-build] Unable to remove ${nextDir}: ${error.message}. Continuing; stale caches will be overwritten.`,
     );
   }
 }
 
-// We intentionally avoid deleting `.next` entirely because some platforms mount it
-// as a volume, which makes `rm -rf .next` fail with EBUSY. When a custom cache
-// directory is not provided, we fall back to `.next-turbo-cache` and try to
-// clear that location only; the primary `.next` output will be overwritten by
-// the build process without pre-cleaning.
-if (!process.env.NEXT_CACHE_DIR) {
-  cleanFallbackCache(fallbackCache);
-}
+cleanNextDir();
 
 const env = {
   ...process.env,

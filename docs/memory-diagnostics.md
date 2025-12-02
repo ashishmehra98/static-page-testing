@@ -10,9 +10,6 @@ Use this checklist to decide what to do when platform metrics (e.g., Railway RAM
 - Poll `GET /api/diagnostics/memory` every few minutes for at least one hour while the app is idle.
 - Save each JSON response alongside its timestamp to see whether RSS or heap grows without traffic.
 - A simple starting command: `curl -H "x-diagnostic-token: $DIAGNOSTICS_TOKEN" https://<host>/api/diagnostics/memory >> memory-log.jsonl`.
-- For automated sampling, run `./scripts/poll-memory.sh --url https://<host>/api/diagnostics/memory --token "$DIAGNOSTICS_TOKEN" --output memory-log.jsonl --interval 120 --count 50` to capture 50 JSONL entries locally (defaults target the ecoviapestcontrol.com.au deployment).
-
-> Live example: if the site is deployed to `https://www.ecoviapestcontrol.com.au`, call `curl -H "x-diagnostic-token: $DIAGNOSTICS_TOKEN" https://www.ecoviapestcontrol.com.au/api/diagnostics/memory` to capture a single sample.
 
 ## 3) Interpret the readings
 - **rssMb** rising steadily while **heapUsedMb** stays flat often points to native add-ons or open file/socket handles.
