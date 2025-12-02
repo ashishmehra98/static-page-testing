@@ -18,11 +18,5 @@ export async function GET(request: NextRequest) {
 		return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
 	}
 
-	const response = NextResponse.json(getMemoryReport());
-
-	response.headers.set("Cache-Control", "no-store, max-age=0, must-revalidate");
-	response.headers.set("Pragma", "no-cache");
-	response.headers.set("Expires", "0");
-
-	return response;
+	return NextResponse.json(getMemoryReport());
 }
