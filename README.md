@@ -77,6 +77,21 @@ yarn format:check # Check formatting without making changes
 # Pre-commit: Runs prettier and eslint --fix on staged files
 ```
 
+#### Package manager
+
+- The repository uses **Yarn Classic (1.22.x)**. Running Yarn 2+/Berry will rewrite `yarn.lock` and introduce `.yarnrc.yml`/
+  `.yarn/` metadata that we do not commit. If you have Corepack enabled, pin to `yarn@1.22.22` (already declared in
+  `package.json`) to keep the lockfile stable.
+
+### Memory diagnostics
+
+Deploys include a lightweight memory report endpoint to help investigate issues like the rising baseline seen in hosting metrics.
+
+- Set an environment variable `DIAGNOSTICS_TOKEN` to require an `x-diagnostic-token` header for access (optional but recommended).
+- Request `GET /api/diagnostics/memory` to retrieve current RSS, heap usage, resource statistics, and whether GC is exposed.
+- Use the response to correlate heap growth with uptime and identify whether the process is accumulating memory without requests.
+- Follow the [memory diagnostics guide](docs/memory-diagnostics.md) for step-by-step instructions on sampling, interpreting trends, and deciding whether a leak is present.
+
 ### Git Hooks
 
 This project uses Husky to automatically run code quality checks before commits:
