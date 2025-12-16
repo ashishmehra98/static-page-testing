@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
 				pathname: "/**",
 			},
 		],
+		unoptimized: true,
 	},
 	// Optimize resource loading
 	experimental: {
@@ -23,7 +24,7 @@ const nextConfig: NextConfig = {
 	compress: true,
 	onDemandEntries: {
 		maxInactiveAge: 60 * 1000,
-		pagesBufferLength: 3,
+		pagesBufferLength: 0,
 	},
 	// Ignore build errors
 	typescript: {
