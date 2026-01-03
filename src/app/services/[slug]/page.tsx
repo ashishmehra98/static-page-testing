@@ -9,6 +9,14 @@ interface PageProps {
 	};
 }
 
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+	return Object.keys(servicesPages).map((slug) => ({
+		slug: slug,
+	}));
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
 	const { slug } = await params;
 	const SERVICE_CONFIG = servicesPages[slug as ServicePages] as ServiceConfig;

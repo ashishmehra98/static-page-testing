@@ -2,21 +2,33 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { IconName, ICONS } from "../../constants/icons";
 import styles from "./Button.module.css";
 
 interface ButtonProps {
 	variant: "primary" | "secondary" | "light";
 	title: string;
-	onPress: () => void;
+	onPress?: () => void;
+	href?: string;
 	disabled?: boolean;
 	isLoading?: boolean;
 	icon?: IconName;
 	className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ variant, title, onPress, disabled = false, isLoading = false, icon, className }) => {
+const Button: React.FC<ButtonProps> = ({
+	variant,
+	title,
+	onPress,
+	href,
+	disabled = false,
+	isLoading = false,
+	icon,
+	className,
+}) => {
 	const buttonRef = useRef<HTMLButtonElement>(null);
+	const router = useRouter();
 	const [buttonWidth, setButtonWidth] = useState<number | null>(null);
 
 	// Measure content width when component mounts or content changes
@@ -29,7 +41,11 @@ const Button: React.FC<ButtonProps> = ({ variant, title, onPress, disabled = fal
 
 	const handleClick = () => {
 		if (!disabled && !isLoading) {
-			onPress();
+			if (href) {
+				router.push(href);
+			} else if (onPress) {
+				onPress();
+			}
 		}
 	};
 

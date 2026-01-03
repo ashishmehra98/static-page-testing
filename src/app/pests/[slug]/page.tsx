@@ -9,6 +9,14 @@ interface PageProps {
 	};
 }
 
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+	return Object.keys(pestPages).map((slug) => ({
+		slug: slug,
+	}));
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
 	const { slug } = await params;
 	const PEST_STUDY_CONFIG = pestPages[slug as PestPages] as PestStudyConfig;

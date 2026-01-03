@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import styles from "./style.module.css";
 import Container from "@/app/components/Container";
 import Header from "@/app/components/Header";
@@ -13,8 +12,9 @@ import { IMAGES } from "@/app/constants/images";
 import blogs from "@/app/constants/blogs";
 import useIsMobile from "@/hooks/useIsMobile";
 
+export const dynamic = "force-static";
+
 const Blogs = () => {
-	const router = useRouter();
 	const isMobile = useIsMobile();
 
 	// Get latest posts (next 4 blogs)
@@ -22,11 +22,6 @@ const Blogs = () => {
 
 	// Get featured posts (first 7 blogs)
 	// const featuredPosts = blogs.slice(5, 12);
-
-	// Navigate to blog details
-	const handleBlogClick = (title: string) => {
-		router.push(`/blogs/${title}`);
-	};
 
 	return (
 		<Container>
@@ -68,7 +63,7 @@ const Blogs = () => {
 									date={blog.date}
 									title={blog.title}
 									content={blog.meta.description}
-									onLearnMore={() => handleBlogClick(blog.title)}
+									slug={blog.slug}
 									className="blog-card"
 								/>
 							);
@@ -90,7 +85,7 @@ const Blogs = () => {
 								date={blog.date}
 								title={blog.title}
 								content={blog.meta.description}
-								onLearnMore={() => handleBlogClick(blog.slug)}
+								slug={blog.slug}
 								className="blog-card"
 							/>
 						))}

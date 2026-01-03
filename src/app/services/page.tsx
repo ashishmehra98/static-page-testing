@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import UserReviewsSection from "../about-us/components/UserReviewsSection";
@@ -14,6 +12,8 @@ import ContactFormFooter from "@/app/components/ContactFormFooter";
 import ServiceCard from "@/app/components/ServiceCard";
 import { IMAGES } from "@/app/constants/images";
 import { servicesIndexPage } from "@/app/constants/services";
+
+export const dynamic = "force-static";
 
 const Services = () => {
 	return (

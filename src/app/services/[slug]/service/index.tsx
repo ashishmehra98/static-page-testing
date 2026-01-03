@@ -1,6 +1,3 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import PestServicesSlide from "./components/PestServicesSlide";
 import EcoviaProcess from "./components/EcoviaProcess";
 import styles from "./style.module.css";
@@ -15,25 +12,16 @@ import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import { IMAGES } from "@/app/constants/images";
-import { ServicePages, servicesPages, CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
+import { ServicePages, servicesPages } from "@/app/constants/services";
 
 interface PageProps {
 	slug: string;
 }
 
 const Service = ({ slug }: PageProps) => {
-	const router = useRouter();
 	const SERVICE_CONFIG = servicesPages[slug as ServicePages] as ServiceConfig;
 	const SERVICE_FAQ_DATA = SERVICE_CONFIG.faq || [];
 	const SERVICE_REVIEWS_DATA = SERVICE_CONFIG.reviews || [];
-
-	const onPhoneClick = () => {
-		window.open(`tel:${CONTACT_NUMBER_TEL}`);
-	};
-
-	const onContactClick = () => {
-		router.push("/contact-us");
-	};
 
 	return (
 		<Container>
@@ -47,10 +35,8 @@ const Service = ({ slug }: PageProps) => {
 							highlightedText={SERVICE_CONFIG.hero.highlightedText}
 							subHeading={SERVICE_CONFIG.hero.subHeading}
 							description={SERVICE_CONFIG.hero.description}
-							phoneNumber={CONTACT_NUMBER}
+							showPhoneButton={true}
 							contactButtonText="Contact Us"
-							onPhoneClick={onPhoneClick}
-							onContactClick={onContactClick}
 						/>
 					</Hero>
 				)}
@@ -154,7 +140,6 @@ const Service = ({ slug }: PageProps) => {
 							description={SERVICE_CONFIG.coverage.description!}
 							contentClassName={styles.reverseSectionContent}
 							contactButtonText="Contact us"
-							onContactClick={onPhoneClick}
 						/>
 					</SectionInfo>
 				)}

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import HeaderSection from "../HeaderSection";
 import PesticideInfoSlides from "../PesticideInfoSlides";

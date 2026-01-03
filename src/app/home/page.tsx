@@ -1,6 +1,3 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import { HomeJumbotron, PestControlServices, HowWeWork, BookConsultation, BestWeOffer, Blogs } from "./components";
 import styles from "./style.module.css";
 import Container from "@/app/components/Container";
@@ -15,20 +12,10 @@ import { homeScreenFaqs } from "@/app/constants/faq";
 import { IMAGES } from "@/app/constants/images";
 import { homeScreenreviews } from "@/app/constants/reviews";
 import blogs from "@/app/constants/blogs";
-import { CONTACT_NUMBER } from "@/app/constants/services";
+
+export const dynamic = "force-static";
 
 export default function Home() {
-	const router = useRouter();
-
-	const handleSeeMoreBlogs = () => {
-		// Navigate to blogs page
-		router.push("/blogs");
-	};
-
-	const handleLearnMore = (title: string) => {
-		router.push(`/blogs/${title}`);
-	};
-
 	return (
 		<Container>
 			<Header />
@@ -40,7 +27,6 @@ export default function Home() {
 					highlightedText="Pest Control "
 					subHeading="Around Sydney"
 					description="Protect your home from unwanted pests today and ensure a safe, clean, and comfortable environment."
-					phoneNumber={CONTACT_NUMBER}
 					contactButtonText="Contact us"
 				/>
 				<UserReviews reviews={homeScreenreviews} className={styles.userReviewsSection} />
@@ -50,7 +36,7 @@ export default function Home() {
 				<BookConsultation />
 				<BestWeOffer />
 				<FAQ items={homeScreenFaqs} />
-				<Blogs blogs={blogs} onSeeMoreBlogs={handleSeeMoreBlogs} onLearnMore={handleLearnMore} />
+				<Blogs blogs={blogs} />
 				<ContactFormFooter
 					bgImage={IMAGES.FOOTER_BG}
 					heading="Book Your Quick & Free "

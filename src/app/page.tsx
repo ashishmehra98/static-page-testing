@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Home from "./home/page";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
 	title: "Ecovia Pest Control | Trusted Pest Control for Homes & Businesses in Sydney",
 	description:

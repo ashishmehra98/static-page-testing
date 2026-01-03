@@ -10,6 +10,14 @@ interface BlogDetailsProps {
 	};
 }
 
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+	return blogs.map((blog) => ({
+		slug: blog.slug,
+	}));
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
 	const blog = findBlogBySlug(blogs, params.slug);
 

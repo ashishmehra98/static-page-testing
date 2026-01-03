@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import UserReviewsSection from "./components/UserReviewsSection";
 import styles from "./style.module.css";
@@ -9,7 +7,7 @@ import Header from "@/app/components/Header";
 import Hero from "@/app/components/Hero";
 import SectionInfo from "@/app/components/SectionInfo";
 import HeaderSection from "@/app/components/HeaderSection";
-import Button from "@/app/components/Button";
+import PhoneButton from "@/app/components/PhoneButton";
 import PesticideInfoSection from "@/app/components/PesticideInfoSection";
 import FAQ from "@/app/components/FAQ";
 import ContactFormFooter from "@/app/components/ContactFormFooter";
@@ -17,13 +15,10 @@ import Footer from "@/app/components/Footer";
 import { IMAGES } from "@/app/constants/images";
 import { homeScreenreviews } from "@/app/constants/reviews";
 import { homeScreenFaqs } from "@/app/constants/faq";
-import { CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
+
+export const dynamic = "force-static";
 
 export default function AboutUs() {
-	const onPhoneClick = () => {
-		window.open(`tel:${CONTACT_NUMBER_TEL}`);
-	};
-
 	return (
 		<Container>
 			<Header />
@@ -60,7 +55,7 @@ export default function AboutUs() {
 						align="center"
 						className={styles.trustInfo}
 					/>
-					<Button variant="primary" title={CONTACT_NUMBER} icon="phone" onPress={onPhoneClick} />
+					<PhoneButton variant="primary" />
 					<Image src={IMAGES.FRAME_ONE} alt="frame-one" width={206} height={248} className={styles.frame} />
 					<Image src={IMAGES.FRAME_TWO} alt="frame-two" width={207} height={248} className={styles.frame} />
 					<Image src={IMAGES.FRAME_THREE} alt="frame-three" width={207} height={248} className={styles.frame} />
@@ -98,7 +93,7 @@ Partner with a seasoned professional committed to protecting your home and givin
 							align="start"
 							subtitleClassName={styles.midHeroSubtitle}
 						/>
-						<Button variant="primary" title={CONTACT_NUMBER} icon="phone" onPress={onPhoneClick} />
+						<PhoneButton variant="primary" />
 					</div>
 					<div className={styles.midHeroImage}>
 						<Image src={IMAGES.LOCAL_SYDNEY_EXPERT} fill={true} alt="Local sydney expert" />

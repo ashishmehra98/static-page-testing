@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import UserReviewsSection from "../about-us/components/UserReviewsSection";
 import EcoviaProcess from "../services/[slug]/service/components/EcoviaProcess";
@@ -13,6 +11,8 @@ import ContactFormFooter from "@/app/components/ContactFormFooter";
 import PestInfo from "@/app/components/PestInfo";
 import { IMAGES } from "@/app/constants/images";
 import { pestData } from "@/app/constants/pests";
+
+export const dynamic = "force-static";
 
 const Pest = () => {
 	return (

@@ -1,5 +1,3 @@
-"use client";
-
 import UserReviewsSection from "../about-us/components/UserReviewsSection";
 import styles from "./style.module.css";
 import Container from "@/app/components/Container";
@@ -12,6 +10,8 @@ import LocalPestExpert from "@/app/components/LocalPestExpert";
 import SectionInfo from "@/app/components/SectionInfo";
 import { IMAGES } from "@/app/constants/images";
 import { homeScreenFaqs } from "@/app/constants/faq";
+
+export const dynamic = "force-static";
 
 const ContactUs = () => {
 	return (
