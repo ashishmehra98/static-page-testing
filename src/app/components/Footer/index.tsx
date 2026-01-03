@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { ICONS } from "../../constants/icons";
 import styles from "./Footer.module.css";
 
@@ -11,27 +9,6 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ className }) => {
-	const router = useRouter();
-
-	const handleNavigationClick = (section: string) => {
-		// Navigate to appropriate page
-		const routes: { [key: string]: string } = {
-			about: "/about-us",
-			services: "/services",
-			blogs: "/blogs", // Assuming testimonials are in blogs
-			pests: "/pests",
-		};
-
-		if (routes[section]) {
-			router.push(routes[section]);
-		}
-	};
-
-	const handleSocialClick = (platform: string) => {
-		console.log(`Open ${platform} profile`);
-		// Add social media link logic here
-	};
-
 	return (
 		<footer className={`${styles.footer} ${className || ""}`}>
 			<div className={styles.content}>
@@ -43,42 +20,46 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 
 				{/* Navigation Links */}
 				<nav className={styles.navigation}>
-					<button className={styles.navLink} onClick={() => handleNavigationClick("about")}>
+					<Link href="/about-us" className={styles.navLink}>
 						About
-					</button>
-					<button className={styles.navLink} onClick={() => handleNavigationClick("pests")}>
+					</Link>
+					<Link href="/pests" className={styles.navLink}>
 						Pests
-					</button>
-					<button className={styles.navLink} onClick={() => handleNavigationClick("services")}>
+					</Link>
+					<Link href="/services" className={styles.navLink}>
 						Services
-					</button>
-					<button className={styles.navLink} onClick={() => handleNavigationClick("blogs")}>
+					</Link>
+					<Link href="/blogs" className={styles.navLink}>
 						Blogs
-					</button>
-					{/* <button className={styles.policyLink} onClick={() => handlePolicyClick("privacy")}>
+					</Link>
+					{/* <Link href="/privacy-policy" className={styles.policyLink}>
 						Privacy Policy
-					</button>
-					<button className={styles.policyLink} onClick={() => handlePolicyClick("cookies")}>
+					</Link>
+					<Link href="/cookies-settings" className={styles.policyLink}>
 						Cookies Settings
-					</button> */}
+					</Link> */}
 				</nav>
 
 				<div className={styles.divider} />
 
 				{/* Social Media Icons */}
 				<div className={styles.socialContainer}>
-					<button
+					<a
+						href="https://facebook.com"
+						target="_blank"
+						rel="noopener noreferrer"
 						className={styles.socialButton}
-						onClick={() => handleSocialClick("facebook")}
 						aria-label="Visit our Facebook page">
 						<Image src={ICONS.facebook} alt="Facebook" width={24} height={24} />
-					</button>
-					<button
+					</a>
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						rel="noopener noreferrer"
 						className={styles.socialButton}
-						onClick={() => handleSocialClick("instagram")}
 						aria-label="Visit our Instagram page">
 						<Image src={ICONS.instagram} alt="Instagram" width={24} height={24} />
-					</button>
+					</a>
 				</div>
 			</div>
 

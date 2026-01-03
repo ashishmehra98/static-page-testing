@@ -1,28 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import Button from "../Button";
 import { ICONS } from "../../constants/icons";
-import MenuButton from "../MenuButton";
-import MobileNavigation from "../MobileNavigation";
 import styles from "./Header.module.css";
-import { CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
+import HeaderButtons from "./HeaderButtons";
+import HeaderMobileMenu from "./HeaderMobileMenu";
 
 const Header: React.FC = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const router = useRouter();
-
-	const handlePhoneClick = () => {
-		// Handle phone button click - could open phone dialer
-		window.location.href = `tel:${CONTACT_NUMBER_TEL}`;
-	};
-
-	const handleContactClick = () => {
-		// Navigate to contact page
-		router.push("/contact-us");
-	};
-
 	return (
 		<>
 			<header className={`flex flex-row justify-center items-center ${styles.header}`}>
@@ -46,14 +30,10 @@ const Header: React.FC = () => {
 							</Link>
 						</nav>
 					</div>
-					<div className={styles.buttonsContainer}>
-						<Button variant="primary" title={CONTACT_NUMBER} onPress={handlePhoneClick} icon="phone" />
-						<Button variant="secondary" title="Contact us" onPress={handleContactClick} icon="email" />
-					</div>
-					<MenuButton onToggle={() => setIsMenuOpen((prev) => !prev)} isOpen={isMenuOpen} className={styles.menuBtn} />
+					<HeaderButtons />
+					<HeaderMobileMenu />
 				</div>
 			</header>
-			<MobileNavigation isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 		</>
 	);
 };

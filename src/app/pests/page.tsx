@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import UserReviewsSection from "../about-us/components/UserReviewsSection";
 import EcoviaProcess from "../services/[slug]/service/components/EcoviaProcess";

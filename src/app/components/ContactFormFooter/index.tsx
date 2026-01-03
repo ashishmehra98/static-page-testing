@@ -2,10 +2,9 @@ import React from "react";
 import Hero from "../Hero";
 import HeroContent from "../HeroContent";
 import ContactForm from "../ContactForm";
-import Button from "../Button";
+import PhoneButton from "../PhoneButton";
 import Info from "../Info";
 import styles from "./ContactFormFooter.module.css";
-import { CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
 
 interface ContactFormFooterProps {
 	bgImage: string;
@@ -26,10 +25,6 @@ const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 	heroContainerClassName,
 	showCallCta,
 }) => {
-	const onPhoneClick = () => {
-		window.open(`tel:${CONTACT_NUMBER_TEL}`);
-	};
-
 	return (
 		<div className={styles.jumbotron}>
 			<Hero bgImage={bgImage}>
@@ -43,7 +38,7 @@ const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 					hideButtonSection={true}
 				/>
 				{showCallCta ? (
-					<Button variant="primary" title={CONTACT_NUMBER} icon="phone" onPress={onPhoneClick} className={styles.phoneCTA} />
+					<PhoneButton variant="primary" className={styles.phoneCTA} />
 				) : (
 					<div className={styles.infoGroup}>
 						<Info variant="col" icon="family" title="Safe for Families & Pets" />
@@ -52,7 +47,7 @@ const ContactFormFooter: React.FC<ContactFormFooterProps> = ({
 					</div>
 				)}
 				<div className={styles.contactFormContainer}>
-					<ContactForm onSubmit={() => {}} />
+					<ContactForm />
 				</div>
 			</Hero>
 		</div>

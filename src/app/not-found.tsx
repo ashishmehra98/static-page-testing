@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,10 +5,6 @@ import Button from "./components/Button";
 import styles from "./not-found.module.css";
 
 export default function NotFound() {
-	const handleGoHome = () => {
-		window.location.href = "/";
-	};
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
@@ -24,7 +18,7 @@ export default function NotFound() {
 					have entered the wrong URL.
 				</p>
 				<div className={styles.actions}>
-					<Button variant="secondary" title="Go Home" onPress={handleGoHome} className={styles.homeButton} />
+					<Button variant="secondary" title="Go Home" href="/" className={styles.homeButton} />
 					<Link href="/contact-us" className={styles.contactLink}>
 						Contact Support
 					</Link>

@@ -2,16 +2,10 @@ import Image from "next/image";
 import styles from "./BookConsultation.module.css";
 import Hero from "@/app/components/Hero";
 import HeaderSection from "@/app/components/HeaderSection";
-import Button from "@/app/components/Button";
+import PhoneButton from "@/app/components/PhoneButton";
 import RatingCard from "@/app/components/RatingCard";
 import { IMAGES } from "@/app/constants/images";
 import { homeScreenreviews } from "@/app/constants/reviews";
-import { CONTACT_NUMBER, CONTACT_NUMBER_TEL } from "@/app/constants/services";
-
-const handlePhoneClick = () => {
-	// Open phone dialer
-	window.location.href = `tel:${CONTACT_NUMBER_TEL}`;
-};
 
 const BookConsultation = () => {
 	return (
@@ -32,7 +26,7 @@ const BookConsultation = () => {
 							subtitleClassName={styles.subTitle}
 						/>
 						<div className={styles.buttonContainer}>
-							<Button variant="primary" title={` ${CONTACT_NUMBER}`} onPress={handlePhoneClick} icon={"phone"} />
+							<PhoneButton variant="primary" />
 						</div>
 					</div>
 					<div className={styles.imageContainer}>
@@ -49,7 +43,7 @@ const BookConsultation = () => {
 						userImage=""
 					/>
 					<div className={styles.buttonContainer}>
-						<Button variant="primary" title={` ${CONTACT_NUMBER}`} onPress={handlePhoneClick} icon={"phone"} />
+						<PhoneButton variant="primary" />
 					</div>
 				</div>
 			</div>

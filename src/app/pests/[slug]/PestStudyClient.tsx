@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./style.module.css";
 import UserReviewsSection from "@/app/about-us/components/UserReviewsSection";
 import Container from "@/app/components/Container";
@@ -9,12 +7,12 @@ import Hero from "@/app/components/Hero";
 import HeroContent from "@/app/components/HeroContent";
 import SectionInfo from "@/app/components/SectionInfo";
 import ProcessCheckInfo from "@/app/components/ProcessCheckInfo";
-import Button from "@/app/components/Button";
 import LocalPestExpert from "@/app/components/LocalPestExpert";
 import FAQ from "@/app/components/FAQ";
 import ContactFormFooter from "@/app/components/ContactFormFooter";
 import Footer from "@/app/components/Footer";
 import { PestPages, pestPages } from "@/app/constants/pests";
+import PhoneButton from "@/app/components/PhoneButton";
 
 interface PageProps {
 	slug: string;
@@ -228,12 +226,7 @@ const PestStudyClient = ({ slug }: PageProps) => {
 								<ProcessCheckInfo key={index} {...item} />
 							))}
 						</div>
-						<Button
-							variant={PEST_STUDY_CONFIG.processCheck.button.variant}
-							title={PEST_STUDY_CONFIG.processCheck.button.title}
-							icon={PEST_STUDY_CONFIG.processCheck.button.icon}
-							onPress={() => {}}
-						/>
+						<PhoneButton variant={PEST_STUDY_CONFIG.processCheck.button.variant} />
 					</Hero>
 				)}
 				{/* User Reviews */}

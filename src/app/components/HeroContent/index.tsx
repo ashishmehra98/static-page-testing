@@ -1,7 +1,6 @@
-"use client";
-
 import React from "react";
 import Button from "../Button";
+import PhoneButton from "../PhoneButton";
 import styles from "./HeroContent.module.css";
 
 interface HeroContentProps {
@@ -10,13 +9,11 @@ interface HeroContentProps {
 	highlightedText?: string;
 	subHeading?: string;
 	description?: string;
-	phoneNumber?: string;
+	showPhoneButton?: boolean;
 	headingColor?: string;
 	descriptionColor?: string;
 	contactButtonText?: string;
 	hideButtonSection?: boolean;
-	onPhoneClick?: () => void;
-	onContactClick?: () => void;
 	contentClassName?: string;
 	descriptionClassName?: string;
 }
@@ -27,13 +24,11 @@ const HeroContent: React.FC<HeroContentProps> = ({
 	highlightedText,
 	subHeading,
 	description,
-	phoneNumber,
+	showPhoneButton,
 	contactButtonText,
 	hideButtonSection,
 	headingColor,
 	descriptionColor,
-	onPhoneClick,
-	onContactClick,
 	contentClassName,
 	descriptionClassName,
 }) => {
@@ -60,10 +55,8 @@ const HeroContent: React.FC<HeroContentProps> = ({
 			</div>
 			{!hideButtonSection && (
 				<div className={styles.buttonSection}>
-					{phoneNumber && <Button variant="primary" title={phoneNumber} onPress={onPhoneClick || (() => {})} icon="phone" />}
-					{contactButtonText && (
-						<Button variant="secondary" title={contactButtonText} onPress={onContactClick || (() => {})} icon="email" />
-					)}
+					{showPhoneButton && <PhoneButton variant="primary" />}
+					{contactButtonText && <Button variant="secondary" title={contactButtonText} href="/contact-us" icon="email" />}
 				</div>
 			)}
 		</div>
