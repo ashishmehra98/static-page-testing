@@ -13,6 +13,8 @@ import ServiceCard from "@/app/components/ServiceCard";
 import { IMAGES } from "@/app/constants/images";
 import { servicesIndexPage } from "@/app/constants/services";
 
+export const dynamic = "force-static";
+
 const Services = () => {
 	return (
 		<Container>

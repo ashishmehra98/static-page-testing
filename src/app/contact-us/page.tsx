@@ -11,6 +11,8 @@ import SectionInfo from "@/app/components/SectionInfo";
 import { IMAGES } from "@/app/constants/images";
 import { homeScreenFaqs } from "@/app/constants/faq";
 
+export const dynamic = "force-static";
+
 const ContactUs = () => {
 	return (
 		<Container>

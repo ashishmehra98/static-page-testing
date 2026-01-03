@@ -10,6 +10,8 @@ interface BlogDetailsProps {
 	};
 }
 
+export const dynamic = "force-static";
+
 export async function generateStaticParams() {
 	return blogs.map((blog) => ({
 		slug: blog.slug,

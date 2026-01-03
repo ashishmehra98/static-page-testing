@@ -16,6 +16,8 @@ import { IMAGES } from "@/app/constants/images";
 import { homeScreenreviews } from "@/app/constants/reviews";
 import { homeScreenFaqs } from "@/app/constants/faq";
 
+export const dynamic = "force-static";
+
 export default function AboutUs() {
 	return (
 		<Container>

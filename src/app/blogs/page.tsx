@@ -12,6 +12,8 @@ import { IMAGES } from "@/app/constants/images";
 import blogs from "@/app/constants/blogs";
 import useIsMobile from "@/hooks/useIsMobile";
 
+export const dynamic = "force-static";
+
 const Blogs = () => {
 	const isMobile = useIsMobile();
 

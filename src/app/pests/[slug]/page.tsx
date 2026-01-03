@@ -9,6 +9,8 @@ interface PageProps {
 	};
 }
 
+export const dynamic = "force-static";
+
 export async function generateStaticParams() {
 	return Object.keys(pestPages).map((slug) => ({
 		slug: slug,

@@ -13,6 +13,8 @@ import { IMAGES } from "@/app/constants/images";
 import { homeScreenreviews } from "@/app/constants/reviews";
 import blogs from "@/app/constants/blogs";
 
+export const dynamic = "force-static";
+
 export default function Home() {
 	return (
 		<Container>

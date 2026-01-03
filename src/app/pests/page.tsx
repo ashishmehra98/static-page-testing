@@ -12,6 +12,8 @@ import PestInfo from "@/app/components/PestInfo";
 import { IMAGES } from "@/app/constants/images";
 import { pestData } from "@/app/constants/pests";
 
+export const dynamic = "force-static";
+
 const Pest = () => {
 	return (
 		<Container>
