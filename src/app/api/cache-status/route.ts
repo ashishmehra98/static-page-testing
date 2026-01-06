@@ -1,5 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 
+/**
+ * Cloudflare Cache Status API Route
+ *
+ * This API route checks the Cloudflare cache status (CF-Cache-Status header) for all resources
+ * on the configured website. It extracts resources from HTML and checks their Cloudflare cache status.
+ *
+ * Cloudflare Cache Status values:
+ * - HIT: Resource served from Cloudflare cache
+ * - MISS: Resource not in cache, fetched from origin
+ * - BYPASS: Cache was bypassed
+ * - EXPIRED: Cache entry expired, fetching from origin
+ * - STALE: Serving stale content while revalidating
+ * - UPDATING: Cache is being updated
+ * - DYNAMIC: Resource is dynamic and not cached
+ * - REVALIDATED: Cache was revalidated
+ */
+
 export const dynamic = "force-dynamic";
 
 const BASE_URL = "https://testing-ws.ashishmehra.dev";
@@ -21,7 +38,11 @@ interface CacheStatusResult {
 	bypass: ResourceInfo[];
 	expired: ResourceInfo[];
 	stale: ResourceInfo[];
+	updating: ResourceInfo[];
+	dynamic: ResourceInfo[];
+	revalidated: ResourceInfo[];
 	errors: ResourceInfo[];
+	noCloudflare: ResourceInfo[]; // Resources that don't have Cloudflare headers
 	summary: {
 		total: number;
 		cached: number;
@@ -29,7 +50,11 @@ interface CacheStatusResult {
 		bypass: number;
 		expired: number;
 		stale: number;
+		updating: number;
+		dynamic: number;
+		revalidated: number;
 		errors: number;
+		noCloudflare: number;
 	};
 }
 
@@ -185,15 +210,31 @@ async function checkCacheStatus(url: string): Promise<ResourceInfo> {
 			method: "HEAD",
 			headers: {
 				"User-Agent": "Mozilla/5.0 (compatible; CacheStatusChecker/1.0)",
+				// Ensure we're getting Cloudflare cache status
+				Accept: "*/*",
 			},
 		});
 
 		resourceInfo.statusCode = response.status;
 		resourceInfo.contentType = response.headers.get("content-type") || undefined;
+
+		// Check for Cloudflare-specific headers
 		resourceInfo.cfRay = response.headers.get("cf-ray") || undefined;
 		const cfCacheStatus = response.headers.get("cf-cache-status");
-		resourceInfo.cfCacheStatus = cfCacheStatus || undefined;
+
+		// Also check for other Cloudflare headers to confirm it's behind Cloudflare
+		const cfConnectingIp = response.headers.get("cf-connecting-ip");
+		const server = response.headers.get("server");
+
+		// Set Cloudflare cache status
+		resourceInfo.cfCacheStatus = cfCacheStatus || null;
 		resourceInfo.cacheStatus = cfCacheStatus;
+
+		// If no CF-Cache-Status header, it might not be behind Cloudflare
+		if (!cfCacheStatus && !resourceInfo.cfRay && !cfConnectingIp) {
+			// Resource might not be behind Cloudflare
+			resourceInfo.cacheStatus = "NO_CF";
+		}
 	} catch (error) {
 		resourceInfo.error = error instanceof Error ? error.message : "Unknown error";
 		resourceInfo.cacheStatus = "ERROR";
@@ -209,7 +250,11 @@ function organizeResults(resources: ResourceInfo[]): CacheStatusResult {
 		bypass: [],
 		expired: [],
 		stale: [],
+		updating: [],
+		dynamic: [],
+		revalidated: [],
 		errors: [],
+		noCloudflare: [],
 		summary: {
 			total: resources.length,
 			cached: 0,
@@ -217,33 +262,59 @@ function organizeResults(resources: ResourceInfo[]): CacheStatusResult {
 			bypass: 0,
 			expired: 0,
 			stale: 0,
+			updating: 0,
+			dynamic: 0,
+			revalidated: 0,
 			errors: 0,
+			noCloudflare: 0,
 		},
 	};
 
 	for (const resource of resources) {
+		// Prioritize CF-Cache-Status header (Cloudflare cache status)
 		const status = resource.cfCacheStatus?.toUpperCase() || resource.cacheStatus?.toUpperCase() || "UNKNOWN";
 
 		if (resource.error || status === "ERROR") {
 			result.errors.push(resource);
 			result.summary.errors++;
+		} else if (status === "NO_CF" || (!resource.cfCacheStatus && !resource.cfRay)) {
+			// Resource doesn't appear to be behind Cloudflare
+			result.noCloudflare.push(resource);
+			result.summary.noCloudflare++;
 		} else if (status === "HIT") {
+			// Cloudflare cache HIT - served from cache
 			result.cached.push(resource);
 			result.summary.cached++;
-		} else if (status === "MISS" || status === "NONE" || status === "UNKNOWN") {
+		} else if (status === "MISS") {
+			// Cloudflare cache MISS - not in cache, fetched from origin
 			result.notCached.push(resource);
 			result.summary.notCached++;
 		} else if (status === "BYPASS") {
+			// Cloudflare cache BYPASS - cache was bypassed
 			result.bypass.push(resource);
 			result.summary.bypass++;
 		} else if (status === "EXPIRED") {
+			// Cloudflare cache EXPIRED - cache entry expired, fetching from origin
 			result.expired.push(resource);
 			result.summary.expired++;
 		} else if (status === "STALE") {
+			// Cloudflare cache STALE - serving stale content while revalidating
 			result.stale.push(resource);
 			result.summary.stale++;
+		} else if (status === "UPDATING") {
+			// Cloudflare cache UPDATING - cache is being updated
+			result.updating.push(resource);
+			result.summary.updating++;
+		} else if (status === "DYNAMIC") {
+			// Cloudflare cache DYNAMIC - resource is dynamic and not cached
+			result.dynamic.push(resource);
+			result.summary.dynamic++;
+		} else if (status === "REVALIDATED") {
+			// Cloudflare cache REVALIDATED - cache was revalidated
+			result.revalidated.push(resource);
+			result.summary.revalidated++;
 		} else {
-			// Other statuses like UPDATING, DYNAMIC, etc.
+			// Unknown status or no status
 			result.notCached.push(resource);
 			result.summary.notCached++;
 		}
@@ -346,7 +417,11 @@ export async function GET(request: NextRequest) {
 		organizedResults.bypass.sort(sortResources);
 		organizedResults.expired.sort(sortResources);
 		organizedResults.stale.sort(sortResources);
+		organizedResults.updating.sort(sortResources);
+		organizedResults.dynamic.sort(sortResources);
+		organizedResults.revalidated.sort(sortResources);
 		organizedResults.errors.sort(sortResources);
+		organizedResults.noCloudflare.sort(sortResources);
 
 		return NextResponse.json(
 			{
