@@ -1,0 +1,595 @@
+{
+	"baseUrl": "https://testing-ws.ashishmehra.dev",
+	"timestamp": "2026-01-14T06:06:43.080Z",
+	"cached": [
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/1760aa2a205b9292.css",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2eafa2a7639-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/1760aa2a205b9292.css\\",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2ee2d26d446-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/18374a6b61302457.css",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2eaf9e5ba51-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/18374a6b61302457.css\\",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2ee3e686119-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/30ed31c493d2ebb3.css",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2eafd9dc96d-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/30ed31c493d2ebb3.css\\",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2ee4ad1754b-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/65e36472c9ec3ec1.css",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2eaedf39b53-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/65e36472c9ec3ec1.css\\",
+			"type": "css",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "text/css; charset=UTF-8",
+			"cfRay": "9bdaf2ee39abb98b-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotesque_Bold.p.cac05d2c.woff2",
+			"type": "font",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "font/woff2",
+			"cfRay": "9bdaf2ebae71b35f-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotesque_Bold.p.cac05d2c.woff2\\",
+			"type": "font",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "font/woff2",
+			"cfRay": "9bdaf2ee5e638173-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotesque_Medium.p.a2d524f0.woff2",
+			"type": "font",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "font/woff2",
+			"cfRay": "9bdaf2ebfe281760-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotesque_Regular.p.a72b9fac.woff2",
+			"type": "font",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "font/woff2",
+			"cfRay": "9bdaf2ebfa5d83bf-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotesque_Regular.p.a72b9fac.woff2\\",
+			"type": "font",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "font/woff2",
+			"cfRay": "9bdaf2ee4cb52843-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotesque_SemiBold.p.c432a4bf.woff2",
+			"type": "font",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "font/woff2",
+			"cfRay": "9bdaf2ebfa49df86-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotesque_SemiBold.p.c432a4bf.woff2\\",
+			"type": "font",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "font/woff2",
+			"cfRay": "9bdaf2eee9d2df2b-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icon.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eafdc56cc2-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/document.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eba82ba35c-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/ecovia-logo.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eb49d7b3e2-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/email-secondary.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eb489875ec-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/email.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eb4d10b993-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/facebook.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2ebaf197208-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/family.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2ebabcf766a-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/instagram.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2ebaf2295e6-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/minus.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eb4d8f08b6-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/phone.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eb48dba34b-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/plus.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eb4c6975f2-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/stars.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2ebaab072dd-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/support.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2eb4df8c3d7-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/icons/thumb.svg",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/svg+xml",
+			"cfRay": "9bdaf2ebaa89ebf2-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/blog/thumbnail.png",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/png",
+			"cfRay": "9bdaf2eb99dc8393-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/home-bg.webp",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/webp",
+			"cfRay": "9bdaf2ef28abfc2f-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/home-footer-bg.webp",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/webp",
+			"cfRay": "9bdaf2ef2d054855-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/inspection.webp",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/webp",
+			"cfRay": "9bdaf2eb49eb5195-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/pattern-bg.webp",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/webp",
+			"cfRay": "9bdaf2ef2d3976ca-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/pest-controller.webp",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/webp",
+			"cfRay": "9bdaf2ebab037596-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/pest-service-thumbnail.webp",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/webp",
+			"cfRay": "9bdaf2eb4bf8a37e-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/images/worker.webp",
+			"type": "image",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/webp",
+			"cfRay": "9bdaf2eba90bc6c8-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/21dd6e8913f139ab.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea9e6c8173-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/21dd6e8913f139ab.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ecec93e7f7-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/2e635891c061d290.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2eac82d763f-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/2e635891c061d290.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ecd9036afb-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/3116072a02756d57.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea9a93eb3c-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/3116072a02756d57.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ed6ea7e668-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/3e0f93b37bf948e9.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2eaa9820879-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/409daa79903bdca4.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2eaec558e8e-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/4bda46c07e65acfa.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2eafffd2672-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/4bda46c07e65acfa.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ee3cc36817-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/7dd66bdf8a7e5707.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2eaae42ca18-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/7dd66bdf8a7e5707.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ecce823119-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/91adb7bdb9870c6a.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea6bde2537-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/a6dad97d9634a72d.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2eaeed1b9ec-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/a8296e8349490d3f.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea9cd8b9e0-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/a8296e8349490d3f.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ec6ef5af49-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/c262c49f15ce2f1f.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea9d0b354f-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/e00193d107f0b511.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2eafc307672-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/e00193d107f0b511.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ec6b4f0882-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/f497255919a104ac.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea9aa6cdf7-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/ff1a16fafef87110.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea9e6120bc-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/ff1a16fafef87110.js\\",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ec79457682-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chunks/turbopack-310beeff0483b881.js",
+			"type": "js",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "application/javascript; charset=UTF-8",
+			"cfRay": "9bdaf2ea987849b2-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/chun",
+			"type": "other",
+			"cacheStatus": "HIT",
+			"statusCode": 404,
+			"contentType": "text/plain; charset=utf-8",
+			"cfRay": "9bdaf2edbc3675cd-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/_next/static/media/RebondGrotes",
+			"type": "other",
+			"cacheStatus": "HIT",
+			"statusCode": 404,
+			"contentType": "text/plain; charset=utf-8",
+			"cfRay": "9bdaf2edbe41936a-SEA",
+			"cfCacheStatus": "HIT"
+		},
+		{
+			"url": "https://testing-ws.ashishmehra.dev/favicon.ico?favicon.02c1b755.ico",
+			"type": "other",
+			"cacheStatus": "HIT",
+			"statusCode": 200,
+			"contentType": "image/x-icon",
+			"cfRay": "9bdaf2eb4f0b1fc0-SEA",
+			"cfCacheStatus": "HIT"
+		}
+	],
+	"notCached": [],
+	"bypass": [],
+	"expired": [],
+	"stale": [],
+	"updating": [],
+	"dynamic": [],
+	"revalidated": [],
+	"errors": [],
+	"noCloudflare": [],
+	"summary": {
+		"total": 63,
+		"cached": 63,
+		"notCached": 0,
+		"bypass": 0,
+		"expired": 0,
+		"stale": 0,
+		"updating": 0,
+		"dynamic": 0,
+		"revalidated": 0,
+		"errors": 0,
+		"noCloudflare": 0
+	}
+}
